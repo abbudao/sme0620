@@ -1,0 +1,1617 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE abiword PUBLIC "-//ABISOURCE//DTD AWML 1.0 Strict//EN" "http://www.abisource.com/awml.dtd">
+<abiword template="false" xmlns:ct="http://www.abisource.com/changetracking.dtd" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:math="http://www.w3.org/1998/Math/MathML" xid-max="1595" xmlns:dc="http://purl.org/dc/elements/1.1/" fileformat="1.1" xmlns:svg="http://www.w3.org/2000/svg" xmlns:awml="http://www.abisource.com/awml.dtd" xmlns="http://www.abisource.com/awml.dtd" xmlns:xlink="http://www.w3.org/1999/xlink" version="3.0.1" xml:space="preserve" props="dom-dir:ltr; document-footnote-restart-section:0; document-endnote-type:numeric; document-endnote-place-enddoc:1; document-endnote-initial:1; lang:en-US; document-endnote-restart-section:0; document-footnote-restart-page:0; document-footnote-type:numeric; document-footnote-initial:1; document-endnote-place-endsection:0">
+<!-- ======================================================================== -->
+<!-- This file is an AbiWord document.                                        -->
+<!-- AbiWord is a free, Open Source word processor.                           -->
+<!-- More information about AbiWord is available at http://www.abisource.com/ -->
+<!-- You should not edit this file by hand.                                   -->
+<!-- ======================================================================== -->
+
+<metadata>
+<m key="abiword.generator">AbiWord</m>
+<m key="dc.format">application/x-abiword</m>
+</metadata>
+<rdf>
+</rdf>
+<styles>
+<s type="P" name="Normal" basedon="" followedby="Current Settings" props="font-family:Tinos; margin-top:0pt; font-variant:normal; margin-left:0pt; text-indent:0in; widows:2; font-style:normal; font-weight:normal; text-decoration:none; color:000000; line-height:1.0; text-align:left; margin-bottom:0pt; text-position:normal; margin-right:0pt; bgcolor:transparent; font-size:12pt; font-stretch:normal"/>
+</styles>
+<pagesize pagetype="A4" orientation="portrait" width="210.000000" height="297.000000" units="mm" page-scale="1.000000"/>
+<section xid="1">
+<p style="Normal" xid="2"> % +--------------------------------------------------+</p>
+<p style="Normal" xid="3" props="text-align:left; dom-dir:ltr">% | Typeset enumitem.tex to get the documentation.   |</p>
+<p style="Normal" xid="4">% +--------------------------------------------------+</p>
+<p style="Normal" xid="5">%</p>
+<p style="Normal" xid="6" props="text-align:left; dom-dir:ltr">% Copyright (c) 2003-2011 by Javier Bezos.</p>
+<p style="Normal" xid="7" props="text-align:left; dom-dir:ltr">% All Rights Reserved.</p>
+<p style="Normal" xid="8">%</p>
+<p style="Normal" xid="9" props="text-align:left; dom-dir:ltr">% This file is part of the enumitem distribution release 3.5.2</p>
+<p style="Normal" xid="10">% -----------------------------------------------------------</p>
+<p style="Normal" xid="11">% </p>
+<p style="Normal" xid="12" props="text-align:left; dom-dir:ltr">% It may be distributed and/or modified under the</p>
+<p style="Normal" xid="13" props="text-align:left; dom-dir:ltr">% conditions of the LaTeX Project Public License, either version 1.3</p>
+<p style="Normal" xid="14" props="text-align:left; dom-dir:ltr">% of this license or (at your option) any later version.</p>
+<p style="Normal" xid="15" props="text-align:left; dom-dir:ltr">% The latest version of this license is in</p>
+<p style="Normal" xid="16" props="text-align:left; dom-dir:ltr">%   http://www.latex-project.org/lppl.txt</p>
+<p style="Normal" xid="17" props="text-align:left; dom-dir:ltr">% and version 1.3 or later is part of all distributions of LaTeX</p>
+<p style="Normal" xid="18" props="text-align:left; dom-dir:ltr">% version 2003/12/01 or later.</p>
+<p style="Normal" xid="19">% </p>
+<p style="Normal" xid="20" props="text-align:left; dom-dir:ltr">% This work has the LPPL maintenance status "maintained".</p>
+<p style="Normal" xid="21">% </p>
+<p style="Normal" xid="22" props="text-align:left; dom-dir:ltr">% The Current Maintainer of this work is Javier Bezos.</p>
+<p style="Normal" xid="23">%</p>
+<p style="Normal" xid="24" props="text-align:left; dom-dir:ltr">% Notes</p>
+<p style="Normal" xid="25">% ~~~~~</p>
+<p style="Normal" xid="26">%</p>
+<p style="Normal" xid="27" props="text-align:left; dom-dir:ltr">% The tag enit@ is used through the style</p>
+<p style="Normal" xid="28">%</p>
+<p style="Normal" xid="29" props="text-align:left; dom-dir:ltr">% To do:</p>
+<p style="Normal" xid="30">% ~~~~~~</p>
+<p style="Normal" xid="31" props="text-align:left; dom-dir:ltr">% - ref*, for adding stuff in the same fashion as label*</p>
+<p style="Normal" xid="32" props="text-align:left; dom-dir:ltr">% - option ams, to force upshape, but I have to investigate</p>
+<p style="Normal" xid="33" props="text-align:left; dom-dir:ltr">% how to do it.</p>
+<p style="Normal" xid="34" props="text-align:left; dom-dir:ltr">% - labelled descriptions (ie, label, title, body)</p>
+<p style="Normal" xid="35" props="text-align:left; dom-dir:ltr">% - A true nextline (far from trivial and perhaps solved with</p>
+<p style="Normal" xid="36" props="text-align:left; dom-dir:ltr">%   labelled descriptions).</p>
+<p style="Normal" xid="37" props="text-align:left; dom-dir:ltr">% - Improved \AddEnumerateCounter</p>
+<p style="Normal" xid="38" props="text-align:left; dom-dir:ltr">% - Compatibility with interfaces and zref-enumitem</p>
+<p style="Normal" xid="39" props="text-align:left; dom-dir:ltr">% - "Pausing" somehow inline boxed text.</p>
+<p style="Normal" xid="40" props="text-align:left; dom-dir:ltr">% - \@enumctr &lt;-&gt; \@listctr?</p>
+<p style="Normal" xid="41" props="text-align:left; dom-dir:ltr">% - Define keys with values</p>
+<p style="Normal" xid="42" props="text-align:left; dom-dir:ltr">% - Revise @nobreak</p>
+<p style="Normal" xid="43">%</p>
+<p style="Normal" xid="44" props="text-align:left; dom-dir:ltr">% Release</p>
+<p style="Normal" xid="45">% ~~~~~~~</p>
+<p style="Normal" xid="46"><c></c></p>
+<p style="Normal" xid="47" props="text-align:left; dom-dir:ltr">\NeedsTeXFormat{LaTeX2e}</p>
+<p style="Normal" xid="48" props="text-align:left; dom-dir:ltr">\ProvidesPackage{enumitem}[2011/09/28 v3.5.2 Customized lists]</p>
+<p style="Normal" xid="49"><c></c></p>
+<p style="Normal" xid="50">% +=============================+</p>
+<p style="Normal" xid="51" props="text-align:left; dom-dir:ltr">% |      EMULATING KEYVAL       |</p>
+<p style="Normal" xid="52">% +=============================+</p>
+<p style="Normal" xid="53">%</p>
+<p style="Normal" xid="54" props="text-align:left; dom-dir:ltr">% "Thanks" to xkeyval, which use the same macros names as</p>
+<p style="Normal" xid="55" props="text-align:left; dom-dir:ltr">% keyval :-(, the latter has to be replicated in full here</p>
+<p style="Normal" xid="56" props="text-align:left; dom-dir:ltr">% to ensure it works as intended. The original work if by</p>
+<p style="Normal" xid="57" props="text-align:left; dom-dir:ltr">% David Carlisle, under license LPPL. Once the code is here,</p>
+<p style="Normal" xid="58" props="text-align:left; dom-dir:ltr">% it could be optimized by adpting it to the specific needs</p>
+<p style="Normal" xid="59" props="text-align:left; dom-dir:ltr">% of titlesec (to do).</p>
+<p style="Normal" xid="60"><c></c></p>
+<p style="Normal" xid="61" props="text-align:left; dom-dir:ltr">\def\enitkv@setkeys#1#2{%</p>
+<p style="Normal" xid="62" props="text-align:left; dom-dir:ltr">  \def\enitkv@prefix{enitkv@#1@}%</p>
+<p style="Normal" xid="63" props="text-align:left; dom-dir:ltr">  \let\@tempc\relax</p>
+<p style="Normal" xid="64" props="text-align:left; dom-dir:ltr">  \enitkv@do#2,\relax,}</p>
+<p style="Normal" xid="65"><c></c></p>
+<p style="Normal" xid="66" props="text-align:left; dom-dir:ltr">\def\enitkv@do#1,{%</p>
+<p style="Normal" xid="67" props="text-align:left; dom-dir:ltr"> \ifx\relax#1\empty\else</p>
+<p style="Normal" xid="68" props="text-align:left; dom-dir:ltr">  \enitkv@split#1==\relax</p>
+<p style="Normal" xid="69" props="text-align:left; dom-dir:ltr">  \expandafter\enitkv@do\fi}</p>
+<p style="Normal" xid="70"><c></c></p>
+<p style="Normal" xid="71" props="text-align:left; dom-dir:ltr">\def\enitkv@split#1=#2=#3\relax{%</p>
+<p style="Normal" xid="72" props="text-align:left; dom-dir:ltr">  \enitkv@@sp@def\@tempa{#1}%</p>
+<p style="Normal" xid="73" props="text-align:left; dom-dir:ltr">  \ifx\@tempa\@empty\else</p>
+<p style="Normal" xid="74" props="text-align:left; dom-dir:ltr">    \expandafter\let\expandafter\@tempc</p>
+<p style="Normal" xid="75" props="text-align:left; dom-dir:ltr">      \csname\enitkv@prefix\@tempa\endcsname</p>
+<p style="Normal" xid="76" props="text-align:left; dom-dir:ltr">    \ifx\@tempc\relax</p>
+<p style="Normal" xid="77" props="text-align:left; dom-dir:ltr">      \enitkv@errx{\@tempa\space undefined}%</p>
+<p style="Normal" xid="78" props="text-align:left; dom-dir:ltr">    \else</p>
+<p style="Normal" xid="79" props="text-align:left; dom-dir:ltr">      \ifx\@empty#3\@empty</p>
+<p style="Normal" xid="80" props="text-align:left; dom-dir:ltr">        \enitkv@default</p>
+<p style="Normal" xid="81" props="text-align:left; dom-dir:ltr">      \else</p>
+<p style="Normal" xid="82" props="text-align:left; dom-dir:ltr">        \enitkv@@sp@def\@tempb{#2}%</p>
+<p style="Normal" xid="83" props="text-align:left; dom-dir:ltr">        \expandafter\@tempc\expandafter{\@tempb}\relax</p>
+<p style="Normal" xid="84" props="text-align:left; dom-dir:ltr">      \fi</p>
+<p style="Normal" xid="85" props="text-align:left; dom-dir:ltr">    \fi</p>
+<p style="Normal" xid="86" props="text-align:left; dom-dir:ltr">  \fi}</p>
+<p style="Normal" xid="87"><c></c></p>
+<p style="Normal" xid="88" props="text-align:left; dom-dir:ltr">\def\enitkv@default{%</p>
+<p style="Normal" xid="89" props="text-align:left; dom-dir:ltr">  \expandafter\let\expandafter\@tempb</p>
+<p style="Normal" xid="90" props="text-align:left; dom-dir:ltr">    \csname\enitkv@prefix\@tempa @default\endcsname</p>
+<p style="Normal" xid="91" props="text-align:left; dom-dir:ltr">  \ifx\@tempb\relax</p>
+<p style="Normal" xid="92" props="text-align:left; dom-dir:ltr">    \enitkv@err{No value specified for \@tempa}%</p>
+<p style="Normal" xid="93" props="text-align:left; dom-dir:ltr">  \else</p>
+<p style="Normal" xid="94" props="text-align:left; dom-dir:ltr">    \@tempb\relax</p>
+<p style="Normal" xid="95" props="text-align:left; dom-dir:ltr">  \fi}</p>
+<p style="Normal" xid="96"><c></c></p>
+<p style="Normal" xid="97" props="text-align:left; dom-dir:ltr">\def\enitkv@errx#1{\enit@error{#1}\@ehc}</p>
+<p style="Normal" xid="98"><c></c></p>
+<p style="Normal" xid="99" props="text-align:left; dom-dir:ltr">\let\enitkv@err\enitkv@errx</p>
+<p style="Normal" xid="100"><c></c></p>
+<p style="Normal" xid="101" props="text-align:left; dom-dir:ltr">\def\@tempa#1{%</p>
+<p style="Normal" xid="102" props="text-align:left; dom-dir:ltr">  \def\enitkv@@sp@def##1##2{%</p>
+<p style="Normal" xid="103" props="text-align:left; dom-dir:ltr">    \futurelet\enitkv@tempa\enitkv@@sp@d##2\@nil\@nil#1\@nil\relax##1}%</p>
+<p style="Normal" xid="104" props="text-align:left; dom-dir:ltr">  \def\enitkv@@sp@d{%</p>
+<p style="Normal" xid="105" props="text-align:left; dom-dir:ltr">    \ifx\enitkv@tempa\@sptoken</p>
+<p style="Normal" xid="106" props="text-align:left; dom-dir:ltr">      \expandafter\enitkv@@sp@b</p>
+<p style="Normal" xid="107" props="text-align:left; dom-dir:ltr">    \else</p>
+<p style="Normal" xid="108" props="text-align:left; dom-dir:ltr">      \expandafter\enitkv@@sp@b\expandafter#1%</p>
+<p style="Normal" xid="109" props="text-align:left; dom-dir:ltr">    \fi}%</p>
+<p style="Normal" xid="110" props="text-align:left; dom-dir:ltr">  \def\enitkv@@sp@b#1##1 \@nil{\enitkv@@sp@c##1}}</p>
+<p style="Normal" xid="111"><c></c></p>
+<p style="Normal" xid="112" props="text-align:left; dom-dir:ltr">\@tempa{ }</p>
+<p style="Normal" xid="113"><c></c></p>
+<p style="Normal" xid="114" props="text-align:left; dom-dir:ltr">\def\enitkv@@sp@c#1\@nil#2\relax#3{\enitkv@toks@{#1}\edef#3{\the\enitkv@toks@}}</p>
+<p style="Normal" xid="115"><c></c></p>
+<p style="Normal" xid="116" props="text-align:left; dom-dir:ltr">\@ifundefined{KV@toks@}</p>
+<p style="Normal" xid="117" props="text-align:left; dom-dir:ltr">   {\newtoks\enitkv@toks@}</p>
+<p style="Normal" xid="118" props="text-align:left; dom-dir:ltr">   {\let\enitkv@toks@\KV@toks@}</p>
+<p style="Normal" xid="119"><c></c></p>
+<p style="Normal" xid="120" props="text-align:left; dom-dir:ltr">\def\enitkv@key#1#2{%</p>
+<p style="Normal" xid="121" props="text-align:left; dom-dir:ltr">  \@ifnextchar[{\enitkv@def{#1}{#2}}{\@namedef{enitkv@#1@#2}####1}}</p>
+<p style="Normal" xid="122"><c></c></p>
+<p style="Normal" xid="123" props="text-align:left; dom-dir:ltr">\def\enitkv@def#1#2[#3]{%</p>
+<p style="Normal" xid="124" props="text-align:left; dom-dir:ltr">  \@namedef{enitkv@#1@#2@default\expandafter}\expandafter</p>
+<p style="Normal" xid="125" props="text-align:left; dom-dir:ltr">    {\csname enitkv@#1@#2\endcsname{#3}}%</p>
+<p style="Normal" xid="126" props="text-align:left; dom-dir:ltr">  \@namedef{enitkv@#1@#2}##1}</p>
+<p style="Normal" xid="127"><c></c></p>
+<p style="Normal" xid="128">% +=============================+</p>
+<p style="Normal" xid="129" props="text-align:left; dom-dir:ltr">% |        DEFINITIONS          |</p>
+<p style="Normal" xid="130">% +=============================+</p>
+<p style="Normal" xid="131">%</p>
+<p style="Normal" xid="132" props="text-align:left; dom-dir:ltr">% (1) The package uses a token register very often. To be on the</p>
+<p style="Normal" xid="133" props="text-align:left; dom-dir:ltr">%   safe side, instead of \toks@, etc., a new one is declared.</p>
+<p style="Normal" xid="134" props="text-align:left; dom-dir:ltr">% (2) \enit@inbox is the box storing the items in boxed inline</p>
+<p style="Normal" xid="135" props="text-align:left; dom-dir:ltr">%   lists.</p>
+<p style="Normal" xid="136" props="text-align:left; dom-dir:ltr">% (3) \enit@outerparindent is used to save the outer parindent </p>
+<p style="Normal" xid="137" props="text-align:left; dom-dir:ltr">%   so that it can be used in the key parindent </p>
+<p style="Normal" xid="138" props="text-align:left; dom-dir:ltr">% (4) \enit@type has three values: 0 = enum, 1 = item, 2 = desc.</p>
+<p style="Normal" xid="139" props="text-align:left; dom-dir:ltr">% (5) \enit@calc stores which dimen is to be computed:</p>
+<p style="Normal" xid="140" props="text-align:left; dom-dir:ltr">%   0=labelindent, 1=labelwidth, 2=labelsep, 3=leftmargin,</p>
+<p style="Normal" xid="141" props="text-align:left; dom-dir:ltr">%   4=itemindent</p>
+<p style="Normal" xid="142" props="text-align:left; dom-dir:ltr">% (6) \enit@resuming has four values: 0 = none, 1 = series,</p>
+<p style="Normal" xid="143" props="text-align:left; dom-dir:ltr">%   2 = resume* series (computed in group enumitem-resume),</p>
+<p style="Normal" xid="144" props="text-align:left; dom-dir:ltr">%   3 = resume* list (ie, with no value).</p>
+<p style="Normal" xid="145"><c></c></p>
+<p style="Normal" xid="146" props="text-align:left; dom-dir:ltr">\chardef  \enit@iv=4</p>
+<p style="Normal" xid="147" props="text-align:left; dom-dir:ltr">\newlength\labelindent</p>
+<p style="Normal" xid="148" props="text-align:left; dom-dir:ltr">\newdimen \enit@outerparindent</p>
+<p style="Normal" xid="149" props="text-align:left; dom-dir:ltr">\newtoks  \enit@toks</p>
+<p style="Normal" xid="150" props="text-align:left; dom-dir:ltr">\newbox   \enit@inbox</p>
+<p style="Normal" xid="151"><c></c></p>
+<p style="Normal" xid="152" props="text-align:left; dom-dir:ltr">\newif\ifenit@boxmode</p>
+<p style="Normal" xid="153" props="text-align:left; dom-dir:ltr">\newif\ifenit@sepfrommargin</p>
+<p style="Normal" xid="154" props="text-align:left; dom-dir:ltr">\newif\ifenit@lblfrommargin</p>
+<p style="Normal" xid="155" props="text-align:left; dom-dir:ltr">\newif\ifenit@calcwidest</p>
+<p style="Normal" xid="156" props="text-align:left; dom-dir:ltr">\newif\ifenit@nextline</p>
+<p style="Normal" xid="157" props="text-align:left; dom-dir:ltr">\newif\ifenit@boxdesc</p>
+<p style="Normal" xid="158"><c></c></p>
+<p style="Normal" xid="159" props="text-align:left; dom-dir:ltr">% An alias (calc-savvy):</p>
+<p style="Normal" xid="160"><c></c></p>
+<p style="Normal" xid="161" props="text-align:left; dom-dir:ltr">\let\c@enit@cnt\@tempcnta</p>
+<p style="Normal" xid="162"><c></c></p>
+<p style="Normal" xid="163" props="text-align:left; dom-dir:ltr">\def\enit@meaning{\expandafter\strip@prefix\meaning}</p>
+<p style="Normal" xid="164" props="text-align:left; dom-dir:ltr">\def\enit@noexcs#1{\expandafter\noexpand\csname#1\endcsname}</p>
+<p style="Normal" xid="165"><c></c></p>
+<p style="Normal" xid="166" props="text-align:left; dom-dir:ltr">% Miscelaneous errors</p>
+<p style="Normal" xid="167">% ===================</p>
+<p style="Normal" xid="168"><c></c></p>
+<p style="Normal" xid="169" props="text-align:left; dom-dir:ltr">\def\enit@error{\PackageError{enumitem}}</p>
+<p style="Normal" xid="170">  </p>
+<p style="Normal" xid="171" props="text-align:left; dom-dir:ltr">\def\enit@checkerror#1#2{%</p>
+<p style="Normal" xid="172" props="text-align:left; dom-dir:ltr">  \enit@error{Unknown value `#2' for key `#1'}%</p>
+<p style="Normal" xid="173" props="text-align:left; dom-dir:ltr">      {See the manual for valid values}} </p>
+<p style="Normal" xid="174"><c></c></p>
+<p style="Normal" xid="175" props="text-align:left; dom-dir:ltr">\def\enit@itemerror{%</p>
+<p style="Normal" xid="176" props="text-align:left; dom-dir:ltr">  \enit@error{Misplaced \string\item}%</p>
+<p style="Normal" xid="177" props="text-align:left; dom-dir:ltr">      {Either there is some text before the first\MessageBreak</p>
+<p style="Normal" xid="178" props="text-align:left; dom-dir:ltr">       item or the last item has no text}} </p>
+<p style="Normal" xid="179"><c></c></p>
+<p style="Normal" xid="180" props="text-align:left; dom-dir:ltr">\def\enit@noserieserror#1{%</p>
+<p style="Normal" xid="181" props="text-align:left; dom-dir:ltr">  \enit@error{Series `#1' not started}%</p>
+<p style="Normal" xid="182" props="text-align:left; dom-dir:ltr">      {You are trying to continue a series\MessageBreak</p>
+<p style="Normal" xid="183" props="text-align:left; dom-dir:ltr">       which has not been started with series}} </p>
+<p style="Normal" xid="184"><c></c></p>
+<p style="Normal" xid="185" props="text-align:left; dom-dir:ltr">\def\enit@checkseries#1{%</p>
+<p style="Normal" xid="186" props="text-align:left; dom-dir:ltr">  \ifcase\enit@resuming</p>
+<p style="Normal" xid="187" props="text-align:left; dom-dir:ltr">    \enit@error{Misplaced key `#1'}%</p>
+<p style="Normal" xid="188" props="text-align:left; dom-dir:ltr">      {`series' and `resume*' must be used\MessageBreak</p>
+<p style="Normal" xid="189" props="text-align:left; dom-dir:ltr">       in the optional argument of lists}%</p>
+<p style="Normal" xid="190" props="text-align:left; dom-dir:ltr">  \fi}</p>
+<p style="Normal" xid="191"><c></c></p>
+<p style="Normal" xid="192" props="text-align:left; dom-dir:ltr">\def\enit@checkseries@m{%</p>
+<p style="Normal" xid="193" props="text-align:left; dom-dir:ltr">  \ifcase\enit@resuming\else</p>
+<p style="Normal" xid="194" props="text-align:left; dom-dir:ltr">    \enit@error{Uncompatible series settings}%</p>
+<p style="Normal" xid="195" props="text-align:left; dom-dir:ltr">      {`series' and `resume*' must not be used\MessageBreak</p>
+<p style="Normal" xid="196" props="text-align:left; dom-dir:ltr">       at the same time}%</p>
+<p style="Normal" xid="197" props="text-align:left; dom-dir:ltr">  \fi}</p>
+<p style="Normal" xid="198"><c></c></p>
+<p style="Normal" xid="199" props="text-align:left; dom-dir:ltr">\let\enit@toodeep\@toodeep</p>
+<p style="Normal" xid="200"><c></c></p>
+<p style="Normal" xid="201" props="text-align:left; dom-dir:ltr">\def\@toodeep{%</p>
+<p style="Normal" xid="202" props="text-align:left; dom-dir:ltr">  \ifnum\@listdepth&gt;\enit@listdepth\relax</p>
+<p style="Normal" xid="203" props="text-align:left; dom-dir:ltr">    \enit@toodeep</p>
+<p style="Normal" xid="204" props="text-align:left; dom-dir:ltr">  \else</p>
+<p style="Normal" xid="205" props="text-align:left; dom-dir:ltr">    \count@\@listdepth</p>
+<p style="Normal" xid="206" props="text-align:left; dom-dir:ltr">    \global\advance\@listdepth\@ne</p>
+<p style="Normal" xid="207" props="text-align:left; dom-dir:ltr">    \@ifundefined{@list\romannumeral\the\@listdepth}%</p>
+<p style="Normal" xid="208" props="text-align:left; dom-dir:ltr">      {\expandafter\let</p>
+<p style="Normal" xid="209" props="text-align:left; dom-dir:ltr">         \csname @list\romannumeral\the\@listdepth\expandafter\endcsname</p>
+<p style="Normal" xid="210" props="text-align:left; dom-dir:ltr">         \csname @list\romannumeral\the\count@\endcsname}{}%</p>
+<p style="Normal" xid="211" props="text-align:left; dom-dir:ltr">  \fi}</p>
+<p style="Normal" xid="212"><c></c></p>
+<p style="Normal" xid="213"><c></c></p>
+<p style="Normal" xid="214">% +=============================+</p>
+<p style="Normal" xid="215" props="text-align:left; dom-dir:ltr">% |            KEYS             |</p>
+<p style="Normal" xid="216">% +=============================+</p>
+<p style="Normal" xid="217">%</p>
+<p style="Normal" xid="218" props="text-align:left; dom-dir:ltr">% Including code executed by keys.</p>
+<p style="Normal" xid="219">%</p>
+<p style="Normal" xid="220" props="text-align:left; dom-dir:ltr">% There are 2 keyval groups: enumitem, and enumitem-delayed.</p>
+<p style="Normal" xid="221" props="text-align:left; dom-dir:ltr">% The latter is used to make sure a prioritary key is the</p>
+<p style="Normal" xid="222" props="text-align:left; dom-dir:ltr">% latest one; eg, ref, so that the ref format set by label</p>
+<p style="Normal" xid="223" props="text-align:left; dom-dir:ltr">% is overriden. So, when this key is found in enumitem,</p>
+<p style="Normal" xid="224" props="text-align:left; dom-dir:ltr">% nothing is done, except the key/value is moved to </p>
+<p style="Normal" xid="225" props="text-align:left; dom-dir:ltr">% enumitem-delayed.</p>
+<p style="Normal" xid="226">%</p>
+<p style="Normal" xid="227" props="text-align:left; dom-dir:ltr">% A further group (enumitem-resume) catches resume* and</p>
+<p style="Normal" xid="228" props="text-align:left; dom-dir:ltr">% series in optional arguments in lists.</p>
+<p style="Normal" xid="229">%</p>
+<p style="Normal" xid="230" props="text-align:left; dom-dir:ltr">% Vertical spacing</p>
+<p style="Normal" xid="231">% ================</p>
+<p style="Normal" xid="232"><c></c></p>
+<p style="Normal" xid="233" props="text-align:left; dom-dir:ltr">\enitkv@key{enumitem}{topsep}{%</p>
+<p style="Normal" xid="234" props="text-align:left; dom-dir:ltr">  \setlength\topsep{#1}}</p>
+<p style="Normal" xid="235"><c></c></p>
+<p style="Normal" xid="236" props="text-align:left; dom-dir:ltr">\enitkv@key{enumitem}{itemsep}{%</p>
+<p style="Normal" xid="237" props="text-align:left; dom-dir:ltr">  \setlength\itemsep{#1}}</p>
+<p style="Normal" xid="238"><c></c></p>
+<p style="Normal" xid="239" props="text-align:left; dom-dir:ltr">\enitkv@key{enumitem}{parsep}{%</p>
+<p style="Normal" xid="240" props="text-align:left; dom-dir:ltr">  \setlength\parsep{#1}}</p>
+<p style="Normal" xid="241"><c></c></p>
+<p style="Normal" xid="242" props="text-align:left; dom-dir:ltr">\enitkv@key{enumitem}{partopsep}{%</p>
+<p style="Normal" xid="243" props="text-align:left; dom-dir:ltr">  \setlength\partopsep{#1}}</p>
+<p style="Normal" xid="244"><c></c></p>
+<p style="Normal" xid="245" props="text-align:left; dom-dir:ltr">% Horizontal spacing</p>
+<p style="Normal" xid="246">% ==================</p>
+<p style="Normal" xid="247">%</p>
+<p style="Normal" xid="248" props="text-align:left; dom-dir:ltr">% There are 3 cases: *, ! and a value. The latter also</p>
+<p style="Normal" xid="249" props="text-align:left; dom-dir:ltr">% cancels widest with the sequence key=* ... key=value</p>
+<p style="Normal" xid="250" props="text-align:left; dom-dir:ltr">% \string is used, just in case some package changes the</p>
+<p style="Normal" xid="251" props="text-align:left; dom-dir:ltr">% catcodes.</p>
+<p style="Normal" xid="252"><c></c></p>
+<p style="Normal" xid="253" props="text-align:left; dom-dir:ltr">\def\enit@calcset#1#2#3{%</p>
+<p style="Normal" xid="254" props="text-align:left; dom-dir:ltr">  \if\string*\string#3%</p>
+<p style="Normal" xid="255" props="text-align:left; dom-dir:ltr">    \enit@calcwidesttrue</p>
+<p style="Normal" xid="256" props="text-align:left; dom-dir:ltr">    \let\enit@calc#2%</p>
+<p style="Normal" xid="257" props="text-align:left; dom-dir:ltr">  \else\if\string!\string#3%</p>
+<p style="Normal" xid="258" props="text-align:left; dom-dir:ltr">    \enit@calcwidestfalse</p>
+<p style="Normal" xid="259" props="text-align:left; dom-dir:ltr">    \let\enit@calc#2%</p>
+<p style="Normal" xid="260" props="text-align:left; dom-dir:ltr">  \else</p>
+<p style="Normal" xid="261" props="text-align:left; dom-dir:ltr">    \ifnum\enit@calc=#2%</p>
+<p style="Normal" xid="262" props="text-align:left; dom-dir:ltr">      \enit@calcwidestfalse</p>
+<p style="Normal" xid="263" props="text-align:left; dom-dir:ltr">      \let\enit@calc\z@</p>
+<p style="Normal" xid="264" props="text-align:left; dom-dir:ltr">    \fi</p>
+<p style="Normal" xid="265" props="text-align:left; dom-dir:ltr">    \setlength#1{#3}%</p>
+<p style="Normal" xid="266" props="text-align:left; dom-dir:ltr">  \fi\fi}</p>
+<p style="Normal" xid="267"><c></c></p>
+<p style="Normal" xid="268" props="text-align:left; dom-dir:ltr">\def\enitkv@enumitem@widest#1{%</p>
+<p style="Normal" xid="269" props="text-align:left; dom-dir:ltr">  \expandafter\let\csname enit@cw@\@enumctr\endcsname\relax</p>
+<p style="Normal" xid="270" props="text-align:left; dom-dir:ltr">  \@namedef{enit@widest@\@enumctr}##1{#1}}</p>
+<p style="Normal" xid="271"><c></c></p>
+<p style="Normal" xid="272" props="text-align:left; dom-dir:ltr">\def\enitkv@enumitem@widest@default{%</p>
+<p style="Normal" xid="273" props="text-align:left; dom-dir:ltr">  \expandafter\let\csname enit@cw@\@enumctr\endcsname\relax</p>
+<p style="Normal" xid="274" props="text-align:left; dom-dir:ltr">  \expandafter\let\csname enit@widest@\@enumctr\endcsname\relax}</p>
+<p style="Normal" xid="275"><c></c></p>
+<p style="Normal" xid="276" props="text-align:left; dom-dir:ltr">\enitkv@key{enumitem}{widest*}{%</p>
+<p style="Normal" xid="277" props="text-align:left; dom-dir:ltr">  \setcounter{enit@cnt}{#1}%</p>
+<p style="Normal" xid="278" props="text-align:left; dom-dir:ltr">  \expandafter\edef\csname enit@cw@\@enumctr\endcsname</p>
+<p style="Normal" xid="279" props="text-align:left; dom-dir:ltr">    {\the\c@enit@cnt}%</p>
+<p style="Normal" xid="280" props="text-align:left; dom-dir:ltr">  \expandafter\edef\csname enit@widest@\@enumctr\endcsname##1%</p>
+<p style="Normal" xid="281" props="text-align:left; dom-dir:ltr">    {##1{\the\c@enit@cnt}}}</p>
+<p style="Normal" xid="282"><c></c></p>
+<p style="Normal" xid="283" props="text-align:left; dom-dir:ltr">\enitkv@key{enumitem}{labelindent*}{%</p>
+<p style="Normal" xid="284" props="text-align:left; dom-dir:ltr">  \enit@lblfrommargintrue</p>
+<p style="Normal" xid="285" props="text-align:left; dom-dir:ltr">  \ifnum\enit@calc=\z@</p>
+<p style="Normal" xid="286" props="text-align:left; dom-dir:ltr">    \enit@calcwidestfalse</p>
+<p style="Normal" xid="287" props="text-align:left; dom-dir:ltr">  \fi</p>
+<p style="Normal" xid="288" props="text-align:left; dom-dir:ltr">  \setlength\labelindent{#1}%</p>
+<p style="Normal" xid="289" props="text-align:left; dom-dir:ltr">  \advance\labelindent\leftmargin}</p>
+<p style="Normal" xid="290"><c></c></p>
+<p style="Normal" xid="291" props="text-align:left; dom-dir:ltr">\enitkv@key{enumitem}{labelindent}{%</p>
+<p style="Normal" xid="292" props="text-align:left; dom-dir:ltr">  \enit@lblfrommarginfalse</p>
+<p style="Normal" xid="293" props="text-align:left; dom-dir:ltr">  \enit@calcset\labelindent\z@{#1}}</p>
+<p style="Normal" xid="294"><c></c></p>
+<p style="Normal" xid="295" props="text-align:left; dom-dir:ltr">\enitkv@key{enumitem}{labelwidth}{%</p>
+<p style="Normal" xid="296" props="text-align:left; dom-dir:ltr">  \enit@calcset\labelwidth\@ne{#1}}</p>
+<p style="Normal" xid="297"><c></c></p>
+<p style="Normal" xid="298" props="text-align:left; dom-dir:ltr">\enitkv@key{enumitem}{leftmargin}{%</p>
+<p style="Normal" xid="299" props="text-align:left; dom-dir:ltr">  \edef\enit@c{\the\leftmargin}%</p>
+<p style="Normal" xid="300" props="text-align:left; dom-dir:ltr">  \enit@calcset\leftmargin\thr@@{#1}%</p>
+<p style="Normal" xid="301" props="text-align:left; dom-dir:ltr">  \ifenit@lblfrommargin</p>
+<p style="Normal" xid="302" props="text-align:left; dom-dir:ltr">    \advance\labelindent-\enit@c\relax</p>
+<p style="Normal" xid="303" props="text-align:left; dom-dir:ltr">    \advance\labelindent\leftmargin</p>
+<p style="Normal" xid="304" props="text-align:left; dom-dir:ltr">  \fi}</p>
+<p style="Normal" xid="305"><c></c></p>
+<p style="Normal" xid="306" props="text-align:left; dom-dir:ltr">\enitkv@key{enumitem}{itemindent}{%</p>
+<p style="Normal" xid="307" props="text-align:left; dom-dir:ltr">  \edef\enit@c{\the\itemindent}%</p>
+<p style="Normal" xid="308" props="text-align:left; dom-dir:ltr">  \enit@calcset\itemindent\enit@iv{#1}%</p>
+<p style="Normal" xid="309" props="text-align:left; dom-dir:ltr">  \ifenit@sepfrommargin</p>
+<p style="Normal" xid="310" props="text-align:left; dom-dir:ltr">    \advance\labelsep-\enit@c\relax</p>
+<p style="Normal" xid="311" props="text-align:left; dom-dir:ltr">    \advance\labelsep\itemindent</p>
+<p style="Normal" xid="312" props="text-align:left; dom-dir:ltr">  \fi}</p>
+<p style="Normal" xid="313"><c></c></p>
+<p style="Normal" xid="314" props="text-align:left; dom-dir:ltr">\enitkv@key{enumitem}{listparindent}{%</p>
+<p style="Normal" xid="315" props="text-align:left; dom-dir:ltr">  \setlength\listparindent{#1}}</p>
+<p style="Normal" xid="316"><c></c></p>
+<p style="Normal" xid="317" props="text-align:left; dom-dir:ltr">\enitkv@key{enumitem}{rightmargin}{%</p>
+<p style="Normal" xid="318" props="text-align:left; dom-dir:ltr">  \setlength\rightmargin{#1}}</p>
+<p style="Normal" xid="319"><c></c></p>
+<p style="Normal" xid="320" props="text-align:left; dom-dir:ltr">% labelsep, from itemindent; labelsep*, from leftmargin</p>
+<p style="Normal" xid="321"><c></c></p>
+<p style="Normal" xid="322" props="text-align:left; dom-dir:ltr">\enitkv@key{enumitem}{labelsep*}{%</p>
+<p style="Normal" xid="323" props="text-align:left; dom-dir:ltr">  \enit@sepfrommargintrue</p>
+<p style="Normal" xid="324" props="text-align:left; dom-dir:ltr">  \ifnum\enit@calc=\tw@</p>
+<p style="Normal" xid="325" props="text-align:left; dom-dir:ltr">    \enit@calcwidestfalse</p>
+<p style="Normal" xid="326" props="text-align:left; dom-dir:ltr">    \let\enit@calc\z@</p>
+<p style="Normal" xid="327" props="text-align:left; dom-dir:ltr">  \fi</p>
+<p style="Normal" xid="328" props="text-align:left; dom-dir:ltr">  \setlength\labelsep{#1}%</p>
+<p style="Normal" xid="329" props="text-align:left; dom-dir:ltr">  \advance\labelsep\itemindent}</p>
+<p style="Normal" xid="330"><c></c></p>
+<p style="Normal" xid="331" props="text-align:left; dom-dir:ltr">\enitkv@key{enumitem}{labelsep}{%</p>
+<p style="Normal" xid="332" props="text-align:left; dom-dir:ltr">  \enit@sepfrommarginfalse</p>
+<p style="Normal" xid="333" props="text-align:left; dom-dir:ltr">  \enit@calcset\labelsep\tw@{#1}}</p>
+<p style="Normal" xid="334"><c></c></p>
+<p style="Normal" xid="335" props="text-align:left; dom-dir:ltr">% Series, resume and start</p>
+<p style="Normal" xid="336">% ========================</p>
+<p style="Normal" xid="337"><c></c></p>
+<p style="Normal" xid="338" props="text-align:left; dom-dir:ltr">\enitkv@key{enumitem-resume}{series}{%</p>
+<p style="Normal" xid="339" props="text-align:left; dom-dir:ltr">  \enit@checkseries@m</p>
+<p style="Normal" xid="340" props="text-align:left; dom-dir:ltr">  \let\enit@resuming\@ne</p>
+<p style="Normal" xid="341" props="text-align:left; dom-dir:ltr">  \@ifundefined{enitkv@enumitem@#1}{}%</p>
+<p style="Normal" xid="342" props="text-align:left; dom-dir:ltr">    {\enit@error{Invalid series name `#1'}%</p>
+<p style="Normal" xid="343" props="text-align:left; dom-dir:ltr">       {Do not name a series with an existing key}}%</p>
+<p style="Normal" xid="344" props="text-align:left; dom-dir:ltr">  \def\enit@series{#1}}</p>
+<p style="Normal" xid="345"><c></c></p>
+<p style="Normal" xid="346" props="text-align:left; dom-dir:ltr">\enitkv@key{enumitem}{series}{%</p>
+<p style="Normal" xid="347" props="text-align:left; dom-dir:ltr">  \enit@checkseries{series}}</p>
+<p style="Normal" xid="348"><c></c></p>
+<p style="Normal" xid="349" props="text-align:left; dom-dir:ltr">\def\enitkv@enumitem@resume#1{%</p>
+<p style="Normal" xid="350" props="text-align:left; dom-dir:ltr">  \edef\enit@series{#1}%</p>
+<p style="Normal" xid="351" props="text-align:left; dom-dir:ltr">  \@nameuse{enit@resume@series@#1}\relax}</p>
+<p style="Normal" xid="352"><c></c></p>
+<p style="Normal" xid="353" props="text-align:left; dom-dir:ltr">\def\enitkv@enumitem@resume@default{%</p>
+<p style="Normal" xid="354" props="text-align:left; dom-dir:ltr">  \@nameuse{enit@resume@\@currenvir}\relax}</p>
+<p style="Normal" xid="355">  </p>
+<p style="Normal" xid="356" props="text-align:left; dom-dir:ltr">\@namedef{enitkv@enumitem-resume@resume*}#1{%</p>
+<p style="Normal" xid="357" props="text-align:left; dom-dir:ltr">  \enit@checkseries@m</p>
+<p style="Normal" xid="358" props="text-align:left; dom-dir:ltr">  \let\enit@resuming\tw@</p>
+<p style="Normal" xid="359" props="text-align:left; dom-dir:ltr">  \edef\enit@series{#1}%</p>
+<p style="Normal" xid="360" props="text-align:left; dom-dir:ltr">  \@ifundefined{enit@resumekeys@series@#1}%</p>
+<p style="Normal" xid="361" props="text-align:left; dom-dir:ltr">    {\enit@noserieserror{#1}}%</p>
+<p style="Normal" xid="362" props="text-align:left; dom-dir:ltr">    {\expandafter\let\expandafter\enit@resumekeys</p>
+<p style="Normal" xid="363" props="text-align:left; dom-dir:ltr">         \csname enit@resumekeys@series@#1\endcsname}}</p>
+<p style="Normal" xid="364"><c></c></p>
+<p style="Normal" xid="365" props="text-align:left; dom-dir:ltr">\@namedef{enitkv@enumitem-resume@resume*@default}{%</p>
+<p style="Normal" xid="366" props="text-align:left; dom-dir:ltr">  \let\enit@resuming\thr@@</p>
+<p style="Normal" xid="367" props="text-align:left; dom-dir:ltr">  \expandafter\let\expandafter\enit@resumekeys</p>
+<p style="Normal" xid="368" props="text-align:left; dom-dir:ltr">    \csname enit@resumekeys@\@currenvir\endcsname</p>
+<p style="Normal" xid="369" props="text-align:left; dom-dir:ltr">  \@nameuse{enit@resume@\@currenvir}\relax}</p>
+<p style="Normal" xid="370"><c></c></p>
+<p style="Normal" xid="371" props="text-align:left; dom-dir:ltr">\enitkv@key{enumitem}{resume*}[]{%</p>
+<p style="Normal" xid="372" props="text-align:left; dom-dir:ltr">  \enit@checkseries{resume*}}</p>
+<p style="Normal" xid="373"><c></c></p>
+<p style="Normal" xid="374" props="text-align:left; dom-dir:ltr">\newcommand\restartlist[1]{%</p>
+<p style="Normal" xid="375" props="text-align:left; dom-dir:ltr">  \@ifundefined{end#1}%</p>
+<p style="Normal" xid="376" props="text-align:left; dom-dir:ltr">    {\enit@error{Undefined list `#1'}%</p>
+<p style="Normal" xid="377" props="text-align:left; dom-dir:ltr">      {No list has been defined with that name.}}%</p>
+<p style="Normal" xid="378" props="text-align:left; dom-dir:ltr">    {\expandafter\let</p>
+<p style="Normal" xid="379" props="text-align:left; dom-dir:ltr">     \csname enit@resume@#1\endcsname\@empty}}</p>
+<p style="Normal" xid="380"><c></c></p>
+<p style="Normal" xid="381" props="text-align:left; dom-dir:ltr">\enitkv@key{enumitem}{start}[\@ne]{%</p>
+<p style="Normal" xid="382" props="text-align:left; dom-dir:ltr">  \setcounter{\@listctr}{#1}%</p>
+<p style="Normal" xid="383" props="text-align:left; dom-dir:ltr">  \advance\@nameuse{c@\@listctr}\m@ne}</p>
+<p style="Normal" xid="384"><c></c></p>
+<p style="Normal" xid="385" props="text-align:left; dom-dir:ltr">% Penalties</p>
+<p style="Normal" xid="386">% =========</p>
+<p style="Normal" xid="387">  </p>
+<p style="Normal" xid="388" props="text-align:left; dom-dir:ltr">\enitkv@key{enumitem}{beginpenalty}{%</p>
+<p style="Normal" xid="389" props="text-align:left; dom-dir:ltr">  \@beginparpenalty#1\relax}</p>
+<p style="Normal" xid="390">  </p>
+<p style="Normal" xid="391" props="text-align:left; dom-dir:ltr">\enitkv@key{enumitem}{midpenalty}{%</p>
+<p style="Normal" xid="392" props="text-align:left; dom-dir:ltr">  \@itempenalty#1\relax}</p>
+<p style="Normal" xid="393"><c></c></p>
+<p style="Normal" xid="394" props="text-align:left; dom-dir:ltr">\enitkv@key{enumitem}{endpenalty}{%</p>
+<p style="Normal" xid="395" props="text-align:left; dom-dir:ltr">  \@endparpenalty#1\relax}</p>
+<p style="Normal" xid="396">   </p>
+<p style="Normal" xid="397" props="text-align:left; dom-dir:ltr">% Font/Format</p>
+<p style="Normal" xid="398">% ===========</p>
+<p style="Normal" xid="399"><c></c></p>
+<p style="Normal" xid="400" props="text-align:left; dom-dir:ltr">\enitkv@key{enumitem}{format}{%</p>
+<p style="Normal" xid="401" props="text-align:left; dom-dir:ltr">  \def\enit@format{#1}}</p>
+<p style="Normal" xid="402"><c></c></p>
+<p style="Normal" xid="403" props="text-align:left; dom-dir:ltr">\enitkv@key{enumitem}{font}{%</p>
+<p style="Normal" xid="404" props="text-align:left; dom-dir:ltr">  \def\enit@format{#1}}</p>
+<p style="Normal" xid="405"><c></c></p>
+<p style="Normal" xid="406" props="text-align:left; dom-dir:ltr">% Description styles</p>
+<p style="Normal" xid="407">% ==================</p>
+<p style="Normal" xid="408"><c></c></p>
+<p style="Normal" xid="409" props="text-align:left; dom-dir:ltr">\enitkv@key{enumitem}{style}[normal]{%</p>
+<p style="Normal" xid="410" props="text-align:left; dom-dir:ltr">  \@ifundefined{enit@style@#1}%</p>
+<p style="Normal" xid="411" props="text-align:left; dom-dir:ltr">    {\enit@checkerror{style}{#1}}%</p>
+<p style="Normal" xid="412" props="text-align:left; dom-dir:ltr">    {\enit@nextlinefalse</p>
+<p style="Normal" xid="413" props="text-align:left; dom-dir:ltr">     \enit@boxdescfalse</p>
+<p style="Normal" xid="414" props="text-align:left; dom-dir:ltr">     \@nameuse{enit@style@#1}%</p>
+<p style="Normal" xid="415" props="text-align:left; dom-dir:ltr">     \edef\enit@descstyle{\enit@noexcs{enit@#1style}}}}</p>
+<p style="Normal" xid="416"><c></c></p>
+<p style="Normal" xid="417" props="text-align:left; dom-dir:ltr">\def\enit@style@standard{%</p>
+<p style="Normal" xid="418" props="text-align:left; dom-dir:ltr">  \enit@boxdesctrue</p>
+<p style="Normal" xid="419" props="text-align:left; dom-dir:ltr">  \enit@calcset\itemindent\enit@iv!}</p>
+<p style="Normal" xid="420"><c></c></p>
+<p style="Normal" xid="421" props="text-align:left; dom-dir:ltr">\let\enit@style@normal\enit@style@standard</p>
+<p style="Normal" xid="422"><c></c></p>
+<p style="Normal" xid="423" props="text-align:left; dom-dir:ltr">\def\enit@style@unboxed{%</p>
+<p style="Normal" xid="424" props="text-align:left; dom-dir:ltr">  \enit@calcset\itemindent\enit@iv!}</p>
+<p style="Normal" xid="425"><c></c></p>
+<p style="Normal" xid="426" props="text-align:left; dom-dir:ltr">\def\enit@style@sameline{%</p>
+<p style="Normal" xid="427" props="text-align:left; dom-dir:ltr">  \enit@calcset\labelwidth\@ne!}</p>
+<p style="Normal" xid="428"><c></c></p>
+<p style="Normal" xid="429" props="text-align:left; dom-dir:ltr">\def\enit@style@multiline{%</p>
+<p style="Normal" xid="430" props="text-align:left; dom-dir:ltr">  \enit@align@parleft</p>
+<p style="Normal" xid="431" props="text-align:left; dom-dir:ltr">  \enit@calcset\labelwidth\@ne!}</p>
+<p style="Normal" xid="432"><c></c></p>
+<p style="Normal" xid="433" props="text-align:left; dom-dir:ltr">\def\enit@style@nextline{%</p>
+<p style="Normal" xid="434" props="text-align:left; dom-dir:ltr">  \enit@nextlinetrue</p>
+<p style="Normal" xid="435" props="text-align:left; dom-dir:ltr">  \enit@calcset\labelwidth\@ne!}</p>
+<p style="Normal" xid="436"><c></c></p>
+<p style="Normal" xid="437" props="text-align:left; dom-dir:ltr">% Labels and refs</p>
+<p style="Normal" xid="438">% ===============</p>
+<p style="Normal" xid="439"><c></c></p>
+<p style="Normal" xid="440" props="text-align:left; dom-dir:ltr">% Aligment</p>
+<p style="Normal" xid="441">% --------</p>
+<p style="Normal" xid="442"><c></c></p>
+<p style="Normal" xid="443" props="text-align:left; dom-dir:ltr">\enitkv@key{enumitem}{align}{%</p>
+<p style="Normal" xid="444" props="text-align:left; dom-dir:ltr">  \@ifundefined{enit@align@#1}%</p>
+<p style="Normal" xid="445" props="text-align:left; dom-dir:ltr">    {\enit@checkerror{align}{#1}}%</p>
+<p style="Normal" xid="446" props="text-align:left; dom-dir:ltr">    {\csname enit@align@#1\endcsname}}</p>
+<p style="Normal" xid="447"><c></c></p>
+<p style="Normal" xid="448" props="text-align:left; dom-dir:ltr">% \nobreak for unboxed label with color. See below.</p>
+<p style="Normal" xid="449"><c></c></p>
+<p style="Normal" xid="450" props="text-align:left; dom-dir:ltr">\newcommand\SetLabelAlign[2]{%</p>
+<p style="Normal" xid="451" props="text-align:left; dom-dir:ltr">  \enit@toks{#2}%</p>
+<p style="Normal" xid="452" props="text-align:left; dom-dir:ltr">  \expandafter\edef\csname enit@align@#1\endcsname</p>
+<p style="Normal" xid="453" props="text-align:left; dom-dir:ltr">    {\def\noexpand\enit@align####1{\nobreak\the\enit@toks}}}</p>
+<p style="Normal" xid="454"><c></c></p>
+<p style="Normal" xid="455" props="text-align:left; dom-dir:ltr">\def\enit@align@right{%</p>
+<p style="Normal" xid="456" props="text-align:left; dom-dir:ltr">  \def\enit@align##1{\nobreak\hss\llap{##1}}}</p>
+<p style="Normal" xid="457"><c></c></p>
+<p style="Normal" xid="458" props="text-align:left; dom-dir:ltr">\def\enit@align@left{%</p>
+<p style="Normal" xid="459" props="text-align:left; dom-dir:ltr">  \def\enit@align##1{\nobreak##1\hfil}}</p>
+<p style="Normal" xid="460"><c></c></p>
+<p style="Normal" xid="461" props="text-align:left; dom-dir:ltr">\def\enit@align@parleft{%</p>
+<p style="Normal" xid="462" props="text-align:left; dom-dir:ltr">  \def\enit@align##1{%</p>
+<p style="Normal" xid="463" props="text-align:left; dom-dir:ltr">    \nobreak</p>
+<p style="Normal" xid="464" props="text-align:left; dom-dir:ltr">    \strut\smash{\parbox[t]\labelwidth{\raggedright##1}}}}</p>
+<p style="Normal" xid="465"><c></c></p>
+<p style="Normal" xid="466" props="text-align:left; dom-dir:ltr">% \enit@ref has three possible definitions:</p>
+<p style="Normal" xid="467" props="text-align:left; dom-dir:ltr">% (1) \relax, if there is neither label nor ref (ie, use</p>
+<p style="Normal" xid="468" props="text-align:left; dom-dir:ltr">%   LaTeX settings).</p>
+<p style="Normal" xid="469" props="text-align:left; dom-dir:ltr">% (2) set ref to @itemlabel, if there is label but not ref</p>
+<p style="Normal" xid="470" props="text-align:left; dom-dir:ltr">% (3) set ref to ref, if there is ref (with or without label)</p>
+<p style="Normal" xid="471"><c></c></p>
+<p style="Normal" xid="472" props="text-align:left; dom-dir:ltr">\enitkv@key{enumitem}{label}{%</p>
+<p style="Normal" xid="473" props="text-align:left; dom-dir:ltr">  \expandafter\def\@itemlabel{#1}%</p>
+<p style="Normal" xid="474" props="text-align:left; dom-dir:ltr">  \def\enit@ref{\expandafter\enit@reflabel\@itemlabel\z@}}</p>
+<p style="Normal" xid="475"><c></c></p>
+<p style="Normal" xid="476" props="text-align:left; dom-dir:ltr">\enitkv@key{enumitem}{label*}{%</p>
+<p style="Normal" xid="477" props="text-align:left; dom-dir:ltr">  \ifnum\enit@depth=\@ne</p>
+<p style="Normal" xid="478" props="text-align:left; dom-dir:ltr">    \expandafter\def\@itemlabel{#1}%</p>
+<p style="Normal" xid="479" props="text-align:left; dom-dir:ltr">  \else % no level 0</p>
+<p style="Normal" xid="480" props="text-align:left; dom-dir:ltr">    \advance\enit@depth\m@ne</p>
+<p style="Normal" xid="481" props="text-align:left; dom-dir:ltr">    \enit@toks{#1}%</p>
+<p style="Normal" xid="482" props="text-align:left; dom-dir:ltr">    \expandafter\edef\@itemlabel{%</p>
+<p style="Normal" xid="483" props="text-align:left; dom-dir:ltr">      \enit@noexcs{label\enit@prevlabel}%</p>
+<p style="Normal" xid="484" props="text-align:left; dom-dir:ltr">      \the\enit@toks}%</p>
+<p style="Normal" xid="485" props="text-align:left; dom-dir:ltr">    \advance\enit@depth\@ne  </p>
+<p style="Normal" xid="486" props="text-align:left; dom-dir:ltr">  \fi</p>
+<p style="Normal" xid="487" props="text-align:left; dom-dir:ltr">  \def\enit@ref{\expandafter\enit@reflabel\@itemlabel\z@}}</p>
+<p style="Normal" xid="488"><c></c></p>
+<p style="Normal" xid="489" props="text-align:left; dom-dir:ltr">% ref is set by label, except if there is an explicit ref</p>
+<p style="Normal" xid="490" props="text-align:left; dom-dir:ltr">% in the same hierarchy level. Explicit refs above the</p>
+<p style="Normal" xid="491" props="text-align:left; dom-dir:ltr">% current hierarchy level are overriden by label (besides ref),</p>
+<p style="Normal" xid="492" props="text-align:left; dom-dir:ltr">% too. Since an explicit ref has preference, it's delayed.</p>
+<p style="Normal" xid="493">  </p>
+<p style="Normal" xid="494" props="text-align:left; dom-dir:ltr">\enitkv@key{enumitem}{ref}{%</p>
+<p style="Normal" xid="495" props="text-align:left; dom-dir:ltr">  \g@addto@macro\enit@delayedkeys{,ref=#1}}</p>
+<p style="Normal" xid="496"><c></c></p>
+<p style="Normal" xid="497" props="text-align:left; dom-dir:ltr">\enitkv@key{enumitem-delayed}{ref}{%</p>
+<p style="Normal" xid="498" props="text-align:left; dom-dir:ltr">  \def\enit@ref{\enit@reflabel{#1}\@ne}}</p>
+<p style="Normal" xid="499"><c></c></p>
+<p style="Normal" xid="500" props="text-align:left; dom-dir:ltr">% #2=0 don't "normalize" (ie, already normalized)</p>
+<p style="Normal" xid="501" props="text-align:left; dom-dir:ltr">%   =1 "normalize" (in key ref)</p>
+<p style="Normal" xid="502" props="text-align:left; dom-dir:ltr">% Used thru \enit@ref</p>
+<p style="Normal" xid="503"><c></c></p>
+<p style="Normal" xid="504" props="text-align:left; dom-dir:ltr">\def\enit@reflabel#1#2{%</p>
+<p style="Normal" xid="505" props="text-align:left; dom-dir:ltr">  \ifnum\enit@depth=\@ne\else % no level 0</p>
+<p style="Normal" xid="506" props="text-align:left; dom-dir:ltr">    \advance\enit@depth\@ne</p>
+<p style="Normal" xid="507" props="text-align:left; dom-dir:ltr">    \@namedef{p@\@enumctr}{}% Don't accumulate labels</p>
+<p style="Normal" xid="508" props="text-align:left; dom-dir:ltr">    \advance\enit@depth\m@ne</p>
+<p style="Normal" xid="509" props="text-align:left; dom-dir:ltr">  \fi</p>
+<p style="Normal" xid="510" props="text-align:left; dom-dir:ltr">  \ifcase#2%</p>
+<p style="Normal" xid="511" props="text-align:left; dom-dir:ltr">    \@namedef{the\@enumctr}{{#1}}%</p>
+<p style="Normal" xid="512" props="text-align:left; dom-dir:ltr">  \else</p>
+<p style="Normal" xid="513" props="text-align:left; dom-dir:ltr">    \enit@normlabel{\csname the\@enumctr\endcsname}{#1}%</p>
+<p style="Normal" xid="514" props="text-align:left; dom-dir:ltr">  \fi}</p>
+<p style="Normal" xid="515"><c></c></p>
+<p style="Normal" xid="516" props="text-align:left; dom-dir:ltr">% \xxx* in counters (refstar) and widest (calcdef)</p>
+<p style="Normal" xid="517">% ------------------------------------------------</p>
+<p style="Normal" xid="518" props="text-align:left; dom-dir:ltr">% \enit@labellist contains a list of</p>
+<p style="Normal" xid="519" props="text-align:left; dom-dir:ltr">% \enit@elt{widest}\count\@count\enit@sc@@count</p>
+<p style="Normal" xid="520" props="text-align:left; dom-dir:ltr">% \enit@elt is either \enit@getwidth or \enit@refstar, defined</p>
+<p style="Normal" xid="521" props="text-align:left; dom-dir:ltr">% below</p>
+<p style="Normal" xid="522" props="text-align:left; dom-dir:ltr">% The current implementation is sub-optimal -- labels are stored in </p>
+<p style="Normal" xid="523" props="text-align:left; dom-dir:ltr">% labellist, counters defined again when processing labels, and</p>
+<p style="Normal" xid="524" props="text-align:left; dom-dir:ltr">% modifying it is almost impossible.</p>
+<p style="Normal" xid="525"><c></c></p>
+<p style="Normal" xid="526" props="text-align:left; dom-dir:ltr">\let\enit@labellist\@empty </p>
+<p style="Normal" xid="527"><c></c></p>
+<p style="Normal" xid="528" props="text-align:left; dom-dir:ltr">\newcommand\AddEnumerateCounter{%</p>
+<p style="Normal" xid="529" props="text-align:left; dom-dir:ltr">  \@ifstar\enit@addcounter@s\enit@addcounter}</p>
+<p style="Normal" xid="530"><c></c></p>
+<p style="Normal" xid="531" props="text-align:left; dom-dir:ltr">\def\enit@addcounter#1#2#3{%</p>
+<p style="Normal" xid="532" props="text-align:left; dom-dir:ltr">  \enit@toks\expandafter{%</p>
+<p style="Normal" xid="533" props="text-align:left; dom-dir:ltr">    \enit@labellist</p>
+<p style="Normal" xid="534" props="text-align:left; dom-dir:ltr">    \enit@elt{#3}}%</p>
+<p style="Normal" xid="535" props="text-align:left; dom-dir:ltr">  \edef\enit@labellist{%</p>
+<p style="Normal" xid="536" props="text-align:left; dom-dir:ltr">    \the\enit@toks</p>
+<p style="Normal" xid="537" props="text-align:left; dom-dir:ltr">    \enit@noexcs{\expandafter\@gobble\string#1}%</p>
+<p style="Normal" xid="538" props="text-align:left; dom-dir:ltr">    \enit@noexcs{\expandafter\@gobble\string#2}%</p>
+<p style="Normal" xid="539" props="text-align:left; dom-dir:ltr">    \enit@noexcs{enit@sc@\expandafter\@gobble\string#2}}}</p>
+<p style="Normal" xid="540"><c></c></p>
+<p style="Normal" xid="541" props="text-align:left; dom-dir:ltr">\def\enit@addcounter@s#1#2#3{%</p>
+<p style="Normal" xid="542" props="text-align:left; dom-dir:ltr">  \enit@addcounter{#1}{#2}%</p>
+<p style="Normal" xid="543" props="text-align:left; dom-dir:ltr">    {\@nameuse{enit@sc@\expandafter\@gobble\string#2}{#3}}}</p>
+<p style="Normal" xid="544"><c></c></p>
+<p style="Normal" xid="545" props="text-align:left; dom-dir:ltr">% The 5 basic counters:</p>
+<p style="Normal" xid="546"><c></c></p>
+<p style="Normal" xid="547" props="text-align:left; dom-dir:ltr">\AddEnumerateCounter\arabic\@arabic{0}</p>
+<p style="Normal" xid="548" props="text-align:left; dom-dir:ltr">\AddEnumerateCounter\alph\@alph{m}</p>
+<p style="Normal" xid="549" props="text-align:left; dom-dir:ltr">\AddEnumerateCounter\Alph\@Alph{M}</p>
+<p style="Normal" xid="550" props="text-align:left; dom-dir:ltr">\AddEnumerateCounter\roman\@roman{viii}</p>
+<p style="Normal" xid="551" props="text-align:left; dom-dir:ltr">\AddEnumerateCounter\Roman\@Roman{VIII}</p>
+<p style="Normal" xid="552"><c></c></p>
+<p style="Normal" xid="553" props="text-align:left; dom-dir:ltr">% Inline lists</p>
+<p style="Normal" xid="554">% ============</p>
+<p style="Normal" xid="555">%</p>
+<p style="Normal" xid="556" props="text-align:left; dom-dir:ltr">% Labels</p>
+<p style="Normal" xid="557">% ------</p>
+<p style="Normal" xid="558"><c></c></p>
+<p style="Normal" xid="559" props="text-align:left; dom-dir:ltr">\enitkv@key{enumitem}{itemjoin}{%</p>
+<p style="Normal" xid="560" props="text-align:left; dom-dir:ltr">  \def\enit@itemjoin{#1}}</p>
+<p style="Normal" xid="561"><c></c></p>
+<p style="Normal" xid="562" props="text-align:left; dom-dir:ltr">\enitkv@key{enumitem}{itemjoin*}{%</p>
+<p style="Normal" xid="563" props="text-align:left; dom-dir:ltr">  \def\enit@itemjoin@s{#1}}</p>
+<p style="Normal" xid="564"><c></c></p>
+<p style="Normal" xid="565" props="text-align:left; dom-dir:ltr">\enitkv@key{enumitem}{afterlabel}{%</p>
+<p style="Normal" xid="566" props="text-align:left; dom-dir:ltr">  \def\enit@afterlabel{#1}}</p>
+<p style="Normal" xid="567"><c></c></p>
+<p style="Normal" xid="568" props="text-align:left; dom-dir:ltr">% Mode</p>
+<p style="Normal" xid="569">% ----</p>
+<p style="Normal" xid="570"><c></c></p>
+<p style="Normal" xid="571" props="text-align:left; dom-dir:ltr">\enitkv@key{enumitem}{mode}{%</p>
+<p style="Normal" xid="572" props="text-align:left; dom-dir:ltr">  \@ifundefined{enit@mode#1}%</p>
+<p style="Normal" xid="573" props="text-align:left; dom-dir:ltr">    {\enit@checkerror{mode}{#1}}%</p>
+<p style="Normal" xid="574" props="text-align:left; dom-dir:ltr">    {\csname enit@mode#1\endcsname}}</p>
+<p style="Normal" xid="575"><c></c></p>
+<p style="Normal" xid="576" props="text-align:left; dom-dir:ltr">\let\enit@modeboxed\enit@boxmodetrue</p>
+<p style="Normal" xid="577" props="text-align:left; dom-dir:ltr">\let\enit@modeunboxed\enit@boxmodefalse</p>
+<p style="Normal" xid="578"><c></c></p>
+<p style="Normal" xid="579" props="text-align:left; dom-dir:ltr">% Short Labels</p>
+<p style="Normal" xid="580">% ============</p>
+<p style="Normal" xid="581"><c></c></p>
+<p style="Normal" xid="582" props="text-align:left; dom-dir:ltr">\let\enit@marklist\@empty</p>
+<p style="Normal" xid="583"><c></c></p>
+<p style="Normal" xid="584" props="text-align:left; dom-dir:ltr">% shorthand, expansion:</p>
+<p style="Normal" xid="585"><c></c></p>
+<p style="Normal" xid="586" props="text-align:left; dom-dir:ltr">\newcommand\SetEnumerateShortLabel[2]{%</p>
+<p style="Normal" xid="587" props="text-align:left; dom-dir:ltr">  \let\enit@a\@empty</p>
+<p style="Normal" xid="588" props="text-align:left; dom-dir:ltr">  \def\enit@elt##1##2{%</p>
+<p style="Normal" xid="589" props="text-align:left; dom-dir:ltr">    \def\enit@b{#1}\def\enit@c{##1}%</p>
+<p style="Normal" xid="590" props="text-align:left; dom-dir:ltr">    \ifx\enit@b\enit@c\else</p>
+<p style="Normal" xid="591" props="text-align:left; dom-dir:ltr">      \expandafter\def\expandafter\enit@a\expandafter{%</p>
+<p style="Normal" xid="592" props="text-align:left; dom-dir:ltr">        \enit@a</p>
+<p style="Normal" xid="593" props="text-align:left; dom-dir:ltr">        \enit@elt{##1}{##2}}%</p>
+<p style="Normal" xid="594" props="text-align:left; dom-dir:ltr">    \fi}%</p>
+<p style="Normal" xid="595" props="text-align:left; dom-dir:ltr">  \enit@marklist</p>
+<p style="Normal" xid="596" props="text-align:left; dom-dir:ltr">  \expandafter\def\expandafter\enit@a\expandafter{%</p>
+<p style="Normal" xid="597" props="text-align:left; dom-dir:ltr">    \enit@a</p>
+<p style="Normal" xid="598" props="text-align:left; dom-dir:ltr">    \enit@elt{#1}{#2}}%</p>
+<p style="Normal" xid="599" props="text-align:left; dom-dir:ltr">  \let\enit@marklist\enit@a}</p>
+<p style="Normal" xid="600"><c></c></p>
+<p style="Normal" xid="601" props="text-align:left; dom-dir:ltr">\SetEnumerateShortLabel{a}{\alph*}</p>
+<p style="Normal" xid="602" props="text-align:left; dom-dir:ltr">\SetEnumerateShortLabel{A}{\Alph*}</p>
+<p style="Normal" xid="603" props="text-align:left; dom-dir:ltr">\SetEnumerateShortLabel{i}{\roman*}</p>
+<p style="Normal" xid="604" props="text-align:left; dom-dir:ltr">\SetEnumerateShortLabel{I}{\Roman*}</p>
+<p style="Normal" xid="605" props="text-align:left; dom-dir:ltr">\SetEnumerateShortLabel{1}{\arabic*}</p>
+<p style="Normal" xid="606"><c></c></p>
+<p style="Normal" xid="607" props="text-align:left; dom-dir:ltr">% This is called \enit@first one,two,three,\@nil\@@nil. If there</p>
+<p style="Normal" xid="608" props="text-align:left; dom-dir:ltr">% are just one element #2 is \@nil, otherwise we have to remove</p>
+<p style="Normal" xid="609" props="text-align:left; dom-dir:ltr">% the trailing ,\@nil with enit@first@x</p>
+<p style="Normal" xid="610" props="text-align:left; dom-dir:ltr">% Called with the keys in \enit@c</p>
+<p style="Normal" xid="611" props="text-align:left; dom-dir:ltr">% Returns enit@toks</p>
+<p style="Normal" xid="612"><c></c></p>
+<p style="Normal" xid="613" props="text-align:left; dom-dir:ltr">\def\enit@first#1,#2\@@nil{%</p>
+<p style="Normal" xid="614" props="text-align:left; dom-dir:ltr">  \in@{=}{#1}% Quick test, if contains =, it's key=value</p>
+<p style="Normal" xid="615" props="text-align:left; dom-dir:ltr">  \ifin@\else</p>
+<p style="Normal" xid="616" props="text-align:left; dom-dir:ltr">    \enitkv@@sp@def\enit@a{#1}%</p>
+<p style="Normal" xid="617" props="text-align:left; dom-dir:ltr">    \@ifundefined{enitkv@enumitem@\enit@meaning\enit@a}%</p>
+<p style="Normal" xid="618" props="text-align:left; dom-dir:ltr">      {\ifnum\enit@type=\z@</p>
+<p style="Normal" xid="619" props="text-align:left; dom-dir:ltr">         \def\enit@elt{\enit@replace\enit@a}%</p>
+<p style="Normal" xid="620" props="text-align:left; dom-dir:ltr">         \enit@marklist % Returns \enit@toks</p>
+<p style="Normal" xid="621" props="text-align:left; dom-dir:ltr">       \else</p>
+<p style="Normal" xid="622" props="text-align:left; dom-dir:ltr">         \enit@toks{#1}%</p>
+<p style="Normal" xid="623" props="text-align:left; dom-dir:ltr">       \fi</p>
+<p style="Normal" xid="624" props="text-align:left; dom-dir:ltr">       \ifx\@nil#2%</p>
+<p style="Normal" xid="625" props="text-align:left; dom-dir:ltr">         \ifx,#1,\else</p>
+<p style="Normal" xid="626" props="text-align:left; dom-dir:ltr">           \edef\enit@c{label=\the\enit@toks}%</p>
+<p style="Normal" xid="627" props="text-align:left; dom-dir:ltr">         \fi</p>
+<p style="Normal" xid="628" props="text-align:left; dom-dir:ltr">       \else</p>
+<p style="Normal" xid="629" props="text-align:left; dom-dir:ltr">         \@temptokena\expandafter{\enit@first@x#2}%</p>
+<p style="Normal" xid="630" props="text-align:left; dom-dir:ltr">         \edef\enit@c{label=\the\enit@toks,\the\@temptokena}%</p>
+<p style="Normal" xid="631" props="text-align:left; dom-dir:ltr">       \fi}%</p>
+<p style="Normal" xid="632">     {}%</p>
+<p style="Normal" xid="633" props="text-align:left; dom-dir:ltr">  \fi</p>
+<p style="Normal" xid="634" props="text-align:left; dom-dir:ltr">  \enit@toks\expandafter{\enit@c}}</p>
+<p style="Normal" xid="635"><c></c></p>
+<p style="Normal" xid="636" props="text-align:left; dom-dir:ltr">\def\enit@first@x#1,\@nil{#1}</p>
+<p style="Normal" xid="637"><c></c></p>
+<p style="Normal" xid="638" props="text-align:left; dom-dir:ltr">\def\enit@replace#1#2#3{%</p>
+<p style="Normal" xid="639" props="text-align:left; dom-dir:ltr">  \enit@toks{}%</p>
+<p style="Normal" xid="640" props="text-align:left; dom-dir:ltr">  \def\enit@b##1#2##2\@@nil{%</p>
+<p style="Normal" xid="641" props="text-align:left; dom-dir:ltr">    \ifx\@nil##2%</p>
+<p style="Normal" xid="642" props="text-align:left; dom-dir:ltr">      \addto@hook\enit@toks{##1}%</p>
+<p style="Normal" xid="643" props="text-align:left; dom-dir:ltr">    \else</p>
+<p style="Normal" xid="644" props="text-align:left; dom-dir:ltr">      \edef\enit@a{\the\enit@toks}%</p>
+<p style="Normal" xid="645" props="text-align:left; dom-dir:ltr">      \ifx\enit@a\@empty\else</p>
+<p style="Normal" xid="646" props="text-align:left; dom-dir:ltr">        \enit@error{Extra short label ignored}%</p>
+<p style="Normal" xid="647" props="text-align:left; dom-dir:ltr">           {There are more than one short label}%</p>
+<p style="Normal" xid="648" props="text-align:left; dom-dir:ltr">      \fi</p>
+<p style="Normal" xid="649" props="text-align:left; dom-dir:ltr">      \addto@hook\enit@toks{##1#3}%</p>
+<p style="Normal" xid="650" props="text-align:left; dom-dir:ltr">      \enit@b##2\@@nil</p>
+<p style="Normal" xid="651" props="text-align:left; dom-dir:ltr">    \fi}%</p>
+<p style="Normal" xid="652" props="text-align:left; dom-dir:ltr">  \expandafter\enit@b#1#2\@nil\@@nil</p>
+<p style="Normal" xid="653" props="text-align:left; dom-dir:ltr">  \edef#1{\the\enit@toks}}</p>
+<p style="Normal" xid="654"><c></c></p>
+<p style="Normal" xid="655" props="text-align:left; dom-dir:ltr">% Pre and post code</p>
+<p style="Normal" xid="656">% =================</p>
+<p style="Normal" xid="657"><c></c></p>
+<p style="Normal" xid="658" props="text-align:left; dom-dir:ltr">\enitkv@key{enumitem}{before}{%</p>
+<p style="Normal" xid="659" props="text-align:left; dom-dir:ltr">  \def\enit@before{#1}}</p>
+<p style="Normal" xid="660"><c></c></p>
+<p style="Normal" xid="661" props="text-align:left; dom-dir:ltr">\enitkv@key{enumitem}{after}{%</p>
+<p style="Normal" xid="662" props="text-align:left; dom-dir:ltr">  \def\enit@after{#1}}</p>
+<p style="Normal" xid="663"><c></c></p>
+<p style="Normal" xid="664" props="text-align:left; dom-dir:ltr">\enitkv@key{enumitem}{before*}{%</p>
+<p style="Normal" xid="665" props="text-align:left; dom-dir:ltr">  \expandafter\def\expandafter\enit@before\expandafter</p>
+<p style="Normal" xid="666" props="text-align:left; dom-dir:ltr">    {\enit@before#1}}</p>
+<p style="Normal" xid="667"><c></c></p>
+<p style="Normal" xid="668" props="text-align:left; dom-dir:ltr">\enitkv@key{enumitem}{after*}{%</p>
+<p style="Normal" xid="669" props="text-align:left; dom-dir:ltr">  \expandafter\def\expandafter\enit@after\expandafter</p>
+<p style="Normal" xid="670" props="text-align:left; dom-dir:ltr">    {\enit@after#1}}</p>
+<p style="Normal" xid="671"><c></c></p>
+<p style="Normal" xid="672" props="text-align:left; dom-dir:ltr">% Miscelaneous keys</p>
+<p style="Normal" xid="673">% ================</p>
+<p style="Normal" xid="674">  </p>
+<p style="Normal" xid="675" props="text-align:left; dom-dir:ltr">\enitkv@key{enumitem}{nolistsep}[true]{%</p>
+<p style="Normal" xid="676" props="text-align:left; dom-dir:ltr">  \partopsep=\z@skip</p>
+<p style="Normal" xid="677" props="text-align:left; dom-dir:ltr">  \topsep=\z@ plus .1pt</p>
+<p style="Normal" xid="678" props="text-align:left; dom-dir:ltr">  \itemsep=\z@skip</p>
+<p style="Normal" xid="679" props="text-align:left; dom-dir:ltr">  \parsep=\z@skip}</p>
+<p style="Normal" xid="680"><c></c></p>
+<p style="Normal" xid="681" props="text-align:left; dom-dir:ltr">\enitkv@key{enumitem}{nosep}[true]{%</p>
+<p style="Normal" xid="682" props="text-align:left; dom-dir:ltr">  \partopsep=\z@skip</p>
+<p style="Normal" xid="683" props="text-align:left; dom-dir:ltr">  \topsep=\z@skip</p>
+<p style="Normal" xid="684" props="text-align:left; dom-dir:ltr">  \itemsep=\z@skip</p>
+<p style="Normal" xid="685" props="text-align:left; dom-dir:ltr">  \parsep=\z@skip}</p>
+<p style="Normal" xid="686"><c></c></p>
+<p style="Normal" xid="687"><c></c></p>
+<p style="Normal" xid="688" props="text-align:left; dom-dir:ltr">\enitkv@key{enumitem}{noitemsep}[true]{%</p>
+<p style="Normal" xid="689" props="text-align:left; dom-dir:ltr">  \itemsep=\z@skip</p>
+<p style="Normal" xid="690" props="text-align:left; dom-dir:ltr">  \parsep=\z@skip}</p>
+<p style="Normal" xid="691"><c></c></p>
+<p style="Normal" xid="692" props="text-align:left; dom-dir:ltr">\enitkv@key{enumitem}{wide}[\parindent]{%</p>
+<p style="Normal" xid="693" props="text-align:left; dom-dir:ltr">  \enit@align@left</p>
+<p style="Normal" xid="694" props="text-align:left; dom-dir:ltr">  \leftmargin\z@</p>
+<p style="Normal" xid="695" props="text-align:left; dom-dir:ltr">  \labelwidth\z@</p>
+<p style="Normal" xid="696" props="text-align:left; dom-dir:ltr">  \setlength\labelindent{#1}%</p>
+<p style="Normal" xid="697" props="text-align:left; dom-dir:ltr">  \listparindent\labelindent</p>
+<p style="Normal" xid="698" props="text-align:left; dom-dir:ltr">  \enit@calcset\itemindent\enit@iv!}</p>
+<p style="Normal" xid="699"><c></c></p>
+<p style="Normal" xid="700" props="text-align:left; dom-dir:ltr">% The following is deprecated in favour of wide:</p>
+<p style="Normal" xid="701"><c></c></p>
+<p style="Normal" xid="702" props="text-align:left; dom-dir:ltr">\enitkv@key{enumitem}{fullwidth}[true]{%</p>
+<p style="Normal" xid="703" props="text-align:left; dom-dir:ltr">  \leftmargin\z@</p>
+<p style="Normal" xid="704" props="text-align:left; dom-dir:ltr">  \labelwidth\z@</p>
+<p style="Normal" xid="705" props="text-align:left; dom-dir:ltr">  \def\enit@align##1{\hskip\labelsep##1}}</p>
+<p style="Normal" xid="706"><c></c></p>
+<p style="Normal" xid="707" props="text-align:left; dom-dir:ltr">% "Abstract" layer</p>
+<p style="Normal" xid="708">% ================</p>
+<p style="Normal" xid="709">%</p>
+<p style="Normal" xid="710" props="text-align:left; dom-dir:ltr">% Named values</p>
+<p style="Normal" xid="711">% ------------</p>
+<p style="Normal" xid="712"><c></c></p>
+<p style="Normal" xid="713" props="text-align:left; dom-dir:ltr">\newcommand\SetEnumitemValue[2]{% Implicit #3</p>
+<p style="Normal" xid="714" props="text-align:left; dom-dir:ltr">  \@ifundefined{enit@enitkv@#1}%</p>
+<p style="Normal" xid="715" props="text-align:left; dom-dir:ltr">    {\@ifundefined{enitkv@enumitem@#1}%</p>
+<p style="Normal" xid="716" props="text-align:left; dom-dir:ltr">       {\enit@error{Wrong key `#1' in \string\SetEnumitemValue}%</p>
+<p style="Normal" xid="717" props="text-align:left; dom-dir:ltr">          {Perhaps you have misspelled it}}{}%</p>
+<p style="Normal" xid="718" props="text-align:left; dom-dir:ltr">     \expandafter\let\csname enit@enitkv@#1\expandafter\endcsname</p>
+<p style="Normal" xid="719" props="text-align:left; dom-dir:ltr">       \csname enitkv@enumitem@#1\endcsname}{}%</p>
+<p style="Normal" xid="720" props="text-align:left; dom-dir:ltr">  \@namedef{enitkv@enumitem@#1}##1{%</p>
+<p style="Normal" xid="721" props="text-align:left; dom-dir:ltr">    \def\enit@a{##1}%</p>
+<p style="Normal" xid="722" props="text-align:left; dom-dir:ltr">    \@ifundefined{enit@enitkv@#1@\enit@meaning\enit@a}%</p>
+<p style="Normal" xid="723" props="text-align:left; dom-dir:ltr">      {\@nameuse{enit@enitkv@#1}{##1}}%</p>
+<p style="Normal" xid="724" props="text-align:left; dom-dir:ltr">      {\@nameuse{enit@enitkv@#1\expandafter\expandafter\expandafter}%</p>
+<p style="Normal" xid="725" props="text-align:left; dom-dir:ltr">         \expandafter\expandafter\expandafter</p>
+<p style="Normal" xid="726" props="text-align:left; dom-dir:ltr">         {\csname enit@enitkv@#1@##1\endcsname}}{}}%</p>
+<p style="Normal" xid="727" props="text-align:left; dom-dir:ltr">  \@namedef{enit@enitkv@#1@#2}}</p>
+<p style="Normal" xid="728"><c></c></p>
+<p style="Normal" xid="729" props="text-align:left; dom-dir:ltr">% Defining keys</p>
+<p style="Normal" xid="730">% -------------</p>
+<p style="Normal" xid="731"><c></c></p>
+<p style="Normal" xid="732" props="text-align:left; dom-dir:ltr">\newcommand\SetEnumitemKey[2]{%</p>
+<p style="Normal" xid="733" props="text-align:left; dom-dir:ltr">  \@ifundefined{enitkv@enumitem@#1}%</p>
+<p style="Normal" xid="734" props="text-align:left; dom-dir:ltr">    {\enitkv@key{enumitem}{#1}[]{\enitkv@setkeys{enumitem}{#2}}}%</p>
+<p style="Normal" xid="735" props="text-align:left; dom-dir:ltr">    {\enit@error{Duplicated key `#1' in \string\SetEnumitemKey}%</p>
+<p style="Normal" xid="736" props="text-align:left; dom-dir:ltr">       {There already exists a key with that name}}}</p>
+<p style="Normal" xid="737"><c></c></p>
+<p style="Normal" xid="738">% +=============================+</p>
+<p style="Normal" xid="739" props="text-align:left; dom-dir:ltr">% |       PROCESSING KEYS       |</p>
+<p style="Normal" xid="740">% +=============================+</p>
+<p style="Normal" xid="741">%</p>
+<p style="Normal" xid="742" props="text-align:left; dom-dir:ltr">% Set keys</p>
+<p style="Normal" xid="743">% ========</p>
+<p style="Normal" xid="744"><c></c></p>
+<p style="Normal" xid="745" props="text-align:left; dom-dir:ltr">\def\enit@setkeys#1{%</p>
+<p style="Normal" xid="746" props="text-align:left; dom-dir:ltr">  \@ifundefined{enit@@#1}{}%</p>
+<p style="Normal" xid="747" props="text-align:left; dom-dir:ltr">    {\expandafter\expandafter\expandafter</p>
+<p style="Normal" xid="748" props="text-align:left; dom-dir:ltr">     \enit@setkeys@i\csname enit@@#1\endcsname\@@}}</p>
+<p style="Normal" xid="749"><c></c></p>
+<p style="Normal" xid="750" props="text-align:left; dom-dir:ltr">% The following is used directly in resumeset:</p>
+<p style="Normal" xid="751"><c></c></p>
+<p style="Normal" xid="752" props="text-align:left; dom-dir:ltr">\def\enit@setkeys@i#1\@@{%</p>
+<p style="Normal" xid="753" props="text-align:left; dom-dir:ltr">  \let\enit@delayedkeys\@empty</p>
+<p style="Normal" xid="754" props="text-align:left; dom-dir:ltr">  \enit@shl{#1}% is or returns \enit@toks</p>
+<p style="Normal" xid="755" props="text-align:left; dom-dir:ltr">  \expandafter\enit@setkeys@ii\the\enit@toks\@@}</p>
+<p style="Normal" xid="756"><c></c></p>
+<p style="Normal" xid="757" props="text-align:left; dom-dir:ltr">\def\enit@setkeys@ii#1\@@{%</p>
+<p style="Normal" xid="758" props="text-align:left; dom-dir:ltr">  \enitkv@setkeys{enumitem}{#1}%</p>
+<p style="Normal" xid="759" props="text-align:left; dom-dir:ltr">  \enit@toks\expandafter{\enit@delayedkeys}%</p>
+<p style="Normal" xid="760" props="text-align:left; dom-dir:ltr">  \edef\enit@a{%</p>
+<p style="Normal" xid="761" props="text-align:left; dom-dir:ltr">    \noexpand\enitkv@setkeys{enumitem-delayed}{\the\enit@toks}}%</p>
+<p style="Normal" xid="762" props="text-align:left; dom-dir:ltr">  \enit@a}</p>
+<p style="Normal" xid="763"><c></c></p>
+<p style="Normal" xid="764" props="text-align:left; dom-dir:ltr">% Handling * and ! values</p>
+<p style="Normal" xid="765">% =======================</p>
+<p style="Normal" xid="766">%</p>
+<p style="Normal" xid="767" props="text-align:left; dom-dir:ltr">% \@gobbletwo removes \c from \c@counter.</p>
+<p style="Normal" xid="768"><c></c></p>
+<p style="Normal" xid="769" props="text-align:left; dom-dir:ltr">\def\enit@getwidth#1#2#3#4{%</p>
+<p style="Normal" xid="770" props="text-align:left; dom-dir:ltr">  \let#4#3%</p>
+<p style="Normal" xid="771" props="text-align:left; dom-dir:ltr">  \def#3##1{%</p>
+<p style="Normal" xid="772" props="text-align:left; dom-dir:ltr">    \@ifundefined{enit@widest\expandafter\@gobbletwo\string##1}% if no widest=key</p>
+<p style="Normal" xid="773">      {#1}%</p>
+<p style="Normal" xid="774" props="text-align:left; dom-dir:ltr">      {\csname enit@widest\expandafter\@gobbletwo\string##1\endcsname{#4}}}}</p>
+<p style="Normal" xid="775"><c></c></p>
+<p style="Normal" xid="776" props="text-align:left; dom-dir:ltr">\def\enit@valueerror#1{\z@ % if after an assignment, but doesn't catch \ifnum</p>
+<p style="Normal" xid="777" props="text-align:left; dom-dir:ltr">   \enit@error{No default \string\value\space for `#1'}%</p>
+<p style="Normal" xid="778" props="text-align:left; dom-dir:ltr">     {You can provide one with widest*}}%</p>
+<p style="Normal" xid="779"><c></c></p>
+<p style="Normal" xid="780" props="text-align:left; dom-dir:ltr">\let\enit@values\@empty</p>
+<p style="Normal" xid="781"><c></c></p>
+<p style="Normal" xid="782" props="text-align:left; dom-dir:ltr">\def\enit@calcwidth{%</p>
+<p style="Normal" xid="783" props="text-align:left; dom-dir:ltr">  \ifenit@calcwidest</p>
+<p style="Normal" xid="784" props="text-align:left; dom-dir:ltr">    \ifnum\enit@type=\z@ % ie, enum</p>
+<p style="Normal" xid="785" props="text-align:left; dom-dir:ltr">      \@ifundefined{enit@cw@\@enumctr}%</p>
+<p style="Normal" xid="786" props="text-align:left; dom-dir:ltr">        {\@namedef{enit@cv@\@enumctr}{\enit@valueerror\@enumctr}}%</p>
+<p style="Normal" xid="787" props="text-align:left; dom-dir:ltr">        {\edef\enit@values{%</p>
+<p style="Normal" xid="788" props="text-align:left; dom-dir:ltr">           \enit@values</p>
+<p style="Normal" xid="789" props="text-align:left; dom-dir:ltr">           \@nameuse{c@\@enumctr}\@nameuse{enit@cw@\@enumctr}\relax}%</p>
+<p style="Normal" xid="790" props="text-align:left; dom-dir:ltr">         \expandafter</p>
+<p style="Normal" xid="791" props="text-align:left; dom-dir:ltr">         \edef\csname enit@cv@\@enumctr\endcsname</p>
+<p style="Normal" xid="792" props="text-align:left; dom-dir:ltr">           {\@nameuse{c@\@enumctr}}}%</p>
+<p style="Normal" xid="793" props="text-align:left; dom-dir:ltr">    \fi</p>
+<p style="Normal" xid="794" props="text-align:left; dom-dir:ltr">    \begingroup</p>
+<p style="Normal" xid="795" props="text-align:left; dom-dir:ltr">      \enit@values</p>
+<p style="Normal" xid="796" props="text-align:left; dom-dir:ltr">      \def\value##1{\csname enit@cv@##1\endcsname}%</p>
+<p style="Normal" xid="797" props="text-align:left; dom-dir:ltr">      \let\enit@elt\enit@getwidth</p>
+<p style="Normal" xid="798" props="text-align:left; dom-dir:ltr">      \enit@labellist</p>
+<p style="Normal" xid="799" props="text-align:left; dom-dir:ltr">      \settowidth\labelwidth{\@itemlabel}%</p>
+<p style="Normal" xid="800" props="text-align:left; dom-dir:ltr">      \xdef\enit@a{\labelwidth\the\labelwidth\relax}%</p>
+<p style="Normal" xid="801" props="text-align:left; dom-dir:ltr">    \endgroup</p>
+<p style="Normal" xid="802" props="text-align:left; dom-dir:ltr">    \enit@a</p>
+<p style="Normal" xid="803" props="text-align:left; dom-dir:ltr">  \fi</p>
+<p style="Normal" xid="804" props="text-align:left; dom-dir:ltr">  \advance\dimen@-\labelwidth}</p>
+<p style="Normal" xid="805"><c></c></p>
+<p style="Normal" xid="806" props="text-align:left; dom-dir:ltr">\def\enit@calcleft{%</p>
+<p style="Normal" xid="807" props="text-align:left; dom-dir:ltr">  \dimen@\leftmargin</p>
+<p style="Normal" xid="808" props="text-align:left; dom-dir:ltr">  \advance\dimen@\itemindent</p>
+<p style="Normal" xid="809" props="text-align:left; dom-dir:ltr">  \advance\dimen@-\labelsep</p>
+<p style="Normal" xid="810" props="text-align:left; dom-dir:ltr">  \advance\dimen@-\labelindent</p>
+<p style="Normal" xid="811" props="text-align:left; dom-dir:ltr">  \ifcase\enit@calc % = 0 = labelindent</p>
+<p style="Normal" xid="812" props="text-align:left; dom-dir:ltr">    \enit@calcwidth</p>
+<p style="Normal" xid="813" props="text-align:left; dom-dir:ltr">    \advance\labelindent\dimen@</p>
+<p style="Normal" xid="814" props="text-align:left; dom-dir:ltr">  \or % = 1 = labelwidth, so no \enit@calcwidth</p>
+<p style="Normal" xid="815" props="text-align:left; dom-dir:ltr">    \labelwidth\dimen@</p>
+<p style="Normal" xid="816" props="text-align:left; dom-dir:ltr">  \or % = 2 = labelsep</p>
+<p style="Normal" xid="817" props="text-align:left; dom-dir:ltr">    \enit@calcwidth</p>
+<p style="Normal" xid="818" props="text-align:left; dom-dir:ltr">    \advance\labelsep\dimen@</p>
+<p style="Normal" xid="819" props="text-align:left; dom-dir:ltr">  \or % = 3 = leftmargin</p>
+<p style="Normal" xid="820" props="text-align:left; dom-dir:ltr">    \enit@calcwidth</p>
+<p style="Normal" xid="821" props="text-align:left; dom-dir:ltr">    \advance\leftmargin-\dimen@</p>
+<p style="Normal" xid="822" props="text-align:left; dom-dir:ltr">  \or % = 4 =itemindent</p>
+<p style="Normal" xid="823" props="text-align:left; dom-dir:ltr">    \enit@calcwidth</p>
+<p style="Normal" xid="824" props="text-align:left; dom-dir:ltr">    \advance\itemindent-\dimen@</p>
+<p style="Normal" xid="825" props="text-align:left; dom-dir:ltr">  \fi}</p>
+<p style="Normal" xid="826"><c></c></p>
+<p style="Normal" xid="827" props="text-align:left; dom-dir:ltr">% "Normalizing" labels</p>
+<p style="Normal" xid="828">% ====================</p>
+<p style="Normal" xid="829">%</p>
+<p style="Normal" xid="830" props="text-align:left; dom-dir:ltr">% Replaces \counter* by \counter{level} (those in \enit@labellist).</p>
+<p style="Normal" xid="831">%</p>
+<p style="Normal" xid="832" props="text-align:left; dom-dir:ltr">% #1 is either \csname...\endcsmame or the container \@itemlabel --</p>
+<p style="Normal" xid="833" props="text-align:left; dom-dir:ltr">% hence \expandafter</p>
+<p style="Normal" xid="834"><c></c></p>
+<p style="Normal" xid="835" props="text-align:left; dom-dir:ltr">\def\enit@refstar@i#1#2{%</p>
+<p style="Normal" xid="836" props="text-align:left; dom-dir:ltr">  \if*#2\@empty</p>
+<p style="Normal" xid="837" props="text-align:left; dom-dir:ltr">    \noexpand#1{\@enumctr}%</p>
+<p style="Normal" xid="838" props="text-align:left; dom-dir:ltr">  \else</p>
+<p style="Normal" xid="839" props="text-align:left; dom-dir:ltr">    \noexpand#1{#2}%</p>
+<p style="Normal" xid="840" props="text-align:left; dom-dir:ltr">  \fi}%</p>
+<p style="Normal" xid="841"><c></c></p>
+<p style="Normal" xid="842" props="text-align:left; dom-dir:ltr">\def\enit@refstar#1#2#3#4{%</p>
+<p style="Normal" xid="843" props="text-align:left; dom-dir:ltr">  \def#2{\enit@refstar@i#2}%</p>
+<p style="Normal" xid="844" props="text-align:left; dom-dir:ltr">  \def#3{\enit@refstar@i#3}}</p>
+<p style="Normal" xid="845"><c></c></p>
+<p style="Normal" xid="846" props="text-align:left; dom-dir:ltr">\def\enit@normlabel#1#2{%</p>
+<p style="Normal" xid="847" props="text-align:left; dom-dir:ltr">  \begingroup</p>
+<p style="Normal" xid="848" props="text-align:left; dom-dir:ltr">    \def\value{\enit@refstar@i\value}%</p>
+<p style="Normal" xid="849" props="text-align:left; dom-dir:ltr">    \let\enit@elt\enit@refstar</p>
+<p style="Normal" xid="850" props="text-align:left; dom-dir:ltr">    \enit@labellist</p>
+<p style="Normal" xid="851" props="text-align:left; dom-dir:ltr">    \protected@xdef\enit@a{{#2}}% Added braces as \ref is in the </p>
+<p style="Normal" xid="852" props="text-align:left; dom-dir:ltr">  \endgroup</p>
+<p style="Normal" xid="853" props="text-align:left; dom-dir:ltr">  \expandafter\let#1\enit@a}                    % global scope. </p>
+<p style="Normal" xid="854"><c></c></p>
+<p style="Normal" xid="855" props="text-align:left; dom-dir:ltr">% Preliminary settings and default values</p>
+<p style="Normal" xid="856">% =======================================</p>
+<p style="Normal" xid="857"><c></c></p>
+<p style="Normal" xid="858" props="text-align:left; dom-dir:ltr">\def\enit@prelist#1#2#3{%</p>
+<p style="Normal" xid="859" props="text-align:left; dom-dir:ltr">  \let\enit@type#1%</p>
+<p style="Normal" xid="860" props="text-align:left; dom-dir:ltr">  \def\enit@depth{#2}%</p>
+<p style="Normal" xid="861" props="text-align:left; dom-dir:ltr">  \edef\enit@prevlabel{#3\romannumeral#2}%</p>
+<p style="Normal" xid="862" props="text-align:left; dom-dir:ltr">  \advance#2\@ne}</p>
+<p style="Normal" xid="863">     </p>
+<p style="Normal" xid="864" props="text-align:left; dom-dir:ltr">\def\enit@preset#1#2#3{%</p>
+<p style="Normal" xid="865" props="text-align:left; dom-dir:ltr">   \enit@sepfrommarginfalse</p>
+<p style="Normal" xid="866" props="text-align:left; dom-dir:ltr">   \enit@calcwidestfalse</p>
+<p style="Normal" xid="867" props="text-align:left; dom-dir:ltr">   \let\enit@resuming\z@</p>
+<p style="Normal" xid="868" props="text-align:left; dom-dir:ltr">   \let\enit@series\relax</p>
+<p style="Normal" xid="869" props="text-align:left; dom-dir:ltr">   \enit@boxmodetrue</p>
+<p style="Normal" xid="870" props="text-align:left; dom-dir:ltr">   \def\enit@itemjoin{ }%</p>
+<p style="Normal" xid="871" props="text-align:left; dom-dir:ltr">   \let\enit@itemjoin@s\relax</p>
+<p style="Normal" xid="872" props="text-align:left; dom-dir:ltr">   \let\enit@afterlabel\nobreakspace</p>
+<p style="Normal" xid="873" props="text-align:left; dom-dir:ltr">   \let\enit@before\@empty</p>
+<p style="Normal" xid="874" props="text-align:left; dom-dir:ltr">   \let\enit@after\@empty</p>
+<p style="Normal" xid="875" props="text-align:left; dom-dir:ltr">   \let\enit@format\@firstofone % and NOT empty</p>
+<p style="Normal" xid="876" props="text-align:left; dom-dir:ltr">   \let\enit@ref\relax</p>
+<p style="Normal" xid="877" props="text-align:left; dom-dir:ltr">   \labelindent\z@skip</p>
+<p style="Normal" xid="878" props="text-align:left; dom-dir:ltr">   \ifnum\@listdepth=\@ne</p>
+<p style="Normal" xid="879" props="text-align:left; dom-dir:ltr">     \enit@outerparindent\parindent</p>
+<p style="Normal" xid="880" props="text-align:left; dom-dir:ltr">   \else</p>
+<p style="Normal" xid="881" props="text-align:left; dom-dir:ltr">     \parindent\enit@outerparindent</p>
+<p style="Normal" xid="882" props="text-align:left; dom-dir:ltr">   \fi</p>
+<p style="Normal" xid="883" props="text-align:left; dom-dir:ltr">   \enit@setkeys{list}%</p>
+<p style="Normal" xid="884" props="text-align:left; dom-dir:ltr">   \enit@setkeys{list\romannumeral\@listdepth}%</p>
+<p style="Normal" xid="885" props="text-align:left; dom-dir:ltr">   \enit@setkeys{#1}%</p>
+<p style="Normal" xid="886" props="text-align:left; dom-dir:ltr">   \enit@setkeys{#1\romannumeral#2}%</p>
+<p style="Normal" xid="887" props="text-align:left; dom-dir:ltr">   \enit@setresume{#3}}</p>
+<p style="Normal" xid="888"><c></c></p>
+<p style="Normal" xid="889" props="text-align:left; dom-dir:ltr">% keyval "error" in enumitem-resume: all undefined keys (ie, all</p>
+<p style="Normal" xid="890" props="text-align:left; dom-dir:ltr">% except resume*) are ignored, but &lt;series&gt; is treated like</p>
+<p style="Normal" xid="891" props="text-align:left; dom-dir:ltr">% resume*=&lt;series&gt;</p>
+<p style="Normal" xid="892"><c></c></p>
+<p style="Normal" xid="893" props="text-align:left; dom-dir:ltr">\def\enitkv@err@a#1{%</p>
+<p style="Normal" xid="894" props="text-align:left; dom-dir:ltr">   \@ifundefined{enit@resumekeys@series@\@tempa}{}%</p>
+<p style="Normal" xid="895" props="text-align:left; dom-dir:ltr">     {\@nameuse{enitkv@enumitem-resume@resume*\expandafter}%</p>
+<p style="Normal" xid="896" props="text-align:left; dom-dir:ltr">        \expandafter{\@tempa}}}</p>
+<p style="Normal" xid="897"><c></c></p>
+<p style="Normal" xid="898" props="text-align:left; dom-dir:ltr">% keyval "error" in the optional argument: all undefined keys are</p>
+<p style="Normal" xid="899" props="text-align:left; dom-dir:ltr">% passed to the keyval error, but &lt;series&gt; is ignored (already</p>
+<p style="Normal" xid="900" props="text-align:left; dom-dir:ltr">% processed in enumitem-resume</p>
+<p style="Normal" xid="901"><c></c></p>
+<p style="Normal" xid="902" props="text-align:left; dom-dir:ltr">\def\enitkv@err@b#1{%</p>
+<p style="Normal" xid="903" props="text-align:left; dom-dir:ltr">   \@ifundefined{enit@resumekeys@series@\@tempa}%</p>
+<p style="Normal" xid="904" props="text-align:left; dom-dir:ltr">     {\enit@savekverr{#1}}%</p>
+<p style="Normal" xid="905">     {}}</p>
+<p style="Normal" xid="906"><c></c></p>
+<p style="Normal" xid="907" props="text-align:left; dom-dir:ltr">% Process keys in optional argument:</p>
+<p style="Normal" xid="908"><c></c></p>
+<p style="Normal" xid="909" props="text-align:left; dom-dir:ltr">\def\enit@setresume#1{%</p>
+<p style="Normal" xid="910" props="text-align:left; dom-dir:ltr">  \enit@shl{#1}% Returns enit@toks</p>
+<p style="Normal" xid="911" props="text-align:left; dom-dir:ltr">  \edef\enit@savekeys{\the\enit@toks}%</p>
+<p style="Normal" xid="912" props="text-align:left; dom-dir:ltr">  \let\enit@savekverr\enitkv@errx</p>
+<p style="Normal" xid="913" props="text-align:left; dom-dir:ltr">  \let\enitkv@errx\enitkv@err@a</p>
+<p style="Normal" xid="914" props="text-align:left; dom-dir:ltr">  \edef\enit@b{%</p>
+<p style="Normal" xid="915" props="text-align:left; dom-dir:ltr">    \noexpand\enitkv@setkeys{enumitem-resume}{\the\enit@toks}}%</p>
+<p style="Normal" xid="916" props="text-align:left; dom-dir:ltr">  \enit@b</p>
+<p style="Normal" xid="917" props="text-align:left; dom-dir:ltr">  \let\enitkv@errx\enitkv@err@b</p>
+<p style="Normal" xid="918" props="text-align:left; dom-dir:ltr">  \ifcase\enit@resuming\or\or % = 2</p>
+<p style="Normal" xid="919" props="text-align:left; dom-dir:ltr">    \expandafter</p>
+<p style="Normal" xid="920" props="text-align:left; dom-dir:ltr">    \enit@setkeys@i\enit@resumekeys,resume=\enit@series\@@</p>
+<p style="Normal" xid="921" props="text-align:left; dom-dir:ltr">  \or % = 3</p>
+<p style="Normal" xid="922" props="text-align:left; dom-dir:ltr">    \expandafter</p>
+<p style="Normal" xid="923" props="text-align:left; dom-dir:ltr">    \enit@setkeys@i\enit@resumekeys,resume\@@</p>
+<p style="Normal" xid="924" props="text-align:left; dom-dir:ltr">  \fi</p>
+<p style="Normal" xid="925" props="text-align:left; dom-dir:ltr">  \expandafter\enit@setkeys@i\enit@savekeys\@@</p>
+<p style="Normal" xid="926" props="text-align:left; dom-dir:ltr">  \let\enitkv@errx\enit@savekverr}</p>
+<p style="Normal" xid="927"><c></c></p>
+<p style="Normal" xid="928">% +=============================+</p>
+<p style="Normal" xid="929" props="text-align:left; dom-dir:ltr">% |         LIST TYPES          |</p>
+<p style="Normal" xid="930">% +=============================+</p>
+<p style="Normal" xid="931">%</p>
+<p style="Normal" xid="932" props="text-align:left; dom-dir:ltr">% Displayed lists</p>
+<p style="Normal" xid="933">% ===============</p>
+<p style="Normal" xid="934" props="text-align:left; dom-dir:ltr">% #1 #2 implicit</p>
+<p style="Normal" xid="935"><c></c></p>
+<p style="Normal" xid="936" props="text-align:left; dom-dir:ltr">\def\enit@dylist{%</p>
+<p style="Normal" xid="937" props="text-align:left; dom-dir:ltr">  \enit@align@right</p>
+<p style="Normal" xid="938" props="text-align:left; dom-dir:ltr">  \list}</p>
+<p style="Normal" xid="939"><c></c></p>
+<p style="Normal" xid="940" props="text-align:left; dom-dir:ltr">\def\enit@endlist{%</p>
+<p style="Normal" xid="941" props="text-align:left; dom-dir:ltr">  \enit@after</p>
+<p style="Normal" xid="942" props="text-align:left; dom-dir:ltr">  \endlist</p>
+<p style="Normal" xid="943" props="text-align:left; dom-dir:ltr">  \ifx\enit@series\relax\else % discards resume*, too</p>
+<p style="Normal" xid="944" props="text-align:left; dom-dir:ltr">    \ifnum\enit@resuming=\@ne % ie, series=</p>
+<p style="Normal" xid="945" props="text-align:left; dom-dir:ltr">      \enit@setresumekeys{series@\enit@series}\global\global</p>
+<p style="Normal" xid="946" props="text-align:left; dom-dir:ltr">    \else % ie, resume=, resume*= (save count, but not keys)</p>
+<p style="Normal" xid="947" props="text-align:left; dom-dir:ltr">      \enit@setresumekeys{series@\enit@series}\@gobblefour\global</p>
+<p style="Normal" xid="948" props="text-align:left; dom-dir:ltr">    \fi</p>
+<p style="Normal" xid="949" props="text-align:left; dom-dir:ltr">    \enit@afterlist</p>
+<p style="Normal" xid="950" props="text-align:left; dom-dir:ltr">  \fi</p>
+<p style="Normal" xid="951" props="text-align:left; dom-dir:ltr">  \ifnum\enit@resuming=\thr@@ % ie, resume* list (save count only)</p>
+<p style="Normal" xid="952" props="text-align:left; dom-dir:ltr">    \enit@setresumekeys\@currenvir\@gobblefour\global</p>
+<p style="Normal" xid="953" props="text-align:left; dom-dir:ltr">  \else</p>
+<p style="Normal" xid="954" props="text-align:left; dom-dir:ltr">    \enit@setresumekeys\@currenvir\@empty\@empty</p>
+<p style="Normal" xid="955" props="text-align:left; dom-dir:ltr">  \fi</p>
+<p style="Normal" xid="956" props="text-align:left; dom-dir:ltr">  \aftergroup\enit@afterlist}</p>
+<p style="Normal" xid="957"><c></c></p>
+<p style="Normal" xid="958" props="text-align:left; dom-dir:ltr">% #1 = either \@currenvir or series@&lt;series&gt;</p>
+<p style="Normal" xid="959" props="text-align:left; dom-dir:ltr">% #2(keys) #3(counter) are \global, \@gobblefour or \@empty</p>
+<p style="Normal" xid="960"><c></c></p>
+<p style="Normal" xid="961" props="text-align:left; dom-dir:ltr">\def\enit@setresumekeys#1#2#3{%</p>
+<p style="Normal" xid="962" props="text-align:left; dom-dir:ltr">  \enit@toks\expandafter{\enit@savekeys}%</p>
+<p style="Normal" xid="963" props="text-align:left; dom-dir:ltr">  \xdef\enit@afterlist{%</p>
+<p style="Normal" xid="964" props="text-align:left; dom-dir:ltr">    #2\def\enit@noexcs{enit@resumekeys@#1}{\the\enit@toks}%</p>
+<p style="Normal" xid="965" props="text-align:left; dom-dir:ltr">    \ifnum\enit@type=\z@ % ie, enum</p>
+<p style="Normal" xid="966" props="text-align:left; dom-dir:ltr">      #3\def\enit@noexcs{enit@resume@#1}{%</p>
+<p style="Normal" xid="967" props="text-align:left; dom-dir:ltr">        \csname c@\@listctr\endcsname</p>
+<p style="Normal" xid="968" props="text-align:left; dom-dir:ltr">        \the\csname c@\@listctr\endcsname}%</p>
+<p style="Normal" xid="969" props="text-align:left; dom-dir:ltr">    \fi}}</p>
+<p style="Normal" xid="970"><c></c></p>
+<p style="Normal" xid="971" props="text-align:left; dom-dir:ltr">% Inline lists</p>
+<p style="Normal" xid="972">% ============</p>
+<p style="Normal" xid="973"><c></c></p>
+<p style="Normal" xid="974" props="text-align:left; dom-dir:ltr">% Definition of \@trivlist inside inline lists.  So, when</p>
+<p style="Normal" xid="975" props="text-align:left; dom-dir:ltr">% \@trivlist is found in any displayed list (including quote,</p>
+<p style="Normal" xid="976" props="text-align:left; dom-dir:ltr">% center, verbatim...) the default \@item is restored.</p>
+<p style="Normal" xid="977"><c></c></p>
+<p style="Normal" xid="978" props="text-align:left; dom-dir:ltr">\def\enit@intrivlist{%</p>
+<p style="Normal" xid="979" props="text-align:left; dom-dir:ltr">  \enit@changed@itemfalse</p>
+<p style="Normal" xid="980" props="text-align:left; dom-dir:ltr">  \let\@item\enit@outer@item</p>
+<p style="Normal" xid="981" props="text-align:left; dom-dir:ltr">  \let\par\@@par</p>
+<p style="Normal" xid="982" props="text-align:left; dom-dir:ltr">  \let\@trivlist\enit@outer@triv</p>
+<p style="Normal" xid="983" props="text-align:left; dom-dir:ltr">  \@trivlist}</p>
+<p style="Normal" xid="984"><c></c></p>
+<p style="Normal" xid="985" props="text-align:left; dom-dir:ltr">% Keep track of \@item and \item changes</p>
+<p style="Normal" xid="986"><c></c></p>
+<p style="Normal" xid="987" props="text-align:left; dom-dir:ltr">\newif\ifenit@changed@item</p>
+<p style="Normal" xid="988" props="text-align:left; dom-dir:ltr">\enit@changed@itemfalse</p>
+<p style="Normal" xid="989"><c></c></p>
+<p style="Normal" xid="990" props="text-align:left; dom-dir:ltr">\newif\ifenit@changeditem</p>
+<p style="Normal" xid="991" props="text-align:left; dom-dir:ltr">\enit@changeditemfalse</p>
+<p style="Normal" xid="992"><c></c></p>
+<p style="Normal" xid="993" props="text-align:left; dom-dir:ltr">% List</p>
+<p style="Normal" xid="994">% ----</p>
+<p style="Normal" xid="995"><c></c></p>
+<p style="Normal" xid="996" props="text-align:left; dom-dir:ltr">% Arguments, as before:</p>
+<p style="Normal" xid="997" props="text-align:left; dom-dir:ltr">% \enitdp@&lt;name&gt;, &lt;name&gt;, &lt;max-depth&gt;, &lt;format&gt;</p>
+<p style="Normal" xid="998" props="text-align:left; dom-dir:ltr">% About @newlist, see @initem.</p>
+<p style="Normal" xid="999"><c></c></p>
+<p style="Normal" xid="1000" props="text-align:left; dom-dir:ltr">\def\enit@inlist#1#2{%</p>
+<p style="Normal" xid="1001" props="text-align:left; dom-dir:ltr">  \ifnum\@listdepth&gt;\enit@listdepth\relax</p>
+<p style="Normal" xid="1002" props="text-align:left; dom-dir:ltr">    \@toodeep</p>
+<p style="Normal" xid="1003" props="text-align:left; dom-dir:ltr">  \else</p>
+<p style="Normal" xid="1004" props="text-align:left; dom-dir:ltr">    \global\advance\@listdepth\@ne</p>
+<p style="Normal" xid="1005" props="text-align:left; dom-dir:ltr">  \fi</p>
+<p style="Normal" xid="1006" props="text-align:left; dom-dir:ltr">  \let\enit@align\@firstofone</p>
+<p style="Normal" xid="1007" props="text-align:left; dom-dir:ltr">  \def\@itemlabel{#1}%</p>
+<p style="Normal" xid="1008" props="text-align:left; dom-dir:ltr">  \@nmbrlistfalse</p>
+<p style="Normal" xid="1009" props="text-align:left; dom-dir:ltr">  \ifenit@changed@item\else</p>
+<p style="Normal" xid="1010" props="text-align:left; dom-dir:ltr">    \enit@changed@itemtrue</p>
+<p style="Normal" xid="1011" props="text-align:left; dom-dir:ltr">    \let\enit@outer@triv\@trivlist</p>
+<p style="Normal" xid="1012" props="text-align:left; dom-dir:ltr">    \let\@trivlist\enit@intrivlist</p>
+<p style="Normal" xid="1013" props="text-align:left; dom-dir:ltr">    \@setpar\@empty</p>
+<p style="Normal" xid="1014" props="text-align:left; dom-dir:ltr">    \let\enit@outer@item\@item</p>
+<p style="Normal" xid="1015" props="text-align:left; dom-dir:ltr">  \fi</p>
+<p style="Normal" xid="1016" props="text-align:left; dom-dir:ltr">  #2\relax</p>
+<p style="Normal" xid="1017" props="text-align:left; dom-dir:ltr">  \global\@newlisttrue</p>
+<p style="Normal" xid="1018" props="text-align:left; dom-dir:ltr">  \ifenit@boxmode</p>
+<p style="Normal" xid="1019" props="text-align:left; dom-dir:ltr">    \ifenit@changeditem\else</p>
+<p style="Normal" xid="1020" props="text-align:left; dom-dir:ltr">      \enit@changeditemtrue</p>
+<p style="Normal" xid="1021" props="text-align:left; dom-dir:ltr">      \let\enit@outeritem\item</p>
+<p style="Normal" xid="1022" props="text-align:left; dom-dir:ltr">    \fi</p>
+<p style="Normal" xid="1023" props="text-align:left; dom-dir:ltr">    \let\@item\enit@boxitem</p>
+<p style="Normal" xid="1024" props="text-align:left; dom-dir:ltr">  \else</p>
+<p style="Normal" xid="1025" props="text-align:left; dom-dir:ltr">    \let\@item\enit@noboxitem</p>
+<p style="Normal" xid="1026" props="text-align:left; dom-dir:ltr">    \ifx\enit@itemjoin@s\relax\else</p>
+<p style="Normal" xid="1027" props="text-align:left; dom-dir:ltr">      \PackageWarning{enumitem}%</p>
+<p style="Normal" xid="1028" props="text-align:left; dom-dir:ltr">         {itemjoin* discarded in mode unboxed\MessageBreak}%</p>
+<p style="Normal" xid="1029" props="text-align:left; dom-dir:ltr">    \fi</p>
+<p style="Normal" xid="1030" props="text-align:left; dom-dir:ltr">  \fi</p>
+<p style="Normal" xid="1031" props="text-align:left; dom-dir:ltr">  \let\enit@calcleft\relax</p>
+<p style="Normal" xid="1032" props="text-align:left; dom-dir:ltr">  \let\enit@afteritem\relax</p>
+<p style="Normal" xid="1033" props="text-align:left; dom-dir:ltr">  \ifenit@boxmode</p>
+<p style="Normal" xid="1034" props="text-align:left; dom-dir:ltr">    \global\setbox\enit@inbox\hbox\bgroup\color@begingroup</p>
+<p style="Normal" xid="1035" props="text-align:left; dom-dir:ltr">      \let\item\enit@endinbox</p>
+<p style="Normal" xid="1036" props="text-align:left; dom-dir:ltr">  \fi</p>
+<p style="Normal" xid="1037" props="text-align:left; dom-dir:ltr">  \ignorespaces}</p>
+<p style="Normal" xid="1038"><c></c></p>
+<p style="Normal" xid="1039" props="text-align:left; dom-dir:ltr">\def\enit@endinlist{%</p>
+<p style="Normal" xid="1040" props="text-align:left; dom-dir:ltr">  \ifenit@boxmode</p>
+<p style="Normal" xid="1041" props="text-align:left; dom-dir:ltr">      \unskip</p>
+<p style="Normal" xid="1042" props="text-align:left; dom-dir:ltr">      \xdef\enit@afteritem{%</p>
+<p style="Normal" xid="1043" props="text-align:left; dom-dir:ltr">        \ifhmode\spacefactor\the\spacefactor\relax\fi}%</p>
+<p style="Normal" xid="1044" props="text-align:left; dom-dir:ltr">      \color@endgroup</p>
+<p style="Normal" xid="1045" props="text-align:left; dom-dir:ltr">    \egroup</p>
+<p style="Normal" xid="1046" props="text-align:left; dom-dir:ltr">    \ifdim\wd\enit@inbox=\z@</p>
+<p style="Normal" xid="1047" props="text-align:left; dom-dir:ltr">      \enit@itemerror</p>
+<p style="Normal" xid="1048" props="text-align:left; dom-dir:ltr">    \else</p>
+<p style="Normal" xid="1049" props="text-align:left; dom-dir:ltr">      \ifenit@noinitem\else</p>
+<p style="Normal" xid="1050" props="text-align:left; dom-dir:ltr">        \ifhmode\unskip\fi</p>
+<p style="Normal" xid="1051" props="text-align:left; dom-dir:ltr">        \@ifundefined{enit@itemjoin@s}%</p>
+<p style="Normal" xid="1052" props="text-align:left; dom-dir:ltr">          {\enit@itemjoin}%</p>
+<p style="Normal" xid="1053" props="text-align:left; dom-dir:ltr">          {\enit@itemjoin@s}%</p>
+<p style="Normal" xid="1054" props="text-align:left; dom-dir:ltr">      \fi</p>
+<p style="Normal" xid="1055" props="text-align:left; dom-dir:ltr">      \unhbox\@labels</p>
+<p style="Normal" xid="1056" props="text-align:left; dom-dir:ltr">      \enit@afterlabel</p>
+<p style="Normal" xid="1057" props="text-align:left; dom-dir:ltr">      \unhbox\enit@inbox</p>
+<p style="Normal" xid="1058" props="text-align:left; dom-dir:ltr">      \enit@afteritem</p>
+<p style="Normal" xid="1059" props="text-align:left; dom-dir:ltr">    \fi</p>
+<p style="Normal" xid="1060" props="text-align:left; dom-dir:ltr">  \else</p>
+<p style="Normal" xid="1061" props="text-align:left; dom-dir:ltr">    \unskip</p>
+<p style="Normal" xid="1062" props="text-align:left; dom-dir:ltr">    \if@newlist</p>
+<p style="Normal" xid="1063" props="text-align:left; dom-dir:ltr">      \enit@itemerror</p>
+<p style="Normal" xid="1064" props="text-align:left; dom-dir:ltr">    \fi</p>
+<p style="Normal" xid="1065" props="text-align:left; dom-dir:ltr">  \fi</p>
+<p style="Normal" xid="1066" props="text-align:left; dom-dir:ltr">  \enit@after</p>
+<p style="Normal" xid="1067" props="text-align:left; dom-dir:ltr">  \global\advance\@listdepth\m@ne</p>
+<p style="Normal" xid="1068" props="text-align:left; dom-dir:ltr">  \global\@inlabelfalse</p>
+<p style="Normal" xid="1069" props="text-align:left; dom-dir:ltr">  \if@newlist</p>
+<p style="Normal" xid="1070" props="text-align:left; dom-dir:ltr">    \global\@newlistfalse</p>
+<p style="Normal" xid="1071" props="text-align:left; dom-dir:ltr">    \@noitemerr</p>
+<p style="Normal" xid="1072" props="text-align:left; dom-dir:ltr">  \fi</p>
+<p style="Normal" xid="1073" props="text-align:left; dom-dir:ltr">  \ifx\enit@series\relax\else % discards resume* list, too</p>
+<p style="Normal" xid="1074" props="text-align:left; dom-dir:ltr">    \ifnum\enit@resuming=\@ne % ie, series</p>
+<p style="Normal" xid="1075" props="text-align:left; dom-dir:ltr">      \enit@setresumekeys{series@\enit@series}\global\global</p>
+<p style="Normal" xid="1076" props="text-align:left; dom-dir:ltr">    \else % ie, resume, resume* (save count, but not keys)</p>
+<p style="Normal" xid="1077" props="text-align:left; dom-dir:ltr">      \enit@setresumekeys{series@\enit@series}\@gobblefour\global</p>
+<p style="Normal" xid="1078" props="text-align:left; dom-dir:ltr">    \fi</p>
+<p style="Normal" xid="1079" props="text-align:left; dom-dir:ltr">    \enit@afterlist</p>
+<p style="Normal" xid="1080" props="text-align:left; dom-dir:ltr">  \fi</p>
+<p style="Normal" xid="1081" props="text-align:left; dom-dir:ltr">  \ifnum\enit@resuming=\thr@@ % ie, resume* list (save count only)</p>
+<p style="Normal" xid="1082" props="text-align:left; dom-dir:ltr">    \enit@setresumekeys\@currenvir\@gobblefour\global</p>
+<p style="Normal" xid="1083" props="text-align:left; dom-dir:ltr">  \else</p>
+<p style="Normal" xid="1084" props="text-align:left; dom-dir:ltr">    \enit@setresumekeys\@currenvir\@empty\@empty</p>
+<p style="Normal" xid="1085" props="text-align:left; dom-dir:ltr">  \fi</p>
+<p style="Normal" xid="1086" props="text-align:left; dom-dir:ltr">  \aftergroup\enit@afterlist}</p>
+<p style="Normal" xid="1087"><c></c></p>
+<p style="Normal" xid="1088" props="text-align:left; dom-dir:ltr">% \@item: unboxed</p>
+<p style="Normal" xid="1089">% ---------------</p>
+<p style="Normal" xid="1090"><c></c></p>
+<p style="Normal" xid="1091" props="text-align:left; dom-dir:ltr">\def\enit@noboxitem[#1]{%</p>
+<p style="Normal" xid="1092" props="text-align:left; dom-dir:ltr">  \if@newlist</p>
+<p style="Normal" xid="1093" props="text-align:left; dom-dir:ltr">    \leavevmode % ships pending labels out</p>
+<p style="Normal" xid="1094" props="text-align:left; dom-dir:ltr">    \global\@newlistfalse</p>
+<p style="Normal" xid="1095" props="text-align:left; dom-dir:ltr">  \else</p>
+<p style="Normal" xid="1096" props="text-align:left; dom-dir:ltr">    \ifhmode</p>
+<p style="Normal" xid="1097" props="text-align:left; dom-dir:ltr">      \unskip</p>
+<p style="Normal" xid="1098" props="text-align:left; dom-dir:ltr">      \enit@itemjoin</p>
+<p style="Normal" xid="1099" props="text-align:left; dom-dir:ltr">    \else</p>
+<p style="Normal" xid="1100" props="text-align:left; dom-dir:ltr">      \noindent</p>
+<p style="Normal" xid="1101" props="text-align:left; dom-dir:ltr">    \fi</p>
+<p style="Normal" xid="1102" props="text-align:left; dom-dir:ltr">  \fi</p>
+<p style="Normal" xid="1103" props="text-align:left; dom-dir:ltr">  \if@noitemarg</p>
+<p style="Normal" xid="1104" props="text-align:left; dom-dir:ltr">    \@noitemargfalse</p>
+<p style="Normal" xid="1105" props="text-align:left; dom-dir:ltr">    \if@nmbrlist</p>
+<p style="Normal" xid="1106" props="text-align:left; dom-dir:ltr">      \refstepcounter{\@listctr}% after \unskip (hyperref)</p>
+<p style="Normal" xid="1107" props="text-align:left; dom-dir:ltr">    \fi</p>
+<p style="Normal" xid="1108" props="text-align:left; dom-dir:ltr">  \fi</p>
+<p style="Normal" xid="1109" props="text-align:left; dom-dir:ltr">  \mbox{\makelabel{#1}}%</p>
+<p style="Normal" xid="1110" props="text-align:left; dom-dir:ltr">  \enit@afterlabel</p>
+<p style="Normal" xid="1111" props="text-align:left; dom-dir:ltr">  \ignorespaces}</p>
+<p style="Normal" xid="1112"><c></c></p>
+<p style="Normal" xid="1113" props="text-align:left; dom-dir:ltr">% \@item: boxed</p>
+<p style="Normal" xid="1114">% ------------</p>
+<p style="Normal" xid="1115">%</p>
+<p style="Normal" xid="1116" props="text-align:left; dom-dir:ltr">% We don't want \item to be executed locally, because it sets a flag</p>
+<p style="Normal" xid="1117" props="text-align:left; dom-dir:ltr">% (and hyperref adds another flag, too).  So, we redefine it inside</p>
+<p style="Normal" xid="1118" props="text-align:left; dom-dir:ltr">% the box to \enit@endinbox which ends the box and then use the actual</p>
+<p style="Normal" xid="1119" props="text-align:left; dom-dir:ltr">% (outer) \item.  labels are stored in another box, to detect empty</p>
+<p style="Normal" xid="1120" props="text-align:left; dom-dir:ltr">% boxes, ie, misplaced \item's.  Note the 2nd \item ends collecting</p>
+<p style="Normal" xid="1121" props="text-align:left; dom-dir:ltr">% the 1st item and ships it out, while the 3rd \item ends collecting</p>
+<p style="Normal" xid="1122" props="text-align:left; dom-dir:ltr">% the 2nd item, puts the itemjoin and then ships the 2nd item out.</p>
+<p style="Normal" xid="1123" props="text-align:left; dom-dir:ltr">% The flag enit@noinitem keeps track of that.</p>
+<p style="Normal" xid="1124"><c></c></p>
+<p style="Normal" xid="1125" props="text-align:left; dom-dir:ltr">\newif\ifenit@noinitem</p>
+<p style="Normal" xid="1126"><c></c></p>
+<p style="Normal" xid="1127" props="text-align:left; dom-dir:ltr">\def\enit@endinbox{%</p>
+<p style="Normal" xid="1128" props="text-align:left; dom-dir:ltr">    \unskip</p>
+<p style="Normal" xid="1129" props="text-align:left; dom-dir:ltr">    \xdef\enit@afteritem{%</p>
+<p style="Normal" xid="1130" props="text-align:left; dom-dir:ltr">      \ifhmode\spacefactor\the\spacefactor\relax\fi}%</p>
+<p style="Normal" xid="1131" props="text-align:left; dom-dir:ltr">    \color@endgroup</p>
+<p style="Normal" xid="1132" props="text-align:left; dom-dir:ltr">  \egroup</p>
+<p style="Normal" xid="1133" props="text-align:left; dom-dir:ltr">  \enit@outeritem}</p>
+<p style="Normal" xid="1134"><c></c></p>
+<p style="Normal" xid="1135" props="text-align:left; dom-dir:ltr">\def\enit@boxitem[#1]{%</p>
+<p style="Normal" xid="1136" props="text-align:left; dom-dir:ltr">  \if@newlist</p>
+<p style="Normal" xid="1137" props="text-align:left; dom-dir:ltr">    \global\@newlistfalse</p>
+<p style="Normal" xid="1138" props="text-align:left; dom-dir:ltr">    \ifdim\wd\enit@inbox&gt;\z@</p>
+<p style="Normal" xid="1139" props="text-align:left; dom-dir:ltr">       \enit@itemerror</p>
+<p style="Normal" xid="1140" props="text-align:left; dom-dir:ltr">    \fi</p>
+<p style="Normal" xid="1141" props="text-align:left; dom-dir:ltr">    \enit@noinitemtrue</p>
+<p style="Normal" xid="1142" props="text-align:left; dom-dir:ltr">    \leavevmode % ships pending labels out</p>
+<p style="Normal" xid="1143" props="text-align:left; dom-dir:ltr">  \else</p>
+<p style="Normal" xid="1144" props="text-align:left; dom-dir:ltr">    \ifdim\wd\enit@inbox=\z@</p>
+<p style="Normal" xid="1145" props="text-align:left; dom-dir:ltr">      \enit@itemerror</p>
+<p style="Normal" xid="1146" props="text-align:left; dom-dir:ltr">    \else</p>
+<p style="Normal" xid="1147" props="text-align:left; dom-dir:ltr">      \ifenit@noinitem</p>
+<p style="Normal" xid="1148" props="text-align:left; dom-dir:ltr">        \enit@noinitemfalse</p>
+<p style="Normal" xid="1149" props="text-align:left; dom-dir:ltr">      \else</p>
+<p style="Normal" xid="1150" props="text-align:left; dom-dir:ltr">        \ifhmode\unskip\fi</p>
+<p style="Normal" xid="1151" props="text-align:left; dom-dir:ltr">        \enit@itemjoin</p>
+<p style="Normal" xid="1152" props="text-align:left; dom-dir:ltr">      \fi</p>
+<p style="Normal" xid="1153" props="text-align:left; dom-dir:ltr">      \unhbox\@labels</p>
+<p style="Normal" xid="1154" props="text-align:left; dom-dir:ltr">      \enit@afterlabel</p>
+<p style="Normal" xid="1155" props="text-align:left; dom-dir:ltr">      \unhbox\enit@inbox</p>
+<p style="Normal" xid="1156" props="text-align:left; dom-dir:ltr">      \enit@afteritem</p>
+<p style="Normal" xid="1157" props="text-align:left; dom-dir:ltr">    \fi</p>
+<p style="Normal" xid="1158" props="text-align:left; dom-dir:ltr">  \fi</p>
+<p style="Normal" xid="1159" props="text-align:left; dom-dir:ltr">  \if@noitemarg</p>
+<p style="Normal" xid="1160" props="text-align:left; dom-dir:ltr">    \@noitemargfalse</p>
+<p style="Normal" xid="1161" props="text-align:left; dom-dir:ltr">    \if@nmbrlist</p>
+<p style="Normal" xid="1162" props="text-align:left; dom-dir:ltr">      \refstepcounter{\@listctr}%</p>
+<p style="Normal" xid="1163" props="text-align:left; dom-dir:ltr">    \fi</p>
+<p style="Normal" xid="1164" props="text-align:left; dom-dir:ltr">  \fi</p>
+<p style="Normal" xid="1165" props="text-align:left; dom-dir:ltr">  \sbox\@labels{\makelabel{#1}}%</p>
+<p style="Normal" xid="1166" props="text-align:left; dom-dir:ltr">  \let\enit@afteritem\relax</p>
+<p style="Normal" xid="1167" props="text-align:left; dom-dir:ltr">  \setbox\enit@inbox\hbox\bgroup\color@begingroup</p>
+<p style="Normal" xid="1168" props="text-align:left; dom-dir:ltr">    \let\item\enit@endinbox</p>
+<p style="Normal" xid="1169" props="text-align:left; dom-dir:ltr">    \hskip1sp % in case the first thing is \label</p>
+<p style="Normal" xid="1170" props="text-align:left; dom-dir:ltr">    \ignorespaces} </p>
+<p style="Normal" xid="1171"><c></c></p>
+<p style="Normal" xid="1172" props="text-align:left; dom-dir:ltr">% Pause item</p>
+<p style="Normal" xid="1173">% ----------</p>
+<p style="Normal" xid="1174">%</p>
+<p style="Normal" xid="1175" props="text-align:left; dom-dir:ltr">% To do.</p>
+<p style="Normal" xid="1176">%</p>
+<p style="Normal" xid="1177" props="text-align:left; dom-dir:ltr">% The three types</p>
+<p style="Normal" xid="1178">% ===============</p>
+<p style="Normal" xid="1179">%</p>
+<p style="Normal" xid="1180" props="text-align:left; dom-dir:ltr">% enumerate and enumerate*</p>
+<p style="Normal" xid="1181">% ------------------------</p>
+<p style="Normal" xid="1182">%</p>
+<p style="Normal" xid="1183" props="text-align:left; dom-dir:ltr">% The following has 4 arguments, which in enumerate are:</p>
+<p style="Normal" xid="1184" props="text-align:left; dom-dir:ltr">% \@enumdepth, enum, \thr@@, &lt;format&gt;.</p>
+<p style="Normal" xid="1185" props="text-align:left; dom-dir:ltr">% In user defined environments they are:</p>
+<p style="Normal" xid="1186" props="text-align:left; dom-dir:ltr">% \enitdp@&lt;name&gt;, &lt;name&gt;, &lt;max-depth&gt;, &lt;format&gt;</p>
+<p style="Normal" xid="1187"><c></c></p>
+<p style="Normal" xid="1188" props="text-align:left; dom-dir:ltr">\def\enit@enumerate{%</p>
+<p style="Normal" xid="1189" props="text-align:left; dom-dir:ltr">  \let\enit@list\enit@dylist</p>
+<p style="Normal" xid="1190" props="text-align:left; dom-dir:ltr">  \enit@enumerate@i}</p>
+<p style="Normal" xid="1191"><c></c></p>
+<p style="Normal" xid="1192" props="text-align:left; dom-dir:ltr">\@namedef{enit@enumerate*}{%</p>
+<p style="Normal" xid="1193" props="text-align:left; dom-dir:ltr">  \let\enit@list\enit@inlist</p>
+<p style="Normal" xid="1194" props="text-align:left; dom-dir:ltr">  \enit@enumerate@i}</p>
+<p style="Normal" xid="1195"><c></c></p>
+<p style="Normal" xid="1196" props="text-align:left; dom-dir:ltr">\def\enit@enumerate@i#1#2#3#4{%</p>
+<p style="Normal" xid="1197" props="text-align:left; dom-dir:ltr">  \ifnum#1&gt;#3\relax</p>
+<p style="Normal" xid="1198" props="text-align:left; dom-dir:ltr">    \enit@toodeep</p>
+<p style="Normal" xid="1199" props="text-align:left; dom-dir:ltr">  \else</p>
+<p style="Normal" xid="1200" props="text-align:left; dom-dir:ltr">    \enit@prelist\z@{#1}{#2}%</p>
+<p style="Normal" xid="1201" props="text-align:left; dom-dir:ltr">    \edef\@enumctr{#2\romannumeral#1}%</p>
+<p style="Normal" xid="1202" props="text-align:left; dom-dir:ltr">    \expandafter</p>
+<p style="Normal" xid="1203" props="text-align:left; dom-dir:ltr">    \enit@list</p>
+<p style="Normal" xid="1204" props="text-align:left; dom-dir:ltr">      \csname label\@enumctr\endcsname</p>
+<p style="Normal" xid="1205" props="text-align:left; dom-dir:ltr">      {\usecounter\@enumctr</p>
+<p style="Normal" xid="1206" props="text-align:left; dom-dir:ltr">       \let\enit@calc\z@</p>
+<p style="Normal" xid="1207" props="text-align:left; dom-dir:ltr">       \def\makelabel##1{\enit@align{\enit@format{##1}}}%</p>
+<p style="Normal" xid="1208" props="text-align:left; dom-dir:ltr">       \enit@preset{#2}{#1}{#4}%</p>
+<p style="Normal" xid="1209" props="text-align:left; dom-dir:ltr">       \enit@normlabel\@itemlabel\@itemlabel</p>
+<p style="Normal" xid="1210" props="text-align:left; dom-dir:ltr">       \enit@ref</p>
+<p style="Normal" xid="1211" props="text-align:left; dom-dir:ltr">       \enit@calcleft</p>
+<p style="Normal" xid="1212" props="text-align:left; dom-dir:ltr">       \enit@before}%</p>
+<p style="Normal" xid="1213" props="text-align:left; dom-dir:ltr">  \fi}</p>
+<p style="Normal" xid="1214"><c></c></p>
+<p style="Normal" xid="1215" props="text-align:left; dom-dir:ltr">\let\enit@endenumerate\enit@endlist</p>
+<p style="Normal" xid="1216" props="text-align:left; dom-dir:ltr">\@namedef{enit@endenumerate*}{\enit@endinlist}</p>
+<p style="Normal" xid="1217"><c></c></p>
+<p style="Normal" xid="1218" props="text-align:left; dom-dir:ltr">% itemize and itemize*</p>
+<p style="Normal" xid="1219">% --------------------</p>
+<p style="Normal" xid="1220">%</p>
+<p style="Normal" xid="1221" props="text-align:left; dom-dir:ltr">% The following has 4 arguments, which in itemize are:</p>
+<p style="Normal" xid="1222" props="text-align:left; dom-dir:ltr">% \@itemdepth, item, \thr@@, &lt;format&gt;.</p>
+<p style="Normal" xid="1223" props="text-align:left; dom-dir:ltr">% In user defined environments they are:</p>
+<p style="Normal" xid="1224" props="text-align:left; dom-dir:ltr">% \enitdp@&lt;name&gt;, &lt;name&gt;, &lt;max-depth&gt;, &lt;format&gt;</p>
+<p style="Normal" xid="1225"><c></c></p>
+<p style="Normal" xid="1226" props="text-align:left; dom-dir:ltr">\def\enit@itemize{%</p>
+<p style="Normal" xid="1227" props="text-align:left; dom-dir:ltr">  \let\enit@list\enit@dylist</p>
+<p style="Normal" xid="1228" props="text-align:left; dom-dir:ltr">  \enit@itemize@i}</p>
+<p style="Normal" xid="1229"><c></c></p>
+<p style="Normal" xid="1230" props="text-align:left; dom-dir:ltr">\@namedef{enit@itemize*}{%</p>
+<p style="Normal" xid="1231" props="text-align:left; dom-dir:ltr">  \let\enit@list\enit@inlist</p>
+<p style="Normal" xid="1232" props="text-align:left; dom-dir:ltr">  \enit@itemize@i}</p>
+<p style="Normal" xid="1233">  </p>
+<p style="Normal" xid="1234" props="text-align:left; dom-dir:ltr">\def\enit@itemize@i#1#2#3#4{%</p>
+<p style="Normal" xid="1235" props="text-align:left; dom-dir:ltr">  \ifnum#1&gt;#3\relax</p>
+<p style="Normal" xid="1236" props="text-align:left; dom-dir:ltr">    \enit@toodeep</p>
+<p style="Normal" xid="1237" props="text-align:left; dom-dir:ltr">  \else</p>
+<p style="Normal" xid="1238" props="text-align:left; dom-dir:ltr">    \enit@prelist\@ne{#1}{#2}%</p>
+<p style="Normal" xid="1239" props="text-align:left; dom-dir:ltr">    \edef\@itemitem{label#2\romannumeral#1}%</p>
+<p style="Normal" xid="1240" props="text-align:left; dom-dir:ltr">    \expandafter</p>
+<p style="Normal" xid="1241" props="text-align:left; dom-dir:ltr">    \enit@list</p>
+<p style="Normal" xid="1242" props="text-align:left; dom-dir:ltr">      \csname\@itemitem\endcsname</p>
+<p style="Normal" xid="1243" props="text-align:left; dom-dir:ltr">       {\let\enit@calc\z@</p>
+<p style="Normal" xid="1244" props="text-align:left; dom-dir:ltr">        \def\makelabel##1{\enit@align{\enit@format{##1}}}%</p>
+<p style="Normal" xid="1245" props="text-align:left; dom-dir:ltr">        \enit@preset{#2}{#1}{#4}% </p>
+<p style="Normal" xid="1246" props="text-align:left; dom-dir:ltr">        \enit@calcleft</p>
+<p style="Normal" xid="1247" props="text-align:left; dom-dir:ltr">        \enit@before}%</p>
+<p style="Normal" xid="1248" props="text-align:left; dom-dir:ltr">  \fi}</p>
+<p style="Normal" xid="1249"><c></c></p>
+<p style="Normal" xid="1250" props="text-align:left; dom-dir:ltr">\let\enit@enditemize\enit@endlist</p>
+<p style="Normal" xid="1251" props="text-align:left; dom-dir:ltr">\@namedef{enit@enditemize*}{\enit@endinlist}</p>
+<p style="Normal" xid="1252"><c></c></p>
+<p style="Normal" xid="1253" props="text-align:left; dom-dir:ltr">% description and description*</p>
+<p style="Normal" xid="1254">% ----------------------------</p>
+<p style="Normal" xid="1255">%</p>
+<p style="Normal" xid="1256" props="text-align:left; dom-dir:ltr">% Make sure \descriptionlabel exists:</p>
+<p style="Normal" xid="1257"><c></c></p>
+<p style="Normal" xid="1258" props="text-align:left; dom-dir:ltr">\providecommand*\descriptionlabel[1]{%</p>
+<p style="Normal" xid="1259" props="text-align:left; dom-dir:ltr">  \hspace\labelsep</p>
+<p style="Normal" xid="1260" props="text-align:left; dom-dir:ltr">  \normalfont\bfseries#1}</p>
+<p style="Normal" xid="1261"><c></c></p>
+<p style="Normal" xid="1262" props="text-align:left; dom-dir:ltr">\@namedef{enit@description*}{%</p>
+<p style="Normal" xid="1263" props="text-align:left; dom-dir:ltr">  \let\enit@list\enit@inlist</p>
+<p style="Normal" xid="1264" props="text-align:left; dom-dir:ltr">  \enit@description@i}</p>
+<p style="Normal" xid="1265"><c></c></p>
+<p style="Normal" xid="1266" props="text-align:left; dom-dir:ltr">\def\enit@description{%</p>
+<p style="Normal" xid="1267" props="text-align:left; dom-dir:ltr">  \let\enit@list\enit@dylist</p>
+<p style="Normal" xid="1268" props="text-align:left; dom-dir:ltr">  \enit@description@i}</p>
+<p style="Normal" xid="1269"><c></c></p>
+<p style="Normal" xid="1270" props="text-align:left; dom-dir:ltr">\def\enit@description@i#1#2#3#4{%</p>
+<p style="Normal" xid="1271" props="text-align:left; dom-dir:ltr">  \ifnum#1&gt;#3\relax</p>
+<p style="Normal" xid="1272" props="text-align:left; dom-dir:ltr">    \enit@toodeep</p>
+<p style="Normal" xid="1273" props="text-align:left; dom-dir:ltr">  \else</p>
+<p style="Normal" xid="1274" props="text-align:left; dom-dir:ltr">    \enit@list{}%</p>
+<p style="Normal" xid="1275" props="text-align:left; dom-dir:ltr">      {\let\enit@type\tw@</p>
+<p style="Normal" xid="1276" props="text-align:left; dom-dir:ltr">       \advance#1\@ne</p>
+<p style="Normal" xid="1277" props="text-align:left; dom-dir:ltr">       \labelwidth\z@</p>
+<p style="Normal" xid="1278" props="text-align:left; dom-dir:ltr">       \enit@align@left</p>
+<p style="Normal" xid="1279" props="text-align:left; dom-dir:ltr">       \let\makelabel\descriptionlabel</p>
+<p style="Normal" xid="1280" props="text-align:left; dom-dir:ltr">       \enit@style@standard</p>
+<p style="Normal" xid="1281" props="text-align:left; dom-dir:ltr">       \enit@preset{#2}{#1}{#4}%</p>
+<p style="Normal" xid="1282" props="text-align:left; dom-dir:ltr">       \enit@calcleft</p>
+<p style="Normal" xid="1283" props="text-align:left; dom-dir:ltr">       \let\enit@svlabel\makelabel</p>
+<p style="Normal" xid="1284" props="text-align:left; dom-dir:ltr">       \def\makelabel##1{%</p>
+<p style="Normal" xid="1285" props="text-align:left; dom-dir:ltr">         \labelsep\z@</p>
+<p style="Normal" xid="1286" props="text-align:left; dom-dir:ltr">         \ifenit@boxdesc</p>
+<p style="Normal" xid="1287" props="text-align:left; dom-dir:ltr">           \enit@svlabel{\enit@align{\enit@format{##1}}}%</p>
+<p style="Normal" xid="1288" props="text-align:left; dom-dir:ltr">         \else</p>
+<p style="Normal" xid="1289" props="text-align:left; dom-dir:ltr">           \nobreak</p>
+<p style="Normal" xid="1290" props="text-align:left; dom-dir:ltr">           \enit@svlabel{\enit@format{##1}}%</p>
+<p style="Normal" xid="1291" props="text-align:left; dom-dir:ltr">           \aftergroup\enit@postlabel</p>
+<p style="Normal" xid="1292" props="text-align:left; dom-dir:ltr">         \fi}%</p>
+<p style="Normal" xid="1293" props="text-align:left; dom-dir:ltr">       \enit@before}%</p>
+<p style="Normal" xid="1294" props="text-align:left; dom-dir:ltr">  \fi}</p>
+<p style="Normal" xid="1295"><c></c></p>
+<p style="Normal" xid="1296" props="text-align:left; dom-dir:ltr">\let\enit@enddescription\enit@endlist</p>
+<p style="Normal" xid="1297" props="text-align:left; dom-dir:ltr">\@namedef{enit@enddescription*}{\enit@endinlist}</p>
+<p style="Normal" xid="1298"><c></c></p>
+<p style="Normal" xid="1299" props="text-align:left; dom-dir:ltr">% trivlist</p>
+<p style="Normal" xid="1300">% ========</p>
+<p style="Normal" xid="1301"><c></c></p>
+<p style="Normal" xid="1302" props="text-align:left; dom-dir:ltr">\def\enit@trivlist{%</p>
+<p style="Normal" xid="1303" props="text-align:left; dom-dir:ltr">  \let\enit@type\tw@</p>
+<p style="Normal" xid="1304" props="text-align:left; dom-dir:ltr">  \parsep\parskip</p>
+<p style="Normal" xid="1305" props="text-align:left; dom-dir:ltr">  \csname @list\romannumeral\the\@listdepth\endcsname</p>
+<p style="Normal" xid="1306" props="text-align:left; dom-dir:ltr">  \@nmbrlistfalse</p>
+<p style="Normal" xid="1307" props="text-align:left; dom-dir:ltr">  \enit@setkeys{trivlist}%</p>
+<p style="Normal" xid="1308" props="text-align:left; dom-dir:ltr">  \enit@setkeys{trivlist\romannumeral\@listdepth}%</p>
+<p style="Normal" xid="1309" props="text-align:left; dom-dir:ltr">  \@trivlist</p>
+<p style="Normal" xid="1310" props="text-align:left; dom-dir:ltr">  \labelwidth\z@</p>
+<p style="Normal" xid="1311" props="text-align:left; dom-dir:ltr">  \leftmargin\z@</p>
+<p style="Normal" xid="1312" props="text-align:left; dom-dir:ltr">  \itemindent\z@</p>
+<p style="Normal" xid="1313" props="text-align:left; dom-dir:ltr">  \let\@itemlabel\@empty</p>
+<p style="Normal" xid="1314" props="text-align:left; dom-dir:ltr">  \def\makelabel##1{##1}}</p>
+<p style="Normal" xid="1315"><c></c></p>
+<p style="Normal" xid="1316" props="text-align:left; dom-dir:ltr">% Description styles</p>
+<p style="Normal" xid="1317">% ==================</p>
+<p style="Normal" xid="1318">%</p>
+<p style="Normal" xid="1319" props="text-align:left; dom-dir:ltr">% the next definition is somewhat tricky because labels are boxed.</p>
+<p style="Normal" xid="1320" props="text-align:left; dom-dir:ltr">% That's fine when the label is just placed at the begining of a line</p>
+<p style="Normal" xid="1321" props="text-align:left; dom-dir:ltr">% of text, but when the box is placed without horizontal material,</p>
+<p style="Normal" xid="1322" props="text-align:left; dom-dir:ltr">% leading is killed.  So, we need change somehow \box to \unhbox, but</p>
+<p style="Normal" xid="1323" props="text-align:left; dom-dir:ltr">% I don't want to modify \@item.  The code below presumes \@item has</p>
+<p style="Normal" xid="1324" props="text-align:left; dom-dir:ltr">% not been changed and arguments gobble the part setting \@labels,</p>
+<p style="Normal" xid="1325" props="text-align:left; dom-dir:ltr">% which is replaced by a new one.</p>
+<p style="Normal" xid="1326">%</p>
+<p style="Normal" xid="1327" props="text-align:left; dom-dir:ltr">% The default value in description is itemindent=!, but some styles</p>
+<p style="Normal" xid="1328" props="text-align:left; dom-dir:ltr">% (those whose item text begin at a fixed place, ie, nextline,</p>
+<p style="Normal" xid="1329" props="text-align:left; dom-dir:ltr">% multiline and sameline) change it to labelwidth=!.</p>
+<p style="Normal" xid="1330">%</p>
+<p style="Normal" xid="1331" props="text-align:left; dom-dir:ltr">% We must be careful with the group and the whatsit added by color to</p>
+<p style="Normal" xid="1332" props="text-align:left; dom-dir:ltr">% boxes.  Alignment is applied here and some adjustments in skips are</p>
+<p style="Normal" xid="1333" props="text-align:left; dom-dir:ltr">% necessary to get proper line breaks (including a \nobreak at the</p>
+<p style="Normal" xid="1334" props="text-align:left; dom-dir:ltr">% beginning of \enit@align, ie, after the first whatsit, see above).</p>
+<p style="Normal" xid="1335" props="text-align:left; dom-dir:ltr">% To "pass" the inner group added by color to the box, \enit@postlabel</p>
+<p style="Normal" xid="1336" props="text-align:left; dom-dir:ltr">% ckecks if the following is }.  ie, \egroup -- if not, the box has</p>
+<p style="Normal" xid="1337" props="text-align:left; dom-dir:ltr">% not reached yet its end.</p>
+<p style="Normal" xid="1338"><c></c></p>
+<p style="Normal" xid="1339" props="text-align:left; dom-dir:ltr">\def\enit@postlabel{%</p>
+<p style="Normal" xid="1340" props="text-align:left; dom-dir:ltr">  \@ifnextchar\egroup</p>
+<p style="Normal" xid="1341" props="text-align:left; dom-dir:ltr">    {\aftergroup\enit@postlabel}%</p>
+<p style="Normal" xid="1342" props="text-align:left; dom-dir:ltr">    {\enit@postlabel@i}}</p>
+<p style="Normal" xid="1343"><c></c></p>
+<p style="Normal" xid="1344" props="text-align:left; dom-dir:ltr">\def\enit@postlabel@i#1#2#3#4#5{%</p>
+<p style="Normal" xid="1345" props="text-align:left; dom-dir:ltr">  \def\enit@lblpenalty{\penalty\z@\hskip\skip@}%</p>
+<p style="Normal" xid="1346" props="text-align:left; dom-dir:ltr">  \ifenit@nextline</p>
+<p style="Normal" xid="1347" props="text-align:left; dom-dir:ltr">    \ifdim\wd\@tempboxa&gt;\labelwidth</p>
+<p style="Normal" xid="1348" props="text-align:left; dom-dir:ltr">      \def\enit@lblpenalty{\newline\@nobreaktrue}%</p>
+<p style="Normal" xid="1349" props="text-align:left; dom-dir:ltr">    \fi</p>
+<p style="Normal" xid="1350" props="text-align:left; dom-dir:ltr">  \fi</p>
+<p style="Normal" xid="1351" props="text-align:left; dom-dir:ltr">  \everypar{%</p>
+<p style="Normal" xid="1352" props="text-align:left; dom-dir:ltr">    \@minipagefalse</p>
+<p style="Normal" xid="1353" props="text-align:left; dom-dir:ltr">    \global\@newlistfalse</p>
+<p style="Normal" xid="1354" props="text-align:left; dom-dir:ltr">    \if@inlabel</p>
+<p style="Normal" xid="1355" props="text-align:left; dom-dir:ltr">      \global\@inlabelfalse</p>
+<p style="Normal" xid="1356" props="text-align:left; dom-dir:ltr">      {\setbox\z@\lastbox</p>
+<p style="Normal" xid="1357" props="text-align:left; dom-dir:ltr">       \ifvoid\z@</p>
+<p style="Normal" xid="1358" props="text-align:left; dom-dir:ltr">         \kern-\itemindent</p>
+<p style="Normal" xid="1359" props="text-align:left; dom-dir:ltr">       \fi}%</p>
+<p style="Normal" xid="1360" props="text-align:left; dom-dir:ltr">      \unhbox\@labels</p>
+<p style="Normal" xid="1361" props="text-align:left; dom-dir:ltr">      \skip@\lastskip % Save last \labelsep</p>
+<p style="Normal" xid="1362" props="text-align:left; dom-dir:ltr">      \unskip % Remove it </p>
+<p style="Normal" xid="1363" props="text-align:left; dom-dir:ltr">      \enit@lblpenalty % Restore it, after penalty</p>
+<p style="Normal" xid="1364" props="text-align:left; dom-dir:ltr">    \fi</p>
+<p style="Normal" xid="1365" props="text-align:left; dom-dir:ltr">    \if@nobreak</p>
+<p style="Normal" xid="1366" props="text-align:left; dom-dir:ltr">      \@nobreakfalse</p>
+<p style="Normal" xid="1367" props="text-align:left; dom-dir:ltr">      \clubpenalty\@M</p>
+<p style="Normal" xid="1368" props="text-align:left; dom-dir:ltr">    \else</p>
+<p style="Normal" xid="1369" props="text-align:left; dom-dir:ltr">      \clubpenalty\@clubpenalty</p>
+<p style="Normal" xid="1370" props="text-align:left; dom-dir:ltr">      \everypar{}%</p>
+<p style="Normal" xid="1371" props="text-align:left; dom-dir:ltr">    \fi}%</p>
+<p style="Normal" xid="1372" props="text-align:left; dom-dir:ltr">  \def\enit@a{#1#2#3#4}%</p>
+<p style="Normal" xid="1373" props="text-align:left; dom-dir:ltr">  \def\enit@b{\global\setbox\@labels\hbox}%</p>
+<p style="Normal" xid="1374" props="text-align:left; dom-dir:ltr">  \ifx\enit@a\enit@b\else</p>
+<p style="Normal" xid="1375" props="text-align:left; dom-dir:ltr">    \enit@error{Non standard \string\item}%</p>
+<p style="Normal" xid="1376" props="text-align:left; dom-dir:ltr">      {A class or a package has redefined \string\item\MessageBreak</p>
+<p style="Normal" xid="1377" props="text-align:left; dom-dir:ltr">       and I do not know how to continue}%</p>
+<p style="Normal" xid="1378" props="text-align:left; dom-dir:ltr">  \fi</p>
+<p style="Normal" xid="1379" props="text-align:left; dom-dir:ltr">  \global\setbox\@labels\hbox{%</p>
+<p style="Normal" xid="1380" props="text-align:left; dom-dir:ltr">    \unhbox\@labels</p>
+<p style="Normal" xid="1381" props="text-align:left; dom-dir:ltr">    \hskip\itemindent</p>
+<p style="Normal" xid="1382" props="text-align:left; dom-dir:ltr">    \hskip-\labelwidth</p>
+<p style="Normal" xid="1383" props="text-align:left; dom-dir:ltr">    \hskip-\labelsep</p>
+<p style="Normal" xid="1384" props="text-align:left; dom-dir:ltr">    \ifdim\wd\@tempboxa&gt;\labelwidth</p>
+<p style="Normal" xid="1385" props="text-align:left; dom-dir:ltr">      \enit@align{\unhbox\@tempboxa}\unskip % Removes (typically) \hfil</p>
+<p style="Normal" xid="1386" props="text-align:left; dom-dir:ltr">    \else</p>
+<p style="Normal" xid="1387" props="text-align:left; dom-dir:ltr">      \leavevmode\hbox to\labelwidth{\enit@align{\unhbox\@tempboxa}}%</p>
+<p style="Normal" xid="1388" props="text-align:left; dom-dir:ltr">    \fi</p>
+<p style="Normal" xid="1389" props="text-align:left; dom-dir:ltr">    \hskip\labelsep}}</p>
+<p style="Normal" xid="1390"><c></c></p>
+<p style="Normal" xid="1391">% +=============================+</p>
+<p style="Normal" xid="1392" props="text-align:left; dom-dir:ltr">% |     (RE)DEFINING LISTS      |</p>
+<p style="Normal" xid="1393">% +=============================+</p>
+<p style="Normal" xid="1394">%</p>
+<p style="Normal" xid="1395" props="text-align:left; dom-dir:ltr">% Set keys/values</p>
+<p style="Normal" xid="1396">% ===============</p>
+<p style="Normal" xid="1397" props="text-align:left; dom-dir:ltr">% Remember \romannumeral0 expands to nothing.</p>
+<p style="Normal" xid="1398" props="text-align:left; dom-dir:ltr">% #1 = list name, #2 = level, #3 = flag if star, #4 = keys/values</p>
+<p style="Normal" xid="1399"><c></c></p>
+<p style="Normal" xid="1400" props="text-align:left; dom-dir:ltr">\def\enit@saveset#1#2#3#4{%</p>
+<p style="Normal" xid="1401" props="text-align:left; dom-dir:ltr">  \setcounter{enit@cnt}{#2}%</p>
+<p style="Normal" xid="1402" props="text-align:left; dom-dir:ltr">  \ifcase#3%</p>
+<p style="Normal" xid="1403" props="text-align:left; dom-dir:ltr">    \expandafter</p>
+<p style="Normal" xid="1404" props="text-align:left; dom-dir:ltr">    \def\csname enit@@#1\romannumeral\c@enit@cnt\endcsname{#4}%</p>
+<p style="Normal" xid="1405" props="text-align:left; dom-dir:ltr">  \or</p>
+<p style="Normal" xid="1406" props="text-align:left; dom-dir:ltr">    \expandafter\let\expandafter\enit@b</p>
+<p style="Normal" xid="1407" props="text-align:left; dom-dir:ltr">      \csname enit@@#1\romannumeral\c@enit@cnt\endcsname</p>
+<p style="Normal" xid="1408" props="text-align:left; dom-dir:ltr">    \ifx\enit@b\relax</p>
+<p style="Normal" xid="1409" props="text-align:left; dom-dir:ltr">      \let\enit@b\@empty</p>
+<p style="Normal" xid="1410" props="text-align:left; dom-dir:ltr">    \fi</p>
+<p style="Normal" xid="1411" props="text-align:left; dom-dir:ltr">    \expandafter\def</p>
+<p style="Normal" xid="1412" props="text-align:left; dom-dir:ltr">      \csname enit@@#1\romannumeral\c@enit@cnt\expandafter\endcsname</p>
+<p style="Normal" xid="1413" props="text-align:left; dom-dir:ltr">      \expandafter{\enit@b,#4}%</p>
+<p style="Normal" xid="1414" props="text-align:left; dom-dir:ltr">  \fi}</p>
+<p style="Normal" xid="1415"><c></c></p>
+<p style="Normal" xid="1416" props="text-align:left; dom-dir:ltr">% To do: more robust tests (catch wrong names, but not easy)</p>
+<p style="Normal" xid="1417"><c></c></p>
+<p style="Normal" xid="1418" props="text-align:left; dom-dir:ltr">% Internally, LaTeX uses a short name for enumerate (enum)</p>
+<p style="Normal" xid="1419" props="text-align:left; dom-dir:ltr">% and itemize (item). To be consistent with this convention,</p>
+<p style="Normal" xid="1420" props="text-align:left; dom-dir:ltr">% a couple of macros provide a "translation". I'm not very</p>
+<p style="Normal" xid="1421" props="text-align:left; dom-dir:ltr">% happy with the current implementation.</p>
+<p style="Normal" xid="1422"><c></c></p>
+<p style="Normal" xid="1423" props="text-align:left; dom-dir:ltr">\def\enit@shortenumerate{enum}</p>
+<p style="Normal" xid="1424" props="text-align:left; dom-dir:ltr">\def\enit@shortitemize{item}</p>
+<p style="Normal" xid="1425"><c></c></p>
+<p style="Normal" xid="1426" props="text-align:left; dom-dir:ltr">\newcommand\setlist{%</p>
+<p style="Normal" xid="1427" props="text-align:left; dom-dir:ltr">  \@ifstar{\enit@setlist\@ne}{\enit@setlist\z@}}</p>
+<p style="Normal" xid="1428"><c></c></p>
+<p style="Normal" xid="1429" props="text-align:left; dom-dir:ltr">\def\enit@setlist#1{%</p>
+<p style="Normal" xid="1430" props="text-align:left; dom-dir:ltr">  \@ifnextchar[{\enit@setlist@x#1}{\enit@setlist@i#1\@empty}}</p>
+<p style="Normal" xid="1431"><c></c></p>
+<p style="Normal" xid="1432" props="text-align:left; dom-dir:ltr">% Let's accept \setlist[]*{}, too, because an error in &lt;=3.5.1</p>
+<p style="Normal" xid="1433"><c></c></p>
+<p style="Normal" xid="1434" props="text-align:left; dom-dir:ltr">\def\enit@setlist@x#1[#2]{%</p>
+<p style="Normal" xid="1435" props="text-align:left; dom-dir:ltr">  \@ifstar{\enit@setlist@i\@ne{#2}}{\enit@setlist@i#1{#2}}}</p>
+<p style="Normal" xid="1436"><c></c></p>
+<p style="Normal" xid="1437" props="text-align:left; dom-dir:ltr">% #1 list names/levels, #2 keys/values</p>
+<p style="Normal" xid="1438"><c></c></p>
+<p style="Normal" xid="1439" props="text-align:left; dom-dir:ltr">% #1 star flag, #2 list names/levels, #3 keys/values</p>
+<p style="Normal" xid="1440"><c></c></p>
+<p style="Normal" xid="1441" props="text-align:left; dom-dir:ltr">\def\enit@setlist@i#1#2#3{%</p>
+<p style="Normal" xid="1442" props="text-align:left; dom-dir:ltr">  \let\enit@eltnames\relax</p>
+<p style="Normal" xid="1443" props="text-align:left; dom-dir:ltr">  \let\enit@b\@empty</p>
+<p style="Normal" xid="1444" props="text-align:left; dom-dir:ltr">  \let\enit@eltlevels\relax</p>
+<p style="Normal" xid="1445" props="text-align:left; dom-dir:ltr">  \let\enit@c\@empty</p>
+<p style="Normal" xid="1446" props="text-align:left; dom-dir:ltr">  \protected@edef\enit@a{#2}%</p>
+<p style="Normal" xid="1447" props="text-align:left; dom-dir:ltr">  \@for\enit@a:=\enit@a\do{% the 2nd enit@a is first expanded</p>
+<p style="Normal" xid="1448" props="text-align:left; dom-dir:ltr">    \@ifundefined{enitdp@\enit@meaning\enit@a}%</p>
+<p style="Normal" xid="1449" props="text-align:left; dom-dir:ltr">      {\edef\enit@c{\enit@c\enit@eltlevels{\enit@a}}}%</p>
+<p style="Normal" xid="1450" props="text-align:left; dom-dir:ltr">      {\@ifundefined{enit@short\enit@meaning\enit@a}%</p>
+<p style="Normal" xid="1451" props="text-align:left; dom-dir:ltr">         \@empty</p>
+<p style="Normal" xid="1452" props="text-align:left; dom-dir:ltr">         {\edef\enit@a{\@nameuse{enit@short\enit@a}}}%</p>
+<p style="Normal" xid="1453" props="text-align:left; dom-dir:ltr">       \edef\enit@b{\enit@b\enit@eltnames{\enit@a}}}}%</p>
+<p style="Normal" xid="1454" props="text-align:left; dom-dir:ltr">  \ifx\enit@b\@empty</p>
+<p style="Normal" xid="1455" props="text-align:left; dom-dir:ltr">     \def\enit@b{\enit@eltnames{list}}%</p>
+<p style="Normal" xid="1456" props="text-align:left; dom-dir:ltr">  \fi</p>
+<p style="Normal" xid="1457" props="text-align:left; dom-dir:ltr">  \ifx\enit@c\@empty</p>
+<p style="Normal" xid="1458" props="text-align:left; dom-dir:ltr">     \def\enit@c{\enit@eltlevels{0}}%</p>
+<p style="Normal" xid="1459" props="text-align:left; dom-dir:ltr">  \fi</p>
+<p style="Normal" xid="1460" props="text-align:left; dom-dir:ltr">  \def\enit@eltnames##1{%</p>
+<p style="Normal" xid="1461" props="text-align:left; dom-dir:ltr">    \def\enit@a{##1}%</p>
+<p style="Normal" xid="1462" props="text-align:left; dom-dir:ltr">    \enit@c}%</p>
+<p style="Normal" xid="1463" props="text-align:left; dom-dir:ltr">  \def\enit@eltlevels##1{%</p>
+<p style="Normal" xid="1464" props="text-align:left; dom-dir:ltr">    \enit@saveset\enit@a{##1}#1{#3}}%</p>
+<p style="Normal" xid="1465" props="text-align:left; dom-dir:ltr">  \enit@b}%</p>
+<p style="Normal" xid="1466"><c></c></p>
+<p style="Normal" xid="1467" props="text-align:left; dom-dir:ltr">% Deprecated:</p>
+<p style="Normal" xid="1468"><c></c></p>
+<p style="Normal" xid="1469" props="text-align:left; dom-dir:ltr">\newcommand\setdisplayed[1][0]{\setlist[trivlist,#1]}</p>
+<p style="Normal" xid="1470" props="text-align:left; dom-dir:ltr">\let\enitdp@trivlist\@empty % dummy, let know it exists</p>
+<p style="Normal" xid="1471" props="text-align:left; dom-dir:ltr">\newcommand\setenumerate[1][0]{\setlist[enumerate,#1]}</p>
+<p style="Normal" xid="1472" props="text-align:left; dom-dir:ltr">\newcommand\setitemize[1][0]{\setlist[itemize,#1]}</p>
+<p style="Normal" xid="1473" props="text-align:left; dom-dir:ltr">\newcommand\setdescription[1][0]{\setlist[description,#1]}</p>
+<p style="Normal" xid="1474"><c></c></p>
+<p style="Normal" xid="1475" props="text-align:left; dom-dir:ltr">% New lists</p>
+<p style="Normal" xid="1476">% =========</p>
+<p style="Normal" xid="1477"><c></c></p>
+<p style="Normal" xid="1478" props="text-align:left; dom-dir:ltr">% When defining a list, \label... and counters must be defined</p>
+<p style="Normal" xid="1479" props="text-align:left; dom-dir:ltr">% for each level, too:</p>
+<p style="Normal" xid="1480"><c></c></p>
+<p style="Normal" xid="1481" props="text-align:left; dom-dir:ltr">\def\enit@xset@itemize{%</p>
+<p style="Normal" xid="1482" props="text-align:left; dom-dir:ltr">  \@namedef{label\enit@c\romannumeral\count@}{%</p>
+<p style="Normal" xid="1483" props="text-align:left; dom-dir:ltr">    \enit@error{Undefined label}%</p>
+<p style="Normal" xid="1484" props="text-align:left; dom-dir:ltr">      {You have defined a list, but labels have</p>
+<p style="Normal" xid="1485" props="text-align:left; dom-dir:ltr">       not been setup.\MessageBreak</p>
+<p style="Normal" xid="1486" props="text-align:left; dom-dir:ltr">       You can set the label field with \string\setlist.}}}</p>
+<p style="Normal" xid="1487" props="text-align:left; dom-dir:ltr">\@namedef{enit@xset@itemize*}{\enit@xset@itemize}</p>
+<p style="Normal" xid="1488"><c></c></p>
+<p style="Normal" xid="1489" props="text-align:left; dom-dir:ltr">\def\enit@xset@enumerate{%</p>
+<p style="Normal" xid="1490" props="text-align:left; dom-dir:ltr">  \enit@xset@itemize</p>
+<p style="Normal" xid="1491" props="text-align:left; dom-dir:ltr">  \@ifundefined{c@\enit@c\romannumeral\count@}%</p>
+<p style="Normal" xid="1492" props="text-align:left; dom-dir:ltr">    {\@definecounter{\enit@c\romannumeral\count@}}{}}</p>
+<p style="Normal" xid="1493" props="text-align:left; dom-dir:ltr">\@namedef{enit@xset@enumerate*}{\enit@xset@enumerate}</p>
+<p style="Normal" xid="1494"><c></c></p>
+<p style="Normal" xid="1495" props="text-align:left; dom-dir:ltr">\let\enit@xset@description\@empty</p>
+<p style="Normal" xid="1496" props="text-align:left; dom-dir:ltr">\@namedef{enit@xset@description*}{\enit@xset@description}</p>
+<p style="Normal" xid="1497"><c></c></p>
+<p style="Normal" xid="1498" props="text-align:left; dom-dir:ltr">\newcommand\newlist{\enit@newlist\newenvironment}</p>
+<p style="Normal" xid="1499" props="text-align:left; dom-dir:ltr">\newcommand\renewlist{\enit@newlist\renewenvironment}</p>
+<p style="Normal" xid="1500"><c></c></p>
+<p style="Normal" xid="1501" props="text-align:left; dom-dir:ltr">% &lt;new/renew&gt;, &lt;name&gt;, &lt;type&gt;, &lt;max-depth&gt;</p>
+<p style="Normal" xid="1502"><c></c></p>
+<p style="Normal" xid="1503" props="text-align:left; dom-dir:ltr">\def\enit@newlist#1#2#3#4{%</p>
+<p style="Normal" xid="1504" props="text-align:left; dom-dir:ltr">  \@ifundefined{enit@xset@#3}%</p>
+<p style="Normal" xid="1505" props="text-align:left; dom-dir:ltr">    {\enit@error{Unknown list type `#3')}%</p>
+<p style="Normal" xid="1506" props="text-align:left; dom-dir:ltr">          {Valid types are:</p>
+<p style="Normal" xid="1507" props="text-align:left; dom-dir:ltr">           enumerate, itemize, description,\messageBreak</p>
+<p style="Normal" xid="1508" props="text-align:left; dom-dir:ltr">           enumerate*, itemize*, description*}}%</p>
+<p style="Normal" xid="1509">    {}%</p>
+<p style="Normal" xid="1510" props="text-align:left; dom-dir:ltr">  \setcounter{enit@cnt}{#4}%</p>
+<p style="Normal" xid="1511" props="text-align:left; dom-dir:ltr">  \count@\@ne</p>
+<p style="Normal" xid="1512" props="text-align:left; dom-dir:ltr">  \@ifundefined{enit@short#2}%</p>
+<p style="Normal" xid="1513" props="text-align:left; dom-dir:ltr">    {\def\enit@c{#2}}%</p>
+<p style="Normal" xid="1514" props="text-align:left; dom-dir:ltr">    {\edef\enit@c{\csname enit@short#2\endcsname}}%</p>
+<p style="Normal" xid="1515" props="text-align:left; dom-dir:ltr">  \loop</p>
+<p style="Normal" xid="1516" props="text-align:left; dom-dir:ltr">    \@nameuse{enit@xset@#3}% Uses \enit@c</p>
+<p style="Normal" xid="1517" props="text-align:left; dom-dir:ltr">    \ifnum\count@&lt;\c@enit@cnt</p>
+<p style="Normal" xid="1518" props="text-align:left; dom-dir:ltr">    \advance\count@\@ne</p>
+<p style="Normal" xid="1519" props="text-align:left; dom-dir:ltr">  \repeat</p>
+<p style="Normal" xid="1520" props="text-align:left; dom-dir:ltr">  \@ifundefined{enitdp@#2}%</p>
+<p style="Normal" xid="1521" props="text-align:left; dom-dir:ltr">    {\expandafter\newcount\csname enitdp@#2\endcsname}{}%</p>
+<p style="Normal" xid="1522" props="text-align:left; dom-dir:ltr">  \csname enitdp@#2\endcsname\z@</p>
+<p style="Normal" xid="1523" props="text-align:left; dom-dir:ltr">  \advance\c@enit@cnt\m@ne</p>
+<p style="Normal" xid="1524" props="text-align:left; dom-dir:ltr">  \edef\enit@a{%</p>
+<p style="Normal" xid="1525" props="text-align:left; dom-dir:ltr">    \noexpand#1{#2}[1][]%</p>
+<p style="Normal" xid="1526" props="text-align:left; dom-dir:ltr">      {\enit@noexcs{enit@#3}%</p>
+<p style="Normal" xid="1527" props="text-align:left; dom-dir:ltr">       \enit@noexcs{enitdp@#2}%</p>
+<p style="Normal" xid="1528" props="text-align:left; dom-dir:ltr">       {\enit@c}%</p>
+<p style="Normal" xid="1529" props="text-align:left; dom-dir:ltr">       {\the\c@enit@cnt}%</p>
+<p style="Normal" xid="1530">       {####1}}%</p>
+<p style="Normal" xid="1531" props="text-align:left; dom-dir:ltr">      {\enit@noexcs{enit@end#3}}}%</p>
+<p style="Normal" xid="1532" props="text-align:left; dom-dir:ltr">  \enit@a}</p>
+<p style="Normal" xid="1533"><c></c></p>
+<p style="Normal" xid="1534" props="text-align:left; dom-dir:ltr">% Changing the default nesting limit</p>
+<p style="Normal" xid="1535">% ----------------------------------</p>
+<p style="Normal" xid="1536"><c></c></p>
+<p style="Normal" xid="1537" props="text-align:left; dom-dir:ltr">\newcommand\setlistdepth{\def\enit@listdepth}</p>
+<p style="Normal" xid="1538" props="text-align:left; dom-dir:ltr">\setlistdepth{5}</p>
+<p style="Normal" xid="1539"><c></c></p>
+<p style="Normal" xid="1540">% +=============================+</p>
+<p style="Normal" xid="1541" props="text-align:left; dom-dir:ltr">% |       PACKAGE OPTIONS       |</p>
+<p style="Normal" xid="1542">% +=============================+</p>
+<p style="Normal" xid="1543"><c></c></p>
+<p style="Normal" xid="1544" props="text-align:left; dom-dir:ltr">\newif\ifenit@loadonly</p>
+<p style="Normal" xid="1545"><c></c></p>
+<p style="Normal" xid="1546" props="text-align:left; dom-dir:ltr">\DeclareOption{ignoredisplayed}{\let\enit@trivlist\trivlist}</p>
+<p style="Normal" xid="1547" props="text-align:left; dom-dir:ltr">\DeclareOption{loadonly}{\enit@loadonlytrue}</p>
+<p style="Normal" xid="1548" props="text-align:left; dom-dir:ltr">\DeclareOption{shortlabels}</p>
+<p style="Normal" xid="1549" props="text-align:left; dom-dir:ltr">  {\def\enit@shl#1{%</p>
+<p style="Normal" xid="1550" props="text-align:left; dom-dir:ltr">     \ifnum\enit@type=\tw@</p>
+<p style="Normal" xid="1551" props="text-align:left; dom-dir:ltr">       \enit@toks{#1}%</p>
+<p style="Normal" xid="1552" props="text-align:left; dom-dir:ltr">     \else</p>
+<p style="Normal" xid="1553" props="text-align:left; dom-dir:ltr">       \def\enit@c{#1}%</p>
+<p style="Normal" xid="1554" props="text-align:left; dom-dir:ltr">       \enit@first#1,\@nil\@@nil % Returns enit@toks</p>
+<p style="Normal" xid="1555" props="text-align:left; dom-dir:ltr">    \fi}}</p>
+<p style="Normal" xid="1556" props="text-align:left; dom-dir:ltr">\DeclareOption{inline}</p>
+<p style="Normal" xid="1557" props="text-align:left; dom-dir:ltr">  {\newenvironment{enumerate*}[1][]%</p>
+<p style="Normal" xid="1558" props="text-align:left; dom-dir:ltr">     {\@nameuse{enit@enumerate*}\enitdp@enumerate{enum}\thr@@{#1}}</p>
+<p style="Normal" xid="1559" props="text-align:left; dom-dir:ltr">     {\@nameuse{enit@endenumerate*}}</p>
+<p style="Normal" xid="1560" props="text-align:left; dom-dir:ltr">   \newenvironment{itemize*}[1][]%</p>
+<p style="Normal" xid="1561" props="text-align:left; dom-dir:ltr">     {\@nameuse{enit@itemize*}\enitdp@itemize{item}\thr@@{#1}}</p>
+<p style="Normal" xid="1562" props="text-align:left; dom-dir:ltr">     {\@nameuse{enit@enditemize*}}</p>
+<p style="Normal" xid="1563" props="text-align:left; dom-dir:ltr">   \newenvironment{description*}[1][]%</p>
+<p style="Normal" xid="1564" props="text-align:left; dom-dir:ltr">     {\@nameuse{enit@description*}\enitdp@description{description}\@M{#1}}</p>
+<p style="Normal" xid="1565" props="text-align:left; dom-dir:ltr">     {\@nameuse{enit@enddescription*}}}</p>
+<p style="Normal" xid="1566"><c></c></p>
+<p style="Normal" xid="1567" props="text-align:left; dom-dir:ltr">\let\enit@shl\enit@toks</p>
+<p style="Normal" xid="1568"><c></c></p>
+<p style="Normal" xid="1569" props="text-align:left; dom-dir:ltr">\ProcessOptions</p>
+<p style="Normal" xid="1570"><c></c></p>
+<p style="Normal" xid="1571" props="text-align:left; dom-dir:ltr">\let\trivlist\enit@trivlist</p>
+<p style="Normal" xid="1572"><c></c></p>
+<p style="Normal" xid="1573" props="text-align:left; dom-dir:ltr">% If there is no loadonly, redefine the basic lists:</p>
+<p style="Normal" xid="1574"><c></c></p>
+<p style="Normal" xid="1575" props="text-align:left; dom-dir:ltr">\ifenit@loadonly\else</p>
+<p style="Normal" xid="1576"><c></c></p>
+<p style="Normal" xid="1577" props="text-align:left; dom-dir:ltr">\let\enitdp@enumerate\@enumdepth</p>
+<p style="Normal" xid="1578" props="text-align:left; dom-dir:ltr">\renewenvironment{enumerate}[1][]</p>
+<p style="Normal" xid="1579" props="text-align:left; dom-dir:ltr">  {\enit@enumerate\enitdp@enumerate{enum}\thr@@{#1}}</p>
+<p style="Normal" xid="1580" props="text-align:left; dom-dir:ltr">  {\enit@endenumerate}</p>
+<p style="Normal" xid="1581"><c></c></p>
+<p style="Normal" xid="1582" props="text-align:left; dom-dir:ltr">\let\enitdp@itemize\@itemdepth</p>
+<p style="Normal" xid="1583" props="text-align:left; dom-dir:ltr">\renewenvironment{itemize}[1][]</p>
+<p style="Normal" xid="1584" props="text-align:left; dom-dir:ltr">  {\enit@itemize\enitdp@itemize{item}\thr@@{#1}}</p>
+<p style="Normal" xid="1585" props="text-align:left; dom-dir:ltr">  {\enit@enditemize}</p>
+<p style="Normal" xid="1586"><c></c></p>
+<p style="Normal" xid="1587" props="text-align:left; dom-dir:ltr">\newcount\enitdp@description</p>
+<p style="Normal" xid="1588" props="text-align:left; dom-dir:ltr">\renewenvironment{description}[1][]</p>
+<p style="Normal" xid="1589" props="text-align:left; dom-dir:ltr">  {\enit@description\enitdp@description{description}\@M{#1}}</p>
+<p style="Normal" xid="1590" props="text-align:left; dom-dir:ltr">  {\enit@enddescription}</p>
+<p style="Normal" xid="1591"><c></c></p>
+<p style="Normal" xid="1592" props="text-align:left; dom-dir:ltr">\fi</p>
+<p style="Normal" xid="1593"><c></c></p>
+<p style="Normal" xid="1594" props="text-align:left; dom-dir:ltr">\endinput</p>
+<p style="Normal" xid="1595"></p>
+</section>
+</abiword>

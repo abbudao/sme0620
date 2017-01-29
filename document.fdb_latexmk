@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1485652504 "document.tex" "document.pdf" "document" 1485652504
+["pdflatex"] 1485659646 "document.tex" "document.pdf" "document" 1485659646
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1492244627 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1492244632 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/tcrm1095.tfm" 1492244635 1536 02c06700a42be0f5a28664c7273f82e7 ""
@@ -240,12 +240,12 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1493559426 334148 1b9d30ff8c861d6082e3e9bfccd8d7eb ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1485664512 7252863 910cb444ced41006b9fb2c7e7f48508f ""
   "DocumentStyle.sty" 1493815138 564 428f1ed9e932b78b63e12c1306b69a67 ""
-  "document.aux" 1485652349 262 465103e67645db71b5f1b72cf1628afc ""
+  "document.aux" 1485656982 262 465103e67645db71b5f1b72cf1628afc ""
   "document.tex" 1493815138 188 293a7c9a31fb46df218fbd9f6aa37823 ""
   "enumitem.sty" 1489600215 42666 6fa770e3485520a6a5f2ea7d259c8f8d ""
-  "tex/ModelosProb.aux" 1485652349 3331 1b476681fc2ee4fde6c1f34902500cf0 ""
-  "tex/ModelosProb.tex" 1485652502 47808 d18938e0ad1c9fb6da53ebbd80d551a7 ""
-  "tex/Probabilidade.aux" 1485652318 5813 f0c47e3da22c7bb400d21737c865ff82 ""
+  "tex/ModelosProb.aux" 1485656982 3435 4f459395149d1cc4d34ed2cf610ac996 ""
+  "tex/ModelosProb.tex" 1485659642 53155 3f1f127356a78117439b5fc3f1f334f2 ""
+  "tex/Probabilidade.aux" 1485656954 5813 f0c47e3da22c7bb400d21737c865ff82 ""
   "tex/Probabilidade.tex" 1485642581 57416 f6ec153c80b21321e4894884338a3c48 ""
   "tikz/ModelosProb/arvore1.tikz" 1493815138 1024 de3c710fbbdba56602345c6edb0307c8 ""
   "tikz/ModelosProb/dnorm1.tikz" 1493815138 761 02dbaf01b9dd5da8f5c4027ec9d19f5d ""
@@ -290,8 +290,8 @@
   "tikz/Probabilidade/tree1.tikz" 1493497117 1767 52cd76400cef3acc3c58c2803cfae502 ""
   "tikz/Probabilidade/tree2.tikz" 1493544480 1937 cfc124ed361366fc2c5e0ca1d888375c ""
   (generated)
+  "document.log"
   "tex/Probabilidade.aux"
   "document.pdf"
-  "document.log"
-  "tex/ModelosProb.aux"
   "document.aux"
+  "tex/ModelosProb.aux"

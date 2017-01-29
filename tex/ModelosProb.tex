@@ -1351,3 +1351,153 @@ E assim por diante,  para todo $x$ e $y$.
 
 Como esses produtos de probabilidades sao satisfeitos, temos que $X$ e $Y$ sao independentes.
 \end{description}
+\subsection{Esperanca, Covariancia, Correlacao}
+\begin{description}
+  \item [Definição:] Sejam $x$ e $y$ v.a.'s com $E(X)=\mu_{x}$, $E(Y)=\mu_{y}$, $Var(X)=\sigma_x^2$ e $Var(Y)=\sigma_y^2$. Seja $p_{x,y}(x,y)$ a f.m.p.\ conjunta ou $f_{x,y}(x,y)$ a f.d.p.\ conjunta de $x$ e $y$. Seja $h(x,y)$ uma função de $(X,Y)$. Definimos o valor esperado de $h(x,y)$ no caso discreto por:
+    \begin{align}
+      E \left(h \left(x,y\right)\right) = \sum limits_{R_{x}} \sum \limits_{R_{y}} h(x,y) \times p_{x,y}(x,y)
+    \end{align}
+    E no caso contínuo:
+    \begin{align}
+      E(h(x,y)) = \int \limits_{R_{x}} \int \limits_{R_{y}} h(x,y) f_{x,y}(x,y) dydx \\
+      = \int \limits_{R_{y}} \int \limits_{R_{x}} h(x,y) f_{x,y}(x,y) dxdy
+    \end{align}
+    Alem disso, definimos para ambos os casos, a covariancia entre $x$ e $y$:
+    \begin{align}
+      \sigma_{x,y}  = Cov(X,Y) = E \left( \left(X-E(X)\right) \left(Y-E(Y)\right)\right) \\
+      = E(XY) - E(X)E(Y)\\
+      =E(XY)- \mu_{x}\times \mu_{y}
+    \end{align}
+    A correlacao entre $x$ e $y$ eh dada por:
+    \begin{align}
+      \rho_{x,y} = \frac{Cov(X,Y)}{\sqrt{Var(x) \times \sqrt{Var(y)}}}= \frac{\sigma_{x,y}}{\sigma_{x} \times \sigma_{y}}
+    \end{align}
+  \item [Exemplo:] Vamos calcular a Correlacao entre $X$ e $Y$ no exemplo anterior (exemplo da maquina).\\
+    A f.m.p.\ conjunta eh:
+  \begin{table}[H]
+    \centering
+    \begin{tabular}{c c c c c}
+      \toprule
+      x /\ y & 0 & 1 & 2 &$p_{x}(x)$ \\ \midrule
+      0 & 0,1 & 0,2 & 0,2& 0,5\\ \midrule
+      1 & 0,04 & 0,08& 0,08&0,2 \\ \midrule
+      2 & 0,06 & 0,12 & 0,12 & 0,3 \\ \midrule 
+      $p_{Y} (y)$ & 0,2 & 0,4 &0,4 & 1 \bottomrule
+      \bottomrule
+    \end{tabular}
+  \end{table}
+\begin{align*}
+  \rho_{x,y} = \frac{Cov(x,y)}{\sigma_{x},\sigma_{y}}\\
+  Cov(X,Y)=E(XY)-E(X) \times E(Y)
+\end{align*}
+\begin{align*}
+  \mu_{x} =E(X)=\sum \limits_{R_{x}}x \times p_{x} \\
+  = 0 \times 0.5 + 1 \times 0.2 + 2 \times 0.3 \\
+  = 0.8
+\end{align*}
+\begin{align*}
+  \mu_{y} =E(Y)=\sum \limits_{R_{y}}y \times p_{y} \\
+  = 0 \times 0.2 + 1 \times 0.4 + 2 \times 0.4 \\
+  =1.2 
+\end{align*}
+\begin{align*}
+  E(XY) = \sum \limits_{R_{X}} \sum \limits_{R_{y}} x\times y \times p_{x,y}(x,y) \\
+  = 0 \times 0 \times 0.1 + \ldots + 2 \times 2 \times 0.12\\
+  = 0.96
+\end{align*}
+\begin{align*}
+  Cov(x,y) = 0.96 - 0.8 \times 1.2 \\
+  =0
+\end{align*}
+\begin{align*}
+  \sigma_{x}^2 - \left(E(X)\right)^2
+\end{align*}
+Como temos:
+\begin{align*}
+  E(X^2) = \sum \limits_{R_{x}} x^2 \times  p_{x}
+\end{align*}
+Logo a $\rho_{x,y}$ eh:
+\begin{align*}
+  \rho_{x,y}  = \frac{0}{\sgima_{x} \times \sigma_{y}}=0 
+\end{align*}
+\item [Resultado]:
+  \begin{description}
+    \item[Independencia e correlacao]:  Se $X$ e $Y$ sao duas v.a.'s independentes, então a correlacao entre $X$ e $Y$ eh o $0$ ($\rho_{x,y}=0$).
+    \item [Obs:]  A volta nao vale. Se $X$ e $Y$ sao independetes $E(XY)=E(X) \times E(Y)$.
+    \end{description}
+  \item [Resultados]:
+    
+    Para $X$ e $Y$ v.a.\ 's e $a,b \in \mathbb{R}$, constantes:
+    \begin{enumerate}
+      \item 
+       \begin{align*}
+         Var(X+Y)= Var(X)+Var(Y) + 2 Cov(X,Y) 
+       \end{align*} 
+     \item 
+       \begin{align*}
+         Var(X-Y) = Var(X) + Var(Y) -2 Cov(X,Y)
+       \end{align*}
+     \item Se $X$ e $Y$ sao independentes, entao:
+       \begin{align*}
+         Var(X \pm Y) = Var(X) +Var(Y)
+       \end{align*}
+     \item 
+       \begin{align*}
+         Var(aX \pm bY) - a^2 Var(X)+ b^2 Var(Y) \pm 2ab Cov(X,Y)
+       \end{align*}
+     \item Se $X$ e $Y$ sao independentes, entao:
+       \begin{align*}
+         Var(aX \pm bY) = a^2 Var(X) + b^2Var(Y)
+       \end{align*}
+    \end{enumerate}
+  \item [Exemplo:] Seja $(X,Y)$ uma v.a. bidimensional cuja f.d.p.\ conjunta eh dada por:
+    \begin{description}
+      
+    \begin{align*}
+      f_{x,y} (x,y) = \begin{cases}
+       9xy, \quad 0<x<y<1  \\
+       0, \quad \text{c.c.}
+      \end{cases}
+    \end{align*}
+\item [Determine:]
+    \begin{enumerate}[label=(\alph*)]
+      \item As marginais de $X$ e $Y$
+      \item $P(0 \leq X \leq \frac{1}{2}, 0 \leq Y \leq \frac{1}{2})$
+    \end{enumerate}
+\item [Resolução:]
+   \begin{enumerate}[label=(\alph*)]
+     \item $f_{x} (x)= ?$ e $f_{y}(y)=?$
+       %Grafico aqui\
+      \begin{align*}
+        f_{x} (x)= \int \limits_{R_{y}} f_{x,y} (x,y) dy \\
+        = \int \limits_{x}^{1} 8xy dy = \eval{ \frac{8xy^2}{2} }{x}{1} \\
+      = 4x(1-x^2)
+      \end{align*}
+      Entao, a marginal de $x$ eh:
+      \begin{align*}
+        f_{x} (x)= \begin{cases}
+          4x(1-x^2) , \quad 0<x<1 \\
+          0, \quad \text{c.c.}
+        \end{cases}
+      \end{align*}
+        \begin{align*}
+          f_{y}(y)= \int \limits_{R_{x}} f_{xy} (x,y) \\
+          = \int \limits_{0}^{y} 8xy dx = \eval{\frac{8yx^2}{2}}{0}{y} = 4y^3
+        \end{align*}
+        Logo, a marginal de $y$ eh:
+        \begin{align*}
+          f_{y }(y)= \begin{cases}
+           4y^3= \quad 0<y<1 \\
+           0, \quad \text{c.c.}
+          \end{cases}
+        \end{align*}
+      \item 
+        \begin{align*}
+          P(0 \leq X \leq \frac{1}{2}, 0 \leq Y \leq \frac{1}{2}) = \int \limits_{0}^{\frac{1}{2}} 8xy dy dx\\
+          = \int \limits_{0}^{\frac{1}{2}} \int \limits_{0}^{y} 8xy dx dy \\
+          = \frac{1}{16}=0.0625
+        \end{align*}
+   \end{enumerate} 
+    \end{description}
+
+\end{description}

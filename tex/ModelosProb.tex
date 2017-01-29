@@ -1157,4 +1157,197 @@ Ou equivalentemente:
 \end{enumerate}
 \end{description}
 \end{description}
+\section{Variaveis Aleatorias Bidimensionais}
+\begin{description}
+  \item Seja $X$ e $Y$ duas variáveis aleatórias quando ha interesse na variacao conjunta de $X$ e $Y$, estudamos o par $(X,Y)$ como uma variável aleatória bidimensional. `1`
+  \item  [Definição:] A variável aleatória bidimensional discreta $(X,Y)$ tem funcao massa de probabilidade conjunta definida por:
+    \begin{align}
+      P_{x,y}= P(X=x, Y=y)
+    \end{align}
+    A funcao de distribuição acumulada $F_{x,y} = P(X \leq x, Y \leq y)$ para $(x,y)$ valores que $(X,Y)$ pode assumir.
+  \item [Propriedades]:
+    \begin{enumerate}[label=(\alph*)]
+      \item $p_{x,y}(x,y) \geq 0, \quad \forall (x,y)$.
+      \item $\sum \limits_{R_X} \sum \limits_{R_Y} p_{x,y} (x,y) = 1$.
+    \end{enumerate}
+  \item [Exemplo]:
+Em um processo de inspecao de qualdiade, cada peca passa por dois testes e eh classificada de acordo com duas variáveis $X$ e $Y$, tais que:
+\begin{align*}
+ X= \begin{cases}
+   1,\quad \text{Se a peca passa no primeiro teste}  \\
+   0, \quad \text{Se a peca falha no primeiro teste}
+ \end{cases} 
+\end{align*}
+\begin{align*}
+ Y= \begin{cases}
+  1,\quad \text{Se a peca passa no segundo teste}  \\
+0, \quad \text{Se a peca falha no segundo teste}
+ \end{cases} 
+\end{align*}
+Segundo a f.m.p.\ conjunta dada por:
+%Tabela ma formatada, reformular
+\begin{table}[H]
+  \centering
+  \label{tab:x}
+  \begin{tabular}{c c c c}
+    $    p_{x,y} $ & $Y$& $p_x{x}$ \\
+    $ X$ & 0 &1  \\
+    0 & 0,1&0,2&0,3 \\
+    1 & 0,2& 0,5& 0,7\\
+    $p_y(y)$  & 0,3&0,7&1
+  \end{tabular}
+\end{table}
+$P(X=0, Y=0)=0,1$, indica a proabilidade de uma peca selecionada ao acaso falhar no primeiro teste e no segundo teste.
+\end{description}
+\subsection{Distribuiçoes Marginais}
+\begin{description}
+\item [Definição:] 
+  Seja $(X,Y)$ variávei aleatória bidimensional com f.m.p.\ conjunta $p_{x,y}(x,y)$. A probabilidade marginal de $X$ eh $\sum \limits_{R_{Y}} p_{x,y} (x,y)$. A probabilidade marginal de $Y$ eh $p_{y}(y) = \sum \limits_{R_{x}} p_{x,y}(x,y)$.
+\item[Exemplo:] Considere o exemplo anterior, e obtenha as distribuiçoes marginais.
 
+  Marginal de X:
+  \begin{align*}
+    R_{x} = \{ 0,1 \}
+  \end{align*}
+  \begin{align*}
+    p_{x} (0) = P(X=0, Y=y)\\
+    = P(X=0, Y=0) +P(X=0,Y=1)=0,1+0,2=0,3
+  \end{align*}
+  \begin{align*}
+    p_{x} (0) = P(X=1, Y=y)\\
+    = P(X=1, Y=0) +P(X=1,Y=1)=0,2+0,5=0,7
+  \end{align*}
+  Com isso, temos que a f.m.p.\ marginal de $X$ eh:
+  \begin{table}[H]
+    \centering
+    \begin{tabular}{c c c}
+      $x$ & $0$ &$1$ \\ \midrule
+      $p_{x}$ & 0,3 & 0,7 \\
+    \end{tabular}
+  \end{table}
+  A f.m.p.\ marginal de $Y$ eh dada por:
+\begin{table}[H]
+    \centering
+    \begin{tabular}{c c c}
+      $y$ & $0$ &$1$ \\ \midrule
+      $p_{x}$ & 0,3 & 0,7 
+    \end{tabular}
+  \end{table}
+\item [Definicao:] A v.a.\ bidimensional continua $(X,Y)$ tem f.d.p.\ conjunta dada por $f_{x,y}(x,y)$ e função acumulada $F_{x,y}(x,y)$, satisfazendo:
+  \begin{enumerate}[leftmargin=*, label=\roman*., widest=IV, align=left]
+    \item 
+     \begin{align}
+      f_{x,y} \geq 0, \quad \forall (x,y)
+     \end{align} 
+    \item  
+     \begin{align*}
+      \int \limits_{R_{y}} \int \limits_{R_{x}} f_{x,y} (x,y) dx dy = int \limits_{R_{x}} \int \limits_{R_{y}} f_{x,y} (x,y) dy dx= 1
+     \end{align*} 
+    \item 
+      \begin{align*}
+        F_{X,Y}(x,y) = P(X \leq x, Y\leq y)\\
+        = F_{X,Y}(x,y) = P(X < x, Y\leq y)\\
+        = F_{X,Y}(x,y) = P(X \leq x, Y< y)\\
+        = F_{X,Y}(x,y) = P(X<x, Y<y)
+      \end{align*}
+  \end{enumerate}
+\item[Propriedades]:
+  \begin{enumerate}[label=(\alph*)]
+    \item 
+      \begin{align*}
+        f_{x,y} (x,y)= \frac{\partial^2}{\partial x \partial y}F_{x,y} (x,y)
+      \end{align*}
+    \item 
+      \begin{align*}
+        F_{x,y} (x,y)= \int \limits_{- \infty}^{x} \int \limits_{- \infty}^{y} f_{x,y}(x,y) dy dx
+      \end{align*}
+      \item 
+        \begin{align*} 
+          P(a \leq X \leq b ; c \leq y \leq d) = \int \limits_{a}^{b} \int \limits_{c}^{d} f_{x,y} (x,y) dy dx
+        \end{align*}
+  \end{enumerate}
+\item [Exemplo:] Duas caracteristicas do desempenho do motor de um foguete sao o empuxo $(X)$ e a taxa de mistura $(Y)$. Suponha que $(X,Y)$ seja uma v.a.\ continua bidimensional com f.d.p.\ conjunta dada por:
+  \begin{align*}
+    f_{x,y} (x,y)= \begin{cases}
+      2(x+y-2xy), \quad 0\leq x \leq 1, \quad 0 \leq y \leq 1\\
+      0, \quad \text{c.c.}
+    \end{cases}
+  \end{align*}
+  Calcular a probabilidade:
+  \begin{align*}
+    P(0 \leq X \leq 0,5; 0,5 \leq Y \leq 1)  \\
+    = \int \limits_{0}^{0.5} \int \limits_{0.5}^{1} 2(x+y -2xy)dy dx \\
+    =2 \int \limits_{0}^{0.5} \left( \eval{xy}{0.5}{1} + \eval{\frac{y^2}{2}}{0.5}{1} - \eval{xy^2}{0.5}{1} \right) dx \\
+    = 2 \int \limits_{0}^{0.5} \left( (\frac{1}{2} x + \frac{3}{8} - \frac{3x}{4}) \right)dx \\
+    = 2 \left( \eval{\frac{x^2}{4}{0}{0.5} + \eval{\frac{3}{8}}{0}{0.5} -\eval{\frac{3x^2}{8}}{0}{0.5} \right) \\
+      = \frac{5}{16}  =0.3125
+  \end{align*}
+\end{description}
+\subsection{Densidades Marginais}
+\begin{description}
+  \item [Definição:] Seja $(X,Y)$ v.a.\ continua bidimensional com f.d.p.\ conjunta $f_{x,y}(x,y)$. A f.d.p.\ marginal de $X$ eh dada por $f_{x}(x)= \int \limits_{R_{y}}f_{x,y}(x,y)dy$ e a f.d.p.\ marginal dada por:
+    \begin{align*}
+      f_{y} (y)= \int_{R_{x}}f_{x,y} (x,y) dx
+    \end{align*}
+  \item [Exemplo:] No exemplo anterior, determine as distribuiçoes marginais de $X$ e $Y$. 
+
+    \begin{align*}
+      f_{x,y} (x,y) = 2(x+y -2xy), \quad x \in \[ 0,1 \] \quad y \in \[ 0,1 \]
+    \end{align*}
+    A marginal de $X$:
+\begin{align*}
+  f_{x} (x)= \int \limits_{0}^{1} 2 \left(x+y -2xy \right) dy \\ 
+  = 2 \left( \eval{xy}{0}{1} + \eval{xy}{0}{1} - \eval{xy^2}{0}{1} \right)
+\end{align*}
+\begin{align*}
+  f_{x}(x)= 2 \left( x + \frac{1}{2} - x \right)= 1
+\end{align*}
+Logo, a f.d.p de $X$ eh:
+\begin{align*}
+  f_{x} (x) = \begin{cases}
+   1, \quad 0 \leq x \leq 1  \\
+   0, \quad \text{c.c.}
+  \end{cases}
+\end{align*}
+A marginal de $Y$:
+\begin{align*}
+  f_{y} (y) = \int \limits_{0}^{1} 2 \left(x+y -2xy\right)dx \\
+  =2 \left( \eval{x^2}{0}{1}- \eval{yx^2}{0}{1}\right)\\
+  = 2 \left(\frac{1}{2}+ y - y\right)=1
+\end{align*}
+\end{description}
+\subsection{Independência Probabilística}
+\begin{description}
+  \item  Duas v.a.'s $X$ e $Y$ sao independentes se a sua f.m.p.\ conjunta (ou f.d.p.\ conjunta) de $(X,Y)$ for fatoravel no produto das f.m.p.\ (ou f.d.p.\ marginais )de $X$ e $Y$, isto eh:
+  \begin{align}
+    p_{x,y}  = p_{x}(x) \times p_{y}(y)
+  \end{align}
+  No caso discreto, e no caso continuo:
+  \begin{align}
+    f_{x,y} (x,y)= f_{x}(x) \times f_{y}(y) \quad \forall (x,y)
+  \end{align}
+ 
+\item [Exemplo:]  Suponha que uma maquina seja ajustada par auma determinada tarefa de manha e para outra tarefa a tarde. SUponha que o numero de vezes que a maquina da problema de manha e a tarde sejam representadas por variaveis  $X$ e $Y$ com f.m.p.\ conjunta dada por:
+  \begin{table}[H]
+    \centering
+    \begin{tabular}{c c c c c}
+      \toprule
+      x /\ y & 0 & 1 & 2 &$p_{x}(x)$ \\ \midrule
+      0 & 0,1 & 0,2 & 0,2& 0,5\\ \midrule
+      1 & 0,04 & 0,08& 0,08&0,2 \\ \midrule
+      2 & 0,06 & 0,12 & 0,12 & 0,3 \\ \midrule 
+      $p_{Y} (y)$ & 0,2 & 0,4 &0,4 & 1 \bottomrule
+      \bottomrule
+    \end{tabular}
+  \end{table}
+  Observem que:
+  \begin{align*}
+    P(X=0, Y=0) = P(x=0) + P(y=0)= 0,5 \times 0,2 = 0,1
+  \end{align*}
+  \begin{align*}
+    P(X=0, Y=1) = P(x=0) + P(y=1)= 0,5 \times 0,4 = 0,2
+  \end{align*}
+E assim por diante,  para todo $x$ e $y$.
+
+Como esses produtos de probabilidades sao satisfeitos, temos que $X$ e $Y$ sao independentes.
+\end{description}

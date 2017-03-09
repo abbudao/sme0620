@@ -1,4 +1,4 @@
-\documentclass[11pt,a4paper]{article}
+\documentclass[11pt,a4paper]{book}
 \usepackage[portuguese]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
@@ -6,26 +6,283 @@
 \usepackage{enumitem}
 \usepackage{booktabs}
 \begin{document}
-\section{Definições de probabilidade}
+% Dia 07/06/2017
+%Aula 1
+% Todo
+% Refazer a parte de seção de organização das duas primeiras aulas
+% Lembrar de tirar itemize parar enumerate alf
+% Fazer as figuras de diagrama de Venn
+% Corrigir erros crassos
+% Procurar os \null substituir
+\chapter{Probabilidade}
+Objetivo: Definir um modelo estatistico que seja adequado à descrição e interpretação de fenômenos aleatórios.
+
+A princípio iremos definir alguns conceitos básicos:
 \begin{itemize}
+  \item Experimentos ou fenômenos aleatórios ( $\varepsilon$): são os acontecimentos cujos resultados não podem ser previstos 
+    com certeza, sob condições idênticas.
+
+    Exemplos: 
+    \begin{itemize}
+      \item Lançamento de um dado.
+       \item Lançamento de uma moeda
+       \item Tempo de vida útil de um componente eletrônico.
+    \end{itemize}
+
+  \item Espaço Amostral ($\Omega$): refere-se ao conjunto de todos os possíveis resultados de um experimento ou fenômeno 
+    aleatório.
+
+    Exemplos:
+    \begin{itemize}
+      \item $\Omega_1= \{ 1,2,3,5,6 \}$ 
+      \item $\Omega_2= \{ c,k \}$ Aonde $k$ é cara e $c$ é coroa.
+      \item $\Omega_3= [ 0,\infty \}$ 
+    \end{itemize}
+
+  \item Evento: qualquer subconjunto do espaço amostral $\Omega$ do experimento aleatório $\varepsilon$.
+
+    Notação: $A,B,C,D,\dots,A_1,A_2,A_3,\dots,B_1,B_2,\dots$
+
+    Notamos que $A$ é um evento, então $A \ceq \Omega$.
+
+\end{itemize}
+\subsection{Tipos de Eventos}
+
+\begin{itemize}
+  \item Evento simples ou elementar: é o evento formado por um único ponto do espaço amostral. 
+
+    Exemplo: $A=\{W\}$.
+
+  \item Evento composto:  é o evento formado por dois ou mais pontos do espaço amostral.
+
+    Exemplo:$ A= \{w_1,w_2,w_3 \}$
+
+  \item Evento certo: é o evento formado por todos os pontos amostrais.
+
+    Exemplo: $A= \Omega$ 
+
+  \item Evento impossível: É o evento que não possuí elementos de $\Omega$, isto é, evento vazio.
+
+    Exemplo: $A=\{\}$ ou $A= \empty$
+
+\end{itemize}
+Alguns Exemplos:
+
+$A=$ Face do dado maior que 5
+
+$A=\{6\}$
+
+$B=$ Face do dado sem par 
+
+$B= \{2,4,6\}$
+
+$C=$ Face do dado maior que 1
+
+$C= \{1,2,3,4,5,6\}=\Omega$
+
+$D=$ Face do dado maior que 6.
+
+$D=\{ \}$ ou $D=\null$
+%Aula 2 9/03/2017
+\subsection{Operação com Eventos}
+Para ilustrar graficamente eventos, é costume utilizar-se os mesmos diagramas de Venn utilizados na teoria de conjuntos.
+
+Considere eventos definidos em um espaço amostral $\Omega$ de um experimento aleatório $\varepsilon$.
+\begin{itemize}
+  \item União de eventos ( $A \cup B$ ): é o evento formado por todos os elementos que pertencem a $A$, ou  $B$, ou ambos.
+    \begin{figure}
+      %figura 1
+    \end{figure}
+
+  \item Intersecção de eventos ( $A \cap B$ ): é o evento formado pelos elementos que pertencem a $A$ e a $B$.
+   \begin{figure}[]
+     \centering
+     \includegraphics[width=]{}
+       \caption{}
+       \label{figura:2}
+     \end{figure} 
+
+\end{itemize}
+\subsubsection{Casos Particulares}
+\begin{itemize}
+  \item Se $B \contido A$, então $A \cap B= B$ 
+    \begin{figure}[]
+      \centering
+      \includegraphics[width=]{}
+        \caption{}
+        \label{figura:3}
+      \end{figure}
+
+      \item Se $A$ e $B$ são eventos disjuntos ou mutuamente exclusivos (não possui elementos comuns), então $A\cap B = \null$.
+        \begin{figure}[]
+          \centering
+          \includegraphics[width=]{}
+            \caption{}
+            \label{figura:4}
+          \end{figure}
+
+\end{itemize}
+Diferença de eventos ($A-B$):é o evento formado pelos elementos que pertencem a $A$ mas não pertencem a $B$.
+\begin{figure}[]
+  \centering
+  \includegraphics[width=]{}
+    \caption{}
+    \label{figura:5}
+  \end{figure}
+ Evento Complementar ($\bar{A}$ ou $A^c$): é o evento formado por todos os elementos de $\Omega$ que não pertencem a $A$.
+ \begin{figure}[]
+   \centering
+   \includegraphics[width=]{}
+     \caption{}
+     \label{figura:6}
+   \end{figure}
+
+   Alguns exemplos de eventos complementares: 
+
+   \begin{itemize}
+     \item $(A \cup B )^c = A^c \B^c$
+       \begin{figure}[]
+         \centering
+         \includegraphics[width=]{}
+           \caption{}
+           \label{figura:7}
+         \end{figure}
+
+       \item $(A \cap B)^c = A^c \cup B^c $
+         \begin{figure}[]
+           \centering
+           \includegraphics[width=]{}
+             \caption{}
+             \label{figura:8}
+           \end{figure}
+
+           Os itens $ a$ e $b$ são conhecidos como Lei de Demorgan.
+         \item $A \cup B^c = ( A \cap B ) \cup B^c = A \cup (A \cap B)^c
+           \begin{figure}[]
+             \centering
+             \includegraphics[width=]{}
+               \caption{}
+               \label{figura:9}
+               
+             \end{figure}
+
+             \item  $A \cap B^c = B^c \cap (A \cup B)$
+               \begin{figure}[]
+                 \centering
+                 \includegraphics[width=]{}
+                   \caption{}
+                   \label{figura:10}
+                 \end{figure}
+
+   \end{itemize}
+
+   Outras operações: 
+   \begin{align}
+     A \cap \null = \null \\
+     A \cup \null = A \\
+     \null^c = \Omega \\
+     \Omega^c = \null \\
+     (A^c)^c = A \\
+     B= (A \cap B)\cup (A^c \cap B)\\
+     A= (A \cap B) \cup (A \cap B^c)
+   \end{align}
+
+   Exemplo: Escrever $A \cup B$ como união de eventos disjuntos.
+   \begin{figure}[]
+     \centering
+     \includegraphics[width=]{}
+       \caption{}
+       \label{figura:11}
+     \end{figure}
+     Situação 1:
+     \begin{figure}[]
+       \centering
+       \includegraphics[width=]{}
+         \caption{}
+         \label{figura:11}
+       \end{figure}
+
+       $A \cup B = A \cup (A^c \cap B)$
+       Situação 2: 
+       \begin{figure}[]
+         \centering
+         \includegraphics[width=]{}
+           \caption{}
+           \label{figura:12}
+         \end{figure}
+         $(A \cup B) = B \cup (B^c \cap A)$
+
+         Considerando a situação 1 , vamos verficair se os eventos são disjuntos. Os eventos serão disjuntos se $A \cap ( A^c \cap B )= \null$ . Vericando, temos: 
+         \begin{align}
+           \( A \cap A^c\) \\
+           \null \cap B= \null
+         \end{align}
+\section{Definições de probabilidade}
+\begin{enumerate}[label=(\alph*)]
   \item Definicão de probabilidade em espaços equiprováveis
+
+    Se um experimento aleatório tiver $n$ resultados possíveis, $\Omega = \{ \omega_1,\omega_2,\ldots,\omega_n \}$, mutuamente exclusivos e igualmente possíveis e se um evento $A$ tiver $n_A$ desses resultados, então a probabilidade deo evento $A$, representado por $P(A)$, é dada por: 
     \begin{align}
-      A \subset \Omega\\
-      P(A)= \frac{N_a}{n}
+      A \subset \Omega \nonumber\\
+      P(A)= \frac{N_a}{n} 
     \end{align}
-    Sendo que $\Omega$ é definido como todo o espaco amostral.
+    Sendo que $\Omega$ é definido como todo o espaco amostral, $n_A$ o número de casos favoráveis $A$ e $n$ o número de casos possíveis.
+
+    Exemplo: 
+
+    Lançamento de duas moedas honestas. Calcular a probabilidade de: 
+    \begin{enumerate}
+      \item  Obter duas faces iguais.
+      \item Obter pelo menos uma face diferente de cara
+        \item  Obter pelo menos uma face diferente.
+    \end{enumerate}
+
+    \begin{table}[]
+      \centering
+      \caption{}
+      \label{}
+      \begin{tabular}{}
+        
+      \end{tabular}
+    \end{table}
+    $\Omega = \{ (c,c); (c,k); (k,c) ; (k,k)\}$
+
+    \begin{enumerate}
+      \item $A$= Faces iguais
+        \begin{align*}
+          A= \{ (c,c) ; (k,k) \} \\
+          P(A) = \frac{2}{4} = \frac{1}{2}= 0.5
+        \end{align*}
+      \item $B=$ Pelo menos uma face diferente de cara.
+
+        \begin{align}
+          B= \{ (c,k); (k,c); (k,k) \}\\
+          P(B)= \frac{3}{4}
+        \end{align}
+        \item  $C=$ Obter pelo menos uma face diferente
+
+          \begin{align*}
+            C= \{ (c,k) ; (k,c)\} \\
+            P(C)= \frac{2}{4}= \frac{1}{2}:
+
+          \end{align*}
+    \end{enumerate}
   \item Definição de probabilidade frequentista
 
-    Um experimento é realizado um número grande, $n$, de vezes. O evento $A$ ocorre $N_a$ vezes com: $0 \le N_a \le n$. A frequência relativa de vezes que ocorreu o evento $A$ é uma forma de aproximar a probabilidade do evento A, ou seja:
+    Um experimento é realizado  $n$ vezes, sendo $n$ um número grande. O evento $A$ ocorre exatamente $N_a$ vezes com: $0 \le N_a \le n$. A frequência relativa de vezes que ocorreu o evento $A$ é uma forma de aproximar a probabilidade do evento A, ou seja:
     \begin{align}
       f_r (A)= \frac{n_a}{n}
     \end{align}
-    Quando $n \to \infty$, $f_r(A)$ se aproxima de $P(A)$.
+    Quando $n \to \infty$, $f_r(A)$ aproxima-se de $P(A)$.
+
+    Exemplo: Geração de $n$ número inteiros entre 1 e 5, $\{ 1,2,3,4,5 \}$, e o evento de interesse é a ocorrência do número 4.
+
   \item Definição de probabilidade axiomática
 
     A probabilidade de um evento $A$ é definida como sendo um número $P(A)$ que satisfaz
     os seguintes axiomas:
-    \begin{itemize}
+    % Usar sempre numeração romana pra axiomas!
+    \begin{enumerate}
       \item $P(A) \ge 0, \forall A \subset \Omega$
       \item $P(\Omega)=1$
       \item Se $A_1, A_2,\ldots$ são eventos mutuamente exclusivos ($A_i \cup A_j = \phi, \forall i \neq j$), então:
@@ -56,8 +313,9 @@
 \end{itemize}
 Exemplo: 
 
-Mostre a propriedade (g). Use o fato de que $A\cup (B \cup )=
-(A\cup B )\cup (A \cup C )$:
+Mostre a propriedade (g).
+
+Use o fato de que $A\cup (B \cup C )= (A\cup B )\cup (A \cup C )$:
 \begin{align}
   P(A\cup B\cup C)- P(A \cup (B \cup C) )\\
   =P(A)+P(B\cup C)- P(A\cap(B\cup C) )\\

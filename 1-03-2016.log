@@ -1,15 +1,15 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.12.15)  9 MAR 2017 11:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2017.3.14)  14 MAR 2017 09:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
 **1-03-2016.tex
 (./1-03-2016.tex
-LaTeX2e <2016/02/01>
-Babel <3.9q> and hyphenation patterns for 3 language(s) loaded.
-(/usr/share/texlive/texmf-dist/tex/latex/base/book.cls
+LaTeX2e <2016/03/31> patch level 3
+Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
+(/usr/share/texmf-dist/tex/latex/base/book.cls
 Document Class: book 2014/09/29 v1.4h Standard LaTeX document class
-(/usr/share/texlive/texmf-dist/tex/latex/base/bk11.clo
+(/usr/share/texmf-dist/tex/latex/base/bk11.clo
 File: bk11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -24,47 +24,28 @@ File: bk11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
-) (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2016/02/24 3.9q The Babel package
-
-/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty:310: Package babel Error: Unknown option `portuguese'. Either you misspelled it
-(babel)                or the language definition file portuguese.ldf was not found.
-
-See the babel package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.310 \ProcessOptions*
-                      
-Valid options are: shorthands=, KeepShorthandsActive,
-activeacute, activegrave, noconfigs, safe=, main=, math=
-headfoot=, strings=, config=, hyphenmap=, or a language name.
-
-
-/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty:343: Package babel Error: You haven't specified a language option.
-
-See the babel package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.343 ...ry to proceed from here, type x to quit.}
-                                                  
-You need to specify a language, either as a global option
-or as an optional argument to the \usepackage command;
-You shouldn't try to proceed from here, type x to quit.
-
-) (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+) (/usr/share/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2016/04/23 3.9r The Babel package
+(/usr/share/texmf-dist/tex/generic/babel-portuges/portuges.ldf
+Language: portuges 2008/03/18 v1.2q Portuguese support from the babel system
+(/usr/share/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2016/04/23 3.9r Babel common definitions
+\babel@savecnt=\count88
+\U@D=\dimen103
+)
+Package babel Info: Making " an active character on input line 145.
+)) (/usr/share/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2015/03/17 v1.2c Input encoding file
 \inpenc@prehook=\toks14
 \inpenc@posthook=\toks15
-(/usr/share/texlive/texmf-dist/tex/latex/base/utf8.def
-File: utf8.def 2015/12/03 v1.1r UTF-8 support for inputenc
+(/usr/share/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2016/02/28 v1.1s UTF-8 support for inputenc
 Now handling font encoding OML ...
 ... no UTF-8 mapping file for font encoding OML
 Now handling font encoding T1 ...
 ... processing UTF-8 mapping file for font encoding T1
-(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.dfu
-File: t1enc.dfu 2015/12/03 v1.1r UTF-8 support for inputenc
+(/usr/share/texmf-dist/tex/latex/base/t1enc.dfu
+File: t1enc.dfu 2016/02/28 v1.1s UTF-8 support for inputenc
    defining Unicode char U+00A0 (decimal 160)
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
@@ -276,11 +257,15 @@ File: t1enc.dfu 2015/12/03 v1.1r UTF-8 support for inputenc
    defining Unicode char U+0219 (decimal 537)
    defining Unicode char U+021A (decimal 538)
    defining Unicode char U+021B (decimal 539)
-   defining Unicode char U+01E02 (decimal 7682)
-   defining Unicode char U+01E03 (decimal 7683)
+   defining Unicode char U+1E02 (decimal 7682)
+   defining Unicode char U+1E03 (decimal 7683)
    defining Unicode char U+200C (decimal 8204)
+   defining Unicode char U+2010 (decimal 8208)
+   defining Unicode char U+2011 (decimal 8209)
+   defining Unicode char U+2012 (decimal 8210)
    defining Unicode char U+2013 (decimal 8211)
    defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2015 (decimal 8213)
    defining Unicode char U+2018 (decimal 8216)
    defining Unicode char U+2019 (decimal 8217)
    defining Unicode char U+201A (decimal 8218)
@@ -295,8 +280,8 @@ File: t1enc.dfu 2015/12/03 v1.1r UTF-8 support for inputenc
 )
 Now handling font encoding OT1 ...
 ... processing UTF-8 mapping file for font encoding OT1
-(/usr/share/texlive/texmf-dist/tex/latex/base/ot1enc.dfu
-File: ot1enc.dfu 2015/12/03 v1.1r UTF-8 support for inputenc
+(/usr/share/texmf-dist/tex/latex/base/ot1enc.dfu
+File: ot1enc.dfu 2016/02/28 v1.1s UTF-8 support for inputenc
    defining Unicode char U+00A0 (decimal 160)
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
@@ -335,8 +320,8 @@ File: ot1enc.dfu 2015/12/03 v1.1r UTF-8 support for inputenc
 )
 Now handling font encoding OMS ...
 ... processing UTF-8 mapping file for font encoding OMS
-(/usr/share/texlive/texmf-dist/tex/latex/base/omsenc.dfu
-File: omsenc.dfu 2015/12/03 v1.1r UTF-8 support for inputenc
+(/usr/share/texmf-dist/tex/latex/base/omsenc.dfu
+File: omsenc.dfu 2016/02/28 v1.1s UTF-8 support for inputenc
    defining Unicode char U+00A7 (decimal 167)
    defining Unicode char U+00B6 (decimal 182)
    defining Unicode char U+00B7 (decimal 183)
@@ -358,60 +343,60 @@ Now handling font encoding U ...
    defining Unicode char U+2026 (decimal 8230)
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
-)) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2016/03/03 v2.15a AMS math features
+)) (/usr/share/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2016/06/28 v2.15d AMS math features
 \@mathmargin=\skip43
 For additional information on amsmath, use the `?' option.
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/share/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01 AMS text
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+(/usr/share/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks16
-\ex@=\dimen103
-)) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+\ex@=\dimen104
+)) (/usr/share/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen104
-) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
-Package: amsopn 1999/12/14 v2.01 operator names
+\pmbraise@=\dimen105
+) (/usr/share/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count88
+\inf@bad=\count89
 LaTeX Info: Redefining \frac on input line 199.
-\uproot@=\count89
-\leftroot@=\count90
+\uproot@=\count90
+\leftroot@=\count91
 LaTeX Info: Redefining \overline on input line 297.
-\classnum@=\count91
-\DOTSCASE@=\count92
+\classnum@=\count92
+\DOTSCASE@=\count93
 LaTeX Info: Redefining \ldots on input line 394.
 LaTeX Info: Redefining \dots on input line 397.
 LaTeX Info: Redefining \cdots on input line 518.
 \Mathstrutbox@=\box26
 \strutbox@=\box27
-\big@size=\dimen105
-LaTeX Font Info:    Redeclaring font encoding OML on input line 630.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 631.
-\macc@depth=\count93
-\c@MaxMatrixCols=\count94
+\big@size=\dimen106
+LaTeX Font Info:    Redeclaring font encoding OML on input line 634.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 635.
+\macc@depth=\count94
+\c@MaxMatrixCols=\count95
 \dotsspace@=\muskip10
-\c@parentequation=\count95
-\dspbrk@lvl=\count96
+\c@parentequation=\count96
+\dspbrk@lvl=\count97
 \tag@help=\toks17
-\row@=\count97
-\column@=\count98
-\maxfields@=\count99
+\row@=\count98
+\column@=\count99
+\maxfields@=\count100
 \andhelp@=\toks18
-\eqnshift@=\dimen106
-\alignsep@=\dimen107
-\tagshift@=\dimen108
-\tagwidth@=\dimen109
-\totwidth@=\dimen110
-\lineht@=\dimen111
+\eqnshift@=\dimen107
+\alignsep@=\dimen108
+\tagshift@=\dimen109
+\tagwidth@=\dimen110
+\totwidth@=\dimen111
+\lineht@=\dimen112
 \@envbody=\toks19
 \multlinegap=\skip44
 \multlinetaggap=\skip45
 \mathdisplay@stack=\toks20
-LaTeX Info: Redefining \[ on input line 2735.
-LaTeX Info: Redefining \] on input line 2736.
-) (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+LaTeX Info: Redefining \[ on input line 2739.
+LaTeX Info: Redefining \] on input line 2740.
+) (/usr/share/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
@@ -421,32 +406,35 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \enitkv@toks@=\toks21
 \labelindent=\skip46
-\enit@outerparindent=\dimen112
+\enit@outerparindent=\dimen113
 \enit@toks=\toks22
 \enit@inbox=\box28
-\enitdp@description=\count100
-) (/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty
-Package: booktabs 2005/04/14 v1.61803 publication quality tables
-\heavyrulewidth=\dimen113
-\lightrulewidth=\dimen114
-\cmidrulewidth=\dimen115
-\belowrulesep=\dimen116
-\belowbottomsep=\dimen117
-\aboverulesep=\dimen118
-\abovetopsep=\dimen119
-\cmidrulesep=\dimen120
-\cmidrulekern=\dimen121
-\defaultaddspace=\dimen122
-\@cmidla=\count101
-\@cmidlb=\count102
-\@aboverulesep=\dimen123
-\@belowrulesep=\dimen124
-\@thisruleclass=\count103
-\@lastruleclass=\count104
-\@thisrulewidth=\dimen125
+\enitdp@description=\count101
+) (/usr/share/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2016/04/27 v1.618033 publication quality tables
+\heavyrulewidth=\dimen114
+\lightrulewidth=\dimen115
+\cmidrulewidth=\dimen116
+\belowrulesep=\dimen117
+\belowbottomsep=\dimen118
+\aboverulesep=\dimen119
+\abovetopsep=\dimen120
+\cmidrulesep=\dimen121
+\cmidrulekern=\dimen122
+\defaultaddspace=\dimen123
+\@cmidla=\count102
+\@cmidlb=\count103
+\@aboverulesep=\dimen124
+\@belowrulesep=\dimen125
+\@thisruleclass=\count104
+\@lastruleclass=\count105
+\@thisrulewidth=\dimen126
 ) (./1-03-2016.aux
 
 LaTeX Warning: Label `figura:11' multiply defined.
+
+
+LaTeX Warning: Label `fig:16' multiply defined.
 
 
 LaTeX Warning: Label `fig:7' multiply defined.
@@ -466,19 +454,19 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 8.
 LaTeX Font Info:    ... okay on input line 8.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
 LaTeX Font Info:    ... okay on input line 8.
-Chapter 1.
+Cap\'{\i }tulo 1.
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 22.
-(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+(/usr/share/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 22.
 LaTeX Font Info:    Try loading font information for U+msa on input line 22.
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+(/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 22.
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+(/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 ./1-03-2016.tex:46: Undefined control sequence.
@@ -613,38 +601,6 @@ and I'll forget about whatever was undefined.
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 161.
 
-
-./1-03-2016.tex:161: LaTeX Error: Not in outer par mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.161            \begin{figure}[]
-                                 
-You've lost some text.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-./1-03-2016.tex:161: Undefined control sequence.
-\@xfloat ...@fltovf \fi \global \setbox \@currbox 
-                                                  \color@vbox \normalcolor \...
-l.161            \begin{figure}[]
-                                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-./1-03-2016.tex:161: Missing number, treated as zero.
-<to be read again> 
-                   \color@vbox 
-l.161            \begin{figure}[]
-                                 
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
 ./1-03-2016.tex:163: Undefined control sequence.
 l.163              \includegraphics
                                    [width=]{}
@@ -653,36 +609,6 @@ of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
-
-./1-03-2016.tex:168: Missing $ inserted.
-<inserted text> 
-                $
-l.168 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./1-03-2016.tex:168: Missing } inserted.
-<inserted text> 
-                }
-l.168 
-      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./1-03-2016.tex:168: Extra }, or forgotten \endgroup.
-\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
-                                                  \fi 
-l.168 
-      
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
 
 
 LaTeX Warning: No positions in optional float specifier.
@@ -873,9 +799,9 @@ I've put in what seems to be necessary to fix
 the current column of the current alignment.
 Try to go on, since this might almost work.
 
-[3]
+[3] [4]
 Overfull \hbox (35.68044pt too wide) in paragraph at lines 224--225
-[]\OT1/cmr/m/n/10.95 Se um ex-per-i-mento aleat^^Sorio tiver $\OML/cmm/m/it/10.95 n$ \OT1/cmr/m/n/10.95 re-sul-ta-dos poss^^S^^Pveis, $
+[]\OT1/cmr/m/n/10.95 Se um ex-pe-ri-mento aleat^^Sorio ti-ver $\OML/cmm/m/it/10.95 n$ \OT1/cmr/m/n/10.95 re-sul-ta-dos poss^^S^^Pveis, $
  = \OMS/cmsy/m/n/10.95 f\OML/cmm/m/it/10.95 ![]; ![]; [] ; ![]\OMS/cmsy/m/n/10.95 g$\OT1/cmr/m/n/10.95 ,
  []
 
@@ -892,7 +818,6 @@ There should be exactly one # between &'s, when an
 \halign or \valign is being set up. In this case you had
 none, so I've put one in; maybe that will work.
 
-[4]
 Runaway argument?
  C= \{ (c,k) ; (k,c)\} \\ P(C)= \frac {2}{4}= \frac {1}{2}: 
 ./1-03-2016.tex:267: Paragraph ended before \align* was complete.
@@ -1010,6 +935,7 @@ l.268           \end{align*}
 The `$' that I just saw supposedly matches a previous `$$'.
 So I shall assume that you typed `$$' both times.
 
+[5]
 
 ./1-03-2016.tex:292: LaTeX Error: \begin{enumerate} on input line 285 ended by \end{itemize}.
 
@@ -1036,37 +962,537 @@ Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-[5]
-Overfull \hbox (84.99113pt too wide) in paragraph at lines 312--312
+
+./1-03-2016.tex:326: LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.326 \end{align*}
+                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+./1-03-2016.tex:326: LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.326 \end{align*}
+                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+./1-03-2016.tex:326: Missing } inserted.
+<inserted text> 
+                }
+l.326 \end{align*}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./1-03-2016.tex:326: Missing $ inserted.
+<inserted text> 
+                $
+l.326 \end{align*}
+                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+./1-03-2016.tex:326: LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.326 \end{align*}
+                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+./1-03-2016.tex:326: LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.326 \end{align*}
+                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+./1-03-2016.tex:326: Missing { inserted.
+<inserted text> 
+                {
+l.326 \end{align*}
+                  
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+./1-03-2016.tex:326: Extra }, or forgotten $.
+<recently read> }
+                 
+l.326 \end{align*}
+                  
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./1-03-2016.tex:326: Missing $ inserted.
+<inserted text> 
+                $
+l.326 \end{align*}
+                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./1-03-2016.tex:326: Missing } inserted.
+<inserted text> 
+                }
+l.326 \end{align*}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+./1-03-2016.tex:326: LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.326 \end{align*}
+                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+./1-03-2016.tex:326: LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.326 \end{align*}
+                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+./1-03-2016.tex:326: Missing } inserted.
+<inserted text> 
+                }
+l.326 \end{align*}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./1-03-2016.tex:326: Missing $ inserted.
+<inserted text> 
+                $
+l.326 \end{align*}
+                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+./1-03-2016.tex:326: LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.326 \end{align*}
+                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+./1-03-2016.tex:326: LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.326 \end{align*}
+                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+./1-03-2016.tex:326: Extra }, or forgotten $.
+<recently read> }
+                 
+l.326 \end{align*}
+                  
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./1-03-2016.tex:326: Missing $ inserted.
+<inserted text> 
+                $
+l.326 \end{align*}
+                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./1-03-2016.tex:326: Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.326 \end{align*}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./1-03-2016.tex:326: Missing } inserted.
+<inserted text> 
+                }
+l.326 \end{align*}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./1-03-2016.tex:326: Missing { inserted.
+<inserted text> 
+                {
+l.326 \end{align*}
+                  
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+
+Overfull \hbox (14.8718pt too wide) in paragraph at lines 326--326
 [] 
  []
 
+[6]
+./1-03-2016.tex:343: Undefined control sequence.
+l.343   \includegraphics
+                        [width=0.8\linewidth]{name.ext}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-Overfull \hbox (103.8402pt too wide) in paragraph at lines 325--325
-[] 
- []
+./1-03-2016.tex:343: Missing number, treated as zero.
+<to be read again> 
+                   ]
+l.343   \includegraphics[width=0.8\linewidth]
+                                             {name.ext}
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
 
-[6] [7] [8] [9]
-Overfull \hbox (3.7922pt too wide) in paragraph at lines 488--490
+./1-03-2016.tex:343: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   ]
+l.343   \includegraphics[width=0.8\linewidth]
+                                             {name.ext}
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+./1-03-2016.tex:355: Undefined control sequence.
+l.355     \includegraphics
+                          [width=0.8\linewidth]{name.ext}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./1-03-2016.tex:355: Missing number, treated as zero.
+<to be read again> 
+                   ]
+l.355     \includegraphics[width=0.8\linewidth]
+                                               {name.ext}
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+./1-03-2016.tex:355: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   ]
+l.355     \includegraphics[width=0.8\linewidth]
+                                               {name.ext}
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+
+./1-03-2016.tex:362: LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.362 \end{align*}
+                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+./1-03-2016.tex:362: LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.362 \end{align*}
+                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+./1-03-2016.tex:362: Missing } inserted.
+<inserted text> 
+                }
+l.362 \end{align*}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./1-03-2016.tex:362: Missing $ inserted.
+<inserted text> 
+                $
+l.362 \end{align*}
+                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./1-03-2016.tex:362: Missing { inserted.
+<inserted text> 
+                {
+l.362 \end{align*}
+                  
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+./1-03-2016.tex:362: Extra }, or forgotten $.
+<recently read> }
+                 
+l.362 \end{align*}
+                  
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./1-03-2016.tex:362: Missing $ inserted.
+<inserted text> 
+                $
+l.362 \end{align*}
+                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./1-03-2016.tex:362: Missing } inserted.
+<inserted text> 
+                }
+l.362 \end{align*}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+./1-03-2016.tex:362: LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.362 \end{align*}
+                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+./1-03-2016.tex:362: LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.362 \end{align*}
+                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+./1-03-2016.tex:362: Missing } inserted.
+<inserted text> 
+                }
+l.362 \end{align*}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./1-03-2016.tex:362: Missing $ inserted.
+<inserted text> 
+                $
+l.362 \end{align*}
+                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./1-03-2016.tex:362: Extra }, or forgotten $.
+<recently read> }
+                 
+l.362 \end{align*}
+                  
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./1-03-2016.tex:362: Missing $ inserted.
+<inserted text> 
+                $
+l.362 \end{align*}
+                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./1-03-2016.tex:362: Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.362 \end{align*}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./1-03-2016.tex:362: Missing } inserted.
+<inserted text> 
+                }
+l.362 \end{align*}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./1-03-2016.tex:362: Misplaced \omit.
+\math@cr@@@ ...@ \@ne \add@amps \maxfields@ \omit 
+                                                  \kern -\alignsep@ \iftag@ ...
+l.362 \end{align*}
+                  
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+./1-03-2016.tex:362: Missing { inserted.
+<inserted text> 
+                {
+l.362 \end{align*}
+                  
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+[7]
+./1-03-2016.tex:380: Undefined control sequence.
+l.380   \includegraphics
+                        [width=0.8\linewidth]{name.ext}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./1-03-2016.tex:380: Missing number, treated as zero.
+<to be read again> 
+                   ]
+l.380   \includegraphics[width=0.8\linewidth]
+                                             {name.ext}
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+./1-03-2016.tex:380: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   ]
+l.380   \includegraphics[width=0.8\linewidth]
+                                             {name.ext}
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+[8] [9] [10]
+Overfull \hbox (3.7922pt too wide) in paragraph at lines 533--535
 []\OT1/cmr/m/n/10.95 Defini^^Xc~ao: Uma cole^^Xc~ao de even-tos $\OML/cmm/m/it/10.95 A[]; A[]; [] ; A[]$ \OT1/cmr/m/n/10.95 for-mam uma parti^^Xc~ao
  []
 
-[10] [11] [12] [13]
-Overfull \hbox (10.29048pt too wide) in paragraph at lines 672--672
+[11] [12] [13] [14]
+Overfull \hbox (10.29048pt too wide) in paragraph at lines 717--717
 [] 
  []
 
-[14] [15] [16] [17] [18] [19]
-Overfull \hbox (21.41458pt too wide) in paragraph at lines 955--955
-[]\OT1/cmr/bx/n/14.4 Esperan^^Xca Matem^^Satica de uma Vari^^Savel Aleat^^Soria 
+[15] [16] [17] [18] [19] [20]
+Overfull \hbox (21.41458pt too wide) in paragraph at lines 1000--1000
+[]\OT1/cmr/bx/n/14.4 Esperan^^Xca Ma-tem^^Satica de uma Vari^^Savel Aleat^^Soria 
  []
 
 
-Overfull \hbox (13.88315pt too wide) in paragraph at lines 956--959
-\OT1/cmr/m/n/10.95 com f.m.p $\OML/cmm/m/it/10.95 p[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 x\OT1/cmr/m/n/10.95 )$ (no caso dis-creto) ou f.d.p $\OML/cmm/m/it/10.95 f[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 x\OT1/cmr/m/n/10.95 )$ (no caso cont^^S^^Pnuo). Chamamos
- []
-
-[20]
 Overfull \hbox (1.69917pt too wide) has occurred while \output is active
 \OT1/cmr/m/sl/10.95 1.8.  ESPERAN[]A MATEM[]ATICA DE UMA VARI[]AVEL ALEAT[]ORIA \OT1/cmr/m/n/10.95 21
  []
@@ -1077,8 +1503,13 @@ Overfull \hbox (1.69917pt too wide) has occurred while \output is active
  []
 
 [23] [24]
-./1-03-2016.tex:1172: Undefined control sequence.
-l.1172 Notação: $X \barrasim
+Overfull \hbox (1.69917pt too wide) has occurred while \output is active
+\OT1/cmr/m/sl/10.95 1.8.  ESPERAN[]A MATEM[]ATICA DE UMA VARI[]AVEL ALEAT[]ORIA \OT1/cmr/m/n/10.95 25
+ []
+
+[25]
+./1-03-2016.tex:1217: Undefined control sequence.
+l.1217 Notação: $X \barrasim
                                U_{d}(k)$
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1086,9 +1517,9 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[25] [26]
-./1-03-2016.tex:1214: Undefined control sequence.
-l.1214 Notação: $X \barrasim
+[26] [27]
+./1-03-2016.tex:1259: Undefined control sequence.
+l.1259 Notação: $X \barrasim
                                Ber(p)$
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1097,12 +1528,12 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1217--1218
+Underfull \hbox (badness 10000) in paragraph at lines 1262--1263
 
  []
 
-./1-03-2016.tex:1262: Undefined control sequence.
-l.1262 $X \barrasim
+./1-03-2016.tex:1307: Undefined control sequence.
+l.1307 $X \barrasim
                     Ber(\frac{1}{6})$
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1110,9 +1541,9 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[27]
-./1-03-2016.tex:1284: Undefined control sequence.
-l.1284 Notação:$ x \barrasim
+[28]
+./1-03-2016.tex:1329: Undefined control sequence.
+l.1329 Notação:$ x \barrasim
                                Bin(M,p)\\$
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1121,27 +1552,27 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Overfull \hbox (2.9309pt too wide) in paragraph at lines 1291--1298
-\OT1/cmr/m/n/10.95 aleato-ri-a-mente e s~ao clas-si-fi-cadas como de-feitu-osas(D) ou n~ao-defeituosas(N).
+Overfull \hbox (2.9309pt too wide) in paragraph at lines 1336--1343
+\OT1/cmr/m/n/10.95 ale-a-to-ri-a-mente e s~ao clas-si-fi-ca-das como de-fei-tu-o-sas(D) ou n~ao-defeituosas(N).
  []
 
 
-Overfull \hbox (3.48705pt too wide) in paragraph at lines 1291--1298
-\OML/cmm/m/it/10.95 X[]; X[]; X[]$ \OT1/cmr/m/n/10.95 s~ao vari^^Saveis aleat^^Sorias que as-sumem 1 se a pe^^Xca for n~ao-defeituosa
+Overfull \hbox (3.48705pt too wide) in paragraph at lines 1336--1343
+\OML/cmm/m/it/10.95 X[]; X[]; X[]$ \OT1/cmr/m/n/10.95 s~ao vari^^Saveis aleat^^Sorias que as-su-mem 1 se a pe^^Xca for n~ao-defeituosa
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1326--1327
+Underfull \hbox (badness 10000) in paragraph at lines 1371--1372
 
  []
 
-[28]
-Underfull \hbox (badness 10000) in paragraph at lines 1327--1329
+[29]
+Underfull \hbox (badness 10000) in paragraph at lines 1372--1374
 
  []
 
-./1-03-2016.tex:1329: Undefined control sequence.
-l.1329 $$y \barrasim
+./1-03-2016.tex:1374: Undefined control sequence.
+l.1374 $$y \barrasim
                      bin(20;0,97)$$\\
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1150,17 +1581,17 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1329--1330
+Underfull \hbox (badness 10000) in paragraph at lines 1374--1375
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1333--1336
+Underfull \hbox (badness 10000) in paragraph at lines 1378--1381
 
  []
 
-./1-03-2016.tex:1336: Undefined control sequence.
-l.1336     $$x \barrasim
+./1-03-2016.tex:1381: Undefined control sequence.
+l.1381     $$x \barrasim
                          bin(20:0,03) \text{quad} x=1,2,3,4,5,\dots,20$$\\
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1169,14 +1600,14 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1336--1337
+Underfull \hbox (badness 10000) in paragraph at lines 1381--1382
 
  []
 
-./1-03-2016.tex:1344: Undefined control sequence.
+./1-03-2016.tex:1389: Undefined control sequence.
 <argument>  P(X=0)= \bin 
                          {20}{0} {0,03}^0 (1-0,03)^{20-0}\\ =0,5438 
-l.1344     \end{align*}
+l.1389     \end{align*}
                        
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1184,10 +1615,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./1-03-2016.tex:1344: Undefined control sequence.
+./1-03-2016.tex:1389: Undefined control sequence.
 <argument>  P(X=0)= \bin 
                          {20}{0} {0,03}^0 (1-0,03)^{20-0}\\ =0,5438 
-l.1344     \end{align*}
+l.1389     \end{align*}
                        
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1196,17 +1627,17 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1362--1364
+Underfull \hbox (badness 10000) in paragraph at lines 1407--1409
 
  []
 
-[29]
-Underfull \hbox (badness 10000) in paragraph at lines 1364--1365
+[30]
+Underfull \hbox (badness 10000) in paragraph at lines 1409--1410
 
  []
 
-./1-03-2016.tex:1365: Undefined control sequence.
-l.1365     $$z \barrasim
+./1-03-2016.tex:1410: Undefined control sequence.
+l.1410     $$z \barrasim
                          B(10:0,4562)$$\\
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1215,17 +1646,12 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1365--1366
+Underfull \hbox (badness 10000) in paragraph at lines 1410--1411
 
  []
 
-
-Overfull \hbox (5.96811pt too wide) in paragraph at lines 1372--1377
-[]\OT1/cmr/m/it/10.95 Exerc^^S^^Pcio\OT1/cmr/m/n/10.95 : Um fab-ri-cante adquire certo tipo de com-po-nente de um fornece-
- []
-
-./1-03-2016.tex:1391: Undefined control sequence.
-l.1391 \begin{center}Notação: $X \barrasim
+./1-03-2016.tex:1436: Undefined control sequence.
+l.1436 \begin{center}Notação: $X \barrasim
                                              Geo(p)$\end{center}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1233,13 +1659,13 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[30]
-Underfull \hbox (badness 10000) in paragraph at lines 1421--1423
+[31]
+Underfull \hbox (badness 10000) in paragraph at lines 1466--1468
 
  []
 
-./1-03-2016.tex:1423: Undefined control sequence.
-l.1423 \begin{center}$Y \barrasim
+./1-03-2016.tex:1468: Undefined control sequence.
+l.1468 \begin{center}$Y \barrasim
                                   Geo(0,3)$\end{center}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1247,8 +1673,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./1-03-2016.tex:1447: Undefined control sequence.
-l.1447 \begin{center}Notação: X \barrasim
+./1-03-2016.tex:1492: Undefined control sequence.
+l.1492 \begin{center}Notação: X \barrasim
                                             BN(r,p)\end{center}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1256,9 +1682,9 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[31]
-./1-03-2016.tex:1456: Misplaced alignment tab character &.
-l.1456   \item $$\binom{x+m-1}{m-1}&
+[32]
+./1-03-2016.tex:1501: Misplaced alignment tab character &.
+l.1501   \item $$\binom{x+m-1}{m-1}&
                                     = \binom{x+m-1}{x}$$
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1267,24 +1693,24 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-[32] (./1-03-2016.aux)
+[33] (./1-03-2016.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 1734 strings out of 494953
- 20505 string characters out of 6180976
- 80758 words of memory out of 5000000
- 5025 multiletter control sequences out of 15000+600000
+ 2092 strings out of 493013
+ 24621 string characters out of 6139317
+ 97282 words of memory out of 5000000
+ 5636 multiletter control sequences out of 15000+600000
  12063 words of font info for 45 fonts, out of 8000000 for 9000
- 14 hyphenation exceptions out of 8191
- 27i,19n,24p,325b,383s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on 1-03-2016.pdf (32 pages, 229049 bytes).
+ 1141 hyphenation exceptions out of 8191
+ 27i,19n,24p,327b,347s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/abbud/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmti10.657pk> </usr/share/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmr6.pk> </home/abbud/.texlive/texmf-var/fonts/pk/ljfour/public/amsfonts/symbols/msbm10.480pk> </home/abbud/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmmi6.600pk> </home/abbud/.texlive/texmf-var/fonts/pk/ljfour/public/amsfonts/symbols/msbm10.657pk> </home/abbud/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmex10.657pk> </home/abbud/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmsy8.600pk> </home/abbud/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmbx12.720pk> </home/abbud/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmmi8.600pk> </home/abbud/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmsl10.657pk> </home/abbud/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmbx12.600pk> </usr/share/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmr8.pk> </home/abbud/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmbx10.657pk> </home/abbud/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmmi10.657pk> </home/abbud/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmsy10.657pk> </home/abbud/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmr10.657pk> </home/abbud/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmbx12.1244pk> </home/abbud/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmbx12.1037pk>
+Output written on 1-03-2016.pdf (33 pages, 186703 bytes).
 PDF statistics:
- 164 PDF objects out of 1000 (max. 8388607)
- 114 compressed objects within 2 object streams
+ 572 PDF objects out of 1000 (max. 8388607)
+ 146 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

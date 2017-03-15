@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1489615210 "1-03-2016.tex" "1-03-2016.pdf" "1-03-2016" 1489615210
+["pdflatex"] 1489619687 "1-03-2016.tex" "1-03-2016.pdf" "1-03-2016" 1489619692
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1479649810 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1479649815 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1479649815 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -153,8 +153,8 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1479649825 31669 df537245012f3e5f05bdc55644b7a3df ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1485695115 1975767 ceb4a3e498ea08864fe77979f02f7f4a ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1480792659 7252863 9fe3b1567046b7287b3680b3961f8f88 ""
-  "1-03-2016.aux" 1489615158 4268 a01820deebdfe518b13f7b98c13756e7 ""
-  "1-03-2016.tex" 1489615209 53566 a4b8ce061fbc4dd6e72b51745f0e9d76 ""
+  "1-03-2016.aux" 1489619688 3972 55b6a5935b5540061d354ac3f65d97fc ""
+  "1-03-2016.tex" 1489619684 53552 5b142ad5aa2f3f3014ba7418ec8024d4 ""
   "enumitem.sty" 1472485685 42666 6fa770e3485520a6a5f2ea7d259c8f8d ""
   "name.ext" 0 -1 0 ""
   "tikz/figura1.tikz" 1489609694 442 aaf1870ecde2c17950f911cd92b02010 ""
@@ -169,8 +169,8 @@
   "tikz/figura9.tikz" 1489614708 542 35762a993c5fae869f35b61241cd278f ""
   (generated)
   "1-03-2016.log"
-  "asmath.aux"
   "tikz/figura5.tikz.aux"
   "1-03-2016.pdf"
-  "amsmath.aux"
   "1-03-2016.aux"
+  "asmath.aux"
+  "amsmath.aux"

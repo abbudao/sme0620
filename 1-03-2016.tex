@@ -13,11 +13,7 @@
 % Dia 07/06/2017
 %Aula 1
 % Todo
-% Refazer a parte de seção de organização das duas primeiras aulas
-% Lembrar de tirar itemize parar enumerate alf
-% Fazer as figuras de diagrama de Venn
-% Corrigir erros crassos
-% Procurar os \null substituir
+%Figuras 11-12-13 por que são diferentes?
 \chapter{Probabilidade}
 
 \section*{Objetivo: Definir um modelo estatístico que seja adequado à descrição e interpretação de fenômenos aleatórios.}
@@ -226,7 +222,6 @@ Considere eventos definidos em um espaço amostral $\Omega$ de um experimento al
         \begin{figure}[H]
           \centering
           \input{tikz/figura1.tikz}
-          \includegraphics[width=]{}
           \caption{}
           \label{fig:12}
         \end{figure}
@@ -238,8 +233,6 @@ Considere eventos definidos em um espaço amostral $\Omega$ de um experimento al
         \begin{figure}[H]
           \centering
           \input{tikz/figura1.tikz}
-          \includegraphics[width=]{}
-          \caption{}
           \label{fig:13}
         \end{figure}
 
@@ -251,6 +244,7 @@ Considere eventos definidos em um espaço amostral $\Omega$ de um experimento al
           \emptyset \cap B= \emptyset
         \end{align*}
 
+\end{description}
 \end{description}
 \section{Definições de Probabilidade}
 \subsection{Probabilidade em Espaços Equiprováveis}
@@ -270,19 +264,20 @@ Dado o lançamento de duas moedas honestas, calcule a probabilidade de:
   \item Obter pelo menos uma face diferente de cara
   \item  Obter pelo menos uma face diferente.
 \end{enumerate}
-
-\begin{table}[]
+\begin{figure} [H]
   \centering
-  \caption{}
-  \label{}
-  \begin{tabular}{}
-
+  \begin{tabular}{c c c}
+    \toprule
+    &c&k\\ \cmidrule{2-3}
+    c&(c,c)&(c,k)\\ \cmidrule{2-3}
+    k&(k,c)&(k,k)\\    \bottomrule
   \end{tabular}
-\end{table}
-$\Omega = \{ (c,c); (c,k); (k,c) ; (k,k)\}$
+  \label{tab:1}
+\end{figure}
 
+$\Omega = \{ (c,c); (c,k) ; (k,c) ; (k,k)\}$
 \begin{enumerate}[label=(\alph*)]
-  \item $A$= Faces iguais
+  \item $A=$ Faces iguais
     \begin{align*}
       A= \{ (c,c) ; (k,k) \} \\
       P(A) = \frac{2}{4} = \frac{1}{2}= 0.5
@@ -290,13 +285,14 @@ $\Omega = \{ (c,c); (c,k); (k,c) ; (k,k)\}$
   \item $B=$ Pelo menos uma face diferente de cara.
 
     \begin{align*}
-      B= \{ (c,k); (k,c); (k,k) \}\\
+      B= \{ (c,k) ; (k,c) ; (k,k) \} \\
       P(B)= \frac{3}{4}
     \end{align*}
-  \item  $C=$ Obter pelo menos uma face diferente
+
+  \item $C=$ Obter pelo menos uma face diferente
 
     \begin{align*}
-      C= \{ \(c,k\) \; \(k,c\)\} \\
+      C= \{ (c,k) ; (k,c) \} \\
       P(C)= \frac{2}{4}= \frac{1}{2}
     \end{align*}
 \end{enumerate}
@@ -322,19 +318,18 @@ os seguintes axiomas:
 \begin{enumerate}[leftmargin=*, label=\Roman*., widest=IV, align=left]
   \item $P(A) \ge 0, \forall A \subset \Omega$
   \item $P(\Omega)=1$
-  \item Se $A_1, A_2,\ldots$ são eventos mutuamente exclusivos ($A_i \cup A_j = \phi, \forall i \neq j$), então:
+  \item Se $A_1, A_2,\ldots$ são eventos mutuamente exclusivos ($A_i \cup A_j = \emptyset, \forall i \neq j$), então:
     \begin{align}
       P(\cup^\infty_{i=1} A_i)= P(A_1\cup A_2 \cup \ldots)= \sum^\infty_{i=1} P(A_i) 
     \end{align}
-\end{itemize}
+\end{enumerate}
 \begin{description}
 %14/03/2017
-\item[Propriedades]
+\item[Propriedades]:
 
 \begin{enumerate}[label=(\alph*)]
-
   \item $0 \le P(A) \le 1$
-  \item $P(\phi)=0$
+  \item $P(\emptyset)=0$
   \item Se $A \subset \omega$ então $P(A)=1-P(A^c)$
   \item Se $A \subset B \subset \Omega$, então $P(A) \le P(B)$
   \item Se $A,B \subset \Omega$, então vale:
@@ -357,10 +352,10 @@ Mostre a propriedade $(g)$.
 
 Use o fato de que $A\cup (B \cup C )= (A\cup B )\cup (A \cup C )$:
 \begin{align*}
-  P(A\cup B\cup C)- P(A \cup (B \cup C) )\\
-  =P(A)+P(B\cup C)- P(A\cap(B\cup C) )\\
+  P\left(A\cup B\cup C \right)- P\left(A \cup \left(B \cup C\right) \right)\\
+  =P(A)+P(B\cup C)- P\left(A\cap \left(B\cup C \right) \right)\\
   =P(A)+P(B)+P(C)-P(B\cap C)- P(A \cap B)\cup (A \cap C)\\
-  =P(A)+P(B)+P(C)-P(B\cap C)- P(A \cap B)-\big\{ P(A \cap B)+ P(A \cap c)-P\(\(A \cap B\) \cap \(A \cap C\)\)\big\}\\
+  =P(A)+P(B)+P(C)-P(B\cap C)- P(A \cap B) \\ -\left\{ P \left(A \cap B \right)+ P\left(A \cap c \right)-P\left(\left(A \cap B \right) \cap \left(A \cap C \right) \right) \right\} \\
   =P(A)+P(B)+P(C)-P(B\cap C)- P(A \cap B)- P(A \cap C)+ P(A \cap B \cap C)
 \end{align*}
 
@@ -381,7 +376,7 @@ Calcule as probabilidades:
   \centering
   \includegraphics[width=0.8\linewidth]{name.ext}
   \caption{Name}
-  \label{fig:13}
+  \label{fig:14}
 \end{figure}
 \begin{enumerate}[label=(\alph*)]
   \item \begin{align*}
@@ -393,10 +388,10 @@ Calcule as probabilidades:
       \centering
       \includegraphics[width=0.8\linewidth]{name.ext}
       \caption{Name}
-      \label{fig:14}
+      \label{fig:15}
     \end{figure}
   \item \begin{align*}
-      P(A^c \cup B^c) = P\( \( A \cap B\)^c \)\\
+      P(A^c \cup B^c) = P\left( \left( A \cap B\right)^c \right)\\
       = 1- P(A \cap B) = 1 - \frac{1}{4}= \frac{3}{4}
     \end{align*}  
     Ou de maneira similar:
@@ -413,12 +408,12 @@ A probabilidade de $A$  dado que ocorre o evento $B$, denotada por $P(A/B)$ é d
 \begin{align}
   P(A/B)= \frac{P(A\cap B)}{P(B)}
 \end{align}
-para $P(B)>0$. 
+Para $P(B)>0$. 
 \begin{figure}[htpb]
   \centering
   \includegraphics[width=0.8\linewidth]{name.ext}
   \caption{Name}
-  \label{fig:15}
+  \label{fig:16}
 \end{figure}
 Consequentemente, podemos escrever:
 \begin{align}
@@ -432,7 +427,10 @@ Conhecida como regra do produto:
 \begin{description}
   \item [Exemplo]: Suponha que um escritório possua 100 computadores de tipos Desktop (D) e 
 Laptop (L) sendo alguns novos (N) e outro com um certo tempo de uso (U), distribuídos da seguinte forma:
-\begin{figure} 
+Um funcionário escolhe um laptop ao acaso. Qual a probabilidade de que seja novo?
+
+\item[Resolucão]: 
+\begin{figure}[H] 
   \centering
   \begin{tabular}{c c c c}
     \toprule
@@ -441,12 +439,9 @@ Laptop (L) sendo alguns novos (N) e outro com um certo tempo de uso (U), distrib
     U&20&10&30\\ \cmidrule{2-4}
     Total&60&40&100 \\\bottomrule
   \end{tabular}
-  \label{fig:16}
-  \caption{Distribuição de probabilidade dos computadores de um dado escritório}
+  \label{tab:2}
 \end{figure}
-Um funcionário escolhe um laptop ao acaso. Qual a probabilidade de que seja novo?
 
-\item[Resolucão]: 
 
 \begin{align*}
   P(N/L)= \frac{P(N \cap L)}{P(L)}= \frac{\frac{30}{100}}{\frac{40}{100}}=\frac{3}{4}
@@ -458,7 +453,7 @@ Obs: $P(A \cap B)$ e $P(A/B)$
 Sejam $A,B \subset \Omega$. Uma representação bastante útil é a àrvore de probabilidades.
 \begin{description}
 \begin{figure}
-  \label{fig:16}
+  \label{fig:17}
   \caption{Um exemplo de uma àrvore de probabilidades}
 \end{figure}
 
@@ -468,7 +463,7 @@ desktop usado?
   \centering
   \includegraphics[width=0.8\linewidth]{name.ext}
   \caption{Name}
-  \label{fig:17}
+  \label{fig:18}
 \end{figure}
 \begin{align*}
   P(D \cap U)= P(D/U)P(U)
@@ -494,7 +489,7 @@ Ou:
  \section{Independência de Eventos}
 
 \begin{description}
-  \item [Definicao]: Dois eventos $A$ e $B$ definidos em $\Omega$ são independentes se 
+  \item [Definição]: Dois eventos $A$ e $B$ definidos em $\Omega$ são independentes se 
  a informação da ocorrência ou não de $B$ não altera a probabilidade de ocorrência
  de $A$. Isto é:
  \begin{align}
@@ -502,7 +497,7 @@ Ou:
    P(B)>0 
  \end{align}
  Logo, dois eventos $A$ e $B$ são independentes se, e somente se, $P(A \cap B)=P(A)\times P(B)$.
-\item [Observacao]: 
+\item [Observação]: 
   \begin{align*}
     P(A/B) = \frac{P(A \cap B)}{P(B)} = \frac{P(A)P(B)}{P(A)}= P(B)
   \end{align*}
@@ -516,17 +511,17 @@ Ou:
  \begin{enumerate}[label=\Alph*:]
    \item  O estudante ser aprovado na empresa $I$
    \item  O esutdanbte ser aprovado na empresa $II$
- \end{itemize}
+ \end{enumerate}
  \begin{align*}
-   P(A)= 0,30\\
-   P(B)=0,50\\
+   P(A)= 0.30\\
+   P(B)=0.50\\
    P(A\cup B)= P(A)+P(B)-P(A\cap B)\\
-   =P(A)+P(B)-P(A).P(B)\\
-   =0,3+0,5- 0,3 \times 0,5\\
+   =P(A)+P(B)-P(A)\times P(B)\\
+   =0.3+0.5- 0,3 \times 0,5\\
    =0.65
  \end{align*}
  \end{description}
- \subsection{Independência de tres eventos}
+ \subsection{Independência de três eventos}
  Os eventos A,B,C em $\Omega$ são independentes se e somente se:
  \begin{description}
 
@@ -548,7 +543,7 @@ Ou:
    \item $A^c$ e $B^c$ são independentes.
  \end{enumerate}
  \begin{figure}
-   \label{fig:3}
+   \label{fig:19}
  \end{figure}
 
  \begin{align*}
@@ -557,38 +552,39 @@ Ou:
    = P(A)(1-P(B))\\
    =P(A)\times P(\bar{B})
  \end{align*}
- \item [Obs]: Não confundir eventos mutuamente exclusivos com eventos independentes. Ou seja, nao confunda $P(A \cap B)  = 0$ com $ P(A \cap B) = P(A)\times P(B)$.
 
-% Exemplo: Um atirador acerta 80\% dos disparos e outro acerta, nas mesmas condições
-% acerta 70\%.
-% \begin{enumerate}[label=(\alph*)]
-%   \item Qual a probabilidade de o alvo ser acertado se ambos os atiradores disparam 
-%     simultanemaente?
-%   \item Qual a probabilidade do alvo ser acertado se ambos os atiradores disparam 
-%     simultanemaente?
-% \end{enumerate}
-% \begin{itemize}
-%   \item A:\@ O atirador 1 acerta o alvo
-%   \item B:\@ O atirador 2 acerta o alvo
-% \end{itemize}
-% \begin{enumerate}[label=(\alph*)]
-%   \item  A intersecção de dois eventos independentes é dada pela multiplicação de suas probabilidades:
-%     \begin{align}
-%       P(A \cap B)= P(A)P(B)\\
-%       =0.8 \times 0.7= 0.56
-%     \end{align}
-%   \item É dado pela a união dos dois eventos:
-%     \begin{align}
-%       P(A \cup B)= P(A)+ P(B)- P( A \cap B )\\
-%       = P(A) + P(B- P(A).P(B)\\
-%       = 0,8+0,7 - 0.8\times 0,7\\
-%       =0,94
-%     \end{align}
-% \end{enumerate}
+ \item [Observação]: Não confundir eventos mutuamente exclusivos com eventos independentes. Ou seja, não confunda $P(A \cap B)  = 0$ com $ P(A \cap B) = P(A)\times P(B)$.
+
+ \item[Exemplo]: Um atirador acerta 80\% dos disparos e outro acerta, nas mesmas condições
+ acerta 70\%.
+ \begin{enumerate}[label=(\alph*)]
+   \item Qual a probabilidade de o alvo ser acertado se ambos os atiradores disparam 
+     simultanemaente?
+   \item Qual a probabilidade do alvo ser acertado se ambos os atiradores disparam 
+     simultanemaente?
+ \end{enumerate}
+ \begin{enumerate}[label=\Alph*:]
+   \item  Atirador 1 acerta o alvo
+   \item Atirador 2 acerta o alvo
+ \end{enumerate}
+ \begin{enumerate}[label=(\alph*)]
+   \item  A intersecção de dois eventos independentes é dada pela multiplicação de suas probabilidades:
+     \begin{align*}
+       P(A \cap B)= P(A)P(B)\\
+       =0.8 \times 0.7= 0.56
+     \end{align*}
+   \item É dado pela a união dos dois eventos:
+     \begin{align*}
+       P(A \cup B)= P(A)+ P(B)- P( A \cap B )\\
+       = P(A) + P(B- P(A)\times P(B)\\
+       = 0.8+0.7 - 0.8\times 0.7\\
+       =0.94
+     \end{align*}
+ \end{enumerate}
 
  \end{description}
  \section{O Teorema de Bayes}
- \subsection{Particoes do espaco amostral}
+ \subsection{Partições do espaco amostral}
      \item[Definição]: Uma coleção de eventos $A_1, A_2, \ldots, A_k$ formam uma partição 
      do espaço amostral $\Omega$ se:
 
@@ -597,36 +593,35 @@ Ou:
        \item $\cup_{i=1}^{k}A_i= \Omega$
      \end{enumerate}
    \end{description}
-   \subsection{Lema da probabildiade total}
+   \subsection{Lema da probabilidade total}
    \begin{description}
- \item [Definicao] Se $A_1,\ldots, A_k$ é uma partição de $\Omega$, então para qualquer evento 
-     $B$ de $\Omega$, vale:
+     \item [Definição] Se $A_1,\ldots, A_k$ é uma partição de $\Omega$, então para qualquer evento $B$ de $\Omega$, vale:
 
      \begin{align}
-       P(B)= \sum^k_{i=1} B(B \cap A_i)\\
-       = \sum^k_{i=1} P(B/A_i)P(A_i)\\
+       P(B)= \sum^k_{i=1} B(B \cap A_i)\\ \nonumber
+       = \sum^k_{i=1} P(B/A_i)P(A_i)
      \end{align}
      \begin{align}
        B= \cup_{i=1}^k A_i \cap B)
      \end{align}
      \begin{align}
-       P(B)= \cup_{i=1}^k P(A_i \cap B)\\
+       P(B)= \cup_{i=1}^k P(A_i \cap B)\\ \nonumber
        = \cup_{i=1}^k P(B/A_i)P(A_i)
      \end{align}
      \begin{figure}[htpb]
        \centering
        \includegraphics[width=0.8\linewidth]{name.ext}
-       \caption{$B=(A_1 \cap B) \cup (A_2 \cap)\cup \dots (A_k \cap B) }$
-       \label{fig:19}
+       \caption{$B=(A_1 \cap B) \cup (A_2 \cap)\cup \dots (A_k \cap B)$ }
+       \label{fig:20}
      \end{figure}
    \end{description}
      \subsection{Fórmula de Bayes}
      \begin{description}
-       \item [Definicao] Se $A_1,A_2,\ldots, A_k$ formam uma partição de $\Omega$ e 
+       \item [Definição] Se $A_1,A_2,\ldots, A_k$ formam uma partição de $\Omega$ e 
  $B \subset \Omega$ com $P(B)>0$, então:
 
  \begin{align}
-   P(A_i/ B)= \frac{P(A_i \cap B)}{P(B)}\\
+   P(A_i/ B)= \frac{P(A_i \cap B)}{P(B)}\\ \nonumber
    =\frac{P(B/A_i)P(A_i)}{\sum_{j=1}^k P(B/A_j)P(A_j)}
  \end{align}
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2016.12.3)  15 MAR 2017 19:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2016.12.3)  15 MAR 2017 20:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -695,17 +695,7 @@ File: pgflibraryshapes.multipart.code.tex 2010/01/07 v3.0.1a (rcs-revision 1.2)
 File: tikzlibrarybackgrounds.code.tex 2013/07/18 v3.0.1a (rcs-revision 1.3)
 \pgf@layerbox@background=\box62
 \pgf@layerboxsaved@background=\box63
-) (./1-03-2016.aux
-
-LaTeX Warning: Label `fig:13' multiply defined.
-
-
-LaTeX Warning: Label `fig:16' multiply defined.
-
-
-LaTeX Warning: Label `fig:3' multiply defined.
-
-)
+) (./1-03-2016.aux)
 \openout1 = `1-03-2016.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
@@ -770,26 +760,26 @@ Package grfext Info: Graphics extension search list:
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 Cap\'{\i }tulo 1.
-LaTeX Font Info:    Try loading font information for U+msa on input line 26.
+LaTeX Font Info:    Try loading font information for U+msa on input line 22.
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 26.
+LaTeX Font Info:    Try loading font information for U+msb on input line 22.
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Overfull \hbox (3.05264pt too wide) in paragraph at lines 26--28
+Overfull \hbox (3.05264pt too wide) in paragraph at lines 22--24
 []\OT1/cmr/m/n/10.95 : s~ao os acon-te-ci-men-tos cu-
  []
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 33.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 29.
 (/usr/share/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 33.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 29.
 
-Overfull \hbox (13.67647pt too wide) in paragraph at lines 48--50
+Overfull \hbox (13.67647pt too wide) in paragraph at lines 44--46
 []\OT1/cmr/m/n/10.95 : qual-quer sub-con-junto do espa^^Xco amos-tral $
 $ do ex-pe-ri-mento aleat^^Sorio
  []
@@ -797,804 +787,119 @@ $ do ex-pe-ri-mento aleat^^Sorio
 [1
 
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./tikz/figura1.tikz) (./tikz/figura2.tikz) [2] (./tikz/figura3.tikz) (./tikz/figura4.tikz) (./tikz/figura5.tikz) [3] (./tikz/figura6.tikz) (./tikz/figura7.tikz) (./tikz/figura8.tikz) [4] (./tikz/figura9.tikz) (./tikz/figura10.tikz) [5] (./tikz/figura1.tikz) (./tikz/figura1.tikz)
-
-./1-03-2016.tex:229: LaTeX Error: File `' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.229           \includegraphics[width=]{}
-                                          
-I could not locate the file with any of these extensions:
-.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-(./tikz/figura1.tikz)
-
-./1-03-2016.tex:241: LaTeX Error: File `' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.241           \includegraphics[width=]{}
-                                          
-I could not locate the file with any of these extensions:
-.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[6]
-Overfull \hbox (35.68044pt too wide) in paragraph at lines 257--258
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./tikz/figura1.tikz) (./tikz/figura2.tikz) [2] (./tikz/figura3.tikz) (./tikz/figura4.tikz) (./tikz/figura5.tikz) [3] (./tikz/figura6.tikz) (./tikz/figura7.tikz) (./tikz/figura8.tikz) [4] (./tikz/figura9.tikz) (./tikz/figura10.tikz) [5] (./tikz/figura1.tikz) (./tikz/figura1.tikz) (./tikz/figura1.tikz) [6]
+Overfull \hbox (8.30537pt too wide) in paragraph at lines 251--252
 \OT1/cmr/m/n/10.95 Se um ex-pe-ri-mento aleat^^Sorio ti-ver $\OML/cmm/m/it/10.95 n$ \OT1/cmr/m/n/10.95 re-sul-ta-dos poss^^S^^Pveis, $
  = \OMS/cmsy/m/n/10.95 f\OML/cmm/m/it/10.95 ![]; ![]; [] ; ![]\OMS/cmsy/m/n/10.95 g$\OT1/cmr/m/n/10.95 ,
  []
 
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 274.
-
-./1-03-2016.tex:278: Missing # inserted in alignment preamble.
-<to be read again> 
-                   \cr 
-l.278   \begin{tabular}{}
-                         
-There should be exactly one # between &'s, when an
-\halign or \valign is being set up. In this case you had
-none, so I've put one in; maybe that will work.
-
-[7]
-
-./1-03-2016.tex:301: LaTeX Error: Bad math environment delimiter.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.301     \end{align*}
-                      
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-./1-03-2016.tex:301: Missing } inserted.
-<inserted text> 
-                }
-l.301     \end{align*}
-                      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./1-03-2016.tex:301: Missing { inserted.
-<inserted text> 
-                {
-l.301     \end{align*}
-                      
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-./1-03-2016.tex:301: Extra }, or forgotten $.
-<recently read> }
-                 
-l.301     \end{align*}
-                      
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./1-03-2016.tex:301: Missing $ inserted.
-<inserted text> 
-                $
-l.301     \end{align*}
-                      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./1-03-2016.tex:301: Missing } inserted.
-<inserted text> 
-                }
-l.301     \end{align*}
-                      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-
-./1-03-2016.tex:301: LaTeX Error: Bad math environment delimiter.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.301     \end{align*}
-                      
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-./1-03-2016.tex:301: Missing } inserted.
-<inserted text> 
-                }
-l.301     \end{align*}
-                      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./1-03-2016.tex:301: Extra }, or forgotten $.
-<recently read> }
-                 
-l.301     \end{align*}
-                      
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./1-03-2016.tex:301: Missing $ inserted.
-<inserted text> 
-                $
-l.301     \end{align*}
-                      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./1-03-2016.tex:301: Missing \endgroup inserted.
-<inserted text> 
-                \endgroup 
-l.301     \end{align*}
-                      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./1-03-2016.tex:301: Missing } inserted.
-<inserted text> 
-                }
-l.301     \end{align*}
-                      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./1-03-2016.tex:301: Misplaced \omit.
-\math@cr@@@ ...@ \@ne \add@amps \maxfields@ \omit 
-                                                  \kern -\alignsep@ \iftag@ ...
-l.301     \end{align*}
-                      
-I expect to see \omit only after tab marks or the \cr of
-an alignment. Proceed, and I'll ignore this case.
-
-./1-03-2016.tex:301: Missing { inserted.
-<inserted text> 
-                {
-l.301     \end{align*}
-                      
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-
-Overfull \hbox (2.72037pt too wide) in paragraph at lines 325--326
-[]\OT1/cmr/m/n/10.95 Se $\OML/cmm/m/it/10.95 A[]; A[]; []$ \OT1/cmr/m/n/10.95 s~ao even-tos mu-tu-a-mente ex-clu-si-vos ($\OML/cmm/m/it/10.95 A[] \OMS/cmsy/m/n/10.95 [ \OML/cmm/m/it/10.95 A[] \OT1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95 ^^^; \OMS/cmsy/m/n/10.95 8\OML/cmm/m/it/10.95 i \OMS/cmsy/m/n/10.95 6\OT1/cmr/m/n/10.95 =
- []
-
-
-./1-03-2016.tex:329: LaTeX Error: \begin{enumerate} on input line 322 ended by \end{itemize}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.329 \end{itemize}
-                   
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-[8]
-
-./1-03-2016.tex:365: LaTeX Error: Bad math environment delimiter.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.365 \end{align*}
-                  
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-./1-03-2016.tex:365: LaTeX Error: Bad math environment delimiter.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.365 \end{align*}
-                  
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-./1-03-2016.tex:365: Missing } inserted.
-<inserted text> 
-                }
-l.365 \end{align*}
-                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./1-03-2016.tex:365: Missing $ inserted.
-<inserted text> 
-                $
-l.365 \end{align*}
-                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-./1-03-2016.tex:365: LaTeX Error: Bad math environment delimiter.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.365 \end{align*}
-                  
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-./1-03-2016.tex:365: LaTeX Error: Bad math environment delimiter.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.365 \end{align*}
-                  
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-./1-03-2016.tex:365: Missing { inserted.
-<inserted text> 
-                {
-l.365 \end{align*}
-                  
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-./1-03-2016.tex:365: Extra }, or forgotten $.
-<recently read> }
-                 
-l.365 \end{align*}
-                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./1-03-2016.tex:365: Missing $ inserted.
-<inserted text> 
-                $
-l.365 \end{align*}
-                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./1-03-2016.tex:365: Missing } inserted.
-<inserted text> 
-                }
-l.365 \end{align*}
-                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-
-./1-03-2016.tex:365: LaTeX Error: Bad math environment delimiter.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.365 \end{align*}
-                  
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-./1-03-2016.tex:365: LaTeX Error: Bad math environment delimiter.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.365 \end{align*}
-                  
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-./1-03-2016.tex:365: Missing } inserted.
-<inserted text> 
-                }
-l.365 \end{align*}
-                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./1-03-2016.tex:365: Missing $ inserted.
-<inserted text> 
-                $
-l.365 \end{align*}
-                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-./1-03-2016.tex:365: LaTeX Error: Bad math environment delimiter.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.365 \end{align*}
-                  
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-./1-03-2016.tex:365: LaTeX Error: Bad math environment delimiter.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.365 \end{align*}
-                  
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-./1-03-2016.tex:365: Extra }, or forgotten $.
-<recently read> }
-                 
-l.365 \end{align*}
-                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./1-03-2016.tex:365: Missing $ inserted.
-<inserted text> 
-                $
-l.365 \end{align*}
-                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./1-03-2016.tex:365: Missing \endgroup inserted.
-<inserted text> 
-                \endgroup 
-l.365 \end{align*}
-                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./1-03-2016.tex:365: Missing } inserted.
-<inserted text> 
-                }
-l.365 \end{align*}
-                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./1-03-2016.tex:365: Misplaced \omit.
-\math@cr@@@ ...@ \@ne \add@amps \maxfields@ \omit 
-                                                  \kern -\alignsep@ \iftag@ ...
-l.365 \end{align*}
-                  
-I expect to see \omit only after tab marks or the \cr of
-an alignment. Proceed, and I'll ignore this case.
-
-./1-03-2016.tex:365: Missing { inserted.
-<inserted text> 
-                {
-l.365 \end{align*}
-                  
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-
-Overfull \hbox (14.8718pt too wide) in paragraph at lines 365--365
+[7] [8]
+Overfull \hbox (14.8718pt too wide) in paragraph at lines 360--360
 [] 
  []
 
 
-LaTeX Warning: File `name.ext' not found on input line 382.
+LaTeX Warning: File `name.ext' not found on input line 377.
 
 
-./1-03-2016.tex:382: LaTeX Error: Unknown graphics extension: .ext.
+./1-03-2016.tex:377: LaTeX Error: Unknown graphics extension: .ext.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.382 ...degraphics[width=0.8\linewidth]{name.ext}
+l.377 ...degraphics[width=0.8\linewidth]{name.ext}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `name.ext' not found on input line 394.
-
-
-./1-03-2016.tex:394: LaTeX Error: Unknown graphics extension: .ext.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.394 ...degraphics[width=0.8\linewidth]{name.ext}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-./1-03-2016.tex:401: LaTeX Error: Bad math environment delimiter.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.401     \end{align*}
-                      
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-./1-03-2016.tex:401: LaTeX Error: Bad math environment delimiter.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.401     \end{align*}
-                      
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-./1-03-2016.tex:401: Missing } inserted.
-<inserted text> 
-                }
-l.401     \end{align*}
-                      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./1-03-2016.tex:401: Missing $ inserted.
-<inserted text> 
-                $
-l.401     \end{align*}
-                      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./1-03-2016.tex:401: Missing { inserted.
-<inserted text> 
-                {
-l.401     \end{align*}
-                      
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-./1-03-2016.tex:401: Extra }, or forgotten $.
-<recently read> }
-                 
-l.401     \end{align*}
-                      
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./1-03-2016.tex:401: Missing $ inserted.
-<inserted text> 
-                $
-l.401     \end{align*}
-                      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./1-03-2016.tex:401: Missing } inserted.
-<inserted text> 
-                }
-l.401     \end{align*}
-                      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-
-./1-03-2016.tex:401: LaTeX Error: Bad math environment delimiter.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.401     \end{align*}
-                      
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-./1-03-2016.tex:401: LaTeX Error: Bad math environment delimiter.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.401     \end{align*}
-                      
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-./1-03-2016.tex:401: Missing } inserted.
-<inserted text> 
-                }
-l.401     \end{align*}
-                      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./1-03-2016.tex:401: Missing $ inserted.
-<inserted text> 
-                $
-l.401     \end{align*}
-                      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./1-03-2016.tex:401: Extra }, or forgotten $.
-<recently read> }
-                 
-l.401     \end{align*}
-                      
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./1-03-2016.tex:401: Missing $ inserted.
-<inserted text> 
-                $
-l.401     \end{align*}
-                      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./1-03-2016.tex:401: Missing \endgroup inserted.
-<inserted text> 
-                \endgroup 
-l.401     \end{align*}
-                      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./1-03-2016.tex:401: Missing } inserted.
-<inserted text> 
-                }
-l.401     \end{align*}
-                      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./1-03-2016.tex:401: Misplaced \omit.
-\math@cr@@@ ...@ \@ne \add@amps \maxfields@ \omit 
-                                                  \kern -\alignsep@ \iftag@ ...
-l.401     \end{align*}
-                      
-I expect to see \omit only after tab marks or the \cr of
-an alignment. Proceed, and I'll ignore this case.
-
-./1-03-2016.tex:401: Missing { inserted.
-<inserted text> 
-                {
-l.401     \end{align*}
-                      
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
 
 [9]
 
-LaTeX Warning: File `name.ext' not found on input line 419.
+LaTeX Warning: File `name.ext' not found on input line 389.
 
 
-./1-03-2016.tex:419: LaTeX Error: Unknown graphics extension: .ext.
+./1-03-2016.tex:389: LaTeX Error: Unknown graphics extension: .ext.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.419 ...degraphics[width=0.8\linewidth]{name.ext}
+l.389 ...degraphics[width=0.8\linewidth]{name.ext}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `name.ext' not found on input line 414.
+
+
+./1-03-2016.tex:414: LaTeX Error: Unknown graphics extension: .ext.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.414 ...degraphics[width=0.8\linewidth]{name.ext}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 [10]
 
-LaTeX Warning: File `name.ext' not found on input line 469.
+LaTeX Warning: File `name.ext' not found on input line 464.
 
 
-./1-03-2016.tex:469: LaTeX Error: Unknown graphics extension: .ext.
+./1-03-2016.tex:464: LaTeX Error: Unknown graphics extension: .ext.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.469 ...degraphics[width=0.8\linewidth]{name.ext}
+l.464 ...degraphics[width=0.8\linewidth]{name.ext}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 [11]
 
-./1-03-2016.tex:519: LaTeX Error: \begin{enumerate} on input line 516 ended by \end{itemize}.
+./1-03-2016.tex:528: LaTeX Error: Something's wrong--perhaps a missing \item.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.519  \end{itemize}
-                    
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-./1-03-2016.tex:533: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.533  \begin{enumerate}[label=(\alph*)]
+l.528  \begin{enumerate}[label=(\alph*)]
                                         
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[12]
+[12] [13]
 
-LaTeX Warning: File `name.ext' not found on input line 618.
+LaTeX Warning: File `name.ext' not found on input line 613.
 
 
-./1-03-2016.tex:618: LaTeX Error: Unknown graphics extension: .ext.
+./1-03-2016.tex:613: LaTeX Error: Unknown graphics extension: .ext.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.618 ...degraphics[width=0.8\linewidth]{name.ext}
+l.613 ...degraphics[width=0.8\linewidth]{name.ext}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-./1-03-2016.tex:619: Missing $ inserted.
-<inserted text> 
-                $
-l.619 ... \cup (A_2 \cap)\cup \dots (A_k \cap B) }
-                                                  $
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./1-03-2016.tex:621: Missing $ inserted.
-<inserted text> 
-                $
-l.621      \end{figure}
-                       
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-[13] [14]
-
-./1-03-2016.tex:1581: LaTeX Error: \begin{description} on input line 110 ended by \end{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1581  \end{document}
-                      
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-(./1-03-2016.aux)
-
-LaTeX Warning: There were multiply-defined labels.
-
- )
-(\end occurred inside a group at level 1)
-
-### semi simple group (level 1) entered at line 110 (\begingroup)
-### bottom level 
+[14] (./1-03-2016.aux) ) 
 Here is how much of TeX's memory you used:
- 15472 strings out of 493013
- 313340 string characters out of 6139317
- 392756 words of memory out of 5000000
- 18645 multiletter control sequences out of 15000+600000
+ 15458 strings out of 493013
+ 313246 string characters out of 6139317
+ 392755 words of memory out of 5000000
+ 18644 multiletter control sequences out of 15000+600000
  11072 words of font info for 41 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,12n,67p,408b,966s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,10n,67p,408b,966s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on 1-03-2016.pdf (14 pages, 144378 bytes).
+Output written on 1-03-2016.pdf (14 pages, 144993 bytes).
 PDF statistics:
  93 PDF objects out of 1000 (max. 8388607)
  66 compressed objects within 1 object stream

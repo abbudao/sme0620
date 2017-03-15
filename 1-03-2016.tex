@@ -5,6 +5,7 @@
 \usepackage{amsfonts}
 \usepackage{enumitem}
 \usepackage{booktabs}
+\usepackage{amssymb}
 \begin{document}
 % Dia 07/06/2017
 %Aula 1
@@ -15,284 +16,313 @@
 % Corrigir erros crassos
 % Procurar os \null substituir
 \chapter{Probabilidade}
-Objetivo: Definir um modelo estatistico que seja adequado à descrição e interpretação de fenômenos aleatórios.
+Objetivo: Definir um modelo estatístico que seja adequado à descrição e interpretação de fenômenos aleatórios.
 
-A princípio iremos definir alguns conceitos básicos:
-\begin{itemize}
-  \item Experimentos ou fenômenos aleatórios ( $\varepsilon$): são os acontecimentos cujos resultados não podem ser previstos 
+\begin{description}
+  \item [Experimentos ou fenômenos aleatórios ($\varepsilon$)]: são os acontecimentos cujos resultados não podem ser previstos 
     com certeza, sob condições idênticas.
 
-    Exemplos: 
-    \begin{itemize}
-      \item Lançamento de um dado.
-       \item Lançamento de uma moeda
-       \item Tempo de vida útil de um componente eletrônico.
-    \end{itemize}
+    \begin{description}
+      \item [Exemplos]:
 
-  \item Espaço Amostral ($\Omega$): refere-se ao conjunto de todos os possíveis resultados de um experimento ou fenômeno 
+        \begin{itemize}
+          \item Lançamento de um dado.
+          \item Lançamento de uma moeda
+          \item Tempo de vida útil de um componente eletrônico.
+        \end{itemize}
+    \end{description}
+  \item [Espaço Amostral ($\Omega$)]: refere-se ao conjunto de todos os possíveis resultados de um experimento ou fenômeno 
     aleatório.
+    \begin{description}
+      \item [Exemplos]:
+        \begin{enumerate}[label=$\Omega_{\arabic*}$]
+          \item $= \{ 1,2,3,5,6 \}$ 
+          \item $= \{ c,k \}$ Aonde $k$ é cara e $c$ é coroa.
+          \item $= [ 0,\infty \}$ 
+        \end{enumerate}
+    \end{description}
+  \item [Evento]: qualquer subconjunto do espaço amostral $\Omega$ do experimento aleatório $\varepsilon$.
+    \begin{description}
+      \item[Notação: $A,B,C,D,\dots,A_1,A_2,A_3,\dots,B_1,B_2,\dots$]
 
-    Exemplos:
-    \begin{itemize}
-      \item $\Omega_1= \{ 1,2,3,5,6 \}$ 
-      \item $\Omega_2= \{ c,k \}$ Aonde $k$ é cara e $c$ é coroa.
-      \item $\Omega_3= [ 0,\infty \}$ 
-    \end{itemize}
+      \item Notamos que como $A$ é um evento, então $A \subset \Omega$.
 
-  \item Evento: qualquer subconjunto do espaço amostral $\Omega$ do experimento aleatório $\varepsilon$.
+    \end{description}
 
-    Notação: $A,B,C,D,\dots,A_1,A_2,A_3,\dots,B_1,B_2,\dots$
-
-    Notamos que $A$ é um evento, então $A \ceq \Omega$.
-
-\end{itemize}
+\end{description}
 \subsection{Tipos de Eventos}
 
-\begin{itemize}
-  \item Evento simples ou elementar: é o evento formado por um único ponto do espaço amostral. 
+\begin{description}
+  \item [Evento Simples ou Elementar]: é o evento formado por um único ponto do espaço amostral. 
+    \begin{description}
+      \item [Exemplo]:
+        $A=\{W\}$.
+    \end{description}
 
-    Exemplo: $A=\{W\}$.
+  \item [Evento Composto]:  é o evento formado por dois ou mais pontos do espaço amostral.
 
-  \item Evento composto:  é o evento formado por dois ou mais pontos do espaço amostral.
+    \begin{description}
+      \item[Exemplo]:
+        $ A= \{w_1,w_2,w_3 \}$
+    \end{description}
 
-    Exemplo:$ A= \{w_1,w_2,w_3 \}$
+  \item [Evento Certo]: é o evento formado por todos os pontos amostrais.
+    \begin{description}
+      \item    [Exemplo]: $A= \Omega$ 
+    \end{description}
+  \item [Evento Impossível]: É o evento que não possuí elementos de $\Omega$, isto é, evento vazio.
+    \begin{description}
+      \item [Notação]: $A=\{\}$ ou $A= \emptyset$
 
-  \item Evento certo: é o evento formado por todos os pontos amostrais.
+      \item    [Alguns Exemplos]:
+        \begin{itemize}[label=]
+          \item  $A=$ Face do dado maior que 5
 
-    Exemplo: $A= \Omega$ 
+            $A=\{6\}$
 
-  \item Evento impossível: É o evento que não possuí elementos de $\Omega$, isto é, evento vazio.
+          \item    $B=$ Face do dado sem par 
 
-    Exemplo: $A=\{\}$ ou $A= \empty$
+            $B= \{2,4,6\}$
 
-\end{itemize}
-Alguns Exemplos:
+          \item    $C=$ Face do dado maior que 1
 
-$A=$ Face do dado maior que 5
+            $C= \{1,2,3,4,5,6\}=\Omega$
 
-$A=\{6\}$
+          \item        $D=$ Face do dado maior que 6.
 
-$B=$ Face do dado sem par 
+           
+            $D=\{ \}$ ou $D=\emptyset$
+        \end{itemize}
 
-$B= \{2,4,6\}$
 
-$C=$ Face do dado maior que 1
-
-$C= \{1,2,3,4,5,6\}=\Omega$
-
-$D=$ Face do dado maior que 6.
-
-$D=\{ \}$ ou $D=\null$
+    \end{description}
+\end{description}
 %Aula 2 9/03/2017
 \subsection{Operação com Eventos}
 Para ilustrar graficamente eventos, é costume utilizar-se os mesmos diagramas de Venn utilizados na teoria de conjuntos.
 
 Considere eventos definidos em um espaço amostral $\Omega$ de um experimento aleatório $\varepsilon$.
-\begin{itemize}
-  \item União de eventos ( $A \cup B$ ): é o evento formado por todos os elementos que pertencem a $A$, ou  $B$, ou ambos.
+
+\begin{description}
+  \item [União de eventos ($A \cup B$)]: é o evento formado por todos os elementos que pertencem a $A$, ou  $B$, ou ambos.
     \begin{figure}
       %figura 1
     \end{figure}
 
-  \item Intersecção de eventos ( $A \cap B$ ): é o evento formado pelos elementos que pertencem a $A$ e a $B$.
-   \begin{figure}[]
-     \centering
-     \includegraphics[width=]{}
-       \caption{}
-       \label{figura:2}
-     \end{figure} 
-
-\end{itemize}
-\subsubsection{Casos Particulares}
-\begin{itemize}
-  \item Se $B \contido A$, então $A \cap B= B$ 
+  \item [Intersecção de eventos ($A \cap B$)]: é o evento formado pelos elementos que pertencem a $A$ e a $B$.
     \begin{figure}[]
       \centering
       \includegraphics[width=]{}
-        \caption{}
-        \label{figura:3}
-      \end{figure}
+      \caption{}
+      \label{figura:2}
+    \end{figure} 
+    \begin{description}
+      \item[Casos Particulares]:
+    \begin{enumerate}
+      \item Se $B \subset A$, então $A \cap B= B$ 
 
-      \item Se $A$ e $B$ são eventos disjuntos ou mutuamente exclusivos (não possui elementos comuns), então $A\cap B = \null$.
         \begin{figure}[]
           \centering
           \includegraphics[width=]{}
-            \caption{}
-            \label{figura:4}
-          \end{figure}
+          \caption{}
+          \label{figura:3}
+        \end{figure}
 
-\end{itemize}
-Diferença de eventos ($A-B$):é o evento formado pelos elementos que pertencem a $A$ mas não pertencem a $B$.
-\begin{figure}[]
-  \centering
-  \includegraphics[width=]{}
-    \caption{}
-    \label{figura:5}
-  \end{figure}
- Evento Complementar ($\bar{A}$ ou $A^c$): é o evento formado por todos os elementos de $\Omega$ que não pertencem a $A$.
- \begin{figure}[]
-   \centering
-   \includegraphics[width=]{}
-     \caption{}
-     \label{figura:6}
-   \end{figure}
+      \item Se $A$ e $B$ são eventos disjuntos ou mutuamente exclusivos (não possui elementos comuns), então $A\cap B = \emptyset$.
 
-   Alguns exemplos de eventos complementares: 
+        \begin{figure}[]
+          \centering
+          \includegraphics[width=]{}
+          \caption{}
+          \label{figura:4}
+        \end{figure}
 
-   \begin{itemize}
-     \item $(A \cup B )^c = A^c \B^c$
-       \begin{figure}[]
-         \centering
-         \includegraphics[width=]{}
-           \caption{}
-           \label{figura:7}
-         \end{figure}
-
-       \item $(A \cap B)^c = A^c \cup B^c $
-         \begin{figure}[]
-           \centering
-           \includegraphics[width=]{}
-             \caption{}
-             \label{figura:8}
-           \end{figure}
-
-           Os itens $a$ e $b$ são conhecidos como Lei de Demorgan.
-         \item $A \cup B^c = ( A \cap B ) \cup B^c = A \cup (A \cap B)^c$
-           \begin{figure}[]
-             \centering
-             \includegraphics[width=]{}
-               \caption{}
-               \label{figura:9}
-               
-             \end{figure}
-
-             \item  $A \cap B^c = B^c \cap (A \cup B)$
-               \begin{figure}[]
-                 \centering
-                 \includegraphics[width=]{}
-                   \caption{}
-                   \label{figura:10}
-                 \end{figure}
-
-   \end{itemize}
-
-   Outras operações: 
-   \begin{align}
-     A \cap \null = \null \\
-     A \cup \null = A \\
-     \null^c = \Omega \\
-     \Omega^c = \null \\
-     (A^c)^c = A \\
-     B= (A \cap B)\cup (A^c \cap B)\\
-     A= (A \cap B) \cup (A \cap B^c)
-   \end{align}
-
-   Exemplo: Escrever $A \cup B$ como união de eventos disjuntos.
-   \begin{figure}[]
-     \centering
-     \includegraphics[width=]{}
-       \caption{}
-       \label{figura:11}
-     \end{figure}
-     Situação 1:
-     \begin{figure}[]
-       \centering
-       \includegraphics[width=]{}
-         \caption{}
-         \label{figura:11}
-       \end{figure}
-
-       $A \cup B = A \cup (A^c \cap B)$
-       Situação 2: 
-       \begin{figure}[]
-         \centering
-         \includegraphics[width=]{}
-           \caption{}
-           \label{figura:12}
-         \end{figure}
-         $(A \cup B) = B \cup (B^c \cap A)$
-
-         Considerando a situação 1 , vamos verficair se os eventos são disjuntos. Os eventos serão disjuntos se $A \cap ( A^c \cap B )= \null$ . Vericando, temos: 
-         \begin{align}
-           \( A \cap A^c\) \\
-           \null \cap B= \null
-         \end{align}
-\section{Definições de probabilidade}
-\begin{enumerate}[label=(\alph*)]
-  \item Definicão de probabilidade em espaços equiprováveis
-
-    Se um experimento aleatório tiver $n$ resultados possíveis, $\Omega = \{ \omega_1,\omega_2,\ldots,\omega_n \}$, mutuamente exclusivos e igualmente possíveis e se um evento $A$ tiver $n_A$ desses resultados, então a probabilidade deo evento $A$, representado por $P(A)$, é dada por: 
-    \begin{align}
-      A \subset \Omega \nonumber\\
-      P(A)= \frac{N_a}{n} 
-    \end{align}
-    Sendo que $\Omega$ é definido como todo o espaco amostral, $n_A$ o número de casos favoráveis $A$ e $n$ o número de casos possíveis.
-
-    Exemplo: 
-
-    Lançamento de duas moedas honestas. Calcular a probabilidade de: 
-    \begin{enumerate}
-      \item  Obter duas faces iguais.
-      \item Obter pelo menos uma face diferente de cara
-        \item  Obter pelo menos uma face diferente.
     \end{enumerate}
+  \end{description}
+  \item[Diferença de eventos ($A-B$)]: é o evento formado pelos elementos que pertencem a $A$ mas não pertencem a $B$.
 
-    \begin{table}[]
+    \begin{figure}[]
       \centering
+      \includegraphics[width=]{}
       \caption{}
-      \label{}
-      \begin{tabular}{}
-        
-      \end{tabular}
-    \end{table}
-    $\Omega = \{ (c,c); (c,k); (k,c) ; (k,k)\}$
+      \label{figura:5}
+    \end{figure}
+  \item [Evento Complementar ($\bar{A}$ ou $A^c$)]: é o evento formado por todos os elementos de $\Omega$ que não pertencem a $A$.
+    \begin{description}
+    \begin{figure}[]
+      \centering
+      \includegraphics[width=]{}
+      \caption{}
+      \label{figura:6}
+    \end{figure}
 
-    \begin{enumerate}
-      \item $A$= Faces iguais
-        \begin{align*}
-          A= \{ (c,c) ; (k,k) \} \\
-          P(A) = \frac{2}{4} = \frac{1}{2}= 0.5
-        \end{align*}
-      \item $B=$ Pelo menos uma face diferente de cara.
+\item [Alguns exemplos de eventos complementares]: 
 
-        \begin{align}
-          B= \{ (c,k); (k,c); (k,k) \}\\
-          P(B)= \frac{3}{4}
-        \end{align}
-        \item  $C=$ Obter pelo menos uma face diferente
+    \begin{enumerate}[align=left,label=({\alph*}) ]
 
-          \begin{align*}
-            C= \{ (c,k) ; (k,c)\} \\
-            P(C)= \frac{2}{4}= \frac{1}{2}:
+      \item $(A \cup B )^c = A^c \cap B^c$
+        \begin{figure}[]
+          \centering
+          \includegraphics[width=]{}
+          \caption{}
+          \label{figura:7}
+        \end{figure}
 
-          \end{align*}
+      \item $(A \cap B)^c = A^c \cup B^c $
+        \begin{figure}[]
+          \centering
+          \includegraphics[width=]{}
+          \caption{}
+          \label{figura:8}
+        \end{figure}
+
+        Os itens $a$ e $b$ são conhecidos como Lei de Demorgan.
+      \item $A \cup B^c = ( A \cap B ) \cup B^c = A \cup (A \cap B)^c$
+        \begin{figure}[]
+          \centering
+          \includegraphics[width=]{}
+          \caption{}
+          \label{figura:9}
+
+        \end{figure}
+
+      \item  $A \cap B^c = B^c \cap (A \cup B)$
+        \begin{figure}[]
+          \centering
+          \includegraphics[width=]{}
+          \caption{}
+          \label{figura:10}
+        \end{figure}
+
     \end{enumerate}
-  \item Definição de probabilidade frequentista
 
-    Um experimento é realizado  $n$ vezes, sendo $n$ um número grande. O evento $A$ ocorre exatamente $N_a$ vezes com: $0 \le N_a \le n$. A frequência relativa de vezes que ocorreu o evento $A$ é uma forma de aproximar a probabilidade do evento A, ou seja:
+  \item [Outras operações]: 
+
+    \begin{enumerate}[leftmargin=*, label=\Roman*., widest=IV, align=left]
+      \item     $A \cap \emptyset= \emptyset$ 
+      \item     $A \cup \emptyset = A$ 
+      \item     $\emptyset^{c} = \Omega$ 
+      \item     $ \Omega^c = \emptyset$ 
+      \item     $(A^c)^c = A$ 
+      \item     $B= (A \cap B)\cup (A^c \cap B)$
+      \item     $A= (A \cap B) \cup (A \cap B^c)$
+    \end{enumerate}
+      \item [Exemplo]: Escrever $A \cup B$ como união de eventos disjuntos.
+
+        \begin{figure}[]
+          \centering
+          \includegraphics[width=]{}
+          \caption{}
+          \label{figura:11}
+        \end{figure}
+
+        Situação 1:
+        \begin{figure}[]
+          \centering
+          \includegraphics[width=]{}
+          \caption{}
+          \label{figura:11}
+        \end{figure}
+
+        $A \cup B = A \cup (A^c \cap B)$
+
+        Situação 2: 
+
+        \begin{figure}[]
+          \centering
+          \includegraphics[width=]{}
+          \caption{}
+          \label{figura:12}
+        \end{figure}
+
+        $(A \cup B) = B \cup (B^c \cap A)$
+
+        Considerando a situação 1 , vamos verficar se os eventos são disjuntos. Os eventos serão disjuntos se $A \cap ( A^c \cap B )= \emptyset$ . Vericando, temos: 
+        \begin{align*}
+          A \cap A^c = \emptyset \\
+          \emptyset \cap B= \emptyset
+        \end{align*}
+
+\end{description}
+\section{Definições de Probabilidade}
+\subsection{Probabilidade em Espaços Equiprováveis}
+Se um experimento aleatório tiver $n$ resultados possíveis, $\Omega = \{ \omega_1,\omega_2,\ldots,\omega_n \}$, mutuamente exclusivos e igualmente possíveis e se um evento $A$ tiver $n_A$ desses resultados, então a probabilidade deo evento $A$, representado por $P(A)$, é dada por: 
+\begin{align}
+  A \subset \Omega \nonumber\\
+  P(A)= \frac{N_a}{n} 
+\end{align}
+Sendo que $\Omega$ é definido como todo o espaco amostral, $n_A$ o número de casos favoráveis $A$ e $n$ o número de casos possíveis.
+
+\begin{description}
+\item [Exemplo]: 
+
+Dado o lançamento de duas moedas honestas, calcule a probabilidade de: 
+\begin{enumerate}[label=(\alph*)]
+  \item  Obter duas faces iguais.
+  \item Obter pelo menos uma face diferente de cara
+  \item  Obter pelo menos uma face diferente.
+\end{enumerate}
+
+\begin{table}[]
+  \centering
+  \caption{}
+  \label{}
+  \begin{tabular}{}
+
+  \end{tabular}
+\end{table}
+$\Omega = \{ (c,c); (c,k); (k,c) ; (k,k)\}$
+
+\begin{enumerate}[label=(\alph*)]
+  \item $A$= Faces iguais
+    \begin{align*}
+      A= \{ (c,c) ; (k,k) \} \\
+      P(A) = \frac{2}{4} = \frac{1}{2}= 0.5
+    \end{align*}
+  \item $B=$ Pelo menos uma face diferente de cara.
+
+    \begin{align*}
+      B= \{ (c,k); (k,c); (k,k) \}\\
+      P(B)= \frac{3}{4}
+    \end{align*}
+  \item  $C=$ Obter pelo menos uma face diferente
+
+    \begin{align*}
+      C= \{ \(c,k\) \; \(k,c\)\} \\
+      P(C)= \frac{2}{4}= \frac{1}{2}
+    \end{align*}
+\end{enumerate}
+
+\end{description}
+\subsection{Probabilidade Frequentista}
+
+Um experimento é realizado  $n$ vezes, sendo $n$ um número grande. O evento $A$ ocorre exatamente $N_a$ vezes com: $0 \le N_a \le n$. A frequência relativa de vezes que ocorreu o evento $A$ é uma forma de aproximar a probabilidade do evento A, ou seja:
+\begin{align}
+  f_r (A)= \frac{n_a}{n}
+\end{align}
+Quando $n \to \infty$, $f_r(A)$ aproxima-se de $P(A)$.
+\begin{description}
+  \item[Exemplo]: 
+
+ Geração de $n$ número inteiros entre 1 e 5, $\{ 1,2,3,4,5 \}$, e o evento de interesse é a ocorrência do número 4.
+\end{description}
+\subsection{Probabilidade axiomática}
+
+A probabilidade de um evento $A$ é definida como sendo um número $P(A)$ que satisfaz
+os seguintes axiomas:
+% Usar sempre numeração romana pra axiomas!
+\begin{enumerate}[leftmargin=*, label=\Roman*., widest=IV, align=left]
+  \item $P(A) \ge 0, \forall A \subset \Omega$
+  \item $P(\Omega)=1$
+  \item Se $A_1, A_2,\ldots$ são eventos mutuamente exclusivos ($A_i \cup A_j = \phi, \forall i \neq j$), então:
     \begin{align}
-      f_r (A)= \frac{n_a}{n}
+      P(\cup^\infty_{i=1} A_i)= P(A_1\cup A_2 \cup \ldots)= \sum^\infty_{i=1} P(A_i) 
     \end{align}
-    Quando $n \to \infty$, $f_r(A)$ aproxima-se de $P(A)$.
-
-    Exemplo: Geração de $n$ número inteiros entre 1 e 5, $\{ 1,2,3,4,5 \}$, e o evento de interesse é a ocorrência do número 4.
-
-  \item Definição de probabilidade axiomática
-
-    A probabilidade de um evento $A$ é definida como sendo um número $P(A)$ que satisfaz
-    os seguintes axiomas:
-    % Usar sempre numeração romana pra axiomas!
-    \begin{enumerate}
-      \item $P(A) \ge 0, \forall A \subset \Omega$
-      \item $P(\Omega)=1$
-      \item Se $A_1, A_2,\ldots$ são eventos mutuamente exclusivos ($A_i \cup A_j = \phi, \forall i \neq j$), então:
-        \begin{align}
-          P(\cup^\infty_{i=1} A_i)= P(A_1\cup A_2 \cup \ldots)= \sum^\infty_{i=1} P(A_i) 
-        \end{align}
-    \end{itemize}
 \end{itemize}
+\begin{description}
 %14/03/2017
-\subsection{Propriedades}
+\item[Propriedades]
+
 \begin{enumerate}[label=(\alph*)]
 
   \item $0 \le P(A) \le 1$
@@ -313,9 +343,9 @@ Diferença de eventos ($A-B$):é o evento formado pelos elementos que pertencem 
       P(B\cup C)+P(A\cup B \cup C) 
     \end{align}
 \end{enumerate}
-Exemplo: 
+\item [Exemplo]: 
 
-Mostre a propriedade (g).
+Mostre a propriedade $(g)$.
 
 Use o fato de que $A\cup (B \cup C )= (A\cup B )\cup (A \cup C )$:
 \begin{align*}
@@ -326,7 +356,7 @@ Use o fato de que $A\cup (B \cup C )= (A\cup B )\cup (A \cup C )$:
   =P(A)+P(B)+P(C)-P(B\cap C)- P(A \cap B)- P(A \cap C)+ P(A \cap B \cap C)
 \end{align*}
 
-Exercício: 
+\item [Exercício]: 
 
 Considere um experimento aleátorio e os eventos $A$ e $B$ associados, tais que:
 \begin{align*}
@@ -334,8 +364,8 @@ Considere um experimento aleátorio e os eventos $A$ e $B$ associados, tais que:
   P(B)= \frac{1}{3}\\
   P(A \cap B)= \frac{1}{4}
 \end{align*}
-Calcule as probabildiades:
-\begin{enumerate}
+Calcule as probabilidades:
+\begin{enumerate}[label=(\alph*)]
   \item $ P(\bar{A} \cap \bar{B})$
   \item $P(\bar{A} \cup \bar{B})$
 \end{enumerate}
@@ -345,32 +375,32 @@ Calcule as probabildiades:
   \caption{Name}
   \label{fig:13}
 \end{figure}
-\begin{enumerate}
+\begin{enumerate}[label=(\alph*)]
   \item \begin{align*}
-    P(A^c \cap B^c) = 1- P(A \cup B) \\
-    = 1- \{ P(A) + P(B) - P(A \cap B) \} \\
-    =1 - \{ \frac{1}{2} + \frac{1}{3} -\frac{1}{4}\}= \frac{5}{12}
-  \end{align*}
-  \begin{figure}[htpb]
-    \centering
-    \includegraphics[width=0.8\linewidth]{name.ext}
-    \caption{Name}
-    \label{fig:14}
-  \end{figure}
-\item \begin{align*}
-    P(A^c \cup B^c) = P\( \( A \cap B\)^c \)\\
-    = 1- P(A \cap B) = 1 - \frac{1}{4}= \frac{3}{4}
-\end{align*}  
-Ou de maneira similar:
-\begin{align*}
-  P(A^c \cup B^c) = P(A^c) + P(B^c ) - P(A^c \cap B^c) \\
-  = (1- P(A)) + (1- P(B)) - \frac{5}{12} \\
-  = (1 - \frac{1}{2})+ (1 - \frac{1}{3})- \frac{5}{12}
-\end{align*}
+      P(A^c \cap B^c) = 1- P(A \cup B) \\
+      = 1- \{ P(A) + P(B) - P(A \cap B) \} \\
+      =1 - \{ \frac{1}{2} + \frac{1}{3} -\frac{1}{4}\}= \frac{5}{12}
+    \end{align*}
+    \begin{figure}[htpb]
+      \centering
+      \includegraphics[width=0.8\linewidth]{name.ext}
+      \caption{Name}
+      \label{fig:14}
+    \end{figure}
+  \item \begin{align*}
+      P(A^c \cup B^c) = P\( \( A \cap B\)^c \)\\
+      = 1- P(A \cap B) = 1 - \frac{1}{4}= \frac{3}{4}
+    \end{align*}  
+    Ou de maneira similar:
+    \begin{align*}
+      P(A^c \cup B^c) = P(A^c) + P(B^c ) - P(A^c \cap B^c) \\
+      = (1- P(A)) + (1- P(B)) - \frac{5}{12} \\
+      = (1 - \frac{1}{2})+ (1 - \frac{1}{3})- \frac{5}{12}
+    \end{align*}
 
 \end{enumerate}
-\section{Probabilidade condicional}
-Definição: Sejam $A$ e $B$ dois eventos definidos em um mesmo espaco amostral $\Omega$.
+\subsection{Probabilidade condicional}
+Sejam $A$ e $B$ dois eventos definidos em um mesmo espaco amostral $\Omega$.
 A probabilidade de $A$  dado que ocorre o evento $B$, denotada por $P(A/B)$ é definida por:
 \begin{align}
   P(A/B)= \frac{P(A\cap B)}{P(B)}
@@ -391,10 +421,8 @@ Conhecida como regra do produto:
   P(B/A)= \frac{P(B \cap A)}{P(A)}= \frac{P\cap B}{P(A)}\\
   P(A \cap B)= P(B/A).P(A)
 \end{align}
-
-Exemplo: 
-
-Suponha que um escritório possua 100 computadores de tipos Desktop (D) e 
+\begin{description}
+  \item [Exemplo]: Suponha que um escritório possua 100 computadores de tipos Desktop (D) e 
 Laptop (L) sendo alguns novos (N) e outro com um certo tempo de uso (U), distribuídos da seguinte forma:
 \begin{figure} 
   \centering
@@ -410,1105 +438,1109 @@ Laptop (L) sendo alguns novos (N) e outro com um certo tempo de uso (U), distrib
 \end{figure}
 Um funcionário escolhe um laptop ao acaso. Qual a probabilidade de que seja novo?
 
-Resolucão: 
+\item[Resolucão]: 
 
 \begin{align*}
   P(N/L)= \frac{P(N \cap L)}{P(L)}= \frac{\frac{30}{100}}{\frac{40}{100}}=\frac{3}{4}
 \end{align*}
 
 Obs: $P(A \cap B)$ e $P(A/B)$
-
+\end{description}
 \section{Àrvore de Probabilidades}
 Sejam $A,B \subset \Omega$. Uma representação bastante útil é a àrvore de probabilidades.
-
+\begin{description}
 \begin{figure}
   \label{fig:16}
   \caption{Um exemplo de uma àrvore de probabilidades}
 \end{figure}
 
-Exemplo: No exemplo anterior, qual a probabilidade de um funcionário selecionar um 
+  \item[Exemplo]: No exemplo anterior, qual a probabilidade de um funcionário selecionar um 
 desktop usado?
 \begin{figure}
 \end{figure}
-\begin{align}
+\begin{align*}
   P(D \cap U)= P(D/U)P(U)
-\end{align}
-Ou:
-\begin{align}
-  P(D \cap U)= P(U/D)P(D)= \frac{20}{60}\times \frac{60}{100}= 0,2
-\end{align}
+\end{align*}
 
-Algumas propriedades:
-\begin{itemize}
+Ou:
+\begin{align*}
+  P(D \cap U)= P(U/D)P(D)= \frac{20}{60}\times \frac{60}{100}= 0,2
+\end{align*}
+
+\item [Algumas propriedades]:
+\begin{enumerate}[label=(\alph*)]
   \item $P(\phi / B)=0$
   \item Se $A \subset \omega$, entao $P(\bar{A} / B)= 1-P(A/B)$
   \item Se $A,C \subset \omega$, então:
     \begin{align}
       P(A \cup C / B)= P(A/B)+ P(C/B) - P(A \cap C/B)
     \end{align}
-\end{itemize}
-\section{Independência de eventos}
-Definicao: Dois eventos $A$ e $B$ definidos em $\Omega$ são independentes se 
-a informação da ocorrência ou não de $B$ não altera a probabilidade de ocorrência
-de $A$. Isto é:
-\begin{align}
-  P(A/B)= P(A) \\
-  P(B)>0 
-\end{align}
-Logo, dois eventos $A$ e $B$ são independentes se, e somente se, $P(A \cap B)=P(A).P(B)$.
-
-Exemplo: Um estudante se inscreve em dois processos seletivos com probabilidade 
-$30\%$ de ser aprovado na empresa $I$ e $50\%$ de ser aprovado na empresa $II$. Se 
-as aprovações são independentes, qual a probabilidade de que ele seja aprovado em
-pelo menos uma?
-
-Definindo os eventos:
-\begin{itemize}
-  \item A:\@ O estudante ser aprovado na empresa $I$
-  \item B:\@ O esutdanbte ser aprovado na empresa $II$
-\end{itemize}
-\begin{align}
-  P(A)= 0,30\\
-  p(B)=0,50\\
-  P(A\cup B)= P(A)+P(B)-P(A\cap B)\\
-  =P(A)+P(B)-P(A).P(B)\\
-  =0,3+0,5-0,3.0,5\\
-  =0,65
-\end{align}
-\section{Independência de 3 eventos}
-OS eventos A,B,C em $\Omega$ são independentes se, somente se:
-\begin{itemize}
-  \item $P(A \cap B) = P(A).P(B)$
-  \item $P(A \cap C) = P(A).P(C)$
-  \item $P(B \cap C)= P(B).P(C)$
-  \item $P(A \cap B \cap C)= P(A).P(B).P(C)$
-\end{itemize}
-Resultado: Se A,B são eventos independentes em $\Omega$, então:
-\begin{enumerate}
-  \item $A$ e $\bar{B}$ são independentes
-  \item $\bar{A}$ e $B$ são independetes
-  \item $\bar{A}$ e $\bar{B}$ são independentes.
-\end{enumerate}
-\begin{figure}
-  \label{fig:3}
-\end{figure}
-
-\begin{align}
-  P(A \cap \bar{B})= P(A) - P(A \cap B)\\
-  = P(A)-P(A).P(B)\\
-  = P(A)(1-P(B))\\
-  =P(A).P(\bar{B})
-\end{align}
-Obs: Não confundir eventos mutuamente exclusivos com eventos independentes.
-
-Exemplo: Um atirador acerta 80\% dos disparos e outro acerta, nas mesmas condições
-acerta 70\%.
-\begin{enumerate}[label=(\alph*)]
-  \item Qual a probabilidade de o alvo ser acertado se ambos os atiradores disparam 
-    simultanemaente?
-  \item Qual a probabilidade do alvo ser acertado se ambos os atiradores disparam 
-    simultanemaente?
-\end{enumerate}
-\begin{itemize}
-  \item A:\@ O atirador 1 acerta o alvo
-  \item B:\@ O atirador 2 acerta o alvo
-\end{itemize}
-\begin{enumerate}[label=(\alph*)]
-  \item  A intersecção de dois eventos independentes é dada pela multiplicação de suas probabilidades:
-    \begin{align}
-      P(A \cap B)= P(A)P(B)\\
-      =0.8 \times 0.7= 0.56
-    \end{align}
-  \item É dado pela a união dos dois eventos:
-    \begin{align}
-      P(A \cup B)= P(A)+ P(B)- P( A \cap B )\\
-      = P(A) + P(B- P(A).P(B)\\
-      = 0,8+0,7 - 0.8\times 0,7\\
-      =0,94
-    \end{align}
-\end{enumerate}
-\section{O teorema de Bayes}
-\begin{enumerate}[label=(\alph*)]
-  \item Partição do espaço amostral: 
-
-    Definição: Uma coleção de eventos $A_1, A_2, \ldots, A_k$ formam uma partição 
-    do espaço amostral $\Omega$ se:
-
-    \begin{enumerate}
-      \item $A_i \cap A_j = \null, \forall i\neq j$, com $i,j =1,\ldots,k$
-      \item $\cup_{i=1}^{k}A_i= \Omega$
-    \end{enumerate}
-  \item Lema da probabilidade total 
-
-    Se $A_1,\ldots, A_k$ é uma partição de $\Omega$, então para qualquer evento 
-    $B$ de $\Omega$, vale:
-
-    \begin{align}
-      P(B)= \sum^k_{i=1} B(B \cap A_i)\\
-      = \sum^k_{i=1} P(B/A_i)P(A_i)\\
-    \end{align}
-    \begin{align}
-      B= \cup_{i=1}^k A_i \cap B)
-    \end{align}
-    \begin{align}
-      P(B)= \cup_{i=1}^k P(A_i \cap B)\\
-      = \cup_{i=1}^k P(B/A_i)P(A_i)
-    \end{align}
 \end{enumerate}
 
-Fórmula de Bayes: Se $A_1,A_2,\ldots, A_k$ formam uma partição de $\Omega$ e 
-$B \subset \Omega$ com $P(B)>0$, então:
+\end{description}
+%End primeira entrega
+% \section{Independência de eventos}
+% Definicao: Dois eventos $A$ e $B$ definidos em $\Omega$ são independentes se 
+% a informação da ocorrência ou não de $B$ não altera a probabilidade de ocorrência
+% de $A$. Isto é:
+% \begin{align}
+%   P(A/B)= P(A) \\
+%   P(B)>0 
+% \end{align}
+% Logo, dois eventos $A$ e $B$ são independentes se, e somente se, $P(A \cap B)=P(A).P(B)$.
 
-\begin{align}
-  P(A_i/ B)= \frac{P(A_i \cap B)}{P(B)}\\
-  =\frac{P(B/A_i)P(A_i)}{\sum_{j=1}^k P(B/A_j)P(A_j)}
-\end{align}
+% Exemplo: Um estudante se inscreve em dois processos seletivos com probabilidade 
+% $30\%$ de ser aprovado na empresa $I$ e $50\%$ de ser aprovado na empresa $II$. Se 
+% as aprovações são independentes, qual a probabilidade de que ele seja aprovado em
+% pelo menos uma?
 
-Exemplo: Uma montadora traalha com dois fornecedores A e B de uma determinada peça.
-Sabe-se que 10\% e 5\% das peças provenientes dos fornecedores A e B respectivamente,
-estão fora de especificação. A montadora recebe 30\% das peças do fornecedor A e 70\%
-do fornecedor B. Se uma peça do estoque inteiro é escolhido ao acaso, calcule:
+% Definindo os eventos:
+% \begin{itemize}
+%   \item A:\@ O estudante ser aprovado na empresa $I$
+%   \item B:\@ O esutdanbte ser aprovado na empresa $II$
+% \end{itemize}
+% \begin{align}
+%   P(A)= 0,30\\
+%   p(B)=0,50\\
+%   P(A\cup B)= P(A)+P(B)-P(A\cap B)\\
+%   =P(A)+P(B)-P(A).P(B)\\
+%   =0,3+0,5-0,3.0,5\\
+%   =0,65
+% \end{align}
+% \section{Independência de 3 eventos}
+% OS eventos A,B,C em $\Omega$ são independentes se, somente se:
+% \begin{itemize}
+%   \item $P(A \cap B) = P(A).P(B)$
+%   \item $P(A \cap C) = P(A).P(C)$
+%   \item $P(B \cap C)= P(B).P(C)$
+%   \item $P(A \cap B \cap C)= P(A).P(B).P(C)$
+% \end{itemize}
+% Resultado: Se A,B são eventos independentes em $\Omega$, então:
+% \begin{enumerate}
+%   \item $A$ e $\bar{B}$ são independentes
+%   \item $\bar{A}$ e $B$ são independetes
+%   \item $\bar{A}$ e $\bar{B}$ são independentes.
+% \end{enumerate}
+% \begin{figure}
+%   \label{fig:3}
+% \end{figure}
 
-\begin{enumerate}[label=(\alph*)]
-  \item a probabilidade que ela esteja fora de especificação.
-  \item Se uma peça é escolhida ao acaso está fora de especificação, qual é a 
-    pŕobabilidade de que tenha sido fornecido por A?\@,
-\end{enumerate}
-\begin{itemize}
-  \item Evento A:\@ A peça é do fornecedor A.
-  \item Evento B:\@ A peça é do fornecedor B.
-  \item Evento C:\@ A peça está fora de especificação.
-\end{itemize}
-\begin{align*}
-  P(A)= 0,3\\
-  P(B)=0,7\\
-  P(C/A)= 0,10\\
-  P(C/B)= 0,05
-\end{align*}
-\begin{figure}
-  \label{fig:5}
-\end{figure}
-\begin{enumerate}[label=(\alph*)]
-  \item $P(C)=$?
+% \begin{align}
+%   P(A \cap \bar{B})= P(A) - P(A \cap B)\\
+%   = P(A)-P(A).P(B)\\
+%   = P(A)(1-P(B))\\
+%   =P(A).P(\bar{B})
+% \end{align}
+% Obs: Não confundir eventos mutuamente exclusivos com eventos independentes.
 
-    \begin{align*}
-      C = (A \cap C ) \cup (B)\\
-      P(C) = P(A \cap C) + P( B \cap C  )\\
-      =P(C/A)P(A)+P(C/B)P(B)\\
-      =0,1 \times 0,3 + 0.05 \times 0.7\\
-      =0.065
-    \end{align*}
-  \item $P(A/C)=$?
+% Exemplo: Um atirador acerta 80\% dos disparos e outro acerta, nas mesmas condições
+% acerta 70\%.
+% \begin{enumerate}[label=(\alph*)]
+%   \item Qual a probabilidade de o alvo ser acertado se ambos os atiradores disparam 
+%     simultanemaente?
+%   \item Qual a probabilidade do alvo ser acertado se ambos os atiradores disparam 
+%     simultanemaente?
+% \end{enumerate}
+% \begin{itemize}
+%   \item A:\@ O atirador 1 acerta o alvo
+%   \item B:\@ O atirador 2 acerta o alvo
+% \end{itemize}
+% \begin{enumerate}[label=(\alph*)]
+%   \item  A intersecção de dois eventos independentes é dada pela multiplicação de suas probabilidades:
+%     \begin{align}
+%       P(A \cap B)= P(A)P(B)\\
+%       =0.8 \times 0.7= 0.56
+%     \end{align}
+%   \item É dado pela a união dos dois eventos:
+%     \begin{align}
+%       P(A \cup B)= P(A)+ P(B)- P( A \cap B )\\
+%       = P(A) + P(B- P(A).P(B)\\
+%       = 0,8+0,7 - 0.8\times 0,7\\
+%       =0,94
+%     \end{align}
+% \end{enumerate}
+% \section{O teorema de Bayes}
+% \begin{enumerate}[label=(\alph*)]
+%   \item Partição do espaço amostral: 
 
-    \begin{align*}
-      P(A/C)= \frac{P(A\cap C)}{P(C)}\\
-      = \frac{P(C/A)P(A)}{P(C/A)P(A)+P(C/B)P(B)}\\
-      =\frac{0,1 \times 0,3}{0,065}=0.4615
-    \end{align*}
-\end{enumerate}
+%     Definição: Uma coleção de eventos $A_1, A_2, \ldots, A_k$ formam uma partição 
+%     do espaço amostral $\Omega$ se:
 
-Exercício para entregar:
+%     \begin{enumerate}
+%       \item $A_i \cap A_j = \emptyset, \forall i\neq j$, com $i,j =1,\ldots,k$
+%       \item $\cup_{i=1}^{k}A_i= \Omega$
+%     \end{enumerate}
+%   \item Lema da probabilidade total 
 
-Estudos reveleram que 40\% dos estudantes universitários
-já experimentaram algum tipo de droga ilícita. Uma universidade resolve aplicar 
-um teste com detector de mentira para descobrir se seus estudantes já usaram algum 
-tipo de droga ilícita. Sabemos que se o estudante já usou algum tipo de droga 
-o detector vai dar positivo com certeza. Porém, sabemos que o detector erra, ou 
-seja, apresenta um falso positivo em 5\% quando aplicado em estudantes que nunca 
-usaram drogas. Se um estudante é selecionado aleatoriamente e o teste aplicado 
-nele deu positivo, qual a probabilidade de ele já ter usado algum tipo de droga?
+%     Se $A_1,\ldots, A_k$ é uma partição de $\Omega$, então para qualquer evento 
+%     $B$ de $\Omega$, vale:
 
-Exercício: Para selecionar seus funcionários uma empresa oferece aos candidatos 
-um curso de treinamento durante uma semana. No final do curso, eles são classificados
-em uma prova; 25\% são classificados como bons (B), 50\% como médios (M) e os 
-25\% restantes como fracos (F). A empresa pretende substituir o treinamento por um teste 
-contendo questões de conhecimentos gerais. Para isso gostaria de conhecer qual a 
-probabilidade de um indíviduo aprovado no teste ser considerado fraco (F), se 
-fizesse o curso. Assim, antes do início do curso, os candidatos do curso, foram 
-submetidos ao teste e receberam o conceito aprovado (A) ou reprovado (R). No final 
-do curso, obtiveram-se as seguintes probabilidades condicionais: 
-\begin{align*}
-  P(A/B)= 0,8\\
-  P(A/M) = 0,5\\
-  P(A/F)=0,2
-\end{align*}
-\section{Variáveis Aleatórias}
-Definição: Seja um experimento aleatório e $\Omega$ o espaço amostral associado 
-a esse experimento. Uma função $X(\omega)$ que associa cada elemento $\omega \in
-\Omega$ a um número real $x=x(\omega)$ é denominada variável aleatória (v.a.\.). 
-\begin{figure} 
-  % Espaco amostral omega em x indo para R 
-\end{figure}
-Obs: $X:\Omega \to \mathbb{R}$
+%     \begin{align}
+%       P(B)= \sum^k_{i=1} B(B \cap A_i)\\
+%       = \sum^k_{i=1} P(B/A_i)P(A_i)\\
+%     \end{align}
+%     \begin{align}
+%       B= \cup_{i=1}^k A_i \cap B)
+%     \end{align}
+%     \begin{align}
+%       P(B)= \cup_{i=1}^k P(A_i \cap B)\\
+%       = \cup_{i=1}^k P(B/A_i)P(A_i)
+%     \end{align}
+% \end{enumerate}
 
-Exemplo: Lançamento de uma moeda duas vezes. A v.a.\ é o $n^o$ de caras. 
+% Fórmula de Bayes: Se $A_1,A_2,\ldots, A_k$ formam uma partição de $\Omega$ e 
+% $B \subset \Omega$ com $P(B)>0$, então:
 
-\begin{align*}
-  \Omega : \{ cc;kc;kc;kk \}\\
-  X: \text{\quad $n^o$ de caras}\\
-  R_x: \{0,1,2 \}\\
-  P(x=0)=?\\
-  P(x=1)=? \\
-  P(x=2)=? \\
-  x=
-  \begin{cases}
-    0, \text{\quad se ocorrer $kk$} \\
-    1, \text{\quad se ocorrer $ck$ ou $kc$} \\
-    2,\text{\quad se ocorrer $cc$}
-  \end{cases}
-\end{align*}
+% \begin{align}
+%   P(A_i/ B)= \frac{P(A_i \cap B)}{P(B)}\\
+%   =\frac{P(B/A_i)P(A_i)}{\sum_{j=1}^k P(B/A_j)P(A_j)}
+% \end{align}
 
-Exemplo: Em uma linha de produção, peças são classificadas em defeituosas ou não
-defeituosas. Podemos definir a v.a.\ X como:
-\begin{align*}
-  \begin{cases}
-    x=1,\text{\quad  se a peça é defeituosa}\\ 
-    0,\text{\quad  a peça não é defeituosa}
-  \end{cases}
-\end{align*}
-Obs: Uma v.a.\ $X$ desse tipo é chamada de v.a.\ de Bernoulli. Nesse caso, $\Omega=\{ \text{peça defeituosa, peça não defeituosa} \}$
-e $x$ assume um cojjunto de valores finitos.
+% Exemplo: Uma montadora traalha com dois fornecedores A e B de uma determinada peça.
+% Sabe-se que 10\% e 5\% das peças provenientes dos fornecedores A e B respectivamente,
+% estão fora de especificação. A montadora recebe 30\% das peças do fornecedor A e 70\%
+% do fornecedor B. Se uma peça do estoque inteiro é escolhido ao acaso, calcule:
 
-\subsection{Classificação de Variáveis Aleatórias}
-Se a v.a.\ $x$ assume valores em um conjunto finito ou infinito e numerável é chamado 
-de variável aleatória discreta. Se $x$ assume valores em um conjunto infinito não-numerável,
-é chamada de v.a.\ contínua.
+% \begin{enumerate}[label=(\alph*)]
+%   \item a probabilidade que ela esteja fora de especificação.
+%   \item Se uma peça é escolhida ao acaso está fora de especificação, qual é a 
+%     pŕobabilidade de que tenha sido fornecido por A?\@,
+% \end{enumerate}
+% \begin{itemize}
+%   \item Evento A:\@ A peça é do fornecedor A.
+%   \item Evento B:\@ A peça é do fornecedor B.
+%   \item Evento C:\@ A peça está fora de especificação.
+% \end{itemize}
+% \begin{align*}
+%   P(A)= 0,3\\
+%   P(B)=0,7\\
+%   P(C/A)= 0,10\\
+%   P(C/B)= 0,05
+% \end{align*}
+% \begin{figure}
+%   \label{fig:5}
+% \end{figure}
+% \begin{enumerate}[label=(\alph*)]
+%   \item $P(C)=$?
 
-Exemplos:
+%     \begin{align*}
+%       C = (A \cap C ) \cup (B)\\
+%       P(C) = P(A \cap C) + P( B \cap C  )\\
+%       =P(C/A)P(A)+P(C/B)P(B)\\
+%       =0,1 \times 0,3 + 0.05 \times 0.7\\
+%       =0.065
+%     \end{align*}
+%   \item $P(A/C)=$?
 
-\begin{enumerate}[label=(\alph*)]
-  \item $x$ indica o $n^o$ de residentes em um domicílio. X pode assumir valores em $\natural$ e assim é chamada de 
-    v.a.\\ discreta.
+%     \begin{align*}
+%       P(A/C)= \frac{P(A\cap C)}{P(C)}\\
+%       = \frac{P(C/A)P(A)}{P(C/A)P(A)+P(C/B)P(B)}\\
+%       =\frac{0,1 \times 0,3}{0,065}=0.4615
+%     \end{align*}
+% \end{enumerate}
 
-  \item $Y$ indica o tempo de vida (em horas) de um equipamento eletrônico. $Y$ pode 
-    assumir valores em $\mathbb{R}^+$ e assim é chamado de v.a.\\ contínua.
-    Definição: Seja x uma v.a.\\ discreta que assume valores em $R_{x}$, $R_{x}=\{x_1,x_2,\dots,
-    x_{k},\dots\}$. A cada possível $x_{i}$, associamos um número, 
-    \begin{align*}
-      P_{i}=p({x_i})=P(X={x_i})=P(X( \omega_i)=x_i),\\
-      \omega_{i} \in \Omega \quad \text{e } x_{i} \in R_{x} \nonumber
-    \end{align*}
-    Dito probabilidade de $x_{i}$. A função $p(x)$ é definida como função massa de probabilidade 
-    (f.m.p) de $X$. 
+% Exercício para entregar:
 
-    As probabilidades $p(x_i)$ devem satisfazer as seguintes condições: 
-    \begin{enumerate} % com i) ii)
-      \item $p(x_i)>0, \forall x_i \in R_{x}$
+% Estudos reveleram que 40\% dos estudantes universitários
+% já experimentaram algum tipo de droga ilícita. Uma universidade resolve aplicar 
+% um teste com detector de mentira para descobrir se seus estudantes já usaram algum 
+% tipo de droga ilícita. Sabemos que se o estudante já usou algum tipo de droga 
+% o detector vai dar positivo com certeza. Porém, sabemos que o detector erra, ou 
+% seja, apresenta um falso positivo em 5\% quando aplicado em estudantes que nunca 
+% usaram drogas. Se um estudante é selecionado aleatoriamente e o teste aplicado 
+% nele deu positivo, qual a probabilidade de ele já ter usado algum tipo de droga?
 
-      \item $\sum^\infty_{i=1} p(x_i)=1$
-    \end{enumerate}
-    Interpretação da f.m.p: 
+% Exercício: Para selecionar seus funcionários uma empresa oferece aos candidatos 
+% um curso de treinamento durante uma semana. No final do curso, eles são classificados
+% em uma prova; 25\% são classificados como bons (B), 50\% como médios (M) e os 
+% 25\% restantes como fracos (F). A empresa pretende substituir o treinamento por um teste 
+% contendo questões de conhecimentos gerais. Para isso gostaria de conhecer qual a 
+% probabilidade de um indíviduo aprovado no teste ser considerado fraco (F), se 
+% fizesse o curso. Assim, antes do início do curso, os candidatos do curso, foram 
+% submetidos ao teste e receberam o conceito aprovado (A) ou reprovado (R). No final 
+% do curso, obtiveram-se as seguintes probabilidades condicionais: 
+% \begin{align*}
+%   P(A/B)= 0,8\\
+%   P(A/M) = 0,5\\
+%   P(A/F)=0,2
+% \end{align*}
+% \section{Variáveis Aleatórias}
+% Definição: Seja um experimento aleatório e $\Omega$ o espaço amostral associado 
+% a esse experimento. Uma função $X(\omega)$ que associa cada elemento $\omega \in
+% \Omega$ a um número real $x=x(\omega)$ é denominada variável aleatória (v.a.\.). 
+% \begin{figure} 
+%   % Espaco amostral omega em x indo para R 
+% \end{figure}
+% Obs: $X:\Omega \to \mathbb{R}$
 
-    Seja $x$ uma v.a.\\ discreta com $R_{x}= \{x_1,x_2,\dots,x_k \}$ e $p(x_i)=p_i$.
+% Exemplo: Lançamento de uma moeda duas vezes. A v.a.\ é o $n^o$ de caras. 
 
-    Exemplo: Lançamento de uma moeda duas vezes e $x$ é o número de caras.
-    \begin{align}
-      \Omega = \{ cc;ck;kc;kk \} \\
-      R_{x}= \{0,1,2\}
-    \end{align}
-    A f.m.p de $x$ é dada por: 
-    \begin{align}
-      p(0)=P(x=0)=P(X(\omega)\in kk)=\frac{1}{4} \\
-      p(1)=P(x=1)=\frac{2}{4}=\frac{1}{2}\\
-      p(2)=P(x=2)=\frac{1}{4}
-      P(X=x)= \begin{cases}
-        \frac{1}{4}, \text{\quad se sair $kk$ ou $cc$ ou $x=0$ ou $x=2$}\\
-        \frac{1}{2}, \text{\quad se sair $ck$ ou $kk$ ou $x=1$ }
-      \end{cases}
-    \end{align}
-\end{enumerate}
-%tabular here
-Exemplo: A demanda diária de um item é uma v.a.\\ discreta com f.m.p.\ dada por: 
-\begin{align}
-  P(D=d)=\frac{2^d k}{d!}, d=1,2,3,4
-\end{align}
-\begin{enumerate}[label=(\alph*)]
-  \item Determine a constante $k$
-  \item Calcule $P(D>2)$
-\end{enumerate}
-\begin{enumerate}[label=(\alph*)]
-  \item Sabemos que: 
-    \begin{align}
-      \sum^{\infty}_{i=1} p(x_i)=1, \forall x_i \in R_{x}\\
-      P(X=1)+P(X=2)+P(X=3)+P(X=4)=1\\
-      \frac{2^1 k}{1!}+\frac{2^2 k}{2!}+\frac{2^3 k}{3\!}+\frac{2^4 k}{4\!}=1\\
-      2K + 2K+ \frac{4K}{3}+\frac{2K}{3}=1 \\
-      4K+\frac{6K}{3}=1 \\
-      6K=1\\
-      K=\frac{1}{6}
-    \end{align}
-    Então o f.m.p de x é: 
-    \begin{align}
-      P(D=d)=\frac{2^d}{6d!}, d=1,2,3,4
-    \end{align}
-  \item 
-    \begin{align}
-      P(D>2)=P(D=3)+P(D=4)\\
-      =\frac{2^3}{6\times 3!}+ \frac{2^4}{6\times 4!}\\
-      =\frac{1}{3}
-    \end{align}
-    ou 
-    \begin{align}
-      P(D>2)=1-P(D\le 2)\\
-      = 1- \{ P(D=1)+ P(D=2) \}\\
-      = 1- P(D=1)- P(D=2)
-    \end{align}
-    Obs: $R_{x}: \{0,1,2,3,4,5 \}$
-    \begin{align}
-      P(X>1)=P(x=2)+ P(x=3)+\cdots+P(x=5)
-    \end{align}
-    ou
-    \begin{align}
-      P(x>1)= 1-P(x\le 1)\\
-      = 1- \{ P(x=0)+ P(x=1) \}\\
-      = P(x>1)+ P(x\le 1)=1
-    \end{align}
-\end{enumerate}
-Definição: Seja x uma v.a.\\ contínua que assume valores em $R_{x},R_{x} \in \mathbb{R}$.
-A função f(x) é a função densidade de probabilidade (f.d.p) para x, se satisfaz as 
-seguintes propriedades: 
-\begin{enumerate} % com i)
-  \item $f(x)\geq 0, \forall x \in R_{x}$
-  \item $\int_R{x} f(x) dx=1 (\int_{- \infty}^{+ \infty} f(x)dx=1)$
-  \item $P(a<x<b)=\int^b_a f(x) dx $
-\end{enumerate}
-Uma ilustração de f.d.p: 
-%figure here
-Obs: Se $x$ é uma v.a.\ contínua assumindo valores em $R_{x}$, então para toda 
-$a \in R_{x}$, temos: 
-\begin{enumerate}[label=(\alph*)]
-  \item $P(x=a)=0$
-  \item $P(x>a)=P(x\leq a)$
-  \item $P(x<a)=P(x\le a)$
-  \item $P(x>a)=1- P(x \le a)\\ = 1-P(x<a)$
-  \item $P(x<a)=1-P(x \geq a)\\ 1-P(x>a)$
-    Outros exemplos: 
-    \begin{align}
-      P(a\le x \le b)= P(a\le x < b)\\
-      = P(a<x \le b)= P(a<x<b)
-    \end{align}
-    Obs: Só vale para v.a.\ contínua. 
-\end{enumerate}
-Exemplo: 
-O tempo de produção de um componente (em minutos) é uma v.a.\ com função densidade 
-de probabilidade dada por: 
-\begin{align}
-  f(x)=
-  \begin{cases}
-    \frac{5-x}{4}, \text{\quad se $2<x<4$}\\
-    0,\text{\quad caso contrário} 
-  \end{cases}
-\end{align}
-\begin{enumerate}[label=(\alph*)]
-  \item Mostre que $f(x)$ é uma f.d.p
-  \item Calcule a probabilidade de que o tempo de produção de um componente 
-    seja menor do que 3 minutos.
-\end{enumerate}
-\begin{enumerate}[label=(\alph*)]
-  \item 
-    \begin{enumerate} %com os i)
-      \item $f(x)\geq 0, \forall x \in R_{x}$
-      \item $\int_{R_{x}} f(x)dx=1$
-    \end{enumerate}
-    \begin{enumerate} %com os i)
-      \item $f(x)\geq 0, \forall 2<x<4$
-      \item 
-        \begin{align*}
-          \int_{2}^4 \frac{5-x}{4}dx=1\\
-          \int_{2}^4 5 dx - \int_{2}^4 x dx - \\
-          = \frac{1}{4} \{5x|^4_2 - \frac{x^2}{2}|4_2 \}\\
-          = \frac{1}{4} \{5(4-2)- \frac{1}{2}(16-4)\}
-        \end{align*}
-    \end{enumerate}
-    Portanto, f(x) é uma função densidade de probabilidade 
-  \item 
-    \begin{align}
-      P(X<3)= \int_{-infty}^{3} f(x)dx \\
-      \int_{-infty}^{2}0 dx +      \int_{2}^{3} \frac{5-x}{4} dx 
-    \end{align}
-    \begin{align}
-      P(X<3)=\int_{2}^{3} \frac{5-x}{4} dx =\\
-      \frac{1}{4}\{ \int_{2}^{3} 5 dx - \int_{2}^{3} x dx \}\\
-      \frac{1}{4}\{ 5\times 1- \frac{1}{2}\times 5\}= \frac{5}{8}\\
-      P(A/B)=\frac{P(A\cap B)}{P(B)}
-    \end{align}
-\end{enumerate}
-Exercício: Seja x uma v.a.\ contínua com f.d.p dada portugues:
-\begin{align}
-  f(x)= 
-  \begin{cases}
-    2x, 0\le x < 1 \\ 
-    0, \text{Caso contrário}
-  \end{cases}
-\end{align}
-\begin{enumerate}[label=(\alph*)]
-  \item Verifique se f(x) é uma f.d.p
-  \item$ P(x\le \frac{1}{2})$
-  \item $P(X\le \frac{1}{2} / \frac{1}{3} \le x \le \frac{2}{3})$
-\end{enumerate}
-Definição: Seja x uma v.a.\ discreta que assume valores em $R_{x}$ e com f.m.p 
-$p(x)=P(X=x)$. Para qualquer $x \in \mathbb{R}$, a função de distribuição 
-acumulada(f.d.a) de x, denotada por $\mathbb{F}_{x}(x)$, é definida por: 
-\begin{align}
-  \mathbb{F_{x}}(x)=P(X \geq x )= \sum b_{x_{i} \in R_{x}} P(X=x_i) = \sum b_{x_{i} \in R_{x}} p(x_i) \\
-  \forall x_i \le x \nonumber
-\end{align}
-De forma mais clara, temos como exemplo: 
-\begin{align*}
-  R_{x}= \{0,1,2,3,4 \}\\
-  F_{x}(2,3)= P(X\le 2,3)\\
-  = P(x=0)+P(x=1)+P(x=2)
-\end{align*}
-Exemplo: 
-Conidere o lançamento de uma moeda duas vezes e x é o número de caras. Já sabemos
-que a f.m.p de x é dada por:
-\begin{figure} 
-  \centering
-  \begin{tabular}{c c c c}
-    \toprule
-    x&0&1&2\\ \midrule
-    $P(X=x)$&$\frac{1}{5}$&$\frac{1}{2}$&$\frac{1}{4}$\\ \bottomrule
-  \end{tabular}
-  \label{fig:6}
-  \caption{F.m.p do lançamento de uma moeda}
-\end{figure}
-\begin{align*}
-  R_{x}=\{0,1,2\}
-\end{align*}
-Ou, de forma equibalente podemos escrever: 
-\begin{align*}
-  p(x)=
-  \begin{cases}
-    \frac{1}{4}, \text{\quad se} x=0,2\\
-    \frac{1}{2}, \text{\quad se} x=1\\
-    0, \text{\quad caso contrário}
-  \end{cases}
-\end{align*}
-A f.d.a de x é dada por:
-\begin{align*}
-  F_{x}=P(X\le x)= 
-  \begin{cases}
-    0, x<0 \\
-    \frac{1}{4}, 0 \le x <1\\
-    \frac{3}{4}, 1 \le x < 2\\
-    1, x \geq 2
-  \end{cases}
-\end{align*}
-A representação gráfica é: 
-% grafico aqui
-Definição: Seja x uma v.a.\ contínua que assume valores em $R_{x}$ e com 
-f.d.p $f(x)$. Para qualquer $x \in \mathbb{R}$, a f.d.p de $x$, denotada por 
-$\mathbb{F_{x}(x)}$ é definida por: 
-\begin{align}
-  \mathbb{F_{x}}(x)= P(X \le x)= \int_{- \infty}^{x} f(t)dt 
-\end{align}
-Obs: $\mathbb{F_{x}}(x)= P(X \le a)= \int_{-\infty}^{a} f(t)dt , a \in \mathbb{R}$
-Como consequência imediata podemos escrever dois resultados: 
-\begin{align}
-  P(a <x<b)= \int_{a}^{b} f(x)dx\\
-  = \mathbb{F_{x}}(b)-\mathbb{F_{x}}(a)
-\end{align}
-%fig here showing a and b interval
-E: 
+% \begin{align*}
+%   \Omega : \{ cc;kc;kc;kk \}\\
+%   X: \text{\quad $n^o$ de caras}\\
+%   R_x: \{0,1,2 \}\\
+%   P(x=0)=?\\
+%   P(x=1)=? \\
+%   P(x=2)=? \\
+%   x=
+%   \begin{cases}
+%     0, \text{\quad se ocorrer $kk$} \\
+%     1, \text{\quad se ocorrer $ck$ ou $kc$} \\
+%     2,\text{\quad se ocorrer $cc$}
+%   \end{cases}
+% \end{align*}
 
-\begin{align}
-  f(x)=\frac{d}{dx}\mathbb{F_{x}}(x), \text{\quad se a derivada existir}
-\end{align}
+% Exemplo: Em uma linha de produção, peças são classificadas em defeituosas ou não
+% defeituosas. Podemos definir a v.a.\ X como:
+% \begin{align*}
+%   \begin{cases}
+%     x=1,\text{\quad  se a peça é defeituosa}\\ 
+%     0,\text{\quad  a peça não é defeituosa}
+%   \end{cases}
+% \end{align*}
+% Obs: Uma v.a.\ $X$ desse tipo é chamada de v.a.\ de Bernoulli. Nesse caso, $\Omega=\{ \text{peça defeituosa, peça não defeituosa} \}$
+% e $x$ assume um cojjunto de valores finitos.
 
-Exemplo: Para a f.d.p dada por: 
-\begin{align*}
-  f(x)= 
-  \begin{cases}
-    \frac{x^2}{3}, -1 < x < 2 \\
-    0, \text{caso contrário}
-  \end{cases}
-\end{align*}
-Determine $F_{x}(x)$ e use-a para avaliar $P(0 \le x< 1)$.
+% \subsection{Classificação de Variáveis Aleatórias}
+% Se a v.a.\ $x$ assume valores em um conjunto finito ou infinito e numerável é chamado 
+% de variável aleatória discreta. Se $x$ assume valores em um conjunto infinito não-numerável,
+% é chamada de v.a.\ contínua.
 
-A f.d.a de x é dada por: 
-\begin{align*}
-  F_{x}(x)= P(X \le x)= \int_{-\infty}^{x} f_{x}(t) dt\\
-  = \int_{-infty}^{x} \frac{t^2}{3} dt, -1<t<2 \\
-  \int_{-1}^{x} \frac{t^2}{3} dt= \frac{1}{9} t^3 |^x_{-1}\\
-  F_{x}(x)= \frac{1}{9}(x^3 +1)\\
-  F_{x}(x)=P(X \le x)= 
-  \begin{cases}
-    0, x <-1 \\
-    \frac{1}{9}(x^3 +1) , -1 \le x <2 \\
-    1, x \geq 2
-  \end{cases}
-\end{align*}
-\begin{align*}
-  P(0 \le x <1)=? \\
-  P(0 \le x <1)= \mathbb{F_{1}}- \mathbb{x}(0)\\
-  \downarrow 
-  P(x \le 1 ) - P(x \le 0)= \frac{1}{9} (1^3 + 1 ) - \frac{1}{9}(0^3+ 1)\\
-  P(0 \le x < 1 )= \frac{2}{9} - \frac{1}{9} = \frac{1}{9}
-\end{align*}
-%fig de uma reta de -1 a 2 num plano 
-O comportamento gráfico de $\mathbb{F_{x}}(x)$ é: 
-% grafico da funcao aqui $
-\subsection{Propriedades de f.d.a}
-\begin{enumerate}[label=(\alph*)]
-  \item $\mathbb{F_{x}}(x)$  é uma função contínua
-  \item $\mathbb{F_{x}}(x)$ é uma função monótona não decrescente. 
-  \item  $0\le \mathbb{F_{x}}(x)\le 1, \forall x \in \mathbb{R}$
-  \item $ \lim_{x \to -\infty} \mathbb{F_{x}}(x)=0$ e $ \lim_{x \to \infty} \mathbb{F_{x}}(x)=1$
-  \item $P(x \le a) = \mathbb{F_{x}}(a)$
-  \item $P(x>a)=1 - P(x \le a)= 1 - \mathbb{F_{x}}(a)$
-  \item $P(a<x\le b)= \mathbb{F_{x}}(b)- \mathbb{F_{x}}(a)$
-\end{enumerate}
-Obs: Se x é uma v.a.\ contínua, então $P(x=a)=0, \forall a$ com isso vale: 
-\begin{align}
-  P(x<a)=\mathbb{F_{x}}(a)\\
-  P(a<x<b)= P(a \le x < b)= P(a < x \le b)\\
-  = P(a \le x \le b)=\mathbb{F_{x}}(b)-\mathbb{F_{x}}(a)
-\end{align}
+% Exemplos:
 
-Exercício para entregar: 
-\begin{enumerate}
-  \item  Seja $F_{x}$ dada por:
-    \begin{align*}
-      F_{x}=\begin{cases} 
-        0, \text{\quad se }x<0 \\
-        \frac{1}{8},\text{\quad se }0 \le x <1 \\
-        \frac{1}{2}, \text{\quad se }1 \le x < 2 \\
-        \frac{5}{8}, \text{\quad se }2 \le x < 3 \\
-        1,\text{\quad se } x \geq 3
-      \end{cases}
-    \end{align*}
-    Determine: 
-    \begin{enumerate}[label=(\alph*)]
-      \item $P(1 < x \le 3)$
-      \item $P(x>2)$
-      \item Encontre a $P(x)$
-    \end{enumerate}
-  \item  Seja x uma v.a.\ contínua com f.d.p dada por: 
-    \begin{align*}
-      f_{x}(x)= 
-      \begin{cases}
-        kx^2,\text{\quad} 0<x<1\\
-        0, \text{\quad caso contrário}
-      \end{cases}
-    \end{align*}
-    \begin{enumerate}[label=(\alph*)]
-      \item Achar k
-      \item Determine $F_{x}(x)$
-      \item $P(\frac{1}{3} < x < \frac{1}{2})$
-    \end{enumerate}
+% \begin{enumerate}[label=(\alph*)]
+%   \item $x$ indica o $n^o$ de residentes em um domicílio. X pode assumir valores em $\natural$ e assim é chamada de 
+%     v.a.\\ discreta.
 
-\end{enumerate}
-\section{Esperança Matemática de uma Variável Aleatória}
-Definição: Seja $X$ uma v.a.\\ com f.m.p $p_{x}(x)$ (no caso discreto) ou f.d.p
-$f_{x}(x)$ (no caso contínuo). Chamamos de esperança matemática ou valor médio 
-de $X$ ao valor: 
-\begin{align}
-  \mu_{x}= E(X)= \sum_{x \in R_{x}} x p_{x}(x)\\
-  =\sum_{x \in R_{x}} x p_{x}(X=x), \text{\quad no caso discreto}\\
-  \mu_{x}= E(X)= \int_{x \in R_{x}} x f_{x}(x)dx, \text{\quad no caso contínuo}
-\end{align}
-Algumas propriedades:
--Considere $a,b \in \mathbb{R}$, constantes.
-\begin{enumerate}[label=(\alph*)]
-  \item Se $a$ é constante, então: 
-    \begin{align}
-      E(aX)=aE(x)
-    \end{align}
-  \item Se $X=a$ (constante), então: 
-    \begin{align}
-      E(X)=E(a)=a
-    \end{align}
-  \item 
-    \begin{align}    E(E(X))= E(X)\end{align}
-  \item Se $a$ é uma constante, então 
-    \begin{align}  E(\mp a)=E(X)\mp a\end{align}
-  \item Se $a,b$ são constantes, então: 
-    \begin{align}  E(ax\mp by)=aE(X)\mp b E(Y)\end{align}
-\end{enumerate}
-Exemplo: Seja $X$ uma v.a.\ com f.m.p.\ dada por:
-\begin{align}p_{x}(x)=\frac{\binom{4}{x}\binom{3}{3-x}}{\binom{7}{3}}, x=0,1,2,3\end{align}
-Calcule o $E(X)$.
+%   \item $Y$ indica o tempo de vida (em horas) de um equipamento eletrônico. $Y$ pode 
+%     assumir valores em $\mathbb{R}^+$ e assim é chamado de v.a.\\ contínua.
+%     Definição: Seja x uma v.a.\\ discreta que assume valores em $R_{x}$, $R_{x}=\{x_1,x_2,\dots,
+%     x_{k},\dots\}$. A cada possível $x_{i}$, associamos um número, 
+%     \begin{align*}
+%       P_{i}=p({x_i})=P(X={x_i})=P(X( \omega_i)=x_i),\\
+%       \omega_{i} \in \Omega \quad \text{e } x_{i} \in R_{x} \nonumber
+%     \end{align*}
+%     Dito probabilidade de $x_{i}$. A função $p(x)$ é definida como função massa de probabilidade 
+%     (f.m.p) de $X$. 
 
-\begin{align}
-  (X)=\sum_{x \in R_{x}} x P(X=x)\\
-  p_{x=0}(x)=\frac{\binom{4}{0}\binom{3}{3-0}}{\binom{7}{3}}=\frac{1}{35}\\
-  p_{x=1}(x)=\frac{\binom{4}{1}\binom{3}{3-1}}{\binom{7}{3}}=\frac{12}{35}\\
-  p_{x=2}(x)=\frac{\binom{4}{2}\binom{3}{3-2}}{\binom{7}{3}}=\frac{18}{35}\\
-  p_{x=3}(x)=\frac{\binom{4}{3}\binom{3}{3-3}}{\binom{7}{3}}=\frac{4}{35}
-\end{align}
-\begin{align}
-  E(X)=0 P(X=0)+1 P(X=1)+2 P(X=2)+3 P(X=3)\\
-  =0 \frac{1}{35}+1 \frac{12}{35}+3 \frac{2\times 18}{35}+ 3 \frac{4}{35}\\
-  =\frac{60}{35}=1,71
-\end{align}
-Exemplo: Considere a v.a.\ $x$ com f.d.p dada por: 
-\begin{align}
-  f_{x}(x)=\begin{cases}
-    2x, 0\le x \le 1 \\
-    0, \text{\quad caso contrário}
-  \end{cases}
-\end{align}
-Calcular o $E(X)$.
-\begin{align}
-  E(X)=\int_{R_{x}} x f_{x}(x)dx
-\end{align}
-\begin{align}
-  E(X)=\int_{0}^{1} x\times 2xdx\\
-  = 2 \int_{0}^{1} x^{2}dx \\
-  = \frac{2}{3} x^{3} |^1_0 = \frac{2}{3}=0,67
-\end{align}
-Resultado: Seja $x$ uma v.a.\ com f.m.p $p_{x}(x)$ ou f.d.p $f_{x}(x)$. Uma função
-de $x$, dita $g(x)$, é também uma v.a.\ e: 
-\begin{align}
-  E(g(x))=\sum_{x \in R_{x}} g(x)P(X=x), \text{\quad no caso discreto}\\
-  E(g(x))=\int_{R_{x}} g(x)f_{x}(x)dx, \text{\quad no caso contínuo}
-\end{align}
+%     As probabilidades $p(x_i)$ devem satisfazer as seguintes condições: 
+%     \begin{enumerate} % com i) ii)
+%       \item $p(x_i)>0, \forall x_i \in R_{x}$
 
-Exemplo:\\ Seja $X$ uma v.a.\ com f.m.p dada por: 
-\begin{align}
-  p_{x}=\begin{cases}
-    \frac{1}{2}, \text{\quad} x=0\\
-    \frac{1}{4}, \text{\quad}x=1,2\\
-    \frac{1}{2}, \text{\quad 0 caso contrário}
-  \end{cases}
-\end{align}
-Considere a v.a.\ $g(x)={(x-a)}^2$, $a=0,\frac{1}{2},1$. Calcule: 
-\begin{enumerate}[label=(\alph*)]
-  \item $E(x)$
-  \item $E(g(x))$ para cada $a$.
-\end{enumerate}
+%       \item $\sum^\infty_{i=1} p(x_i)=1$
+%     \end{enumerate}
+%     Interpretação da f.m.p: 
 
-\begin{enumerate}[label=(\alph*)]
-  \item 
-    \begin{align}
-      E(X)=0 \times \frac{1}{2}+ 1 \times \frac{1}{4}+ 2 \times \frac{2}{4}\\
-      =\frac{3}{4}
-    \end{align}
-  \item 
-    \begin{align}
-      E(g(x))=E({(x-a)}^2)\\
-      =\sum_{x \in R_{x}}(x-a)^2P(X=x)
-    \end{align}
-    ou
-    \begin{align}
-      E(g(x))=E(x^2-2ax+a^2)\\
-      =E(x^2)-2aE(x)+a^2
-    \end{align}
-    \begin{align}
-      E(x^2)=\sum_{x \in R_{x}} x^2 P(X=x)\\
-      =0^2 \frac{1}{2}+1^2 \frac{1}{4}+ 2^2 \frac{1}{4}\\
-      =\frac{5}{4}
-    \end{align}
-    \begin{align}
-      E(g(x))=\frac{5}{4}-2a \frac{3}{4}+a^2\\
-      =\frac{5}{4}-\frac{6}{4}a+a^{2}
-    \end{align}
-    Para $a=0$:
-    \begin{align}
-      E(g(0))=\frac{5}{4}-2\times 0 \frac{3}{4}+0^2\\
-      =\frac{5}{4}-\frac{6}{4}0+0^{2}\\
-      =\frac{5}{4}
-    \end{align}
-    Para $a=\frac{1}{2}$:
-    \begin{align}
-      E(g(\frac{1}{2}))=\frac{5}{4}-2\times \frac{1}{2} \frac{3}{4}+\frac{1}{2}^2\\
-      =\frac{5}{4}-\frac{6}{4}\frac{1}{2}+\frac{1}{2}^{2}\\
-      =\frac{1}{4}
-    \end{align}
-    Para $a=1$:
-    \begin{align}
-      E(g(1))=\frac{5}{4}-2\times 1 \frac{3}{4}+1^2\\
-      =\frac{5}{4}-\frac{6}{4}1+1^{2}\\
-      =\frac{3}{4}
-    \end{align}
-\end{enumerate}
-Definição: Seja $x$ uma v.a.\ com f.m.p $p_{x}(x)$ ou f.d.p $f_{x}(x)$, com 
-média $\mu_{x}=E(x)$. Chamamos de variância da v.a.\ $X$ o valor: 
-\begin{align}
-  \sigma^2=var(x)=E[(X-E(X))^2]\\
-  =E[(x-\mu)^2],
-\end{align}
-Ou seja,
-\begin{align}
-  \sigma^2 =var(x)=\sum_{x \in R_{x}} (x-\mu_{x})^2 P(X=x) \text{\quad no caso discreto}\\
-  \sigma^2 =var(x)=\int_{R_{x}} (x-\mu_{x})^2 f_{x}(x)dx \text{\quad no caso contínuo}
-\end{align}
-A raíz quadrada de variáveis $(\sqrt{\sigma^2}=\sqrt{var(x)})$ é o desvio padrão, 
-denotado por $\sigma$.
+%     Seja $x$ uma v.a.\\ discreta com $R_{x}= \{x_1,x_2,\dots,x_k \}$ e $p(x_i)=p_i$.
 
-Resultado: Podemos escrever a variância v.a.\ $x$ por: 
-\begin{align}
-  \sigma^2 =var(x)=E(X^2)-\{E(X)\}^2\\
-  \sigma^2 =E(X^2)-\{\mu_x\}^2
-\end{align}
-Demonstração: 
-\begin{align}
-  var(x)=E(x^2-2\mu_{x}x+\mu_{x}^2)\\
-  =E(x^2)-2\mu_{x}E(x)+\mu_{x}^2\\
-  =E(x^2)-2\mu_{x}\mu_{x}+\mu_{x}^2\\
-  =E(x^2)-\mu_{x}\\
-  =E(x^2)-\{E(x)\}^2
-\end{align}
-Obs: $E(x^2) \neq \{E(x)\}^2$
+%     Exemplo: Lançamento de uma moeda duas vezes e $x$ é o número de caras.
+%     \begin{align}
+%       \Omega = \{ cc;ck;kc;kk \} \\
+%       R_{x}= \{0,1,2\}
+%     \end{align}
+%     A f.m.p de $x$ é dada por: 
+%     \begin{align}
+%       p(0)=P(x=0)=P(X(\omega)\in kk)=\frac{1}{4} \\
+%       p(1)=P(x=1)=\frac{2}{4}=\frac{1}{2}\\
+%       p(2)=P(x=2)=\frac{1}{4}
+%       P(X=x)= \begin{cases}
+%         \frac{1}{4}, \text{\quad se sair $kk$ ou $cc$ ou $x=0$ ou $x=2$}\\
+%         \frac{1}{2}, \text{\quad se sair $ck$ ou $kk$ ou $x=1$ }
+%       \end{cases}
+%     \end{align}
+% \end{enumerate}
+% %tabular here
+% Exemplo: A demanda diária de um item é uma v.a.\\ discreta com f.m.p.\ dada por: 
+% \begin{align}
+%   P(D=d)=\frac{2^d k}{d!}, d=1,2,3,4
+% \end{align}
+% \begin{enumerate}[label=(\alph*)]
+%   \item Determine a constante $k$
+%   \item Calcule $P(D>2)$
+% \end{enumerate}
+% \begin{enumerate}[label=(\alph*)]
+%   \item Sabemos que: 
+%     \begin{align}
+%       \sum^{\infty}_{i=1} p(x_i)=1, \forall x_i \in R_{x}\\
+%       P(X=1)+P(X=2)+P(X=3)+P(X=4)=1\\
+%       \frac{2^1 k}{1!}+\frac{2^2 k}{2!}+\frac{2^3 k}{3\!}+\frac{2^4 k}{4\!}=1\\
+%       2K + 2K+ \frac{4K}{3}+\frac{2K}{3}=1 \\
+%       4K+\frac{6K}{3}=1 \\
+%       6K=1\\
+%       K=\frac{1}{6}
+%     \end{align}
+%     Então o f.m.p de x é: 
+%     \begin{align}
+%       P(D=d)=\frac{2^d}{6d!}, d=1,2,3,4
+%     \end{align}
+%   \item 
+%     \begin{align}
+%       P(D>2)=P(D=3)+P(D=4)\\
+%       =\frac{2^3}{6\times 3!}+ \frac{2^4}{6\times 4!}\\
+%       =\frac{1}{3}
+%     \end{align}
+%     ou 
+%     \begin{align}
+%       P(D>2)=1-P(D\le 2)\\
+%       = 1- \{ P(D=1)+ P(D=2) \}\\
+%       = 1- P(D=1)- P(D=2)
+%     \end{align}
+%     Obs: $R_{x}: \{0,1,2,3,4,5 \}$
+%     \begin{align}
+%       P(X>1)=P(x=2)+ P(x=3)+\cdots+P(x=5)
+%     \end{align}
+%     ou
+%     \begin{align}
+%       P(x>1)= 1-P(x\le 1)\\
+%       = 1- \{ P(x=0)+ P(x=1) \}\\
+%       = P(x>1)+ P(x\le 1)=1
+%     \end{align}
+% \end{enumerate}
+% Definição: Seja x uma v.a.\\ contínua que assume valores em $R_{x},R_{x} \in \mathbb{R}$.
+% A função f(x) é a função densidade de probabilidade (f.d.p) para x, se satisfaz as 
+% seguintes propriedades: 
+% \begin{enumerate} % com i)
+%   \item $f(x)\geq 0, \forall x \in R_{x}$
+%   \item $\int_R{x} f(x) dx=1 (\int_{- \infty}^{+ \infty} f(x)dx=1)$
+%   \item $P(a<x<b)=\int^b_a f(x) dx $
+% \end{enumerate}
+% Uma ilustração de f.d.p: 
+% %figure here
+% Obs: Se $x$ é uma v.a.\ contínua assumindo valores em $R_{x}$, então para toda 
+% $a \in R_{x}$, temos: 
+% \begin{enumerate}[label=(\alph*)]
+%   \item $P(x=a)=0$
+%   \item $P(x>a)=P(x\leq a)$
+%   \item $P(x<a)=P(x\le a)$
+%   \item $P(x>a)=1- P(x \le a)\\ = 1-P(x<a)$
+%   \item $P(x<a)=1-P(x \geq a)\\ 1-P(x>a)$
+%     Outros exemplos: 
+%     \begin{align}
+%       P(a\le x \le b)= P(a\le x < b)\\
+%       = P(a<x \le b)= P(a<x<b)
+%     \end{align}
+%     Obs: Só vale para v.a.\ contínua. 
+% \end{enumerate}
+% Exemplo: 
+% O tempo de produção de um componente (em minutos) é uma v.a.\ com função densidade 
+% de probabilidade dada por: 
+% \begin{align}
+%   f(x)=
+%   \begin{cases}
+%     \frac{5-x}{4}, \text{\quad se $2<x<4$}\\
+%     0,\text{\quad caso contrário} 
+%   \end{cases}
+% \end{align}
+% \begin{enumerate}[label=(\alph*)]
+%   \item Mostre que $f(x)$ é uma f.d.p
+%   \item Calcule a probabilidade de que o tempo de produção de um componente 
+%     seja menor do que 3 minutos.
+% \end{enumerate}
+% \begin{enumerate}[label=(\alph*)]
+%   \item 
+%     \begin{enumerate} %com os i)
+%       \item $f(x)\geq 0, \forall x \in R_{x}$
+%       \item $\int_{R_{x}} f(x)dx=1$
+%     \end{enumerate}
+%     \begin{enumerate} %com os i)
+%       \item $f(x)\geq 0, \forall 2<x<4$
+%       \item 
+%         \begin{align*}
+%           \int_{2}^4 \frac{5-x}{4}dx=1\\
+%           \int_{2}^4 5 dx - \int_{2}^4 x dx - \\
+%           = \frac{1}{4} \{5x|^4_2 - \frac{x^2}{2}|4_2 \}\\
+%           = \frac{1}{4} \{5(4-2)- \frac{1}{2}(16-4)\}
+%         \end{align*}
+%     \end{enumerate}
+%     Portanto, f(x) é uma função densidade de probabilidade 
+%   \item 
+%     \begin{align}
+%       P(X<3)= \int_{-infty}^{3} f(x)dx \\
+%       \int_{-infty}^{2}0 dx +      \int_{2}^{3} \frac{5-x}{4} dx 
+%     \end{align}
+%     \begin{align}
+%       P(X<3)=\int_{2}^{3} \frac{5-x}{4} dx =\\
+%       \frac{1}{4}\{ \int_{2}^{3} 5 dx - \int_{2}^{3} x dx \}\\
+%       \frac{1}{4}\{ 5\times 1- \frac{1}{2}\times 5\}= \frac{5}{8}\\
+%       P(A/B)=\frac{P(A\cap B)}{P(B)}
+%     \end{align}
+% \end{enumerate}
+% Exercício: Seja x uma v.a.\ contínua com f.d.p dada portugues:
+% \begin{align}
+%   f(x)= 
+%   \begin{cases}
+%     2x, 0\le x < 1 \\ 
+%     0, \text{Caso contrário}
+%   \end{cases}
+% \end{align}
+% \begin{enumerate}[label=(\alph*)]
+%   \item Verifique se f(x) é uma f.d.p
+%   \item$ P(x\le \frac{1}{2})$
+%   \item $P(X\le \frac{1}{2} / \frac{1}{3} \le x \le \frac{2}{3})$
+% \end{enumerate}
+% Definição: Seja x uma v.a.\ discreta que assume valores em $R_{x}$ e com f.m.p 
+% $p(x)=P(X=x)$. Para qualquer $x \in \mathbb{R}$, a função de distribuição 
+% acumulada(f.d.a) de x, denotada por $\mathbb{F}_{x}(x)$, é definida por: 
+% \begin{align}
+%   \mathbb{F_{x}}(x)=P(X \geq x )= \sum b_{x_{i} \in R_{x}} P(X=x_i) = \sum b_{x_{i} \in R_{x}} p(x_i) \\
+%   \forall x_i \le x \nonumber
+% \end{align}
+% De forma mais clara, temos como exemplo: 
+% \begin{align*}
+%   R_{x}= \{0,1,2,3,4 \}\\
+%   F_{x}(2,3)= P(X\le 2,3)\\
+%   = P(x=0)+P(x=1)+P(x=2)
+% \end{align*}
+% Exemplo: 
+% Conidere o lançamento de uma moeda duas vezes e x é o número de caras. Já sabemos
+% que a f.m.p de x é dada por:
+% \begin{figure} 
+%   \centering
+%   \begin{tabular}{c c c c}
+%     \toprule
+%     x&0&1&2\\ \midrule
+%     $P(X=x)$&$\frac{1}{5}$&$\frac{1}{2}$&$\frac{1}{4}$\\ \bottomrule
+%   \end{tabular}
+%   \label{fig:6}
+%   \caption{F.m.p do lançamento de uma moeda}
+% \end{figure}
+% \begin{align*}
+%   R_{x}=\{0,1,2\}
+% \end{align*}
+% Ou, de forma equibalente podemos escrever: 
+% \begin{align*}
+%   p(x)=
+%   \begin{cases}
+%     \frac{1}{4}, \text{\quad se} x=0,2\\
+%     \frac{1}{2}, \text{\quad se} x=1\\
+%     0, \text{\quad caso contrário}
+%   \end{cases}
+% \end{align*}
+% A f.d.a de x é dada por:
+% \begin{align*}
+%   F_{x}=P(X\le x)= 
+%   \begin{cases}
+%     0, x<0 \\
+%     \frac{1}{4}, 0 \le x <1\\
+%     \frac{3}{4}, 1 \le x < 2\\
+%     1, x \geq 2
+%   \end{cases}
+% \end{align*}
+% A representação gráfica é: 
+% % grafico aqui
+% Definição: Seja x uma v.a.\ contínua que assume valores em $R_{x}$ e com 
+% f.d.p $f(x)$. Para qualquer $x \in \mathbb{R}$, a f.d.p de $x$, denotada por 
+% $\mathbb{F_{x}(x)}$ é definida por: 
+% \begin{align}
+%   \mathbb{F_{x}}(x)= P(X \le x)= \int_{- \infty}^{x} f(t)dt 
+% \end{align}
+% Obs: $\mathbb{F_{x}}(x)= P(X \le a)= \int_{-\infty}^{a} f(t)dt , a \in \mathbb{R}$
+% Como consequência imediata podemos escrever dois resultados: 
+% \begin{align}
+%   P(a <x<b)= \int_{a}^{b} f(x)dx\\
+%   = \mathbb{F_{x}}(b)-\mathbb{F_{x}}(a)
+% \end{align}
+% %fig here showing a and b interval
+% E: 
 
-Algumas Propriedades
-- Considere $a,b \in \mathbb{R}$, constantes;
-\begin{enumerate}[label=(\alph*)]
-  \item $var(ax)=a^2var(x)$
-    \\Obs: $var(-x)=var(x)$
-  \item Se $x=a$, então:\\
-    $var(x)=var(a)=0$
-  \item $var(x \mp a)=var(x)var(a)\\ =var(x)$
-  \item Se $a,b$ são constantes,\\
-    $var(ax+\mp+b)=a^2 var(x)+var(b)\\
-    =a^2 var(x)$
-  \item Se $x$ e $y$ são duas v.a.\ `s independetes, então: 
-    $var(ax \pm by)=a^2 var(x)+ b^2 var(y)$
-\end{enumerate}
-Exemplo: Seja $x$ uma v.a.\ com f.d.p\ dada por: 
-\begin{align}
-  f_{x}=
-  \begin{cases}
-    \frac{x^2}{3}, \text{\quad} -1<x<2\\
-    0, \text{\quad caso contrário}
-  \end{cases}
-\end{align}
+% \begin{align}
+%   f(x)=\frac{d}{dx}\mathbb{F_{x}}(x), \text{\quad se a derivada existir}
+% \end{align}
 
-\begin{enumerate}[label=(\alph*)]
-  \item $E(x)$
-  \item $var(x)$
-  \item $E(4x+3)$
-\end{enumerate}
-\begin{enumerate}[label=(\alph*)]
-  \item 
-    \begin{align}
-      \int_{-1}^{2}\frac{x x^2}{3}dx\\
-      =\frac{1}{3}\int_{-1}^{2}x^3dx=\frac{1}{12} x^4 |_{-1}^{2}\\
-      =\frac{1}{12}(16-1)=\frac{15}{12}
-    \end{align}
-  \item 
-    \begin{align}
-      var(x)=E(x^2)-\{E(x)\}^2\\
-      E(x^2)=\int{-1}{2} x^2 \frac{x^2}{3}dx\\
-      E(x^2)=\frac{1}{3}\int{-1}{2} x^4 dx\\
-      =\frac{1}{15}x^5 |_{-1}^2\\
-      =\frac{1}{15}(32+1)=\frac{33}{15}\\
-      var(x)=\frac{33}{15}-\{\frac{15}{12}\}^2=0,6375
-    \end{align}
-  \item 
-    \begin{align}
-      E(4x+3)=4E(x)+3\\
-      =8
-    \end{align}
-    Obs: $E(ax)= a^2 var(x)$
-\end{enumerate}
-\section{Principais Modelos Probabilísticos}
-\subsection{Modelos Discretos}
-\subsubsection{Distribuição Uniforme}
-A v.a.\ assume cada um de seus valores com igual probabilidade.
+% Exemplo: Para a f.d.p dada por: 
+% \begin{align*}
+%   f(x)= 
+%   \begin{cases}
+%     \frac{x^2}{3}, -1 < x < 2 \\
+%     0, \text{caso contrário}
+%   \end{cases}
+% \end{align*}
+% Determine $F_{x}(x)$ e use-a para avaliar $P(0 \le x< 1)$.
 
-Definição: A v.a.\ discreta $X$, assumindo valores $x_1,x_2,\dots,x_k$ tem 
-distribuição uniforme se, e somente se, sua f.m.p.\ é definida por: 
-\begin{align}
-  p(x)=P(X=x)=\begin{cases}
-    \frac{1}{k}, \text{\quad} x=x_1,x_2,\dots,x_k\\
-    0, \text{\quad caso contrário}
-  \end{cases}
-\end{align}
-Notação: $X \barrasim U_{d}(k)$
-A média e variância de x é:
-\begin{align}
-  \mu_{x}=E(x)=\sum_{x \in R_{x}}x_i P(X=x_i)\\
-  = \sum_{x \in R_{x}}x_i \frac{1}{k}= \frac{1}{k}\sum_{x_i \in R_{x}}\\
-  \text{e}\\
-  var(x)=E(X^2)-\{E(X)\}^2\\
-  = \sum_{x_i \in R_{x}}(x_i -\mu_x )^2 p(X=x_i)\\
-  =\frac{1}{k} \{\sum^k_{i=1} x_i^2 - \frac{(\sum_{i=1}^k)^2}{k}\}
-\end{align}
-Exemplo: Seja $x$ uma v.a.\ que indica o $n^o$ de pontos marcados na face 
-superior de um dado quando ele é lançado. Portanto, temos uma distribuição 
-uniforme discreta, cuja f.m.p.\ é dada por: 
-\begin{align}
-  p(x)=P(X=x)-\begin{cases}
-    \frac{1}{6},\text{\quad} x=1,2,3,4,5,6\\
-    0, \text{\quad caso contrário}
-  \end{cases}
-\end{align}
-E o $E(x)$ é: 
-\begin{align}
-  \mu_{x}=E(x)=\frac{1}{6}(1+2+3+4+5+6)\\
-  =\frac{1}{6}21= \frac{7}{2}=3,5
-\end{align}
-E a $var(x)$ é:
-\begin{align}
-  E(x^2)=\frac{1}{6}(1^2 + 2^2 + \dots + 6^2)\\
-  =\frac{91}{6}=15,17\\
-  var(x)=\frac{91}{6}- \{\frac{7}{2}\}^2=\frac{105}{36}=2,92
-\end{align}
-\subsubsection{Distribuição Bernoulli}
-Considere uma v.a.\ $x$ que assume apenas dois valores 1, se ocorrer sucesso,
-0, se ocorrer fracasso. Indicaremos por ``p" a probabilidade de sucesso, Isto
-é, $P(\text{Sucesso})=P(x=1)=p$.
-Definição: A v.a.\ discreta $x$ que assume apenas valores 0 ou 1 tem Distribuição
-Bernoulli se, somente se, sua f.m.p.\ é definida por:
-\begin{align}
-  p(x)=P(X=x)= \begin{cases}
-    p^{x}(1-p){1-x}, \text{\quad} x=0,1, \text{\quad} 0<p<1\\
-    0, \text{\quad caso contrário}
-  \end{cases}
-\end{align}
-Notação: $X \barrasim Ber(p)$
+% A f.d.a de x é dada por: 
+% \begin{align*}
+%   F_{x}(x)= P(X \le x)= \int_{-\infty}^{x} f_{x}(t) dt\\
+%   = \int_{-infty}^{x} \frac{t^2}{3} dt, -1<t<2 \\
+%   \int_{-1}^{x} \frac{t^2}{3} dt= \frac{1}{9} t^3 |^x_{-1}\\
+%   F_{x}(x)= \frac{1}{9}(x^3 +1)\\
+%   F_{x}(x)=P(X \le x)= 
+%   \begin{cases}
+%     0, x <-1 \\
+%     \frac{1}{9}(x^3 +1) , -1 \le x <2 \\
+%     1, x \geq 2
+%   \end{cases}
+% \end{align*}
+% \begin{align*}
+%   P(0 \le x <1)=? \\
+%   P(0 \le x <1)= \mathbb{F_{1}}- \mathbb{x}(0)\\
+%   \downarrow 
+%   P(x \le 1 ) - P(x \le 0)= \frac{1}{9} (1^3 + 1 ) - \frac{1}{9}(0^3+ 1)\\
+%   P(0 \le x < 1 )= \frac{2}{9} - \frac{1}{9} = \frac{1}{9}
+% \end{align*}
+% %fig de uma reta de -1 a 2 num plano 
+% O comportamento gráfico de $\mathbb{F_{x}}(x)$ é: 
+% % grafico da funcao aqui $
+% \subsection{Propriedades de f.d.a}
+% \begin{enumerate}[label=(\alph*)]
+%   \item $\mathbb{F_{x}}(x)$  é uma função contínua
+%   \item $\mathbb{F_{x}}(x)$ é uma função monótona não decrescente. 
+%   \item  $0\le \mathbb{F_{x}}(x)\le 1, \forall x \in \mathbb{R}$
+%   \item $ \lim_{x \to -\infty} \mathbb{F_{x}}(x)=0$ e $ \lim_{x \to \infty} \mathbb{F_{x}}(x)=1$
+%   \item $P(x \le a) = \mathbb{F_{x}}(a)$
+%   \item $P(x>a)=1 - P(x \le a)= 1 - \mathbb{F_{x}}(a)$
+%   \item $P(a<x\le b)= \mathbb{F_{x}}(b)- \mathbb{F_{x}}(a)$
+% \end{enumerate}
+% Obs: Se x é uma v.a.\ contínua, então $P(x=a)=0, \forall a$ com isso vale: 
+% \begin{align}
+%   P(x<a)=\mathbb{F_{x}}(a)\\
+%   P(a<x<b)= P(a \le x < b)= P(a < x \le b)\\
+%   = P(a \le x \le b)=\mathbb{F_{x}}(b)-\mathbb{F_{x}}(a)
+% \end{align}
 
-Exemplos: 
-$$p(x)=(\frac{2}{5})^x(1-\frac{2}{5})^x, \text{\quad}x=0,1$$\\
-$$p(x)=(\frac{7}{8})^{1-x}(1-\frac{7}{8})^{1-x}, \text{\quad }, x=0,1$$
+% Exercício para entregar: 
+% \begin{enumerate}
+%   \item  Seja $F_{x}$ dada por:
+%     \begin{align*}
+%       F_{x}=\begin{cases} 
+%         0, \text{\quad se }x<0 \\
+%         \frac{1}{8},\text{\quad se }0 \le x <1 \\
+%         \frac{1}{2}, \text{\quad se }1 \le x < 2 \\
+%         \frac{5}{8}, \text{\quad se }2 \le x < 3 \\
+%         1,\text{\quad se } x \geq 3
+%       \end{cases}
+%     \end{align*}
+%     Determine: 
+%     \begin{enumerate}[label=(\alph*)]
+%       \item $P(1 < x \le 3)$
+%       \item $P(x>2)$
+%       \item Encontre a $P(x)$
+%     \end{enumerate}
+%   \item  Seja x uma v.a.\ contínua com f.d.p dada por: 
+%     \begin{align*}
+%       f_{x}(x)= 
+%       \begin{cases}
+%         kx^2,\text{\quad} 0<x<1\\
+%         0, \text{\quad caso contrário}
+%       \end{cases}
+%     \end{align*}
+%     \begin{enumerate}[label=(\alph*)]
+%       \item Achar k
+%       \item Determine $F_{x}(x)$
+%       \item $P(\frac{1}{3} < x < \frac{1}{2})$
+%     \end{enumerate}
 
-De forma similar, podemos apresentar $p(x)$ por:
-\begin{figure} 
-  \centering
-  \begin{tabular}{c c c}
-    \toprule
-    x&0&1\\ \midrule
-    $P(X=x)$&$1-p$&$p$\\ \bottomrule
-  \end{tabular}
-  \label{fig:7}
-\end{figure}
-A média de $x$ é: 
-\begin{align}
-  \mu_{x}=E(x)=p
-\end{align}
-e a variância de $x$ é: 
-\begin{align}
-  \sigma^2 = var(x)=p (1-p)
-\end{align}
-Exemplo: Suponha o lançamento de um dado perfeito e o interesse é ocorrer a face
-3.
-\begin{align*}
-  X=\begin{cases}
-    1, \text{\quad se ocorrer a face }3\\
-    0, \text{\quad caso contrário}\{1,2,4,5,6\}]
-  \end{cases}
-\end{align*}
-Cuja f.m.p.\ é dada por:
-\begin{align}
-  p(x)=P(X=x)=\begin{cases}
-    \frac{1}{6}(1-\frac{1}{6})^{1-x}, \text{\quad}x=0,1\\
-    0, \text{\quad caso contrário}
-  \end{cases}
-\end{align}
-\begin{figure} 
-  \centering
-  \begin{tabular}{c c c}
-    \toprule
-    x&0&1\\ \midrule
-    $P(X=x)$&$\frac{5}{6}$&$\frac{1}{6}$\\ \bottomrule
-  \end{tabular}
-  \label{fig:8}
-\end{figure}
-$X \barrasim Ber(\frac{1}{6})$
-A média de $x$ é: 
-\begin{align*}
-  \mu_{x}=(X)=p=\frac{1}{6}
-\end{align*}
-e a variância de $x$ é: 
-\begin{align*}
-  \sigma^2= var(x)=p(1-p)=\frac{1}{6}\frac{5}{6}=\frac{5}{36}
-\end{align*}
-\subsubsection{Distribuição Binominal}
-Considere $M$ ensaios de Bernoulli independentes, todos com a mesma probabilidade
-de sucesso $p$. A v.a.\ que conta o número de sucessos nos $M$ ensaios de Bernoulli
-é denominada v.a.\ binomial com parâmetro $M$ e $p$.
-Definição: A v.a.\ discreta $x$, correspondente ao $n^o$ de sucesso em $M$ ensaios
-independentes de Bernoulli, tem distribuição binomial se, e somente se, sua 
-f.m.p.\ é definida por: 
-\begin{align}
-  p(x)=P(X=x)=\begin{cases}
-    \binom{M}{x}p^x (1-p)^{M-x}, \text{\quad}x=0,1,\dots,M \text{\quad e }0<p<1\\
-    0, \text{\quad caso contrário}
-  \end{cases}
-\end{align}
-Notação:$ x \barrasim Bin(M,p)\\$
-Obs: $\binom{M}{x}=\frac{M!}{x!(M-x)!}$
+% \end{enumerate}
+% \section{Esperança Matemática de uma Variável Aleatória}
+% Definição: Seja $X$ uma v.a.\\ com f.m.p $p_{x}(x)$ (no caso discreto) ou f.d.p
+% $f_{x}(x)$ (no caso contínuo). Chamamos de esperança matemática ou valor médio 
+% de $X$ ao valor: 
+% \begin{align}
+%   \mu_{x}= E(X)= \sum_{x \in R_{x}} x p_{x}(x)\\
+%   =\sum_{x \in R_{x}} x p_{x}(X=x), \text{\quad no caso discreto}\\
+%   \mu_{x}= E(X)= \int_{x \in R_{x}} x f_{x}(x)dx, \text{\quad no caso contínuo}
+% \end{align}
+% Algumas propriedades:
+% -Considere $a,b \in \mathbb{R}$, constantes.
+% \begin{enumerate}[label=(\alph*)]
+%   \item Se $a$ é constante, então: 
+%     \begin{align}
+%       E(aX)=aE(x)
+%     \end{align}
+%   \item Se $X=a$ (constante), então: 
+%     \begin{align}
+%       E(X)=E(a)=a
+%     \end{align}
+%   \item 
+%     \begin{align}    E(E(X))= E(X)\end{align}
+%   \item Se $a$ é uma constante, então 
+%     \begin{align}  E(\mp a)=E(X)\mp a\end{align}
+%   \item Se $a,b$ são constantes, então: 
+%     \begin{align}  E(ax\mp by)=aE(X)\mp b E(Y)\end{align}
+% \end{enumerate}
+% Exemplo: Seja $X$ uma v.a.\ com f.m.p.\ dada por:
+% \begin{align}p_{x}(x)=\frac{\binom{4}{x}\binom{3}{3-x}}{\binom{7}{3}}, x=0,1,2,3\end{align}
+% Calcule o $E(X)$.
 
-Temos que: 
-\begin{align}
-  \mu_{x}=E(X)=Mp\text{a média de} x \text{e}\\
-  \sigma^2 =var(x)=Mp(1-p), \text{a variância de x}
-\end{align}
-Exemplo: Considere uma linha de produção, onde 3 peças são selecionadas aleatoriamente
-e são classificadas como defeituosas(D) ou não-defeituosas(N). $X_{1},X_{2},X_{3}$
-são variáveis aleatórias que assumem 1 se a peça for não-defeituosa e 0 caso 
-contrário. A probabilidade da peça ser não-defeituosa é $p$ e , consequentemente, 
-a probabilidade da peça ser defeituosa é $1-p$. Estamos interessados na distribuição
-de:
-$$Y=X_{1}+X_{2}+X_{3}$$
-Abaixo estão os possíveis resultados do experimento:
-%Arvore zica aqui, pegar de algum colega
+% \begin{align}
+%   (X)=\sum_{x \in R_{x}} x P(X=x)\\
+%   p_{x=0}(x)=\frac{\binom{4}{0}\binom{3}{3-0}}{\binom{7}{3}}=\frac{1}{35}\\
+%   p_{x=1}(x)=\frac{\binom{4}{1}\binom{3}{3-1}}{\binom{7}{3}}=\frac{12}{35}\\
+%   p_{x=2}(x)=\frac{\binom{4}{2}\binom{3}{3-2}}{\binom{7}{3}}=\frac{18}{35}\\
+%   p_{x=3}(x)=\frac{\binom{4}{3}\binom{3}{3-3}}{\binom{7}{3}}=\frac{4}{35}
+% \end{align}
+% \begin{align}
+%   E(X)=0 P(X=0)+1 P(X=1)+2 P(X=2)+3 P(X=3)\\
+%   =0 \frac{1}{35}+1 \frac{12}{35}+3 \frac{2\times 18}{35}+ 3 \frac{4}{35}\\
+%   =\frac{60}{35}=1,71
+% \end{align}
+% Exemplo: Considere a v.a.\ $x$ com f.d.p dada por: 
+% \begin{align}
+%   f_{x}(x)=\begin{cases}
+%     2x, 0\le x \le 1 \\
+%     0, \text{\quad caso contrário}
+%   \end{cases}
+% \end{align}
+% Calcular o $E(X)$.
+% \begin{align}
+%   E(X)=\int_{R_{x}} x f_{x}(x)dx
+% \end{align}
+% \begin{align}
+%   E(X)=\int_{0}^{1} x\times 2xdx\\
+%   = 2 \int_{0}^{1} x^{2}dx \\
+%   = \frac{2}{3} x^{3} |^1_0 = \frac{2}{3}=0,67
+% \end{align}
+% Resultado: Seja $x$ uma v.a.\ com f.m.p $p_{x}(x)$ ou f.d.p $f_{x}(x)$. Uma função
+% de $x$, dita $g(x)$, é também uma v.a.\ e: 
+% \begin{align}
+%   E(g(x))=\sum_{x \in R_{x}} g(x)P(X=x), \text{\quad no caso discreto}\\
+%   E(g(x))=\int_{R_{x}} g(x)f_{x}(x)dx, \text{\quad no caso contínuo}
+% \end{align}
 
-\begin{figure} 
-  \centering
-  \begin{tabular}{c c c c c}
-    \toprule
-    y&0&1&2&3\\ \midrule
-    $P(Y=y)$&$(1-p)^3$&$3p(1-p)^2$&$3p^2(1-p)$&$p^3$\\ \bottomrule
-  \end{tabular}
-  \label{fig:7}
-\end{figure}
-Ou seja,
-\begin{align*}
-  p(y)=P(Y=y)=\begin{cases}
-    \binom{3}{y}p^y (1-p)^{3-y}, \text{\quad}y=0,1,2,3\\
-    0, \text{\quad caso contrário}
-  \end{cases}
-\end{align*}
-\emph{Exemplo}: Uma rede varejista compra certo tipo de equipamento eletrônico. O 
-fabricante indica que a taxa de quipamentos em perfeito estado é $97\%$.
-\begin{enumerate}[label=(\alph*)]
-  \item Seleciona-se ao acaso 20 itens. Qual a probabilidade de haver pelo menos 
-    um item defeituoso nesses 20?
-  \item Seleciona-se aleatoriamente 20 itens em cada 10 carregamentos, qual a 
-    probabilidade de haver 3 carregamentos com pelo menos um item defeituoso?
-\end{enumerate}
-$p$ taxa de equipamentos em perfeito estado\\
-$$p=0,97$$\\
-$y$: $n^o$ de equipamentos em perfeito estado.\\
-$$y \barrasim bin(20;0,97)$$\\
+% Exemplo:\\ Seja $X$ uma v.a.\ com f.m.p dada por: 
+% \begin{align}
+%   p_{x}=\begin{cases}
+%     \frac{1}{2}, \text{\quad} x=0\\
+%     \frac{1}{4}, \text{\quad}x=1,2\\
+%     \frac{1}{2}, \text{\quad 0 caso contrário}
+%   \end{cases}
+% \end{align}
+% Considere a v.a.\ $g(x)={(x-a)}^2$, $a=0,\frac{1}{2},1$. Calcule: 
+% \begin{enumerate}[label=(\alph*)]
+%   \item $E(x)$
+%   \item $E(g(x))$ para cada $a$.
+% \end{enumerate}
 
-\emph{Resolucão:}
-\begin{enumerate}[label=(\alph*)]
-  \item    $M=20$ itens\\
-    Probabilidade de pelo menos um item defeituoso.\\
-    $x$: $n^o$ de equipamentos com defeito\\
-    $$x \barrasim bin(20:0,03) \text{quad} x=1,2,3,4,5,\dots,20$$\\
-    \begin{align*}
-      P(X\ge 1)= 1-P(x<1)\\
-      =1-P(x=0)
-    \end{align*}
-    \begin{align*}
-      P(X=0)= \bin{20}{0} {0,03}^0 (1-0,03)^{20-0}\\
-      =0,5438
-    \end{align*}
-    \begin{align*}
-      P(X\ge 1)= 1-0,5438\\
-      =0,4562
-    \end{align*}
-    Ou, resolvendo pela v.a.\ $Y$, temos:
-    \begin{align*}
-      P(y\le 19)=1-P(Y>19)\\
-      =1-P(y=20)
-    \end{align*}
-    \begin{align*}
-      P(y=20)=\binom{20}{20}0,97^{20}(1-0,97)^{20-20}\\
-      =0,5438
-    \end{align*}
-    \begin{align*}
-      P(y\le 19)=1-0,5339\\
-      =0,4562
-    \end{align*}
-  \item 10 carregamentos: 20 itens são selecionados \\
-    $Z$: $n^o$ de carregamento com pelo menos um item defeituoso \\
-    $$p=0,4562$$\\
-    $$z \barrasim B(10:0,4562)$$\\
-    \begin{align*}
-      P(Z=3)=\binom{10}{3}0,4562^3 (1-0,4562)^{10-3}\\
-      =0,1602
-    \end{align*}
-\end{enumerate}
+% \begin{enumerate}[label=(\alph*)]
+%   \item 
+%     \begin{align}
+%       E(X)=0 \times \frac{1}{2}+ 1 \times \frac{1}{4}+ 2 \times \frac{2}{4}\\
+%       =\frac{3}{4}
+%     \end{align}
+%   \item 
+%     \begin{align}
+%       E(g(x))=E({(x-a)}^2)\\
+%       =\sum_{x \in R_{x}}(x-a)^2P(X=x)
+%     \end{align}
+%     ou
+%     \begin{align}
+%       E(g(x))=E(x^2-2ax+a^2)\\
+%       =E(x^2)-2aE(x)+a^2
+%     \end{align}
+%     \begin{align}
+%       E(x^2)=\sum_{x \in R_{x}} x^2 P(X=x)\\
+%       =0^2 \frac{1}{2}+1^2 \frac{1}{4}+ 2^2 \frac{1}{4}\\
+%       =\frac{5}{4}
+%     \end{align}
+%     \begin{align}
+%       E(g(x))=\frac{5}{4}-2a \frac{3}{4}+a^2\\
+%       =\frac{5}{4}-\frac{6}{4}a+a^{2}
+%     \end{align}
+%     Para $a=0$:
+%     \begin{align}
+%       E(g(0))=\frac{5}{4}-2\times 0 \frac{3}{4}+0^2\\
+%       =\frac{5}{4}-\frac{6}{4}0+0^{2}\\
+%       =\frac{5}{4}
+%     \end{align}
+%     Para $a=\frac{1}{2}$:
+%     \begin{align}
+%       E(g(\frac{1}{2}))=\frac{5}{4}-2\times \frac{1}{2} \frac{3}{4}+\frac{1}{2}^2\\
+%       =\frac{5}{4}-\frac{6}{4}\frac{1}{2}+\frac{1}{2}^{2}\\
+%       =\frac{1}{4}
+%     \end{align}
+%     Para $a=1$:
+%     \begin{align}
+%       E(g(1))=\frac{5}{4}-2\times 1 \frac{3}{4}+1^2\\
+%       =\frac{5}{4}-\frac{6}{4}1+1^{2}\\
+%       =\frac{3}{4}
+%     \end{align}
+% \end{enumerate}
+% Definição: Seja $x$ uma v.a.\ com f.m.p $p_{x}(x)$ ou f.d.p $f_{x}(x)$, com 
+% média $\mu_{x}=E(x)$. Chamamos de variância da v.a.\ $X$ o valor: 
+% \begin{align}
+%   \sigma^2=var(x)=E[(X-E(X))^2]\\
+%   =E[(x-\mu)^2],
+% \end{align}
+% Ou seja,
+% \begin{align}
+%   \sigma^2 =var(x)=\sum_{x \in R_{x}} (x-\mu_{x})^2 P(X=x) \text{\quad no caso discreto}\\
+%   \sigma^2 =var(x)=\int_{R_{x}} (x-\mu_{x})^2 f_{x}(x)dx \text{\quad no caso contínuo}
+% \end{align}
+% A raíz quadrada de variáveis $(\sqrt{\sigma^2}=\sqrt{var(x)})$ é o desvio padrão, 
+% denotado por $\sigma$.
 
-\emph{Exercício}: Um fabricante adquire certo tipo de componente de um fornecedor.
-Segundo este fornecedor, a proporção de componentes defeituoso é de 2\%. O fabricante
-adquire 10 lotes por mês e de cada lote são selecionados 15 componentes para 
-inspeção Qual a probabilidade de que sejam encontrados 3 lotes com mais de um 
-componente defeituoso?
+% Resultado: Podemos escrever a variância v.a.\ $x$ por: 
+% \begin{align}
+%   \sigma^2 =var(x)=E(X^2)-\{E(X)\}^2\\
+%   \sigma^2 =E(X^2)-\{\mu_x\}^2
+% \end{align}
+% Demonstração: 
+% \begin{align}
+%   var(x)=E(x^2-2\mu_{x}x+\mu_{x}^2)\\
+%   =E(x^2)-2\mu_{x}E(x)+\mu_{x}^2\\
+%   =E(x^2)-2\mu_{x}\mu_{x}+\mu_{x}^2\\
+%   =E(x^2)-\mu_{x}\\
+%   =E(x^2)-\{E(x)\}^2
+% \end{align}
+% Obs: $E(x^2) \neq \{E(x)\}^2$
 
-\subsubsection{Distribuição Geométrica}
-Considere uma sequência de ensaios Bernoulli independentes em probabilidade de 
-sucesso $p$ ($0<p<1$). Seja a v.a.\ $x$ o $n^o$ de fracassos até a ocorrência 
-do $1^o$ sucesso. 
+% Algumas Propriedades
+% - Considere $a,b \in \mathbb{R}$, constantes;
+% \begin{enumerate}[label=(\alph*)]
+%   \item $var(ax)=a^2var(x)$
+%     \\Obs: $var(-x)=var(x)$
+%   \item Se $x=a$, então:\\
+%     $var(x)=var(a)=0$
+%   \item $var(x \mp a)=var(x)var(a)\\ =var(x)$
+%   \item Se $a,b$ são constantes,\\
+%     $var(ax+\mp+b)=a^2 var(x)+var(b)\\
+%     =a^2 var(x)$
+%   \item Se $x$ e $y$ são duas v.a.\ `s independetes, então: 
+%     $var(ax \pm by)=a^2 var(x)+ b^2 var(y)$
+% \end{enumerate}
+% Exemplo: Seja $x$ uma v.a.\ com f.d.p\ dada por: 
+% \begin{align}
+%   f_{x}=
+%   \begin{cases}
+%     \frac{x^2}{3}, \text{\quad} -1<x<2\\
+%     0, \text{\quad caso contrário}
+%   \end{cases}
+% \end{align}
 
-\emph{Definição}: A v.a.\ $x$ tem distribuição geométrica se, e somente se, sua 
-f.m.p.\ é definida por: 
-\begin{align}
-  p_{x}(x)=P(X=x)=\begin{cases}
-    p(1-p)^x, \text{\quad }x=0,1,2,\dots \text{\quad}0<p<1\\
-    0, \text{\quad caso contrário}
-  \end{cases}
-\end{align}
-\begin{center}Notação: $X \barrasim Geo(p)$\end{center}
-Temos que:
-\begin{align}
-  \mu_{x}=E(x)=\frac{1-p}{p} \text{\quad e a }\\
-  \sigma^2 = var(x)=\frac{1-p}{p^2}
-\end{align}
-Similarmente, a variável aleatória $X$ pode ser vista como o $n^o$ de ensaios que
-precedem o primeiro sucesso, definida pela v.a.\ $Y$, cuja f.m.p.\ é dada por:
-\begin{align*}
-  p(y)=P(Y=y)=\begin{cases}
-    (1-p)^{y-1} \text{\quad }p,y=1,2,\dots \\
-    0, \text{\quad Caso contrário}
-  \end{cases}
-\end{align*}
-Neste caso, a v.a.\ $Y$ pode ser vista como $Y=X+1$ e, consequentemente,
-$$\mu_y=E(Y)=E(X+1)=E(X)=E(X)+1= \frac{1}{p}$$ 
-e
-$$\sigma_y^2=var(Y)=var(X+1)=var(X)= \frac{1-p}{p}^2$$ 
-\emph{Exemplo}: Um pesquisador está realizando um experimentos químicos independetes 
-e sabe que a probabilidade de que cada cada experimento apresnete uma reação 
-positiva é $0,3$. QUal é a probabilidade de que menos de 3 reações negativas 
-ocorram antes da primeira positiva?
+% \begin{enumerate}[label=(\alph*)]
+%   \item $E(x)$
+%   \item $var(x)$
+%   \item $E(4x+3)$
+% \end{enumerate}
+% \begin{enumerate}[label=(\alph*)]
+%   \item 
+%     \begin{align}
+%       \int_{-1}^{2}\frac{x x^2}{3}dx\\
+%       =\frac{1}{3}\int_{-1}^{2}x^3dx=\frac{1}{12} x^4 |_{-1}^{2}\\
+%       =\frac{1}{12}(16-1)=\frac{15}{12}
+%     \end{align}
+%   \item 
+%     \begin{align}
+%       var(x)=E(x^2)-\{E(x)\}^2\\
+%       E(x^2)=\int{-1}{2} x^2 \frac{x^2}{3}dx\\
+%       E(x^2)=\frac{1}{3}\int{-1}{2} x^4 dx\\
+%       =\frac{1}{15}x^5 |_{-1}^2\\
+%       =\frac{1}{15}(32+1)=\frac{33}{15}\\
+%       var(x)=\frac{33}{15}-\{\frac{15}{12}\}^2=0,6375
+%     \end{align}
+%   \item 
+%     \begin{align}
+%       E(4x+3)=4E(x)+3\\
+%       =8
+%     \end{align}
+%     Obs: $E(ax)= a^2 var(x)$
+% \end{enumerate}
+% \section{Principais Modelos Probabilísticos}
+% \subsection{Modelos Discretos}
+% \subsubsection{Distribuição Uniforme}
+% A v.a.\ assume cada um de seus valores com igual probabilidade.
 
-$x$:$n^o$ de ocorrência positiva 
-\begin{align*}
-  x=&\begin{cases}
-    1, \text{\quad se a reação positiva}\\
-    0, \text{\quad caso contrário}
-  \end{cases}
-\end{align*}
-$$P(x=1)=p=0,3$$\\
-$Y: n^o$ de reações negativas até a ocorrência de uma positiva\\
-\begin{center}$Y \barrasim Geo(0,3)$\end{center}
-\begin{align*}
-  P(Y<3)=P(Y=0)+P(Y=1)+P(Y=2)\\
-  P(Y=0)=(1-0,3)^0 0,3 = 0,3\\
-  P(Y=1)=(1-0,3)^1 0,3 = 0,21\\
-  P(Y=2)=(1-0,3)^2 0,3 = 0,147\\
-  P(Y<3)=0,3+0,21+0147=0,657
-\end{align*}
+% Definição: A v.a.\ discreta $X$, assumindo valores $x_1,x_2,\dots,x_k$ tem 
+% distribuição uniforme se, e somente se, sua f.m.p.\ é definida por: 
+% \begin{align}
+%   p(x)=P(X=x)=\begin{cases}
+%     \frac{1}{k}, \text{\quad} x=x_1,x_2,\dots,x_k\\
+%     0, \text{\quad caso contrário}
+%   \end{cases}
+% \end{align}
+% Notação: $X \barrasim U_{d}(k)$
+% A média e variância de x é:
+% \begin{align}
+%   \mu_{x}=E(x)=\sum_{x \in R_{x}}x_i P(X=x_i)\\
+%   = \sum_{x \in R_{x}}x_i \frac{1}{k}= \frac{1}{k}\sum_{x_i \in R_{x}}\\
+%   \text{e}\\
+%   var(x)=E(X^2)-\{E(X)\}^2\\
+%   = \sum_{x_i \in R_{x}}(x_i -\mu_x )^2 p(X=x_i)\\
+%   =\frac{1}{k} \{\sum^k_{i=1} x_i^2 - \frac{(\sum_{i=1}^k)^2}{k}\}
+% \end{align}
+% Exemplo: Seja $x$ uma v.a.\ que indica o $n^o$ de pontos marcados na face 
+% superior de um dado quando ele é lançado. Portanto, temos uma distribuição 
+% uniforme discreta, cuja f.m.p.\ é dada por: 
+% \begin{align}
+%   p(x)=P(X=x)-\begin{cases}
+%     \frac{1}{6},\text{\quad} x=1,2,3,4,5,6\\
+%     0, \text{\quad caso contrário}
+%   \end{cases}
+% \end{align}
+% E o $E(x)$ é: 
+% \begin{align}
+%   \mu_{x}=E(x)=\frac{1}{6}(1+2+3+4+5+6)\\
+%   =\frac{1}{6}21= \frac{7}{2}=3,5
+% \end{align}
+% E a $var(x)$ é:
+% \begin{align}
+%   E(x^2)=\frac{1}{6}(1^2 + 2^2 + \dots + 6^2)\\
+%   =\frac{91}{6}=15,17\\
+%   var(x)=\frac{91}{6}- \{\frac{7}{2}\}^2=\frac{105}{36}=2,92
+% \end{align}
+% \subsubsection{Distribuição Bernoulli}
+% Considere uma v.a.\ $x$ que assume apenas dois valores 1, se ocorrer sucesso,
+% 0, se ocorrer fracasso. Indicaremos por ``p" a probabilidade de sucesso, Isto
+% é, $P(\text{Sucesso})=P(x=1)=p$.
+% Definição: A v.a.\ discreta $x$ que assume apenas valores 0 ou 1 tem Distribuição
+% Bernoulli se, somente se, sua f.m.p.\ é definida por:
+% \begin{align}
+%   p(x)=P(X=x)= \begin{cases}
+%     p^{x}(1-p){1-x}, \text{\quad} x=0,1, \text{\quad} 0<p<1\\
+%     0, \text{\quad caso contrário}
+%   \end{cases}
+% \end{align}
+% Notação: $X \barrasim Ber(p)$
 
-Exercício: Pensar no exercício anterior com o $n^o$ de ensaios.
+% Exemplos: 
+% $$p(x)=(\frac{2}{5})^x(1-\frac{2}{5})^x, \text{\quad}x=0,1$$\\
+% $$p(x)=(\frac{7}{8})^{1-x}(1-\frac{7}{8})^{1-x}, \text{\quad }, x=0,1$$
 
-\subsubsection{Distribuição Binomial Negativa}
-Considere ensaios independetes de Bernoulli ($p$) e definimos $X$ como o $n^o$ 
-de fracassos anteriores ao n-ésimos sucesso.
+% De forma similar, podemos apresentar $p(x)$ por:
+% \begin{figure} 
+%   \centering
+%   \begin{tabular}{c c c}
+%     \toprule
+%     x&0&1\\ \midrule
+%     $P(X=x)$&$1-p$&$p$\\ \bottomrule
+%   \end{tabular}
+%   \label{fig:7}
+% \end{figure}
+% A média de $x$ é: 
+% \begin{align}
+%   \mu_{x}=E(x)=p
+% \end{align}
+% e a variância de $x$ é: 
+% \begin{align}
+%   \sigma^2 = var(x)=p (1-p)
+% \end{align}
+% Exemplo: Suponha o lançamento de um dado perfeito e o interesse é ocorrer a face
+% 3.
+% \begin{align*}
+%   X=\begin{cases}
+%     1, \text{\quad se ocorrer a face }3\\
+%     0, \text{\quad caso contrário}\{1,2,4,5,6\}]
+%   \end{cases}
+% \end{align*}
+% Cuja f.m.p.\ é dada por:
+% \begin{align}
+%   p(x)=P(X=x)=\begin{cases}
+%     \frac{1}{6}(1-\frac{1}{6})^{1-x}, \text{\quad}x=0,1\\
+%     0, \text{\quad caso contrário}
+%   \end{cases}
+% \end{align}
+% \begin{figure} 
+%   \centering
+%   \begin{tabular}{c c c}
+%     \toprule
+%     x&0&1\\ \midrule
+%     $P(X=x)$&$\frac{5}{6}$&$\frac{1}{6}$\\ \bottomrule
+%   \end{tabular}
+%   \label{fig:8}
+% \end{figure}
+% $X \barrasim Ber(\frac{1}{6})$
+% A média de $x$ é: 
+% \begin{align*}
+%   \mu_{x}=(X)=p=\frac{1}{6}
+% \end{align*}
+% e a variância de $x$ é: 
+% \begin{align*}
+%   \sigma^2= var(x)=p(1-p)=\frac{1}{6}\frac{5}{6}=\frac{5}{36}
+% \end{align*}
+% \subsubsection{Distribuição Binominal}
+% Considere $M$ ensaios de Bernoulli independentes, todos com a mesma probabilidade
+% de sucesso $p$. A v.a.\ que conta o número de sucessos nos $M$ ensaios de Bernoulli
+% é denominada v.a.\ binomial com parâmetro $M$ e $p$.
+% Definição: A v.a.\ discreta $x$, correspondente ao $n^o$ de sucesso em $M$ ensaios
+% independentes de Bernoulli, tem distribuição binomial se, e somente se, sua 
+% f.m.p.\ é definida por: 
+% \begin{align}
+%   p(x)=P(X=x)=\begin{cases}
+%     \binom{M}{x}p^x (1-p)^{M-x}, \text{\quad}x=0,1,\dots,M \text{\quad e }0<p<1\\
+%     0, \text{\quad caso contrário}
+%   \end{cases}
+% \end{align}
+% Notação:$ x \barrasim Bin(M,p)\\$
+% Obs: $\binom{M}{x}=\frac{M!}{x!(M-x)!}$
 
-\emph{Definição}: A v.a.\ $x$ tem distribuição Binomial negativa se, e somente se,
-sua f.m.p.\ é definida por:
-\begin{align}
-  p(x)=P(X=x)=&
-  \begin{cases}
-    \binom{x+m-1}{m-1} p^m (1-p)^x, \text{\quad x=0,1,2,\dots} \\
-    0, \text{\quad caso contrário}
-  \end{cases}
-\end{align}
-\begin{center}Notação: X \barrasim BN(r,p)\end{center}
-Temos que: 
-\begin{align}
-  \mu_{x}=E(x)=\frac{r(1-p)}{p} \text{\quad e}\\
-  \sigma^2 = var(x)=\frac{1-p}{p^2}
-\end{align}
-Observações: 
-\begin{enumerate}
-  \item Note que se $r=1$, temos o modelo geométrico.
-  \item $$\binom{x+m-1}{m-1}&= \binom{x+m-1}{x}$$
-\end{enumerate}
-A Binomial Negativa pode ser definida como o $n^o$ de ensaios necessários para 
-a obtenção do m-ésimo sucesso. Formando $y=x+m$ temos a quantidade desejada e 
-seus valores variam de $r$ em diante. Assim sendo $Y$ o $n^o$ de enasios até 
-a obtenção de $m$ sucessos, temos: 
-\begin{align}
-  p(y)=p(Y=y)=&\begin{cases}
-    \binom{y-1}{m-1}p^m(1-p)^{y-m}, \text{\quad }y=m,m+1,\dots \\
-    0, \text{\quad caso contrário}
-  \end{cases}
-\end{align}
-\end{document}
+% Temos que: 
+% \begin{align}
+%   \mu_{x}=E(X)=Mp\text{a média de} x \text{e}\\
+%   \sigma^2 =var(x)=Mp(1-p), \text{a variância de x}
+% \end{align}
+% Exemplo: Considere uma linha de produção, onde 3 peças são selecionadas aleatoriamente
+% e são classificadas como defeituosas(D) ou não-defeituosas(N). $X_{1},X_{2},X_{3}$
+% são variáveis aleatórias que assumem 1 se a peça for não-defeituosa e 0 caso 
+% contrário. A probabilidade da peça ser não-defeituosa é $p$ e , consequentemente, 
+% a probabilidade da peça ser defeituosa é $1-p$. Estamos interessados na distribuição
+% de:
+% $$Y=X_{1}+X_{2}+X_{3}$$
+% Abaixo estão os possíveis resultados do experimento:
+% %Arvore zica aqui, pegar de algum colega
+
+% \begin{figure} 
+%   \centering
+%   \begin{tabular}{c c c c c}
+%     \toprule
+%     y&0&1&2&3\\ \midrule
+%     $P(Y=y)$&$(1-p)^3$&$3p(1-p)^2$&$3p^2(1-p)$&$p^3$\\ \bottomrule
+%   \end{tabular}
+%   \label{fig:7}
+% \end{figure}
+% Ou seja,
+% \begin{align*}
+%   p(y)=P(Y=y)=\begin{cases}
+%     \binom{3}{y}p^y (1-p)^{3-y}, \text{\quad}y=0,1,2,3\\
+%     0, \text{\quad caso contrário}
+%   \end{cases}
+% \end{align*}
+% \emph{Exemplo}: Uma rede varejista compra certo tipo de equipamento eletrônico. O 
+% fabricante indica que a taxa de quipamentos em perfeito estado é $97\%$.
+% \begin{enumerate}[label=(\alph*)]
+%   \item Seleciona-se ao acaso 20 itens. Qual a probabilidade de haver pelo menos 
+%     um item defeituoso nesses 20?
+%   \item Seleciona-se aleatoriamente 20 itens em cada 10 carregamentos, qual a 
+%     probabilidade de haver 3 carregamentos com pelo menos um item defeituoso?
+% \end{enumerate}
+% $p$ taxa de equipamentos em perfeito estado\\
+% $$p=0,97$$\\
+% $y$: $n^o$ de equipamentos em perfeito estado.\\
+% $$y \barrasim bin(20;0,97)$$\\
+
+% \emph{Resolucão:}
+% \begin{enumerate}[label=(\alph*)]
+%   \item    $M=20$ itens\\
+%     Probabilidade de pelo menos um item defeituoso.\\
+%     $x$: $n^o$ de equipamentos com defeito\\
+%     $$x \barrasim bin(20:0,03) \text{quad} x=1,2,3,4,5,\dots,20$$\\
+%     \begin{align*}
+%       P(X\ge 1)= 1-P(x<1)\\
+%       =1-P(x=0)
+%     \end{align*}
+%     \begin{align*}
+%       P(X=0)= \bin{20}{0} {0,03}^0 (1-0,03)^{20-0}\\
+%       =0,5438
+%     \end{align*}
+%     \begin{align*}
+%       P(X\ge 1)= 1-0,5438\\
+%       =0,4562
+%     \end{align*}
+%     Ou, resolvendo pela v.a.\ $Y$, temos:
+%     \begin{align*}
+%       P(y\le 19)=1-P(Y>19)\\
+%       =1-P(y=20)
+%     \end{align*}
+%     \begin{align*}
+%       P(y=20)=\binom{20}{20}0,97^{20}(1-0,97)^{20-20}\\
+%       =0,5438
+%     \end{align*}
+%     \begin{align*}
+%       P(y\le 19)=1-0,5339\\
+%       =0,4562
+%     \end{align*}
+%   \item 10 carregamentos: 20 itens são selecionados \\
+%     $Z$: $n^o$ de carregamento com pelo menos um item defeituoso \\
+%     $$p=0,4562$$\\
+%     $$z \barrasim B(10:0,4562)$$\\
+%     \begin{align*}
+%       P(Z=3)=\binom{10}{3}0,4562^3 (1-0,4562)^{10-3}\\
+%       =0,1602
+%     \end{align*}
+% \end{enumerate}
+
+% \emph{Exercício}: Um fabricante adquire certo tipo de componente de um fornecedor.
+% Segundo este fornecedor, a proporção de componentes defeituoso é de 2\%. O fabricante
+% adquire 10 lotes por mês e de cada lote são selecionados 15 componentes para 
+% inspeção Qual a probabilidade de que sejam encontrados 3 lotes com mais de um 
+% componente defeituoso?
+
+% \subsubsection{Distribuição Geométrica}
+% Considere uma sequência de ensaios Bernoulli independentes em probabilidade de 
+% sucesso $p$ ($0<p<1$). Seja a v.a.\ $x$ o $n^o$ de fracassos até a ocorrência 
+% do $1^o$ sucesso. 
+
+% \emph{Definição}: A v.a.\ $x$ tem distribuição geométrica se, e somente se, sua 
+% f.m.p.\ é definida por: 
+% \begin{align}
+%   p_{x}(x)=P(X=x)=\begin{cases}
+%     p(1-p)^x, \text{\quad }x=0,1,2,\dots \text{\quad}0<p<1\\
+%     0, \text{\quad caso contrário}
+%   \end{cases}
+% \end{align}
+% \begin{center}Notação: $X \barrasim Geo(p)$\end{center}
+% Temos que:
+% \begin{align}
+%   \mu_{x}=E(x)=\frac{1-p}{p} \text{\quad e a }\\
+%   \sigma^2 = var(x)=\frac{1-p}{p^2}
+% \end{align}
+% Similarmente, a variável aleatória $X$ pode ser vista como o $n^o$ de ensaios que
+% precedem o primeiro sucesso, definida pela v.a.\ $Y$, cuja f.m.p.\ é dada por:
+% \begin{align*}
+%   p(y)=P(Y=y)=\begin{cases}
+%     (1-p)^{y-1} \text{\quad }p,y=1,2,\dots \\
+%     0, \text{\quad Caso contrário}
+%   \end{cases}
+% \end{align*}
+% Neste caso, a v.a.\ $Y$ pode ser vista como $Y=X+1$ e, consequentemente,
+% $$\mu_y=E(Y)=E(X+1)=E(X)=E(X)+1= \frac{1}{p}$$ 
+% e
+% $$\sigma_y^2=var(Y)=var(X+1)=var(X)= \frac{1-p}{p}^2$$ 
+% \emph{Exemplo}: Um pesquisador está realizando um experimentos químicos independetes 
+% e sabe que a probabilidade de que cada cada experimento apresnete uma reação 
+% positiva é $0,3$. QUal é a probabilidade de que menos de 3 reações negativas 
+% ocorram antes da primeira positiva?
+
+% $x$:$n^o$ de ocorrência positiva 
+% \begin{align*}
+%   x=&\begin{cases}
+%     1, \text{\quad se a reação positiva}\\
+%     0, \text{\quad caso contrário}
+%   \end{cases}
+% \end{align*}
+% $$P(x=1)=p=0,3$$\\
+% $Y: n^o$ de reações negativas até a ocorrência de uma positiva\\
+% \begin{center}$Y \barrasim Geo(0,3)$\end{center}
+% \begin{align*}
+%   P(Y<3)=P(Y=0)+P(Y=1)+P(Y=2)\\
+%   P(Y=0)=(1-0,3)^0 0,3 = 0,3\\
+%   P(Y=1)=(1-0,3)^1 0,3 = 0,21\\
+%   P(Y=2)=(1-0,3)^2 0,3 = 0,147\\
+%   P(Y<3)=0,3+0,21+0147=0,657
+% \end{align*}
+
+% Exercício: Pensar no exercício anterior com o $n^o$ de ensaios.
+
+% \subsubsection{Distribuição Binomial Negativa}
+% Considere ensaios independetes de Bernoulli ($p$) e definimos $X$ como o $n^o$ 
+% de fracassos anteriores ao n-ésimos sucesso.
+
+% \emph{Definição}: A v.a.\ $x$ tem distribuição Binomial negativa se, e somente se,
+% sua f.m.p.\ é definida por:
+% \begin{align}
+%   p(x)=P(X=x)=&
+%   \begin{cases}
+%     \binom{x+m-1}{m-1} p^m (1-p)^x, \text{\quad x=0,1,2,\dots} \\
+%     0, \text{\quad caso contrário}
+%   \end{cases}
+% \end{align}
+% \begin{center}Notação: X \barrasim BN(r,p)\end{center}
+% Temos que: 
+% \begin{align}
+%   \mu_{x}=E(x)=\frac{r(1-p)}{p} \text{\quad e}\\
+%   \sigma^2 = var(x)=\frac{1-p}{p^2}
+% \end{align}
+% Observações: 
+% \begin{enumerate}
+%   \item Note que se $r=1$, temos o modelo geométrico.
+%   \item $$\binom{x+m-1}{m-1}&= \binom{x+m-1}{x}$$
+% \end{enumerate}
+% A Binomial Negativa pode ser definida como o $n^o$ de ensaios necessários para 
+% a obtenção do m-ésimo sucesso. Formando $y=x+m$ temos a quantidade desejada e 
+% seus valores variam de $r$ em diante. Assim sendo $Y$ o $n^o$ de enasios até 
+% a obtenção de $m$ sucessos, temos: 
+% \begin{align}
+%   p(y)=p(Y=y)=&\begin{cases}
+%     \binom{y-1}{m-1}p^m(1-p)^{y-m}, \text{\quad }y=m,m+1,\dots \\
+%     0, \text{\quad caso contrário}
+%   \end{cases}
+% \end{align}
+ \end{document}

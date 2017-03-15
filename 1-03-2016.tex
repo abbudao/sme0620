@@ -462,7 +462,11 @@ Sejam $A,B \subset \Omega$. Uma representação bastante útil é a àrvore de p
 
   \item[Exemplo]: No exemplo anterior, qual a probabilidade de um funcionário selecionar um 
 desktop usado?
-\begin{figure}
+\begin{figure}[htpb]
+  \centering
+  \includegraphics[width=0.8\linewidth]{name.ext}
+  \caption{Name}
+  \label{fig:17}
 \end{figure}
 \begin{align*}
   P(D \cap U)= P(D/U)P(U)
@@ -475,9 +479,9 @@ Ou:
 
 \item [Algumas propriedades]:
 \begin{enumerate}[label=(\alph*)]
-  \item $P(\phi / B)=0$
-  \item Se $A \subset \omega$, entao $P(\bar{A} / B)= 1-P(A/B)$
-  \item Se $A,C \subset \omega$, então:
+  \item $P(\emptyset / B)=0$
+  \item Se $A \subset \Omega$, entao $P(A^c / B)= 1-P(A/B)$
+  \item Se $A,C \subset \Omega$, então:
     \begin{align}
       P(A \cup C / B)= P(A/B)+ P(C/B) - P(A \cap C/B)
     \end{align}
@@ -485,59 +489,73 @@ Ou:
 
 \end{description}
 %End primeira entrega
-% \section{Independência de eventos}
-% Definicao: Dois eventos $A$ e $B$ definidos em $\Omega$ são independentes se 
-% a informação da ocorrência ou não de $B$ não altera a probabilidade de ocorrência
-% de $A$. Isto é:
-% \begin{align}
-%   P(A/B)= P(A) \\
-%   P(B)>0 
-% \end{align}
-% Logo, dois eventos $A$ e $B$ são independentes se, e somente se, $P(A \cap B)=P(A).P(B)$.
+ \section{Independência de Eventos}
 
-% Exemplo: Um estudante se inscreve em dois processos seletivos com probabilidade 
-% $30\%$ de ser aprovado na empresa $I$ e $50\%$ de ser aprovado na empresa $II$. Se 
-% as aprovações são independentes, qual a probabilidade de que ele seja aprovado em
-% pelo menos uma?
+\begin{description}
+  \item [Definicao]: Dois eventos $A$ e $B$ definidos em $\Omega$ são independentes se 
+ a informação da ocorrência ou não de $B$ não altera a probabilidade de ocorrência
+ de $A$. Isto é:
+ \begin{align}
+   P(A/B)= P(A) \\
+   P(B)>0 
+ \end{align}
+ Logo, dois eventos $A$ e $B$ são independentes se, e somente se, $P(A \cap B)=P(A)\times P(B)$.
+\item [Observacao]: 
+  \begin{align*}
+    P(A/B) = \frac{P(A \cap B)}{P(B)} = \frac{P(A)P(B)}{P(A)}= P(B)
+  \end{align*}
+\item [Exemplo]: Um estudante se inscreve em dois processos seletivos com probabilidade 
+ $30\%$ de ser aprovado na empresa $I$ e $50\%$ de ser aprovado na empresa $II$. Se 
+ as aprovações são independentes, qual a probabilidade de que ele seja aprovado em
+ pelo menos uma?
 
-% Definindo os eventos:
-% \begin{itemize}
-%   \item A:\@ O estudante ser aprovado na empresa $I$
-%   \item B:\@ O esutdanbte ser aprovado na empresa $II$
-% \end{itemize}
-% \begin{align}
-%   P(A)= 0,30\\
-%   p(B)=0,50\\
-%   P(A\cup B)= P(A)+P(B)-P(A\cap B)\\
-%   =P(A)+P(B)-P(A).P(B)\\
-%   =0,3+0,5-0,3.0,5\\
-%   =0,65
-% \end{align}
-% \section{Independência de 3 eventos}
-% OS eventos A,B,C em $\Omega$ são independentes se, somente se:
-% \begin{itemize}
-%   \item $P(A \cap B) = P(A).P(B)$
-%   \item $P(A \cap C) = P(A).P(C)$
-%   \item $P(B \cap C)= P(B).P(C)$
-%   \item $P(A \cap B \cap C)= P(A).P(B).P(C)$
-% \end{itemize}
-% Resultado: Se A,B são eventos independentes em $\Omega$, então:
-% \begin{enumerate}
-%   \item $A$ e $\bar{B}$ são independentes
-%   \item $\bar{A}$ e $B$ são independetes
-%   \item $\bar{A}$ e $\bar{B}$ são independentes.
-% \end{enumerate}
-% \begin{figure}
-%   \label{fig:3}
-% \end{figure}
+ Definindo os eventos:
 
-% \begin{align}
-%   P(A \cap \bar{B})= P(A) - P(A \cap B)\\
-%   = P(A)-P(A).P(B)\\
-%   = P(A)(1-P(B))\\
-%   =P(A).P(\bar{B})
-% \end{align}
-% Obs: Não confundir eventos mutuamente exclusivos com eventos independentes.
+ \begin{enumerate}[label=\Alph*:]
+   \item  O estudante ser aprovado na empresa $I$
+   \item  O esutdanbte ser aprovado na empresa $II$
+ \end{itemize}
+ \begin{align*}
+   P(A)= 0,30\\
+   P(B)=0,50\\
+   P(A\cup B)= P(A)+P(B)-P(A\cap B)\\
+   =P(A)+P(B)-P(A).P(B)\\
+   =0,3+0,5- 0,3 \times 0,5\\
+   =0.65
+ \end{align*}
+ \end{description}
+ \subsection{Independência de tres eventos}
+ Os eventos A,B,C em $\Omega$ são independentes se e somente se:
+ \begin{description}
+
+ \begin{enumerate}[label=(\alph*)]
+   \item $P(A \cap B) = P(A)\times P(B)$ 
+
+   \item $P(A \cap C) = P(A)\times P(C)$
+
+   \item $P(B \cap C)= P(B)\times P(C)$
+
+   \item $P(A \cap B \cap C)= P(A)\times P(B) \times P(C)$
+ \end{enumerate}
+
+ \item [Resultado]: Se A,B são eventos independentes em $\Omega$, então:
+
+ \begin{enumerate}[leftmargin=*, label=\Roman*., widest=IV, align=left]
+   \item $A$ e $B^c$ são independentes
+   \item $A^c$ e $B$ são independetes
+   \item $A^c$ e $B^c$ são independentes.
+ \end{enumerate}
+ \begin{figure}
+   \label{fig:3}
+ \end{figure}
+
+ \begin{align*}
+   P(A \cap \bar{B})= P(A) - P(A \cap B)\\
+   = P(A)-P(A)\times P(B)\\
+   = P(A)(1-P(B))\\
+   =P(A)\times P(\bar{B})
+ \end{align*}
+ \item [Obs]: Não confundir eventos mutuamente exclusivos com eventos independentes. Ou seja, nao confunda $P(A \cap B)  = 0$ com $ P(A \cap B) = P(A)\times P(B)$.
 
 % Exemplo: Um atirador acerta 80\% dos disparos e outro acerta, nas mesmas condições
 % acerta 70\%.
@@ -565,42 +583,50 @@ Ou:
 %       =0,94
 %     \end{align}
 % \end{enumerate}
-% \section{O teorema de Bayes}
-% \begin{enumerate}[label=(\alph*)]
-%   \item Partição do espaço amostral: 
 
-%     Definição: Uma coleção de eventos $A_1, A_2, \ldots, A_k$ formam uma partição 
-%     do espaço amostral $\Omega$ se:
+ \end{description}
+ \section{O Teorema de Bayes}
+ \subsection{Particoes do espaco amostral}
+     \item[Definição]: Uma coleção de eventos $A_1, A_2, \ldots, A_k$ formam uma partição 
+     do espaço amostral $\Omega$ se:
 
-%     \begin{enumerate}
-%       \item $A_i \cap A_j = \emptyset, \forall i\neq j$, com $i,j =1,\ldots,k$
-%       \item $\cup_{i=1}^{k}A_i= \Omega$
-%     \end{enumerate}
-%   \item Lema da probabilidade total 
+     \begin{enumerate}[leftmargin=*, label=\Roman*., widest=IV, align=left]
+       \item $A_i \cap A_j = \emptyset, \forall i\neq j$, com $i,j =1,\ldots,k$
+       \item $\cup_{i=1}^{k}A_i= \Omega$
+     \end{enumerate}
+   \end{description}
+   \subsection{Lema da probabildiade total}
+   \begin{description}
+ \item [Definicao] Se $A_1,\ldots, A_k$ é uma partição de $\Omega$, então para qualquer evento 
+     $B$ de $\Omega$, vale:
 
-%     Se $A_1,\ldots, A_k$ é uma partição de $\Omega$, então para qualquer evento 
-%     $B$ de $\Omega$, vale:
+     \begin{align}
+       P(B)= \sum^k_{i=1} B(B \cap A_i)\\
+       = \sum^k_{i=1} P(B/A_i)P(A_i)\\
+     \end{align}
+     \begin{align}
+       B= \cup_{i=1}^k A_i \cap B)
+     \end{align}
+     \begin{align}
+       P(B)= \cup_{i=1}^k P(A_i \cap B)\\
+       = \cup_{i=1}^k P(B/A_i)P(A_i)
+     \end{align}
+     \begin{figure}[htpb]
+       \centering
+       \includegraphics[width=0.8\linewidth]{name.ext}
+       \caption{$B=(A_1 \cap B) \cup (A_2 \cap)\cup \dots (A_k \cap B) }$
+       \label{fig:19}
+     \end{figure}
+   \end{description}
+     \subsection{Fórmula de Bayes}
+     \begin{description}
+       \item [Definicao] Se $A_1,A_2,\ldots, A_k$ formam uma partição de $\Omega$ e 
+ $B \subset \Omega$ com $P(B)>0$, então:
 
-%     \begin{align}
-%       P(B)= \sum^k_{i=1} B(B \cap A_i)\\
-%       = \sum^k_{i=1} P(B/A_i)P(A_i)\\
-%     \end{align}
-%     \begin{align}
-%       B= \cup_{i=1}^k A_i \cap B)
-%     \end{align}
-%     \begin{align}
-%       P(B)= \cup_{i=1}^k P(A_i \cap B)\\
-%       = \cup_{i=1}^k P(B/A_i)P(A_i)
-%     \end{align}
-% \end{enumerate}
-
-% Fórmula de Bayes: Se $A_1,A_2,\ldots, A_k$ formam uma partição de $\Omega$ e 
-% $B \subset \Omega$ com $P(B)>0$, então:
-
-% \begin{align}
-%   P(A_i/ B)= \frac{P(A_i \cap B)}{P(B)}\\
-%   =\frac{P(B/A_i)P(A_i)}{\sum_{j=1}^k P(B/A_j)P(A_j)}
-% \end{align}
+ \begin{align}
+   P(A_i/ B)= \frac{P(A_i \cap B)}{P(B)}\\
+   =\frac{P(B/A_i)P(A_i)}{\sum_{j=1}^k P(B/A_j)P(A_j)}
+ \end{align}
 
 % Exemplo: Uma montadora traalha com dois fornecedores A e B de uma determinada peça.
 % Sabe-se que 10\% e 5\% das peças provenientes dos fornecedores A e B respectivamente,
@@ -670,6 +696,7 @@ Ou:
 %   P(A/M) = 0,5\\
 %   P(A/F)=0,2
 % \end{align*}
+\end{description}
 % \section{Variáveis Aleatórias}
 % Definição: Seja um experimento aleatório e $\Omega$ o espaço amostral associado 
 % a esse experimento. Uma função $X(\omega)$ que associa cada elemento $\omega \in

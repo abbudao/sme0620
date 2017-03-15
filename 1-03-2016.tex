@@ -6,6 +6,9 @@
 \usepackage{enumitem}
 \usepackage{booktabs}
 \usepackage{amssymb}
+\usepackage{tikz}
+\usepackage{float}
+\usetikzlibrary{shapes, backgrounds}
 \begin{document}
 % Dia 07/06/2017
 %Aula 1
@@ -16,9 +19,10 @@
 % Corrigir erros crassos
 % Procurar os \null substituir
 \chapter{Probabilidade}
-Objetivo: Definir um modelo estatístico que seja adequado à descrição e interpretação de fenômenos aleatórios.
 
+\section*{Objetivo: Definir um modelo estatístico que seja adequado à descrição e interpretação de fenômenos aleatórios.}
 \begin{description}
+
   \item [Experimentos ou fenômenos aleatórios ($\varepsilon$)]: são os acontecimentos cujos resultados não podem ser previstos 
     com certeza, sob condições idênticas.
 
@@ -105,14 +109,16 @@ Considere eventos definidos em um espaço amostral $\Omega$ de um experimento al
 
 \begin{description}
   \item [União de eventos ($A \cup B$)]: é o evento formado por todos os elementos que pertencem a $A$, ou  $B$, ou ambos.
-    \begin{figure}
-      %figura 1
-    \end{figure}
-
+   \begin{figure}[H]
+     \centering
+     \input{tikz/figura1.tikz}
+       \caption{}
+       \label{figura:1}
+     \end{figure} 
   \item [Intersecção de eventos ($A \cap B$)]: é o evento formado pelos elementos que pertencem a $A$ e a $B$.
-    \begin{figure}[]
+    \begin{figure}[H]
       \centering
-      \includegraphics[width=]{}
+      \input{tikz/figura2.tikz}
       \caption{}
       \label{figura:2}
     \end{figure} 

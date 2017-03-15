@@ -9,8 +9,8 @@
 
 \draw \firstcircle node[below] {$A$};
 \draw \thirdcircle node [below] {$B$};
+\fill[blue] \firstcircle;
 \clip \firstcircle;
 \fill[purple] \thirdcircle;
-
 \end{scope}
 \end{tikzpicture}

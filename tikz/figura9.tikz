@@ -1,0 +1,21 @@
+\def\firstcircle{(0,0) circle (1.5cm)}
+\def\thirdcircle{(2,0) circle (1.5cm)}
+
+\def \amostralspace{(-2,-2) rectangle (4,2)}
+% Now we can draw the sets:
+\begin{tikzpicture}
+\begin{scope}[shift={(3cm,-5cm)}, fill opacity=0.5]
+\draw[fill=orange] \amostralspace ;
+\node at (3.5,-1.5) {$\Omega$};
+\draw \thirdcircle;
+\draw \firstcircle;
+\fill[white,opacity=1] \thirdcircle;
+\begin{scope}
+\clip \thirdcircle;
+\fill[orange] \firstcircle;
+\end{scope}
+\fill[blue] \firstcircle;
+\node at (0,0){$A$};
+\node at (2,0) {$B$};
+\end{scope}
+\end{tikzpicture}

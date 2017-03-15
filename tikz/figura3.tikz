@@ -1,0 +1,15 @@
+\def\firstcircle{(0,0) circle (1.0cm)}
+\def\thirdcircle{(0:0) circle (1.8 cm)}
+
+% Now we can draw the sets:
+\begin{tikzpicture}
+\begin{scope}[shift={(3cm,-5cm)}, fill opacity=0.5]
+\draw (-2,-2) rectangle(4,2) ;
+\node at (3.5,-1.5) {$\Omega$};
+\fill[blue] \firstcircle;
+\draw \firstcircle ;
+\draw \thirdcircle ;
+\node at (0,0) {B};
+\node at (0,-1.5) {A};
+\end{scope}
+\end{tikzpicture}

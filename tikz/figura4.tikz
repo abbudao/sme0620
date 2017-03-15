@@ -1,0 +1,12 @@
+\def\firstcircle{(-0.5,0) circle (1.2cm)}
+\def\thirdcircle{(0:2.5cm) circle (1.2cm)}
+
+% Now we can draw the sets:
+\begin{tikzpicture}
+    \begin{scope}[shift={(3cm,-5cm)}, fill opacity=0.5]
+\draw (-2,-2) rectangle(4,2) ;
+\node at (3.5,-1.5) {$\Omega$};
+        \draw \firstcircle node {$A$};
+        \draw \thirdcircle node {$B$};
+    \end{scope}
+\end{tikzpicture}

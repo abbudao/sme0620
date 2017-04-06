@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2017.3.14)  4 APR 2017 09:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2017.3.14)  5 APR 2017 15:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -948,20 +948,139 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[34] (./1-03-2016.aux) ) 
+[34]
+./1-03-2016.tex:1830: Misplaced alignment tab character &.
+l.1830         \item $$\binom{x+r-1}{r-1}&
+                                          = \binom{x+r-1}{x}$$
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 1855.
+
+./1-03-2016.tex:1855: Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.1855      \end{align*}
+                        
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+./1-03-2016.tex:1855: You can't use `\spacefactor' in math mode.
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.1855      \end{align*}
+                        
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./1-03-2016.tex:1855: Missing } inserted.
+<inserted text> 
+                }
+l.1855      \end{align*}
+                        
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+Missing character: There is no è in font cmex10!
+./1-03-2016.tex:1855: Missing { inserted.
+<inserted text> 
+                {
+l.1855      \end{align*}
+                        
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 1855.
+
+./1-03-2016.tex:1855: Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.1855      \end{align*}
+                        
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+./1-03-2016.tex:1855: You can't use `\spacefactor' in math mode.
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.1855      \end{align*}
+                        
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./1-03-2016.tex:1855: Missing } inserted.
+<inserted text> 
+                }
+l.1855      \end{align*}
+                        
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+Missing character: There is no è in font cmex10!
+./1-03-2016.tex:1855: Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.1855      \end{align*}
+                        
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./1-03-2016.tex:1855: Misplaced \omit.
+\math@cr@@@ ...@ \@ne \add@amps \maxfields@ \omit 
+                                                  \kern -\alignsep@ \iftag@ ...
+l.1855      \end{align*}
+                        
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+./1-03-2016.tex:1855: Missing { inserted.
+<inserted text> 
+                {
+l.1855      \end{align*}
+                        
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+[35] [36] [37]
+Overfull \hbox (15.08875pt too wide) in paragraph at lines 1950--1950
+[] 
+ []
+
+[38] (./1-03-2016.aux) ) 
 Here is how much of TeX's memory you used:
- 15477 strings out of 493013
- 313404 string characters out of 6139317
+ 15484 strings out of 493013
+ 313491 string characters out of 6139317
  393827 words of memory out of 5000000
- 18666 multiletter control sequences out of 15000+600000
- 11717 words of font info for 44 fonts, out of 8000000 for 9000
+ 18671 multiletter control sequences out of 15000+600000
+ 12389 words of font info for 48 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,19n,67p,408b,966s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/abbud/.texlive/texmf-var/fonts/pk/ljfour/public/amsfonts/symbols/msbm10.480pk> </home/abbud/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmmi6.600pk> </usr/share/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmr6.pk> </home/abbud/.texlive/texmf-var/fonts/pk/ljfour/public/amsfonts/symbols/msbm10.657pk> </home/abbud/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmex10.657pk> </home/abbud/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmsy8.600pk> </home/abbud/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmmi8.600pk> </home/abbud/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmsl10.657pk> </home/abbud/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmbx12.600pk> </usr/share/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmr8.pk> </home/abbud/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmsy10.657pk> </home/abbud/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmr10.657pk> </home/abbud/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmmi10.657pk> </home/abbud/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmbx10.657pk> </home/abbud/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmbx12.720pk> </home/abbud/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmbx12.1244pk> </home/abbud/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmbx12.1037pk>
-Output written on 1-03-2016.pdf (34 pages, 188926 bytes).
+Output written on 1-03-2016.pdf (38 pages, 202878 bytes).
 PDF statistics:
- 579 PDF objects out of 1000 (max. 8388607)
- 147 compressed objects within 2 object streams
+ 613 PDF objects out of 1000 (max. 8388607)
+ 158 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

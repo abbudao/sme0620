@@ -1806,38 +1806,148 @@ os seguintes axiomas:
     \end{description}
       \subsection{Distribuição Binomial Negativa}
       \begin{description}
-      Considere ensaios independetes de Bernoulli ($p$) e definimos $X$ como o $n^o$ 
-      de fracassos anteriores ao n-ésimos sucesso.
+        \item  Considere ensaios independetes de Bernoulli ($p$) e definimos $X$ como o $n^o$ 
+      de fracassos anteriores ao r-ésimos sucesso.
 
     \item{Definição}: A v.a.\ $x$ tem distribuição Binomial negativa se, e somente se,
       sua f.m.p.\ é definida por:
       \begin{align}
         p(x)=P(X=x)=&
         \begin{cases}
-          \binom{x+m-1}{m-1} p^m (1-p)^x, \text{\quad x=0,1,2,\dots} \\
+          \binom{x+r-1}{r-1} p^r (1-p)^x, \text{\quad x=0,1,2,\dots} \\
           0, \text{\quad caso contrário}
         \end{cases}
       \end{align}
-     % \begin{center}Notação: X \barrasim BN(r,p)\end{center}
-     % Temos que: 
-     % \begin{align}
-     %   \mu_{x}=E(x)=\frac{r(1-p)}{p} \text{\quad e}\\
-     %   \sigma^2 = var(x)=\frac{1-p}{p^2}
-     % \end{align}
-     % Observações: 
-     % \begin{enumerate}
-     %   \item Note que se $r=1$, temos o modelo geométrico.
-     %   \item $$\binom{x+m-1}{m-1}&= \binom{x+m-1}{x}$$
-     % \end{enumerate}
-     % A Binomial Negativa pode ser definida como o $n^o$ de ensaios necessários para 
-     % a obtenção do m-ésimo sucesso. Formando $y=x+m$ temos a quantidade desejada e 
-     % seus valores variam de $r$ em diante. Assim sendo $Y$ o $n^o$ de enasios até 
-     % a obtenção de $m$ sucessos, temos: 
-     % \begin{align}
-     %   p(y)=p(Y=y)=&\begin{cases}
-     %     \binom{y-1}{m-1}p^m(1-p)^{y-m}, \text{\quad }y=m,m+1,\dots \\
-     %     0, \text{\quad caso contrário}
-     %   \end{cases}
-     % \end{align}
+    \begin{center}Notação: $X \mathtt{\sim}BN(r,p)$\end{center}
+      Temos que: 
+      \begin{align}
+        \mu_{x}=E(x)=\frac{r(1-p)}{p} \\
+        \sigma^2 = var(x)=\frac{1-p}{p^2}
+      \end{align}
+      Observações: 
+      \begin{enumerate}
+        \item Note que se $r=1$, temos o modelo geométrico.
+        \item $$\binom{x+r-1}{r-1}&= \binom{x+r-1}{x}$$
+      \end{enumerate}
+      A Binomial Negativa pode ser definida como o $n^o$ de ensaios necessários para 
+      a obtenção do r-ésimo sucesso. Formando $y=x+r$ temos a quantidade desejada e 
+      seus valores variam de $r$ em diante. Assim sendo $Y$ o $n^o$ de ensaios até 
+      a obtenção de $r$ sucessos, temos: 
+      \begin{align}
+        p(y)=p(Y=y)=&\begin{cases}
+          \binom{y-1}{m-1}p^m(1-p)^{y-m}, \text{\quad }y=m,m+1,\dots \\
+          0, \text{\quad caso contrário}
+        \end{cases}
+      \end{align}
+    \item{Exemplo}: Em uma serie do campeonato de basquete, o time que ganhar quatro em sete jogos sera
+      o vencedor. Suponha que o time $A$ tenha probabilidade de $55\%$ de ganhar de $B$ e que $A$ e $B$ 
+      se enfrentarao em uma serie de sete jogos. Qual a probabilidade de que $A$ venca a serie em 6 jogos?
+     \begin{align*} 
+       X:\text{O numero de derrotas de $A$ até que $A$ ganhe 4 partidas}\\
+       X \mathtt{\sim}BN (r=4, p=0,55)
+     \end{align*}
+     \begin{align*}
+       P(X=2)=\binom{2+4-1}{4-1} 0,55^{4}\times 0,45^{2}=0,1853
+     \end{align*}
+     Ou, de maniera similar, temos:
+     \begin{align*}
+       Y: n^{o} de partidas até que $A$ venca o campeonato
+     \end{align*}
+     \begin{align*}
+       P(Y=6)= \binom{6-1}{4-1} 0,55^{4} \times 0,45^{6-4} = 0,1853
+     \end{align*}
  \end{description}
+ \subsection{Distribuição Hipergeometrica}
+Considere um conjunto de $n$ objetos dos quais $m$ são do tipo $I$
+e $(n-m) $ são do tipo $II$. Para um sorteio de $r$ objetos $(r<n)$, 
+feitos ao acaso e sem repeticao, defina $X$ como o número de objetos do tipo
+$I$ selecionados.
+\begin{description}
+  \item{Definição}: A v.a.\ $X$ tem distribuicao Hipergeometrica se sua f.m.p.\ eh dada
+    por:
+    \begin{align*}
+      P_x(x)= P(X=x)= \frac{\binom{m}{xs} \binom{n-m}{r-x}}{\binom{n}{r}}
+    \end{align*}
+    Em que $x$ (inteiro) eh tal que:
+    \begin{align*}
+      max \{0,r-(n-m)\} \leq x \leq min \{ r,m \}
+    \end{align*}
+  \item{Observação}: Os limites de $x$ garantem que situaçoes absurdas ocorram.
+  \item{Temos que: }
+    \begin{align*}
+      E(X) = r \frac{m}{n} \\
+      Var(x)= \frac{r\times m (n-m)(n-r)}{n^2 (n-1)}
+    \end{align*}
+  \item{Notacao}: $X \mathtt{\sim} Hgeo (m,n,r)$
+  \item{Exemplo}: Considere que em um lote de $20$ peças, existam $4$ defeituosas.
+    Seleciona-se $5$ dessas peças, sem resposicao, qual seria a probabilidade 
+    de duas defeituosas terem sido escolgidas?
+    \begin{align*}
+      X: \text{$N^{o}$  de peças defeituosas em $5$ retiradas }\\
+      P(x=2)=\frac{\binom{4}{2} \binom{16}{3}}{\binom{20}{5}}\\
+      R_{x}: \{ 0,1,2,3,4 \}
+    \end{align*}
+\end{description}
+\subsection{Distribuicao de Poisson}
+Eh largamente empregada quando se deseja contar o número de eventos de certo tipo
+que ocorrem em um certo periodo de tempo ou superficie ou volume.
+\begin{description}
+\item{Definicao} Uma v.a.\ tem Distribuição Poisson com parâmetro $\lambda$, $\lambda >0$,se sua
+  f.m.p.\ eh dada por:
+ \begin{align}
+   P_{x} (x)= P(X=x)= \frac{e^{-\lambda}\lambda{x}}{x!}, \quad x=0,1,2,\ldots
+ \end{align} 
+ \item{Notacao}: $X \mathtt{\sim} Poi(\lambda)$
+ \item{Temos que}:
+   \begin{align}
+     E(X)= \lambda \\
+     Var(x)= \lambda
+   \end{align}
+   \item{Exemplo}: Uma central telefonica recebe, em media, 5 chamadas por minuto.
+     Supondo que a distribuição de Poisson seja adequada nessa situação, obtenha a 
+     probabilidade de que a central receba no maximo 2 chamadas durante um intervalo
+     de um minuto.
+     \begin{align*}
+       X: n^{o} \text{de chamadas recebidas em 1 minuto em uma central telefonica}
+       \\
+       E(X)=\lambda= \text{5 chamadas/minuto}\\
+     \end{align*}
+     \begin{align*}
+       P(X \leq 2)= P(X=0)+ P(X=1)+P(X=2)
+     \end{align*}
+     \begin{align*}
+       P(X=0) = \frac{e^{-5}5^0}{0!}= 0,0067\\
+       P(X=1) = \frac{e^{-5}5^1}{1!}= 0,0334\\
+       P(X=2) = \frac{e^{-5}5^2}{2!}= 0,0842
+     \end{align*}
+     Logo,
+     \begin{align*}
+       P(X \leq 2)= 0,0067+0,0334+0,0842=0,1243
+     \end{align*}
+   \end{description}
+     \subsubsection{O processo de Poisson}
+     
+     Suponha que $\mu$ seja a média de ocorrência do evento de interesse
+     em $t$ unidades de medida(por exemplo, tempo). Denotamos por $\lambda$,
+     a taxa média de ocorrência em uma unidade de medida, como $\mu= \lambda t$.
+     Podemos reescrever a f.m.p.\ por:
+     \begin{align*}
+       p_{x} =P(X=x)= \frac{e^{-\lambda t} \left( \lambda t \right)^{x}}{x!}, \quad x=0,1,2,\ldots
+     \end{align*}
+     \begin{description} 
+       \item{Exemplo}: Considere o exemplo anterior e calcule a probabilidade de que a central 
+         telefonica receba no maximo duas chamadas em 4 minutos.
+         \begin{align*}
+           P(X \leq 2 \/ t=4) = P(X=0)+P(X=1)+P(X=2)
+         \end{align*}
+     \begin{align*}
+       P(X=0) = \frac{e^{-5 \times 4}(5\times 4)^0}{0!}= 2,06 \times 10^{-9}\\
+       P(X=1) = \frac{e^{-5 \times 4}(5\times 4)^1}{1!}= 4,12 \times 10^{-8}\\
+       P(X=2) = \frac{e^{-5 \times 4}(5\times 4)^2}{2!}= 4,12 \times 10^{-7} 
+     \end{align*}
+    \begin{align*}
+      P(X \leq 2 \/ t=4)= 2,06 \times 10^{-9}+4,12 \times 10^{-8}+4,12 \times 10^{-7} = 4,56 \times 10^{-7} \approx 0
+    \end{align*} 
+
+   \end{description}
  \end{document}

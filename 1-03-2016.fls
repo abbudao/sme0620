@@ -263,6 +263,10 @@ INPUT tikz/figura1.tikz
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmtt8.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmtt8.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmtt8.tfm
 INPUT 1-03-2016.aux
 INPUT /home/abbud/.texlive/texmf-var/fonts/pk/ljfour/public/amsfonts/symbols/msbm10.480pk
 INPUT /home/abbud/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmmi6.600pk

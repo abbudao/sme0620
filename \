@@ -8,8 +8,6 @@
 \usepackage{amssymb}
 \usepackage{tikz}
 \usepackage{float}
-\usepackage{xcolor}
-\pgfplotsset{compat=1.7}
 \usetikzlibrary{shapes, backgrounds}
 \begin{document}
 % Dia 07/06/2017
@@ -2142,129 +2140,7 @@ gráfica eh conhecida por curva em forma de sino.
   \item {Definição:}  Uma v.a.\ contínua $X$ tem Distribuição normal com parâmetro $\mu$ (media) e 
     $\sigma^2$ se sua f.d.p.\ eh dada por:
     \begin{align}
-      f_{x} (X)= \frac{1}{\sqrt{2\pi \sigma^2}} e^{\frac{-1}{2\sigma^2} \left( x-\mu \right)^2} \quad -\infty<x<\infty \\
-
-      \text{Com } \quad -\infty < \mu < \infty, \quad \sigma^2>0
+      f_{x} (X)= \frac{1}{\sqrt{2\pi \sigma^2}}
     \end{align}
-  \item {Notação:} $X \sim N(\mu ; \sigma^2)$
-
-Uma ilustração gráfica da sua f.d.p.\ eh:
-%Grafico aqui
-A media e variância de $x$ sao:
-\begin{align*}
-E(x) =\mu \\
-Var(x)=\sigma^2
-\end{align*}
-\item {Propriedades:}
-A distribuição eh simetrica em relacao `a media. Isto eh,
-\begin{align}
-  f(\mu - x) = f(\mu+x), \quad \forall x \in \mathbb{R}
-\end{align}
-\item Como a area total sob a curva eh igual a 1, `a esquerda e `a direita de $\mu$, 
-  a area eh igual a $0,5$.
-\item 
-  \begin{align*}
-    P(\mu -\sigma \leq X \leq \mu+\sigma)= 0,6896\\
-    P(\mu -2\sigma \leq X \leq \mu+2\sigma)= 0,9546\\
-    P(\mu -3\sigma \leq X \leq \mu+3\sigma)= 0,9973
-  \end{align*}
-Ilustrando:
-%Grafico aqui
-%http://johncanning.net/wp/?p=1202
-
-A f.d.a.\ de uma v.a.\ $X \sim N(\mu,\sigma^2)$ eh:
-\begin{align*}
-  F_{x} (X)= P(X \leq x)= \int^{x}_{-\infty} \frac{1}{\sqrt{2\pi \sigma^2}}e^{\frac{-1}{2\sigma^2} \left( t- \mu \right)^2} dt 
-\end{align*}
-Cuja integral nao tem solucao analitica. Assim, calculamos suas probabilidades com auxilio de tabelas.
-
-\item {Definição}: Se $X \sim N(\mu; \sigma^2)$, entao a v.a.\ $Z$ eh definida por:
-  \begin{align}
-   Z= \frac{X-\mu}{\sigma} 
-  \end{align}
-  Tera a distribuição normal com media 0 e variância 1. Ou seja, $Z \sim N(0,1)$.
-  
-  Essa distribuição eh conhecida como distribuição normal-padrão ou reduzida. 
 \end{description}
-  \subsubsection{Calculo de probabilidades}
-  \begin{description}
-    \item {Exemplo} Uso da tabela normal padrão:
-
-      Seja $Z\sim N(0,1)$ calcule:
-      \begin{enumerate}
-        \item $P(0 \leq Z \leq 1,65)$
-        \item $P(Z \leq 0,5)$
-        \item $P(Z < -1,57)$
-        \item $P(-0,65 \leq Z \leq 0,5)$
-        \item $P(0,8 \leq Z < 1,4)$
-        \item $P(0 \leq Z \leq z)=0,4753$
-        \item $P(Z < z)=0,05$
-      \end{enumerate}
-      
-      Resolva:
-      \begin{enumerate}
-        \item $P(0 \leq Z \leq 1,65)$
-          % grafico aqui
-          %Olhando a primeira tabela:
-        \begin{align*}          P(0 \leq Z \leq 1,65)= 0,45053 \end{align*}
-          %Olhando a segunda tabela:
-          Ou:
-          \begin{align*}
-          P(0 \eq Z \leq 1,65)= P(Z < 1,65)-P(Z \leq 0) \\
-          = P(z < 1,65)- 0,5 \\
-          = 0,9505 - 0,5 = 0,4505
-        \end{align*}
-      \item $P(Z < 0,5)$
-%grafico aqui
-        \begin{align*}
-          P(Z < 0,5)= 0,5 + P(0 \leq Z \leq 0,5) \\
-          = 0,5 + 0,19146 \\
-          = 0,69146
-      \end{align*}
-      Ou 
-      \begin{align*}
-        P(Z <0,5) = 0,6915
-      \end{align*}
-
-    \item $ P(Z< -1,57)$
-      %grafico aqui
-      \begin{align*}
-        P(Z< -1,57) = P(Z> 1,57)\\
-        =0,5 - P(0 \leq Z \leq 1,57) \\
-        = 0,5 - 0,44179 \\
-        = 0,0582
-      \end{align*}
-      Ou 
-      \begin{align*}
-        P(Z < -1,57) = 0,0582
-      \end{align*}
-    \item $P(-0,65 \leq Z \leq 0,65)$
-      %Grafico aqui
-      \begin{align*}
-        P(-0,65 \leq Z \leq 0) = P(-0,65 \leq Z \leq 0) \\
-        =2 P(0 \leq Z \leq 0,65) \\
-        =2 \times 0,24215 \\
-        =0,4843
-      \end{align*}
-      \begin{align*}
-        P( -0,65 \leq Z \leq -0,65 ) = P(Z < 0,65) - P(Z < -0,65)
-      \end{align*}
-    \item 
-      %grafico aqui
-      \begin{align*}
-        P(0,8 < z < 1,4)  = P(0 \leq Z \leq 1,4) - P(0 \leq Z \leq 0,8) \\
-        = 0,41924 - 0,28814
-      \end{align*}
-    \item $P(0 \leq Z \leq z) = 0,4753$
-      %grafico aqui
-      \begin{align*}
-       z= 1,965 
-      \end{align*}
-    \item $P(Z < z) = 0,05$
-      %Grafico aqui
-      \begin{align*}
-       z= -1,645 
-      \end{align*}
-      \end{enumerate}
-  \end{description}
  \end{document}

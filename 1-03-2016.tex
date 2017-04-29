@@ -9,7 +9,7 @@
 \usepackage{tikz}
 \usepackage{float}
 \usepackage{xcolor}
-\pgfplotsset{compat=1.7}
+%\pgfplotsset{compat=1.7}
 \usetikzlibrary{shapes, backgrounds}
 \begin{document}
 % Dia 07/06/2017
@@ -1693,7 +1693,7 @@ os seguintes axiomas:
             =1-P(Y=0)
           \end{align*}
           \begin{align*}
-            P(Y=0)= \bin{20}{0} {0,03}^0 (1-0,03)^{20-0}\\
+            P(Y=0)= \binom{20}{0} (0,03)^0 (1-0,03)^{20-0}\\
             =0,5438
           \end{align*}
           \begin{align*}
@@ -1829,7 +1829,7 @@ os seguintes axiomas:
       Observações: 
       \begin{enumerate}
         \item Note que se $r=1$, temos o modelo geométrico.
-        \item $$\binom{x+r-1}{r-1}&= \binom{x+r-1}{x}$$
+        \item $$\binom{x+r-1}{r-1} = \binom{x+r-1}{x}$$
       \end{enumerate}
       A Binomial Negativa pode ser definida como o $n^o$ de ensaios necessários para 
       a obtenção do r-ésimo sucesso. Formando $y=x+r$ temos a quantidade desejada e 
@@ -1853,7 +1853,7 @@ os seguintes axiomas:
      \end{align*}
      Ou, de maniera similar, temos:
      \begin{align*}
-       Y: n^{o} de partidas até que $A$ venca o campeonato
+       Y: \text{ numero de partidas até que $A$ venca o campeonato}
      \end{align*}
      \begin{align*}
        P(Y=6)= \binom{6-1}{4-1} 0,55^{4} \times 0,45^{6-4} = 0,1853
@@ -2010,7 +2010,6 @@ que ocorrem em um certo periodo de tempo ou superficie ou volume.
     = 1-F_{x} (a_1) \\
     P(X \eq a_1)= F_{x}(a_1)
   \end{align*}
-   \end{description}
  \item A media de $x$ eh:
    \begin{align*}
      E(X) = \frac{a+b}{2}
@@ -2023,7 +2022,7 @@ que ocorrem em um certo periodo de tempo ou superficie ou volume.
      Calcule:
 \begin{enumerate}[label=(\alph*)]
   \item $F_{x} (x)$
-  \item P(\frac{-1}{4} \leq x \leq \frac{1}{4})
+  \item $P(\frac{-1}{4} \leq x \leq \frac{1}{4})$
   \item $E(x)$ e $Var(x)$
 \end{enumerate}
 Sabe-se que:
@@ -2065,9 +2064,11 @@ Assim, a f.d.p.\ de $x$ eh:
         Var(x)= \frac{ \left( b-a \right)^2 }{12}= \frac{ \left( \frac{1}{2} + \frac{1}{2} \right)^2 }{12}= \frac{1}{12}
       \end{align*}
 \end{enumerate}
+
+   \end{description}
 \subsection{Distribuição Exponencial}
 \begin{description}
-  \item {Definição}: Uma v.a.\ contínua $X$ tem distribuição exponencial com parâmetro $\labmda, \lambda>0$, se sua
+  \item {Definição}: Uma v.a.\ contínua $X$ tem distribuição exponencial com parâmetro $\lambda, \lambda>0$, se sua
     f.d.p.\ eh dada por:
     \begin{align*}
       f_{x} (x)= \begin{cases}
@@ -2122,8 +2123,8 @@ Assim, a f.d.p.\ de $x$ eh:
         com vida media de 100 horas. Qual a probabilidade de um fusivel durar mais de 150
         horas?
         \begin{align*}
-          X \mathtt{\sim}  Exp(\frac{1}{100}) \\
-          \mu = E(x)= \frac{1}{\lambda}=100 \right \lambda= \frac{1}{100}\\
+          X \sim  Exp(\frac{1}{100}) \\
+          \mu = E(x)= \frac{1}{\lambda}=100 \left( \lambda= \frac{1}{100} \right)\\
           P(X> 150)= int_{150}^{\infty} \frac{1}{100} e^{- \frac{1}{100} x} dx \\
           =0,22313
         \end{align*}
@@ -2143,7 +2144,6 @@ gráfica eh conhecida por curva em forma de sino.
     $\sigma^2$ se sua f.d.p.\ eh dada por:
     \begin{align}
       f_{x} (X)= \frac{1}{\sqrt{2\pi \sigma^2}} e^{\frac{-1}{2\sigma^2} \left( x-\mu \right)^2} \quad -\infty<x<\infty \\
-
       \text{Com } \quad -\infty < \mu < \infty, \quad \sigma^2>0
     \end{align}
   \item {Notação:} $X \sim N(\mu ; \sigma^2)$
@@ -2210,7 +2210,7 @@ Cuja integral nao tem solucao analitica. Assim, calculamos suas probabilidades c
           %Olhando a segunda tabela:
           Ou:
           \begin{align*}
-          P(0 \eq Z \leq 1,65)= P(Z < 1,65)-P(Z \leq 0) \\
+          P(0 \leq Z \leq 1,65)= P(Z < 1,65)-P(Z \leq 0) \\
           = P(z < 1,65)- 0,5 \\
           = 0,9505 - 0,5 = 0,4505
         \end{align*}
@@ -2266,5 +2266,228 @@ Cuja integral nao tem solucao analitica. Assim, calculamos suas probabilidades c
        z= -1,645 
       \end{align*}
       \end{enumerate}
+
+    \item {Exemplo:} Seja $X \sim N(90,100)$ \\
+      \begin{description}
+        \item  {Determine:}
+      \begin{enumerate}[label=(\alph*)]
+        \item $P(80 < x < 100)$
+        \item $P(x \geq  90)$
+        \item $P(60 \leq x \leq 75 )$
+      \end{enumerate}
+
+    \item {Resolucão:}
+      \begin{enumerate}[label=(\alph*)]
+        \item $P(80 < x < 100)$
+          %grafico aqui
+          \begin{align*}
+            Z= \frac{X-\mu  }{\sigma} \\
+            z_1 = \frac{80-90}{10}=-1\\
+            z_2 = \frac{100-90}{10}=1
+          \end{align*}
+         \begin{align*}
+           P(80<X < 100) = P(-1 < Z <1)
+         \end{align*} 
+            %Grafico aqui
+         \begin{align*}
+           P(-1 < Z < 1)  = 2 \times P(0<Z < 1) \\
+           = 2 \times 0,34134 \\
+           =0,6826
+         \end{align*}
+
+        \item $P(x \geq  90)$
+          %grafico aqui
+          \begin{align*}
+            P(x \geq 90) =P(Z \geq \frac{90-90}{10}) \\
+            = P(Z \geq 0)=0,5
+          \end{align*}
+
+        \item $P(60 \leq x \leq 75 )$
+          %grafico aqui
+          \begin{align*}
+            P(60 \leq X \leq 75 ) \\
+            =P(\frac{60-90}{10} \leq Z \leq \frac{75-90}{10}) \\
+            =P(-3 \leq Z \leq 1,5)
+          \end{align*}
+          %Grafico aqui
+          \begin{align*}
+            P(-3 < Z < -1,5)\\
+            =P(Z <1,5)- P(Z< -3) \\
+            =0,0668- 0,0013 \\
+            =0,0655
+          \end{align*}
+
+      \end{enumerate}
+    \item {Exemplo:} Seja $X \sim \mathtt{N}(50; 10^2)$
+      \begin{description}
+        \item {Determine:}
+          \begin{enumerate}[label=(\alph*)]
+   \item $P(|X-50| <10)$
+  \item $P( \mu-a \leq X \leq \mu +a )=0,9$
+  \item $P(K< X <70)=0,8185$
+  \item $P(K < x <75)= 0,3031$
+          \end{enumerate}
+        \item {Resolucao:}
+\begin{enumerate}[label=(\alph*)]
+   \item $P(|X-50| <10)$
+     \begin{align*}
+       \begin{cases}
+        X-50<10 \Rightarrow X<60 \\
+        -(X-50) <10 \Rightarrow X>40
+       \end{cases}
+     \end{align*}
+     \begin{align*}
+       P(|X-50| <10)  = P(40<X<60) \\
+   = P(\frac{40-50}{10}< Z < \frac{60-50}{10}) \\
+   = P(-1 < Z < 1)
+ \end{align*} 
+ %grafico aqui
+\begin{align*}
+  P(-1 < Z <1)  = 2 \times P(0 < Z <1) \\
+  = 2 \times 0,34124 \\
+  \simeq 0,68
+\end{align*}
+
+  \item $P( \mu-a \leq X \leq \mu +a )=0,9$
+\begin{align*}
+  P(50- a \leq X \leq 50 +a)  = 0,9 \\
+  P(\frac{(50-a)-50}{10}) \leq Z \leq \frac{(50+a)-50}{10} \\
+  P(\frac{-a}{10} \leq Z \leq \frac{a}{10})=0,9 
+\end{align*}
+%grafico aqui
+\begin{align*}
+  P( \frac{-a}{10} \leq Z \leq \frac{a}{10} ) = 2 \times P(0 \leq Z \leq \frac{9}{10})= 0,9 \\
+  P(0 \leq Z \leq \frac{a}{10})=0,45 \\
+  \frac{a}{10}= 1,645 \\
+  a = 16,5
+\end{align*}
+  \item $P(K< X <70)=0,8185$
+    %grafico aqui
+    \begin{align*}
+      P( \frac{K-50}{10} < Z < \frac{70-50}{10} ) = 0,8185 \\
+      P(\frac{K-50}{10} < Z < 2) =0,8185
+    \end{align*}
+    %grafico aqui
+    \begin{align*}
+      P( \frac{K-50}{10}<Z<2 )  = 0,8185 \\
+      P( \frac{K-50}{10} < Z <0) + P(0 < Z <2) =0,8185 \\
+      P(\frac{K-50}{10}<Z < 0) = 0,8185 - 0,47725 \\
+      P( \frac{K-50}{10} < Z < 0 ) =0,3413
+    \end{align*}
+    %grafico aqui
+    \begin{align*}
+      \frac{-(K-50)}{10} = 10 \\
+      K= 40
+    \end{align*}
+  \item $P(K < x <75)= 0,3031$
+    %grafico aqui
+    Temos o caso do Grafico 1 caso $P(50 < X < 75) > 0,3031$. Do contrário, se 
+    $P(50 < X < 75) < 0,3031$, temos o caso do Grafico 2.
+    \begin{align*}
+      P(50 < X < 75)  \\
+      =P(\frac{50-50}{10} < Z < \frac{75-50}{10}) \\
+      =P(0 < Z < 2,5) = 0,49379
+    \end{align*}
+    %Grafico aqui
+    \begin{align*}
+      P(K < X < 75)  = 0,3031\\
+      =P(\frac{K-50}{10}< Z <2,5)= 0,3031
+    \end{align*}
+    %Grafico aqui
+    \begin{align*}
+      P(0 < Z < 2,5)  - P(0 < Z  < \frac{k-50}{k})=0,3031 \\
+      0,49379 - 0,3031 = P(0 < Z < \frac{k-50}{10}) \\
+      P(0<Z < \frac{\underbrace{k-50}_{0,495}}{10})= 0,19069  \\
+      \frac{K-50}{10}= 0,495 \Rightarrow  K=4,95 +50 \\
+      K=54,95
+    \end{align*}
+\end{enumerate}
+
+    \end{description}
   \end{description}
+  \subsubsection{Distribuição da Combinacao linear de v.a.\`s normais independentes}
+  \begin{description}
+    \item Sejam $X_1, X_2 , \ldots, X_n $ e  $n$ v.a.\`s tais que:
+  \begin{align*}
+    X_i \sim \mathtt{N}(\mu ; \sigma^2)  \quad \text{para} \quad i=1,2,\ldots,n
+  \end{align*}
+  Considere $Y= \sum_{i=1}^{n} X_i = X_1+\ldots+X_n$, temos que:
+  \begin{align*}
+    E(Y)  = E( \sum_{i}^{n} X_i ) = \sum_{i=1}^{n} E(X_i) \\
+    = \sum_{i=1}^{n} \mu = n \times \mu
+  \end{align*}
+  Ou
+  \begin{align*}
+    E(Y )  =E( \sum_{i=1}^n X_i )= E(X_1 + \ldots +X_n) \\
+    = E(X_1) +E(X_2) + \ldots +E(X_n)\\
+    =\underbrace{\mu + \mu + \dots + \mu}_{n} = n \times \mu
+  \end{align*}
+  Assim:
+  \begin{align*}
+    Var(Y) = Var(\sum_{i=1}^{n} X_i)= \sum^{n}_{i=1} Var(X_i) \\
+    = \sum_{i=1}^{n} \sigma^2 = n  \times \sigma^2
+  \end{align*}
+  Logo, $Y \sim \mathtt{N}(n\mu ; n \sigma^2)$.
+
+  Pelas propriedades da distribuição normal, temos que se $Y\sim \mathtt{N}(n\mu; n\sigma^2)$, 
+  a variável reduzida sera:
+  \begin{align*}
+    Z= \frac{Y- E(Y)}{\sqrt{Var(Y)}} = \frac{Y- n\mu}{\sqrt{n\sigma^2}} \sim \mathtt{N}(0,1)
+  \end{align*}
+  Analogamente, temos a média amostral:
+  \begin{align*}
+    \bar{X} = \frac{\sum_{i}^{n}}{X_i}
+  \end{align*}
+  Com isso, temos:
+  \begin{align*}
+    E(\bar{X}) = E( \frac{\sum_{i=1}^n X_i}{n} )= \frac{1}{n}\sum_{i=1}^{n} E(X_i) \\
+    = \frac{1}{n} \sum_{i=1}^n \mu = \frac{1}{n} \times n \times \mu = \mu
+  \end{align*}
+  E também:
+  \begin{align*}
+    Var(\bar{X}) = Var(\frac{\sum_{i=1}^n}{n}) \\
+    = \frac{1}{n^2} \sum_{i=1}^{n} Var(X_i) \\
+    = \frac{1}{n^2} \sum_{i=1}^{n} \sigma^2 = \frac{1}{n^2} \times n \times \sigma^2 \\
+    = \frac{\sigma^2}{n}
+  \end{align*}
+  Logo $\bar{X} \sim \mathtt{N} ( \mu ; \frac{\sigma^2}{n} ) $
+
+  A variável reduzida eh:
+  \begin{align*}
+    Z = \frac{\bar{X}- E(\bar{X})}{\sqrt{Var(\bar{X})}} = \frac{\bar{x} - \mu}{\sqrt{\frac{\sigma^2}{n}}} \\
+    = \frac{\bar{x}- \mu}{\frac{\sigma}{\sqrt{n}}} \\
+    Z= \frac{\sqrt{n} (\bar{X} -\mu)}{\sigma} \sim \mathtt{N} (0,1)
+  \end{align*}
+\item {Exemplo:} O peso de sacos de parafusos empacotados por uma maquina tem media de $50g$ e desvio-padrão de $2g$.
+  Assumindo que  o peso tem distribuição normal, qual a probabilidade de que 10 sacos pesem juntos de $490g$? 
+  Qual a probabilidade de que a media desses 10 sacos sejam no maximo $52g$?
+
+\begin{enumerate}[label=(\alph*)]
+  \item
+  \begin{align*}
+    X \sim \mathtt{N} (50, 2^2) \\
+    X_1, X_2, \ldots , X_{10 } \\
+    Y= \sum_{i=1}^{n} X_i < 490 \\
+    Y \sim \mathtt{N}(500 ; 10 \times 2^2) \\
+    P(Y <490 ) = P(Z < \frac{490-500}{\sqrt{40}}) \\
+    P(Z< -1,58) = 0,0571
+  \end{align*}
+  %grafico aqui
+
+\item $\bar{X \leq 52g}$
+  \begin{align*}
+    \bar{X}  = \frac{\sum X_{i}}{n} \sim \mathtt{N}(\mu ; \frac{\sigma^2}{n}) \\
+    \bar{X} \sim N(50; \frac{2^2}{10})
+  \end{align*}
+  \begin{align*}
+    P(X \leq 52)  = P(Z \leq \frac{52-50}{\sqrt{\frac{2}{5}}}) \\
+    = P(Z \leq 3,16)
+  \end{align*}
+  %Grafico 
+  \begin{align*}
+    P(Z \leq 3,16 ) = 0,9992
+  \end{align*}
+\end{enumerate}
+\end{description}
+\end{description}
  \end{document}

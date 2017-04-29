@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2017.1.29)  25 APR 2017 08:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2017.1.29)  27 APR 2017 13:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -698,18 +698,18 @@ File: tikzlibrarybackgrounds.code.tex 2013/07/18 v3.0.1a (rcs-revision 1.3)
 ) (./1-03-2016.aux)
 \openout1 = `1-03-2016.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
 ABD: EveryShipout initializing macros (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count127
@@ -760,26 +760,26 @@ Package grfext Info: Graphics extension search list:
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 Cap\'{\i }tulo 1.
-LaTeX Font Info:    Try loading font information for U+msa on input line 22.
+LaTeX Font Info:    Try loading font information for U+msa on input line 24.
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 22.
+LaTeX Font Info:    Try loading font information for U+msb on input line 24.
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Overfull \hbox (3.05264pt too wide) in paragraph at lines 22--24
+Overfull \hbox (3.05264pt too wide) in paragraph at lines 24--26
 []\OT1/cmr/m/n/10.95 : s~ao os acon-te-ci-men-tos cu-
  []
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 29.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 31.
 (/usr/share/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 29.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 31.
 
-Overfull \hbox (13.67647pt too wide) in paragraph at lines 44--46
+Overfull \hbox (13.67647pt too wide) in paragraph at lines 46--48
 []\OT1/cmr/m/n/10.95 : qual-quer sub-con-junto do espa^^Xco amos-tral $
 $ do ex-pe-ri-mento aleat^^Sorio
  []
@@ -788,33 +788,33 @@ $ do ex-pe-ri-mento aleat^^Sorio
 
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./tikz/figura1.tikz) (./tikz/figura2.tikz) [2] (./tikz/figura3.tikz) (./tikz/figura4.tikz) (./tikz/figura5.tikz) [3] (./tikz/figura6.tikz) (./tikz/figura7.tikz) (./tikz/figura8.tikz) [4] (./tikz/figura9.tikz) (./tikz/figura10.tikz) [5] (./tikz/figura1.tikz)
-Overfull \hbox (8.30537pt too wide) in paragraph at lines 240--241
+Overfull \hbox (8.30537pt too wide) in paragraph at lines 242--243
 \OT1/cmr/m/n/10.95 Se um ex-pe-ri-mento aleat^^Sorio ti-ver $\OML/cmm/m/it/10.95 n$ \OT1/cmr/m/n/10.95 re-sul-ta-dos poss^^S^^Pveis, $
  = \OMS/cmsy/m/n/10.95 f\OML/cmm/m/it/10.95 ![]; ![]; [] ; ![]\OMS/cmsy/m/n/10.95 g$\OT1/cmr/m/n/10.95 ,
  []
 
 [6] [7]
-Overfull \hbox (14.8718pt too wide) in paragraph at lines 349--349
+Overfull \hbox (14.8718pt too wide) in paragraph at lines 351--351
 [] 
  []
 
 [8] [9] [10] [11] [12] [13] [14] [15] [16]
-Overfull \hbox (6.97757pt too wide) in paragraph at lines 771--773
+Overfull \hbox (6.97757pt too wide) in paragraph at lines 773--775
 []$\OML/cmm/m/it/10.95 Y$ \OT1/cmr/m/n/10.95 in-dica o tempo de vida (em ho-ras) de um equi-pa-mento eletr^onico.
  []
 
 
-Overfull \hbox (1.25287pt too wide) in paragraph at lines 771--773
+Overfull \hbox (1.25287pt too wide) in paragraph at lines 773--775
 \OML/cmm/m/it/10.95 Y$ \OT1/cmr/m/n/10.95 pode as-su-mir va-lo-res em $\U/msb/m/n/10.95 R[]$ \OT1/cmr/m/n/10.95 e as-sim ^^Se cha-mado de v.a. cont^^S^^Pnua. 
  []
 
 
-Overfull \hbox (48.19504pt too wide) in paragraph at lines 777--779
+Overfull \hbox (48.19504pt too wide) in paragraph at lines 779--781
 []\OT1/cmr/m/n/10.95 : Seja x uma v.a. dis-creta que as-sume va-lo-res em $\OML/cmm/m/it/10.95 R[] \OT1/cmr/m/n/10.95 = \OMS/cmsy/m/n/10.95 f\OML/cmm/m/it/10.95 x[]; x[]; [] ; x[]; [] \OMS/cmsy/m/n/10.95 g$\OT1/cmr/m/n/10.95 .
  []
 
 [17]
-Overfull \hbox (10.29048pt too wide) in paragraph at lines 825--825
+Overfull \hbox (10.29048pt too wide) in paragraph at lines 827--827
 [] 
  []
 
@@ -822,200 +822,64 @@ Overfull \hbox (10.29048pt too wide) in paragraph at lines 825--825
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [27]
-Overfull \hbox (21.41458pt too wide) in paragraph at lines 1258--1258
+Overfull \hbox (21.41458pt too wide) in paragraph at lines 1260--1260
 []\OT1/cmr/bx/n/14.4 Esperan^^Xca Ma-tem^^Satica de uma Vari^^Savel Aleat^^Soria 
  []
 
 [28] [29] [30]
-Underfull \hbox (badness 10000) in paragraph at lines 1669--1670
+Underfull \hbox (badness 10000) in paragraph at lines 1671--1672
 
  []
 
 [31]
-Underfull \hbox (badness 10000) in paragraph at lines 1670--1672
+Underfull \hbox (badness 10000) in paragraph at lines 1672--1674
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1672--1673
+Underfull \hbox (badness 10000) in paragraph at lines 1674--1675
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1685--1686
+Underfull \hbox (badness 10000) in paragraph at lines 1687--1688
 
  []
-
-./1-03-2016.tex:1696: Undefined control sequence.
-<argument>  P(Y=0)= \bin 
-                         {20}{0} {0,03}^0 (1-0,03)^{20-0}\\ =0,5438 
-l.1696           \end{align*}
-                             
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-./1-03-2016.tex:1696: Undefined control sequence.
-<argument>  P(Y=0)= \bin 
-                         {20}{0} {0,03}^0 (1-0,03)^{20-0}\\ =0,5438 
-l.1696           \end{align*}
-                             
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
 
 [32]
-Overfull \hbox (53.42747pt too wide) in paragraph at lines 1720--1725
+Overfull \hbox (53.42747pt too wide) in paragraph at lines 1722--1727
 \OML/cmm/m/it/10.95 p \OT1/cmr/m/n/10.95 :  []$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1720--1725
+Underfull \hbox (badness 10000) in paragraph at lines 1722--1727
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1725--1726
+Underfull \hbox (badness 10000) in paragraph at lines 1727--1728
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1726--1727
+Underfull \hbox (badness 10000) in paragraph at lines 1728--1729
 
  []
 
 [33]
-Underfull \hbox (badness 10000) in paragraph at lines 1788--1790
+Underfull \hbox (badness 10000) in paragraph at lines 1790--1792
 
  []
 
-[34]
-./1-03-2016.tex:1830: Misplaced alignment tab character &.
-l.1830         \item $$\binom{x+r-1}{r-1}&
-                                          = \binom{x+r-1}{x}$$
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-
-LaTeX Warning: Command \' invalid in math mode on input line 1855.
-
-./1-03-2016.tex:1855: Please use \mathaccent for accents in math mode.
-\add@accent ...@spacefactor \spacefactor }\accent 
-                                                  #1 #2\egroup \spacefactor ...
-l.1855      \end{align*}
-                        
-I'm changing \accent to \mathaccent here; wish me luck.
-(Accents are not the same in formulas as they are in text.)
-
-./1-03-2016.tex:1855: You can't use `\spacefactor' in math mode.
-\add@accent ...}\accent #1 #2\egroup \spacefactor 
-                                                  \accent@spacefactor 
-l.1855      \end{align*}
-                        
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-./1-03-2016.tex:1855: Missing } inserted.
-<inserted text> 
-                }
-l.1855      \end{align*}
-                        
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-Missing character: There is no Ë in font cmex10!
-./1-03-2016.tex:1855: Missing { inserted.
-<inserted text> 
-                {
-l.1855      \end{align*}
-                        
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-
-LaTeX Warning: Command \' invalid in math mode on input line 1855.
-
-./1-03-2016.tex:1855: Please use \mathaccent for accents in math mode.
-\add@accent ...@spacefactor \spacefactor }\accent 
-                                                  #1 #2\egroup \spacefactor ...
-l.1855      \end{align*}
-                        
-I'm changing \accent to \mathaccent here; wish me luck.
-(Accents are not the same in formulas as they are in text.)
-
-./1-03-2016.tex:1855: You can't use `\spacefactor' in math mode.
-\add@accent ...}\accent #1 #2\egroup \spacefactor 
-                                                  \accent@spacefactor 
-l.1855      \end{align*}
-                        
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-./1-03-2016.tex:1855: Missing } inserted.
-<inserted text> 
-                }
-l.1855      \end{align*}
-                        
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-Missing character: There is no Ë in font cmex10!
-./1-03-2016.tex:1855: Missing \endgroup inserted.
-<inserted text> 
-                \endgroup 
-l.1855      \end{align*}
-                        
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./1-03-2016.tex:1855: Misplaced \omit.
-\math@cr@@@ ...@ \@ne \add@amps \maxfields@ \omit 
-                                                  \kern -\alignsep@ \iftag@ ...
-l.1855      \end{align*}
-                        
-I expect to see \omit only after tab marks or the \cr of
-an alignment. Proceed, and I'll ignore this case.
-
-./1-03-2016.tex:1855: Missing { inserted.
-<inserted text> 
-                {
-l.1855      \end{align*}
-                        
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-[35] [36] [37]
-Overfull \hbox (15.08875pt too wide) in paragraph at lines 1950--1950
+[34] [35] [36] [37]
+Overfull \hbox (15.08875pt too wide) in paragraph at lines 1952--1952
 [] 
  []
 
-./1-03-2016.tex:1967: Undefined control sequence.
+./1-03-2016.tex:1969: Undefined control sequence.
 <argument>  P=0,05 \quad \talque 
                                  \quad X \mathtt {\sim } Bin(100, 0,05) \\ P...
-l.1967     \end{align*}
+l.1969     \end{align*}
                        
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1023,10 +887,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./1-03-2016.tex:1967: Undefined control sequence.
+./1-03-2016.tex:1969: Undefined control sequence.
 <argument>  P=0,05 \quad \talque 
                                  \quad X \mathtt {\sim } Bin(100, 0,05) \\ P...
-l.1967     \end{align*}
+l.1969     \end{align*}
                        
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1035,15 +899,15 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Overfull \hbox (32.31715pt too wide) in paragraph at lines 1967--1967
+Overfull \hbox (32.31715pt too wide) in paragraph at lines 1969--1969
 [] 
  []
 
 [38]
-./1-03-2016.tex:2010: Undefined control sequence.
+./1-03-2016.tex:2012: Undefined control sequence.
 <argument> ... a_1) \\ = 1-F_{x} (a_1) \\ P(X \eq 
                                                   a_1)= F_{x}(a_1) 
-l.2010   \end{align*}
+l.2012   \end{align*}
                      
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1051,10 +915,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./1-03-2016.tex:2010: Undefined control sequence.
+./1-03-2016.tex:2012: Undefined control sequence.
 <argument> ... a_1) \\ = 1-F_{x} (a_1) \\ P(X \eq 
                                                   a_1)= F_{x}(a_1) 
-l.2010   \end{align*}
+l.2012   \end{align*}
                      
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1062,312 +926,33 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-
-./1-03-2016.tex:2012: LaTeX Error: Lonely \item--perhaps a missing list environment.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2012  \item A
-                media de $x$ eh:
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-Underfull \hbox (badness 10000) detected at line 2012
-[][]
- []
-
-
-./1-03-2016.tex:2016: LaTeX Error: Lonely \item--perhaps a missing list environment.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2016  \item E
-                a vari√¢ncia de $x$ eh:
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-Underfull \hbox (badness 10000) detected at line 2016
-[][]
- []
-
-
-./1-03-2016.tex:2020: LaTeX Error: Lonely \item--perhaps a missing list environment.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2020    \item{
-                Exemplo}: Seja $X$ uma v.a.\ com distribui√ß√£o uniforme, $U...
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-Underfull \hbox (badness 10000) detected at line 2020
-[][]
- []
-
-./1-03-2016.tex:2024: Missing $ inserted.
-<inserted text> 
-                $
-l.2024   \item P(\frac{-1}{4}
-                              \leq x \leq \frac{1}{4})
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./1-03-2016.tex:2024: Extra }, or forgotten $.
-\frac  #1#2->{\begingroup #1\endgroup \@@over #2}
-                                                 
-l.2024   \item P(\frac{-1}{4}
-                              \leq x \leq \frac{1}{4})
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-
-./1-03-2016.tex:2025: LaTeX Error: Command \item invalid in math mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2025   \item
-               $E(x)$ e $Var(x)$
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-./1-03-2016.tex:2025: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2025   \item $
-                E(x)$ e $Var(x)$
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-./1-03-2016.tex:2025: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2025   \item $
-                E(x)$ e $Var(x)$
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-./1-03-2016.tex:2026: LaTeX Error: Command \end{enumerate} invalid in math mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2026 \end{enumerate}
-                      
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-./1-03-2016.tex:2026: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2026 \end{enumerate}
-                      
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-./1-03-2016.tex:2026: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2026 \end{enumerate}
-                      
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-./1-03-2016.tex:2026: Missing $ inserted.
-<inserted text> 
-                $
-l.2026 \end{enumerate}
-                      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./1-03-2016.tex:2026: Missing } inserted.
-<inserted text> 
-                }
-l.2026 \end{enumerate}
-                      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-[39]
-./1-03-2016.tex:2068: Undefined control sequence.
-<recently read> \labmda 
-                        
-l.2068 ...ß√£o exponencial com par√¢metro $\labmda
-                                                  , \lambda>0$, se sua
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-Overfull \hbox (6.41483pt too wide) in paragraph at lines 2068--2070
+[39] [40]
+Overfull \hbox (6.41483pt too wide) in paragraph at lines 2071--2073
 []\OT1/cmr/m/n/10.95 Defini^^Xc~ao: Uma v.a. cont^^S^^Pnua $\OML/cmm/m/it/10.95 X$ \OT1/cmr/m/n/10.95 tem dis-tri-bui^^Xc~ao ex-po-nen-cial com par^ametro
  []
 
-[40]
-./1-03-2016.tex:2127: Missing } inserted.
-<inserted text> 
-                }
-l.2127         \end{align*}
-                           
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
+[41] [42] [43] [44]
+Underfull \hbox (badness 10000) in paragraph at lines 2270--2272
 
-./1-03-2016.tex:2127: Missing delimiter (. inserted).
-<to be read again> 
-                   \lambda 
-l.2127         \end{align*}
-                           
-I was expecting to see something like `(' or `\{' or
-`\}' here. If you typed, e.g., `{' instead of `\{', you
-should probably delete the `{' by typing `1' now, so that
-braces don't get unbalanced. Otherwise just proceed.
-Acceptable delimiters are characters whose \delcode is
-nonnegative, or you can use `\delimiter <delimiter code>'.
+ []
 
-./1-03-2016.tex:2127: Extra \right.
-<to be read again> 
-                   \lambda 
-l.2127         \end{align*}
-                           
-I'm ignoring a \right that had no matching \left.
+[45] [46] [47] [48]
+Underfull \vbox (badness 1590) has occurred while \output is active []
 
-./1-03-2016.tex:2127: Missing { inserted.
-<inserted text> 
-                {
-l.2127         \end{align*}
-                           
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-./1-03-2016.tex:2127: Missing } inserted.
-<inserted text> 
-                }
-l.2127         \end{align*}
-                           
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./1-03-2016.tex:2127: Missing delimiter (. inserted).
-<to be read again> 
-                   \lambda 
-l.2127         \end{align*}
-                           
-I was expecting to see something like `(' or `\{' or
-`\}' here. If you typed, e.g., `{' instead of `\{', you
-should probably delete the `{' by typing `1' now, so that
-braces don't get unbalanced. Otherwise just proceed.
-Acceptable delimiters are characters whose \delcode is
-nonnegative, or you can use `\delimiter <delimiter code>'.
-
-./1-03-2016.tex:2127: Extra \right.
-<to be read again> 
-                   \lambda 
-l.2127         \end{align*}
-                           
-I'm ignoring a \right that had no matching \left.
-
-./1-03-2016.tex:2127: Missing \endgroup inserted.
-<inserted text> 
-                \endgroup 
-l.2127         \end{align*}
-                           
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./1-03-2016.tex:2127: Misplaced \omit.
-\math@cr@@@ ...@ \@ne \add@amps \maxfields@ \omit 
-                                                  \kern -\alignsep@ \iftag@ ...
-l.2127         \end{align*}
-                           
-I expect to see \omit only after tab marks or the \cr of
-an alignment. Proceed, and I'll ignore this case.
-
-./1-03-2016.tex:2127: Missing { inserted.
-<inserted text> 
-                {
-l.2127         \end{align*}
-                           
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-[41]
-
-./1-03-2016.tex:2138: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2138 \end{description}
-                        
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[42] (./1-03-2016.aux) ) 
+[49] [50] (./1-03-2016.aux) ) 
 Here is how much of TeX's memory you used:
- 15488 strings out of 493013
- 313525 string characters out of 6139317
+ 15487 strings out of 493013
+ 313524 string characters out of 6139317
  393827 words of memory out of 5000000
- 18675 multiletter control sequences out of 15000+600000
+ 18674 multiletter control sequences out of 15000+600000
  12389 words of font info for 48 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,19n,67p,408b,966s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on 1-03-2016.pdf (42 pages, 250851 bytes).
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on 1-03-2016.pdf (50 pages, 274241 bytes).
 PDF statistics:
- 200 PDF objects out of 1000 (max. 8388607)
- 140 compressed objects within 2 object streams
+ 230 PDF objects out of 1000 (max. 8388607)
+ 161 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

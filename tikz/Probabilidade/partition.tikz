@@ -1,0 +1,30 @@
+\tikzset{rec/.style={thick,text width=2cm,font=\bfseries\large,align=left, text opacity=1},
+line/.style={ line width=2pt},
+%sharea/.style={shade, left color=gray!50, right color=white} % B/W shading
+}
+\begin{tikzpicture}[scale=1.5]
+%\path[sharea](-0.2,-0.2) rectangle (5.2,5.2);
+\draw[line width=3pt] (0,0) rectangle (5,5);
+% north west lines area
+% \fill[white] (1.8,3.8) to [out=-120,in=90] (2.5,0)--(0,0)--(0,3); % blue line to the left
+% \fill[white] (0,5)--(3.7,5).. controls (3,2.5) .. (0,1.5)-- cycle; % Yellow line to the left
+% \fill[white] (3,5) to[out=-135,in=15] (1.8,3.8) to [out=-200, in=35] (0,3.4) --(0,5)--(3,5); 
+
+\draw[line] (3,5) to[out=-135,in=15](1.8,3.8) to [out=-200, in=35] (0,3.4);
+\draw[line] (1.8,3.8) to[out=-120,in=90](2.5,0);
+\draw[line] (3.7,5).. controls (3,2.5) .. (0,1.5);
+\draw[line] (5,2.5) to[out=-180,in=10] (2.6,2.6);
+\draw[line] (4.2,2.5) to[out=-90,in=90] (4,0);
+\draw[line] (4,1) to[out=160,in=0] (2.3,1);
+
+% node to place text
+\node[rec] at (1.2,0.8)           {$A_5$};
+\node[rec] at (2.8,3.3)           {$A_3$};
+\node[rec] at (3.5,1.8)             {$\ldots$};
+\node[rec] at (1,4.5)             {$A_1$};
+\node[rec,rotate=40] at (1.1,3.1) {$A_2$};
+\node[rec,rotate=10] at (4.5,3.8)   {$A_4$};
+\node[rec] at (3.6,0.5)           {$A_6$};
+\node[rec,rotate=50] at (4.7,1)   {$A_k$};
+\node at (4.9,-0.3)           {$\Omega$};
+\end{tikzpicture}

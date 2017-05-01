@@ -7,10 +7,10 @@
 \draw (-2,-2) rectangle(4,2) ;
 \node at (3.5,-1.5) {$\Omega$};
 
-\draw \firstcircle node[below] {$A$};
-\draw \thirdcircle node [below] {$B$};
+\draw \firstcircle node {$A$};
 \fill[blue] \firstcircle;
-\clip \firstcircle;
-\fill[purple] \thirdcircle;
+\draw \thirdcircle ;
+\fill[white,opacity=1] \thirdcircle;
+\node at (2,0) {$B$};
 \end{scope}
 \end{tikzpicture}

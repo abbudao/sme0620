@@ -1,0 +1,56 @@
+% Set the overall layout of the tree
+\tikzstyle{level 1}=[level distance=3.5cm, sibling distance=3.5cm]
+\tikzstyle{level 2}=[level distance=3.5cm, sibling distance=2cm]
+
+% Define styles for bags and leafs
+\tikzstyle{bag} = [text width=4em, text centered]
+\tikzstyle{end} = [circle, minimum width=3pt,fill, inner sep=0pt]
+
+% The sloped option gives rotated edge labels. Personally
+% I find sloped labels a bit difficult to read. Remove the sloped options
+% to get horizontal labels. 
+\begin{tikzpicture}[grow=right, sloped]
+  %Create a start Node and childs
+  \node[bag] {$  $}
+  child {
+    node[bag] {$D$}
+        child {
+                    node[end, label=right:
+                        {$ U $}] {}
+                    edge from parent
+                    node[above] {$ P(U/D) $}
+                    node[below]  {$ 0,33 $}
+                }
+                    child {
+                                node[end, label=right:
+                                    {$ N $}] {}
+                                edge from parent
+                                node[above] {$ P(N/D) $}
+                                node[below]  {$ 0,67 $}
+                            }
+    edge from parent
+    node[above] {$ P(D) $}
+    node[below]  {$ 0,6 $}
+  }
+  child {
+    node[bag] {$L$}
+        child {
+                    node[end, label=right:
+                        {$ U $}] {}
+                    edge from parent
+                    node[above] {$ P(U/L) $}
+                    node[below]  {$ 0,25 $}
+                }
+                    child {
+                                node[end, label=right:
+                                {$ N $}] {}
+                                edge from parent
+                                node[above] {$ P(N/L) $}
+                                node[below]  {$ 0,75 $}
+                            }
+    edge from parent
+    node[above] {$ P(L) $}
+    node[below]  {$ 0,4 $}
+  }
+  ;
+\end{tikzpicture}

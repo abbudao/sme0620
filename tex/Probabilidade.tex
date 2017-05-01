@@ -1,22 +1,7 @@
-\documentclass[11pt,a4paper]{book}
-\usepackage[portuguese]{babel}
-\usepackage[utf8]{inputenc}
-\usepackage{amsmath}
-\usepackage{amsfonts}
-\usepackage{enumitem}
-\usepackage{booktabs}
-\usepackage{amssymb}
-\usepackage{tikz}
-\usepackage{float}
-\usetikzlibrary{shapes, backgrounds}
-\begin{document}
-% Dia 07/06/2017
-%Aula 1
-% Todo
-%Figuras 11-12-13 por que são diferentes?
 \chapter{Probabilidade}
 
 \section*{Objetivo: Definir um modelo estatístico que seja adequado à descrição e interpretação de fenômenos aleatórios.}
+\subsection{Conceitos basicos}
 \begin{description}
 
   \item [Experimentos ou fenômenos aleatórios ($\varepsilon$)]: são os acontecimentos cujos resultados não podem ser previstos 
@@ -31,21 +16,21 @@
           \item Tempo de vida útil de um componente eletrônico.
         \end{itemize}
     \end{description}
-  \item [Espaço Amostral ($\Omega$)]: refere-se ao conjunto de todos os possíveis resultados de um experimento ou fenômeno 
+  \item [Espaço Amostral ($\Omega$):] refere-se ao conjunto de todos os possíveis resultados de um experimento ou fenômeno 
     aleatório.
     \begin{description}
       \item [Exemplos]:
         \begin{enumerate}[label=$\Omega_{\arabic*}$]
           \item $= \{ 1,2,3,5,6 \}$ 
-          \item $= \{ c,k \}$ Aonde $k$ é cara e $c$ é coroa.
+          \item $= \{ c,k \}$ Sendo $k$ cara, $c$ coroa.
         \item $= [ 0,\infty \}$ 
       \end{enumerate}
   \end{description}
-\item [Evento]: qualquer subconjunto do espaço amostral $\Omega$ do experimento aleatório $\varepsilon$.
+\item [Evento:] qualquer subconjunto do espaço amostral $\Omega$ do experimento aleatório $\varepsilon$.
   \begin{description}
     \item[Notação: $A,B,C,D,\dots,A_1,A_2,A_3,\dots,B_1,B_2,\dots$]
 
-    \item Notamos que como $A$ é um evento, então $A \subset \Omega$.
+    \item Notamos que, como $A$ é um evento então $A \subset \Omega$.
 
   \end{description}
 
@@ -53,20 +38,20 @@
 \subsection{Tipos de Eventos}
 
 \begin{description}
-  \item [Evento Simples ou Elementar]: é o evento formado por um único ponto do espaço amostral. 
+  \item [Evento Simples ou Elementar:] é o evento formado por um único ponto do espaço amostral. 
     \begin{description}
-      \item [Exemplo]:
-        $A=\{W\}$.
+      \item [Exemplo:]
+        $A=\{w \}$.
     \end{description}
 
-  \item [Evento Composto]:  é o evento formado por dois ou mais pontos do espaço amostral.
+  \item [Evento Composto:]  é o evento formado por dois ou mais pontos do espaço amostral.
 
     \begin{description}
-      \item[Exemplo]:
+      \item[Exemplo:]
         $ A= \{w_1,w_2,w_3 \}$
     \end{description}
 
-  \item [Evento Certo]: é o evento formado por todos os pontos amostrais.
+  \item [Evento Certo:] é o evento formado por todos os pontos amostrais.
     \begin{description}
       \item    [Exemplo]: $A= \Omega$ 
     \end{description}
@@ -80,11 +65,11 @@
 
             $A=\{6\}$
 
-          \item    $B=$ Face do dado sem par 
+          \item    $B=$ Face do dado ser par 
 
             $B= \{2,4,6\}$
 
-          \item    $C=$ Face do dado maior que 1
+          \item    $C=$ Face do dado maior ou igual a 1
 
             $C= \{1,2,3,4,5,6\}=\Omega$
 
@@ -99,7 +84,7 @@
 \end{description}
 %Aula 2 9/03/2017
 \subsection{Operação com Eventos}
-Para ilustrar graficamente eventos, é costume utilizar-se os mesmos diagramas de Venn utilizados na teoria de conjuntos.
+Para ilustrar graficamente eventos é costume utilizar-se os mesmos diagramas de Venn utilizados na teoria de conjuntos.
 
 Considere eventos definidos em um espaço amostral $\Omega$ de um experimento aleatório $\varepsilon$.
 
@@ -107,14 +92,14 @@ Considere eventos definidos em um espaço amostral $\Omega$ de um experimento al
   \item [União de eventos ($A \cup B$)]: é o evento formado por todos os elementos que pertencem a $A$, ou  $B$, ou ambos.
     \begin{figure}[H]
       \centering
-      \input{tikz/figura1.tikz}
+      \input{tikz/Probabilidade/figura1.tikz}
       \caption{}
       \label{fig:1}
     \end{figure} 
   \item [Intersecção de eventos ($A \cap B$)]: é o evento formado pelos elementos que pertencem a $A$ e a $B$.
     \begin{figure}[H]
       \centering
-      \input{tikz/figura2.tikz}
+      \input{tikz/Probabilidade/figura2.tikz}
       \caption{}
       \label{fig:2}
     \end{figure} 
@@ -125,7 +110,7 @@ Considere eventos definidos em um espaço amostral $\Omega$ de um experimento al
 
             \begin{figure}[H]
               \centering
-              \input{tikz/figura3.tikz}
+              \input{tikz/Probabilidade/figura3.tikz}
               \caption{}
               \label{fig:3}
             \end{figure}
@@ -134,7 +119,7 @@ Considere eventos definidos em um espaço amostral $\Omega$ de um experimento al
 
             \begin{figure}[H]
               \centering
-              \input{tikz/figura4.tikz}
+              \input{tikz/Probabilidade/figura4.tikz}
               \caption{}
               \label{fig:4}
             \end{figure}
@@ -145,7 +130,7 @@ Considere eventos definidos em um espaço amostral $\Omega$ de um experimento al
 
     \begin{figure}[H]
       \centering
-      \input{tikz/figura5.tikz}
+      \input{tikz/Probabilidade/figura5.tikz}
       \caption{}
       \label{fig:5}
     \end{figure}
@@ -153,7 +138,7 @@ Considere eventos definidos em um espaço amostral $\Omega$ de um experimento al
     \begin{description}
       \begin{figure}[H]
         \centering
-        \input{tikz/figura6.tikz}
+        \input{tikz/Probabilidade/figura6.tikz}
         \caption{}
         \label{fig:6}
       \end{figure}
@@ -165,24 +150,24 @@ Considere eventos definidos em um espaço amostral $\Omega$ de um experimento al
         \item $(A \cup B )^c = A^c \cap B^c$
           \begin{figure}[H]
             \centering
-            \input{tikz/figura7.tikz}
+            \input{tikz/Probabilidade/figura7.tikz}
             \caption{}
-            \label{fig:7}
+            \label{figa:7}
           \end{figure}
 
         \item $(A \cap B)^c = A^c \cup B^c $
           \begin{figure}[H]
             \centering
-            \input{tikz/figura8.tikz}
+            \input{tikz/Probabilidade/figura8.tikz}
             \caption{}
             \label{figura:8}
           \end{figure}
 
-          Os itens $a$ e $b$ são conhecidos como Lei de Demorgan.
-        \item $A \cup B^c = ( A \cap B ) \cup B^c = A \cup (A \cap B)^c$
+          Os itens ($a$) e ($b$) são conhecidos como Lei de Demorgan.
+        \item $A \cup B^c = ( A \cap B ) \cup B^c = A \cup (A \cup B)^c$
           \begin{figure}[H]
             \centering
-            \input{tikz/figura9.tikz}
+            \input{tikz/Probabilidade/figura9.tikz}
             \caption{}
             \label{figura:9}
 
@@ -191,7 +176,7 @@ Considere eventos definidos em um espaço amostral $\Omega$ de um experimento al
         \item  $A \cap B^c = B^c \cap (A \cup B)$
           \begin{figure}[H]
             \centering
-            \input{tikz/figura10.tikz}
+            \input{tikz/Probabilidade/figura10.tikz}
             \caption{}
             \label{fig:10}
           \end{figure}
@@ -213,23 +198,24 @@ Considere eventos definidos em um espaço amostral $\Omega$ de um experimento al
 
       \begin{figure}[H]
         \centering
-        \input{tikz/figura1.tikz}
+        \input{tikz/Probabilidade/figura1.tikz}
         \caption{}
         \label{fig:11}
       \end{figure}
+      \begin{description}
+        \item [Situação 1:]
 
-      Situação 1:
+      $(A \cup B) = A \cup (A^c \cap B)$
 
-      $A \cup B = A \cup (A^c \cap B)$
-
-      Situação 2: 
+    \item      [Situação 2:]
 
 
-      $(A \cup B) = B \cup (B^c \cap A)$
+          $A \cup B = B \cup (A \cap B^{c})$
+        \end{description}
 
-      Considerando a situação 1 , vamos verficar se os eventos são disjuntos. Os eventos serão disjuntos se $A \cap ( A^c \cap B )= \emptyset$ . Vericando, temos: 
+      Considerando a Situação 1 , vamos verificar se os eventos são disjuntos. Os eventos serão disjuntos se $A \cap ( A^c \cap B )= \emptyset$ . Vericando, temos: 
       \begin{align*}
-        A \cap A^c = \emptyset \\
+        (A \cap A^c) \cap B = \emptyset \\
         \emptyset \cap B= \emptyset
       \end{align*}
 
@@ -237,15 +223,14 @@ Considere eventos definidos em um espaço amostral $\Omega$ de um experimento al
 \end{description}
 \section{Definições de Probabilidade}
 \subsection{Probabilidade em Espaços Equiprováveis}
-Se um experimento aleatório tiver $n$ resultados possíveis, $\Omega = \{ \omega_1,\omega_2,\ldots,\omega_n \}$, mutuamente exclusivos e igualmente possíveis e se um evento $A$ tiver $n_A$ desses resultados, então a probabilidade deo evento $A$, representado por $P(A)$, é dada por: 
+Se um experimento aleatório tiver $n$ resultados possíveis, $\Omega = \{ \omega_1,\omega_2,\ldots,\omega_n \}$, mutuamente exclusivos e igualmente possíveis e se um evento $A$ tiver $n_A$ desses resultados, então a probabilidade do evento $A$, representado por $P(A)$, é dada por: 
 \begin{align}
-  A \subset \Omega \nonumber\\
-  P(A)= \frac{N_a}{n} 
+  P(A)= \frac{N_a}{n}, \quad A \subset \Omega 
 \end{align}
 Sendo que $\Omega$ é definido como todo o espaco amostral, $n_A$ o número de casos favoráveis $A$ e $n$ o número de casos possíveis.
 
 \begin{description}
-  \item [Exemplo]: 
+  \item [Exemplo:] 
 
     Dado o lançamento de duas moedas honestas, calcule a probabilidade de: 
     \begin{enumerate}[label=(\alph*)]
@@ -263,8 +248,8 @@ Sendo que $\Omega$ é definido como todo o espaco amostral, $n_A$ o número de c
       \end{tabular}
       \label{tab:1}
     \end{figure}
-
-    $\Omega = \{ (c,c); (c,k) ; (k,c) ; (k,k)\}$
+    \begin{align*}    \Omega = \{ (c,c); (c,k) ; (k,c) ; (k,k)\}
+    \end{align*}
     \begin{enumerate}[label=(\alph*)]
       \item $A=$ Faces iguais
         \begin{align*}
@@ -291,7 +276,7 @@ Sendo que $\Omega$ é definido como todo o espaco amostral, $n_A$ o número de c
 
 Um experimento é realizado  $n$ vezes, sendo $n$ um número grande. O evento $A$ ocorre exatamente $N_a$ vezes com: $0 \le N_a \le n$. A frequência relativa de vezes que ocorreu o evento $A$ é uma forma de aproximar a probabilidade do evento A, ou seja:
 \begin{align}
-  f_r (A)= \frac{n_a}{n}
+  f_r (A)= \frac{n_a}{n} 
 \end{align}
 Quando $n \to \infty$, $f_r(A)$ aproxima-se de $P(A)$.
 \begin{description}
@@ -305,9 +290,9 @@ A probabilidade de um evento $A$ é definida como sendo um número $P(A)$ que sa
 os seguintes axiomas:
 % Usar sempre numeração romana pra axiomas!
 \begin{enumerate}[leftmargin=*, label=\Roman*., widest=IV, align=left]
-  \item $P(A) \ge 0, \forall A \subset \Omega$
+  \item $P(A) > 0, \forall A \subset \Omega$ 
   \item $P(\Omega)=1$
-  \item Se $A_1, A_2,\ldots$ são eventos mutuamente exclusivos ($A_i \cup A_j = \emptyset, \forall i \neq j$), então:
+  \item Se $A_1, A_2,\ldots$ são eventos mutuamente exclusivos ($A_i \cap A_j = \emptyset, \forall i \neq j$), então:
     \begin{align}
       P(\cup^\infty_{i=1} A_i)= P(A_1\cup A_2 \cup \ldots)= \sum^\infty_{i=1} P(A_i) 
     \end{align}
@@ -319,38 +304,36 @@ os seguintes axiomas:
     \begin{enumerate}[label=(\alph*)]
       \item $0 \le P(A) \le 1$
       \item $P(\emptyset)=0$
-      \item Se $A \subset \omega$ então $P(A)=1-P(A^c)$
+      \item Se $A \subset \Omega$ então $P(A)=1-P(A^c)$
       \item Se $A \subset B \subset \Omega$, então $P(A) \le P(B)$
       \item Se $A,B \subset \Omega$, então vale:
         \begin{align}
-          P(B)= P(B\cup A)+ P(B\cup \bar{A})
+          P(B)= P(B\cap A)+ P(B\cup \bar{A})
         \end{align}
       \item Se $A,B \subset \omega$, então:
         \begin{align}
-          P(A\cup B)= P(A)+P(B)-P(A\cup B)
+          P(A\cup B)= P(A)+P(B)-P(A\cap B)
         \end{align}
       \item Se $A,B,C \subset \omega$, então:
         \begin{align}
-          P(A\cup B \cup C)= P(A)+P(B)+P(C)-P(A \cup B)- P(A \cup C) \nonumber\\-
-          P(B\cup C)+P(A\cup B \cup C) 
+          P(A\cup B \cup C)= P(A)+P(B)+P(C)-P(A \cap B)- P(A \cap C) \nonumber\\-
+          P(B\cap C)+P(A\cap B \cap C) 
         \end{align}
     \end{enumerate}
-  \item [Exemplo]: 
+  \item [Exemplo:] Mostre a propriedade $(g)$.
 
-    Mostre a propriedade $(g)$.
-
-    Use o fato de que $A\cup (B \cup C )= (A\cup B )\cup (A \cup C )$:
+    Use o fato de que $A\cap (B \cup C )= (A\cap B )\cup (A \cap C )$:
     \begin{align*}
-      P\left(A\cup B\cup C \right)- P\left(A \cup \left(B \cup C\right) \right)\\
+      P\left(A\cup B\cup C \right)\\
+     = P\left(A \cup \left(B \cup C\right) \right)\\
       =P(A)+P(B\cup C)- P\left(A\cap \left(B\cup C \right) \right)\\
-      =P(A)+P(B)+P(C)-P(B\cap C)- P(A \cap B)\cup (A \cap C)\\
-      =P(A)+P(B)+P(C)-P(B\cap C)- P(A \cap B) \\ -\left\{ P \left(A \cap B \right)+ P\left(A \cap c \right)-P\left(\left(A \cap B \right) \cap \left(A \cap C \right) \right) \right\} \\
+      =P(A)+P(B)+P(C)-P(B\cap C)- P\left((A \cap B)\cup (A \cap C)\right)\\
+      =P(A)+P(B)+P(C)-P(B\cap C)\\
+      - \left( P \left(A \cap B \right)+ P\left(A \cap C \right)-P\left(\left(A \cap B \right) \cap \left(A \cap C \right) \right) \right) \\
       =P(A)+P(B)+P(C)-P(B\cap C)- P(A \cap B)- P(A \cap C)+ P(A \cap B \cap C)
     \end{align*}
 
-  \item [Exercício]: 
-
-    Considere um experimento aleátorio e os eventos $A$ e $B$ associados, tais que:
+  \item [Exercício:]  Considere um experimento aleátorio e os eventos $A$ e $B$ associados, tais que:
     \begin{align*}
       P(A)= \frac{1}{2}\\
       P(B)= \frac{1}{3}\\
@@ -361,23 +344,13 @@ os seguintes axiomas:
       \item $ P(\bar{A} \cap \bar{B})$
       \item $P(\bar{A} \cup \bar{B})$
     \end{enumerate}
-    \begin{figure}[htpb]
-      \centering
-      \caption{Name}
-      \label{fig:14}
-    \end{figure}
     \begin{enumerate}[label=(\alph*)]
       \item \begin{align*}
           P(A^c \cap B^c) = 1- P(A \cup B) \\
           = 1- \{ P(A) + P(B) - P(A \cap B) \} \\
           =1 - \{ \frac{1}{2} + \frac{1}{3} -\frac{1}{4}\}= \frac{5}{12}
         \end{align*}
-        \begin{figure}[htpb]
-          \centering
-          \caption{Name}
-          \label{fig:15}
-        \end{figure}
-      \item \begin{align*}
+          \item \begin{align*}
           P(A^c \cup B^c) = P\left( \left( A \cap B\right)^c \right)\\
           = 1- P(A \cap B) = 1 - \frac{1}{4}= \frac{3}{4}
         \end{align*}  
@@ -389,13 +362,13 @@ os seguintes axiomas:
         \end{align*}
 
     \end{enumerate}
-    \subsection{Probabilidade condicional}
-    Sejam $A$ e $B$ dois eventos definidos em um mesmo espaco amostral $\Omega$.
+    \subsection{Probabilidade Condicional}
+    \begin{description}
+      \item Sejam $A$ e $B$ dois eventos definidos em um mesmo espaco amostral $\Omega$.
     A probabilidade de $A$  dado que ocorre o evento $B$, denotada por $P(A/B)$ é definida por:
     \begin{align}
-      P(A/B)= \frac{P(A\cap B)}{P(B)}
+      P(A/B)= \frac{P(A\cap B)}{P(B)},  \quad P(B)>0. 
     \end{align}
-    Para $P(B)>0$. 
     \begin{figure}[htpb]
       \centering
       \caption{Name}
@@ -405,17 +378,19 @@ os seguintes axiomas:
     \begin{align}
       P(A\cap B)= P(A/B).P(B)
     \end{align}
-    Conhecida como regra do produto:
+    Conhecida como regra do produto.
+  \item [Observação:]
     \begin{align}
-      P(B/A)= \frac{P(B \cap A)}{P(A)}= \frac{P\cap B}{P(A)}\\
-      P(A \cap B)= P(B/A).P(A)
+      P(B/A)= \frac{P(B \cap A)}{P(A)}= \frac{P\left(A\cap B \right)}{P(A)}\\
+      P(A \cap B)= P(B/A)\times P(A)
     \end{align}
-    \begin{description}
+    Logo:
+    \begin{align}
+      P(A \cap B) = P(B/A)\times P(A) \\
+      =P(A/B)\times P(B)
+    \end{align}
       \item [Exemplo]: Suponha que um escritório possua 100 computadores de tipos Desktop (D) e 
         Laptop (L) sendo alguns novos (N) e outro com um certo tempo de uso (U), distribuídos da seguinte forma:
-        Um funcionário escolhe um laptop ao acaso. Qual a probabilidade de que seja novo?
-
-      \item[Resolucão]: 
         \begin{figure}[H] 
           \centering
           \begin{tabular}{c c c c}
@@ -428,6 +403,10 @@ os seguintes axiomas:
           \label{tab:2}
         \end{figure}
 
+        Um funcionário escolhe um laptop ao acaso. Qual a probabilidade de que seja novo?
+
+      \item[Resolucão:]
+
 
         \begin{align*}
           P(N/L)= \frac{P(N \cap L)}{P(L)}= \frac{\frac{30}{100}}{\frac{40}{100}}=\frac{3}{4}
@@ -435,19 +414,23 @@ os seguintes axiomas:
 
         Obs: $P(A \cap B)$ e $P(A/B)$
     \end{description}
-    \section{Àrvore de Probabilidades}
+    \section{Arvore de Probabilidades}
+    
     Sejam $A,B \subset \Omega$. Uma representação bastante útil é a àrvore de probabilidades.
     \begin{description}
-      \begin{figure}
+      \begin{figure}[H]
+        \centering
+        \input{tikz/Probabilidade/tree1.tikz}
         \label{fig:17}
         \caption{Um exemplo de uma àrvore de probabilidades}
       \end{figure}
 
     \item[Exemplo]: No exemplo anterior, qual a probabilidade de um funcionário selecionar um 
       desktop usado?
-      \begin{figure}[htpb]
+      \begin{figure}[H]
         \centering
-        \caption{Name}
+        \input{tikz/Probabilidade/tree2.tikz}
+        \caption{Arvore de probabilidade Desktop/Laptop/Usado/Novo }
         \label{fig:18}
       \end{figure}
       \begin{align*}
@@ -478,13 +461,12 @@ os seguintes axiomas:
       a informação da ocorrência ou não de $B$ não altera a probabilidade de ocorrência
       de $A$. Isto é:
       \begin{align}
-        P(A/B)= P(A) \\
-        P(B)>0 
+        P(A/B)= P(A), \quad        P(B)>0.
       \end{align}
       Logo, dois eventos $A$ e $B$ são independentes se, e somente se, $P(A \cap B)=P(A)\times P(B)$.
     \item [Observação]: 
       \begin{align*}
-        P(A/B) = \frac{P(A \cap B)}{P(B)} = \frac{P(A)P(B)}{P(A)}= P(B)
+        P(A/B) = \frac{P(A \cap B)}{P(B)} = \frac{P(A)P(B)}{P(B)}= P(A)
       \end{align*}
     \item [Exemplo]: Um estudante se inscreve em dois processos seletivos com probabilidade 
       $30\%$ de ser aprovado na empresa $I$ e $50\%$ de ser aprovado na empresa $II$. Se 
@@ -494,8 +476,8 @@ os seguintes axiomas:
       Definindo os eventos:
 
       \begin{enumerate}[label=\Alph*:]
-        \item  O estudante ser aprovado na empresa $I$
-        \item  O esutdanbte ser aprovado na empresa $II$
+        \item  O estudante ser aprovado na empresa $I$.
+        \item  O esutdante ser aprovado na empresa $II$.
       \end{enumerate}
       \begin{align*}
         P(A)= 0.30\\
@@ -523,15 +505,17 @@ os seguintes axiomas:
 
     \item [Resultado]: Se A,B são eventos independentes em $\Omega$, então:
 
-      \begin{enumerate}[leftmargin=*, label=\Roman*., widest=IV, align=left]
-        \item $A$ e $B^c$ são independentes
-        \item $A^c$ e $B$ são independetes
+      \begin{enumerate}
+        \item $A$ e $B^c$ são independentes.
+        \item $A^c$ e $B$ são independetes.
         \item $A^c$ e $B^c$ são independentes.
       \end{enumerate}
-      \begin{figure}
+      \begin{figure}[H]
+        \centering
+        \input{tikz/Probabilidade/figura10.tikz}
         \label{fig:19}
       \end{figure}
-
+    \item[Prova:] Resultado $1$
       \begin{align*}
         P(A \cap \bar{B})= P(A) - P(A \cap B)\\
         = P(A)-P(A)\times P(B)\\
@@ -542,31 +526,24 @@ os seguintes axiomas:
     \item [Observação]: Não confundir eventos mutuamente exclusivos com eventos independentes. Ou seja, não confunda $P(A \cap B)  = 0$ com $ P(A \cap B) = P(A)\times P(B)$.
 
     \item[Exemplo]: Um atirador acerta 80\% dos disparos e outro acerta, nas mesmas condições
-      acerta 70\%.
-      \begin{enumerate}[label=(\alph*)]
-        \item Qual a probabilidade de o alvo ser acertado se ambos os atiradores disparam 
-          simultanemaente?
-        \item Qual a probabilidade do alvo ser acertado se ambos os atiradores disparam 
-          simultanemaente?
-      \end{enumerate}
+      acerta 70\%. Qual a probabilidade de o alvo ser acertado se ambos os atiradores disparam simultaneamente?
       \begin{enumerate}[label=\Alph*:]
         \item  Atirador 1 acerta o alvo
         \item Atirador 2 acerta o alvo
       \end{enumerate}
-      \begin{enumerate}[label=(\alph*)]
-        \item  A intersecção de dois eventos independentes é dada pela multiplicação de suas probabilidades:
+    \item [Resolucão]:
+        A intersecção de dois eventos independentes é dada pela multiplicação de suas probabilidades:
           \begin{align*}
             P(A \cap B)= P(A)P(B)\\
             =0.8 \times 0.7= 0.56
           \end{align*}
-        \item É dado pela a união dos dois eventos:
+        Logo a probabilidade de interesse eh dada pela a união de dois eventos:
           \begin{align*}
             P(A \cup B)= P(A)+ P(B)- P( A \cap B )\\
             = P(A) + P(B- P(A)\times P(B)\\
             = 0.8+0.7 - 0.8\times 0.7\\
             =0.94
           \end{align*}
-      \end{enumerate}
 
   \end{description}
   \section{O Teorema de Bayes}
@@ -578,21 +555,28 @@ os seguintes axiomas:
     \item $A_i \cap A_j = \emptyset, \forall i\neq j$, com $i,j =1,\ldots,k$
     \item $\cup_{i=1}^{k}A_i= \Omega$
   \end{enumerate}
+  \begin{figure}[H]
+    \centering
+    \input{tikz/Probabilidade/partition.tikz}
+    \caption{Espaco amostral com $k$ particoes}
+  \end{figure}
    \end{description}
    \subsection{Lema da probabilidade total}
    \begin{description}
-     \item [Definição] Se $A_1,\ldots, A_k$ é uma partição de $\Omega$, então para qualquer evento $B$ de $\Omega$, vale:
+     \item [Definição:] Se $A_1,\ldots, A_k$ é uma partição de $\Omega$, então para qualquer evento $B$ de $\Omega$, vale:
 
        \begin{align}
          P(B)= \sum^k_{i=1} B(B \cap A_i)\\ \nonumber
-         = \sum^k_{i=1} P(B/A_i)P(A_i)
+         = \sum^k_{i=1} P(B/A_i)P(A_i).
+       \end{align};
+       Vejamos: 
+
+       \begin{align}
+         B= P \left(  \cup_{i=1}^k (A_i \cap B) \right)
        \end{align}
        \begin{align}
-         B= \cup_{i=1}^k A_i \cap B)
-       \end{align}
-       \begin{align}
-         P(B)= \cup_{i=1}^k P(A_i \cap B)\\ \nonumber
-         = \cup_{i=1}^k P(B/A_i)P(A_i)
+         P(B)=P \cup_{i=1}^k \left(A_i \cap B\right) \\ \nonumber
+           = \sum_{i=1}^k P(B/A_i)P(A_i)
        \end{align}
        \begin{figure}[htpb]
          \centering
@@ -707,11 +691,13 @@ os seguintes axiomas:
        a esse experimento. Uma função $X(\omega)$ que associa cada elemento $\omega \in
        \Omega$ a um número real $x=x(\omega)$ é denominada variável aleatória (v.a.\.). 
        % Espaco amostral omega em x indo para R 
-       \begin{figure}[htpb]
+       \begin{figure}[H]
          \centering
+         \input{tikz/Probabilidade/domain1.tikz}
+         \caption{Representacao da variavel aleatoria que associa $\omega_i$ a um $x_i$}
          \label{fig:23}
        \end{figure}
-     \item [Observação]: $X:\Omega \to \mathbb{R}$
+     \item [Notação]: $X:\Omega \to \mathbb{R}$
 
      \item [Exemplo]: Lançamento de uma moeda duas vezes. A v.a.\, $x$, é o $n^o$ de caras. 
        \begin{figure} [H]
@@ -784,7 +770,7 @@ os seguintes axiomas:
        (f.m.p\ ) de $X$. 
 
        As probabilidades $p(x_i)$ devem satisfazer as seguintes condições: 
-       \begin{enumerate} % com i) ii)
+       \begin{enumerate}[label=(\roman*)]
          \item $p(x_i)>0, \forall x_i \in R_{x}$
 
          \item $\sum^\infty_{i=1} p(x_i)=1$
@@ -793,8 +779,8 @@ os seguintes axiomas:
 
        Seja $x$ uma v.a.\\ discreta com $R_{x}= \{x_1,x_2,\dots,x_k \}$ e $p(x_i)=p_i$.
        \begin{figure}[htpb]
-         \centering
-         \caption{}
+         \input{tikz/Probabilidade/fmp1.tikz}
+         \caption{Exemplo de uma funcao massa probabilidade}
          \label{fig:24}
        \end{figure}
 
@@ -895,7 +881,9 @@ os seguintes axiomas:
      \item [Definição:] Seja x uma v.a.\\ contínua que assume valores em $R_{x},R_{x} \in \mathbb{R}$.
        A função f(x) é a função densidade de probabilidade (f.d.p) para x, se satisfaz as 
        seguintes propriedades: 
-       \begin{enumerate} % com i)
+
+
+       \begin{enumerate}[label=(\roman*)]
          \item $f(x)\geq 0, \forall x \in R_{x}$
          \item $\int_R{x} f(x) dx=1 (\int_{- \infty}^{+ \infty} f(x)dx=1)$
          \item $P(a<x<b)=\int^b_a f(x) dx $
@@ -904,6 +892,7 @@ os seguintes axiomas:
        %figure here
        \begin{figure}[htpb]
          \centering
+         \input{tikz/Probabilidade/fmp2.tikz}
          \caption{}
          \label{fig:25}
 
@@ -986,19 +975,23 @@ os seguintes axiomas:
        \begin{enumerate}[label=(\alph*)]
          \item 
            Devemos verificar: 
-           \begin{enumerate}[leftmargin=*, label=\Roman*., widest=IV, align=left] %com os i)
+               \begin{enumerate}[leftmargin=*, label=\roman*., widest=IV, align=left] %com os i)
+
              \item $f(x)\geq 0, \forall x \in R_{x}$
+
+               Temos:
+\begin{align*}                 f(x)\geq 0, \forall x \in  0<x<1\end{align*}
+
              \item $\int_{R_{x}} f(x)dx=1$
 
-               \begin{enumerate} %com os i)
-                 \item $f(x)\geq 0, \forall x \in  0<x<1$
-                 \item 
+               Temos:
                    \begin{align*}
                      \int_{R_x} 2x dx\\
                      =\int_{0}^1 2x dx\\ 
                    = \frac{2x^2}{2}|^1_0 \}\\
                    = 1
                  \end{align*}
+                 Portanto, $f_x(x)$ eh uma f.d.p.\
              \end{enumerate}
 
            \item 
@@ -1009,6 +1002,12 @@ os seguintes axiomas:
                = 1/4
              \end{align*}
            \item Probabilidade Condicional
+             \begin{figure}[H]
+               \centering
+               \input{tikz/Probabilidade/intersecaxis.tikz}
+               \caption{}
+               \label{fig:}
+             \end{figure}
              \begin{align*}
                P(A/B)= \frac{P(A\cap B)}{P(B)} \\
                \frac{ P(\{X \leq \frac{1}{2}\} \cap \{ \frac{1}{3} \leq X \geq \frac{2}{3}\}}{P ( \frac{1}{3} \leq X \geq \frac{2}{3} )}\\
@@ -1017,7 +1016,6 @@ os seguintes axiomas:
                = \frac{x^2 |^{\frac{1}{2}}_{\frac{1}{3}}}{x^2 |^{\frac{2}{3}}_{\frac{1}{3}}}\\
                = \frac{5}{12}
              \end{align*}
-         \end{enumerate}
      \end{enumerate}
 
  \end{description}
@@ -1468,679 +1466,3 @@ os seguintes axiomas:
      %     Obs: $E(ax)= a^2 var(x)$
      % \end{enumerate}
  \end{description}
- % \section{Principais Modelos Probabilísticos}
- % \subsection{Modelos Discretos}
- % \subsubsection{Distribuição Uniforme}
- % A v.a.\ assume cada um de seus valores com igual probabilidade.
-
- % Definição: A v.a.\ discreta $X$, assumindo valores $x_1,x_2,\dots,x_k$ tem 
- % distribuição uniforme se, e somente se, sua f.m.p.\ é definida por: 
- % \begin{align}
- %   p(x)=P(X=x)=\begin{cases}
- %     \frac{1}{k}, \text{\quad} x=x_1,x_2,\dots,x_k\\
- %     0, \text{\quad caso contrário}
- %   \end{cases}
- % \end{align}
- % Notação: $X \sim U_{d}(k)$
- % A média e variância de x é:
- % \begin{align}
- %   \mu_{x}=E(x)=\sum_{x \in R_{x}}x_i P(X=x_i)\\
- %   = \sum_{x \in R_{x}}x_i \frac{1}{k}= \frac{1}{k}\sum_{x_i \in R_{x}}\\
- %   \text{e}\\
- %   var(x)=E(X^2)-\{E(X)\}^2\\
- %   = \sum_{x_i \in R_{x}}(x_i -\mu_x )^2 p(X=x_i)\\
- %   =\frac{1}{k} \{\sum^k_{i=1} x_i^2 - \frac{(\sum_{i=1}^k)^2}{k}\}
- % \end{align}
- % Exemplo: Seja $x$ uma v.a.\ que indica o $n^o$ de pontos marcados na face 
- % superior de um dado quando ele é lançado. Portanto, temos uma distribuição 
- % uniforme discreta, cuja f.m.p.\ é dada por: 
- % \begin{align}
- %   p(x)=P(X=x)-\begin{cases}
- %     \frac{1}{6},\text{\quad} x=1,2,3,4,5,6\\
- %     0, \text{\quad caso contrário}
- %   \end{cases}
- % \end{align}
- % E o $E(x)$ é: 
- % \begin{align}
- %   \mu_{x}=E(x)=\frac{1}{6}(1+2+3+4+5+6)\\
- %   =\frac{1}{6}21= \frac{7}{2}=3,5
- % \end{align}
- % E a $var(x)$ é:
- % \begin{align}
- %   E(x^2)=\frac{1}{6}(1^2 + 2^2 + \dots + 6^2)\\
- %   =\frac{91}{6}=15,17\\
- %   var(x)=\frac{91}{6}- \{\frac{7}{2}\}^2=\frac{105}{36}=2,92
- % \end{align}
- % \subsubsection{Distribuição Bernoulli}
- % Considere uma v.a.\ $x$ que assume apenas dois valores 1, se ocorrer sucesso,
- % 0, se ocorrer fracasso. Indicaremos por ``p" a probabilidade de sucesso, Isto
- % é, $P(\text{Sucesso})=P(x=1)=p$.
- % Definição: A v.a.\ discreta $x$ que assume apenas valores 0 ou 1 tem Distribuição
- % Bernoulli se, somente se, sua f.m.p.\ é definida por:
- % \begin{align}
- %   p(x)=P(X=x)= \begin{cases}
- %     p^{x}(1-p){1-x}, \text{\quad} x=0,1, \text{\quad} 0<p<1\\
- %     0, \text{\quad caso contrário}
- %   \end{cases}
- % \end{align}
- % Notação: $X \sim Ber(p)$
-
- % Exemplos: 
- % $$p(x)=(\frac{2}{5})^x(1-\frac{2}{5})^x, \text{\quad}x=0,1$$\\
- % $$p(x)=(\frac{7}{8})^{1-x}(1-\frac{7}{8})^{1-x}, \text{\quad }, x=0,1$$
-
- % De forma similar, podemos apresentar $p(x)$ por:
- % \begin{figure} 
- %   \centering
- %   \begin{tabular}{c c c}
- %     \toprule
- %     x&0&1\\ \midrule
- %     $P(X=x)$&$1-p$&$p$\\ \bottomrule
- %   \end{tabular}
- %   \label{fig:7}
- % \end{figure}
- % A média de $x$ é: 
- % \begin{align}
- %   \mu_{x}=E(x)=p
- % \end{align}
- % e a variância de $x$ é: 
- % \begin{align}
- %   \sigma^2 = var(x)=p (1-p)
- % \end{align}
- % Exemplo: Suponha o lançamento de um dado perfeito e o interesse é ocorrer a face
- % 3.
- % \begin{align*}
- %   X=\begin{cases}
- %     1, \text{\quad se ocorrer a face }3\\
- %     0, \text{\quad caso contrário}\{1,2,4,5,6\}]
- %   \end{cases}
- % \end{align*}
- % Cuja f.m.p.\ é dada por:
- % \begin{align}
- %   p(x)=P(X=x)=\begin{cases}
- %     \frac{1}{6}(1-\frac{1}{6})^{1-x}, \text{\quad}x=0,1\\
- %     0, \text{\quad caso contrário}
- %   \end{cases}
- % \end{align}
- % \begin{figure} 
- %   \centering
- %   \begin{tabular}{c c c}
- %     \toprule
- %     x&0&1\\ \midrule
- %     $P(X=x)$&$\frac{5}{6}$&$\frac{1}{6}$\\ \bottomrule
- %   \end{tabular}
- %   \label{fig:8}
- % \end{figure}
- % $X \sim Ber(\frac{1}{6})$
- % A média de $x$ é: 
- % \begin{align*}
- %   \mu_{x}=(X)=p=\frac{1}{6}
- % \end{align*}
- % e a variância de $x$ é: 
- % \begin{align*}
- %   \sigma^2= var(x)=p(1-p)=\frac{1}{6}\frac{5}{6}=\frac{5}{36}
- % \end{align*}
- \subsection{Distribuição Binominal}
- Considere $M$ ensaios de Bernoulli independentes, todos com a mesma probabilidade
- de sucesso $p$. A v.a.\ que conta o número de sucessos nos $M$ ensaios de Bernoulli
- é denominada v.a.\ binomial com parâmetro $M$ e $p$.
-
- \begin{description}
-   \item{Definição}: A v.a.\ discreta $x$, correspondente ao $n^o$ de sucesso em $M$ ensaios
-     independentes de Bernoulli, tem distribuição binomial se, e somente se, sua 
-     f.m.p.\ é definida por: 
-     \begin{align}
-       p(x)=P(X=x)=\begin{cases}
-         \binom{M}{x}p^x (1-p)^{M-x}, \text{\quad}x=0,1,\dots,M \text{\quad e }0<p<1\\
-         0, \text{\quad caso contrário}
-       \end{cases}
-     \end{align}
-
-   \item{Notação}:$ x \sim Bin(M,p)\\$
-     Obs: $\binom{M}{x}=\frac{M!}{x!(M-x)!}$
-
-     Temos que: 
-     \begin{align}
-       \mu_{x}=E(X)=Mp\text{a média de} x \text{e}\\
-       \sigma^2 =var(x)=Mp(1-p), \text{a variância de x}
-     \end{align}
-   \item{Exemplo}: Considere uma linha de produção, onde 3 peças são selecionadas aleatoriamente
-     e são classificadas como defeituosas (D) ou não-defeituosas(N). $X_{1},X_{2},X_{3}$
-     são variáveis aleatórias que assumem $1$ se a peça for não-defeituosa e $0$ caso 
-     contrário. A probabilidade da peça ser não-defeituosa é $p$ e , consequentemente, 
-     a probabilidade da peça ser defeituosa é $1-p$. Estamos interessados na distribuição
-     de:
-     $$Y=X_{1}+X_{2}+X_{3}$$
-     \begin{align*}
-       x_1 = \begin{cases}
-         1, \quad \text{se a peca e nao deituosa}\\
-         0, \quad \text{se a peca e deituosa}
-       \end{cases}
-     \end{align*}
-     \begin{tabular}{c c c c c c }
-       \toprule
-       & $X_1$  & $X_2$ & $X_3$   & $Y= X_1 +X_2+ X_3$ & $ P(Y=y)$\\ \midrule
-       DNN &0 & 1 & 1 & 2 & $p^2(1-p)$\\\midrule
-
-       DND& 0 & 1 & 0 & 1 & $p(1-p)^2$\\\midrule
-
-       DDN& 0 & 0 & 1 & 1 & $p(1-p)^2$\\\midrule
-
-       DDD&  0 & 0 & 0 & 0 & $(1-p)^3$\\\midrule
-
-       NNN&   1 & 1 & 1 & 3 & $p^3$\\\midrule
-
-       NND& 1 & 1 & 0 & 2 & $p^2(1-p)$\\\midrule
-
-       NDN& 1 & 0 & 1 & 2 & $p^2(1-p)$\\\midrule
-
-       NDD& 1 & 0 & 0 & 1 & $p(1-p)^2$ \\ \bottomrule
-
-     \end{tabular}
-
-     Abaixo estão os possíveis resultados do experimento:
-
-     %Arvore zica aqui, pegar de algum colega
-
-     \begin{figure} 
-       \centering
-       \begin{tabular}{c c c c c}
-         \toprule
-         y&0&1&2&3\\ \midrule
-         $P(Y=y)$&$(1-p)^3$&$3p(1-p)^2$&$3p^2(1-p)$&$p^3$\\ \bottomrule
-       \end{tabular}
-       \label{fig:127}
-     \end{figure}
-      Ou seja,
-      \begin{align*}
-        p(y)=P(Y=y)=\begin{cases}
-          \binom{3}{y}p^y (1-p)^{3-y}, \text{\quad}y=0,1,2,3\\
-          0, \text{\quad caso contrário}
-        \end{cases}
-      \end{align*}
-    \item{Exemplo}: Uma rede varejista compra certo tipo de equipamento eletrônico. O 
-      fabricante indica que a taxa de quipamentos em perfeito estado é $97\%$.
-      \begin{enumerate}[label=(\alph*)]
-        \item Seleciona-se ao acaso 20 itens. Qual a probabilidade de haver pelo menos 
-          um item defeituoso nesses 20?
-        \item Seleciona-se aleatoriamente 20 itens em cada 10 carregamentos, qual a 
-          probabilidade de haver 3 carregamentos com pelo menos um item defeituoso?
-      \end{enumerate}
-      $p$ taxa de equipamentos em perfeito estado\\
-      $$p=0,97$$\\
-      $y$: $n^o$ de equipamentos em perfeito estado.\\
-      $$y \sim binom(20;0,97)$$\\
-
-    \item{Resolucão:}
-      \begin{enumerate}[label=(\alph*)]
-        \item    $M=20$ itens\\
-          p:Probabilidade de pelo menos um item defeituoso.\\
-          $p=0,03$
-          \begin{align*}
-           X_i= \begin{cases}
-             1, \quad \text{se o equipamente e defeituoso}\\
-             0, \quad \text{c.c }
-            \end{cases} 
-          \end{align*}
-          $$x \sim binom(20:0,03) \text{quad} x=1,2,3,4,5,\dots,20$$\\
-          \begin{align*}
-           Y=X_1 + X_2 + \ldots +X_20 
-          \end{align*}
-          \begin{align*}
-            P(Y\ge 1)= 1-P(Y<1)\\
-            =1-P(Y=0)
-          \end{align*}
-          \begin{align*}
-            P(Y=0)= \bin{20}{0} {0,03}^0 (1-0,03)^{20-0}\\
-            =0,5438
-          \end{align*}
-          \begin{align*}
-            P(Y\ge 1)= 1-0,5438\\
-            =0,4562
-          \end{align*}
-          Ou, resolvendo pela v.a.\ $Y$, temos:
-\begin{align*}
-           X_i= \begin{cases}
-             1, \quad \text{Se o equipamento for perfeito} \\
-             0, \quad \text{se o equipamente for defeituoso}
-            \end{cases} 
-          \end{align*}
-          \begin{align*}
-            P(Y\le 19)=1-P(Y>19)\\
-            =1-P(Y=20)
-          \end{align*}
-          \begin{align*}
-            P(y=20)=\binom{20}{20}0,97^{20}(1-0,97)^{20-20}\\
-            =0,5438
-          \end{align*}
-          \begin{align*}
-            P(y\le 19)=1-0,5339\\
-            =0,4562
-          \end{align*}
-        \item 10 carregamentos: 20 itens são selecionados \\
-          $Y$: $n^o$ de carregamento com pelo menos um item defeituoso \\
-          $M=10$\\
-          $Y=0,1,2,\ldots,10$\\
-          $p:\quad \text{porporcao de ter pelo menos um item defeituoso em um carregamento}$\\
-          $$p=0,4562$$\\
-          $$Y \sim B(10:0,4562)$$\\
-          \begin{align*}
-            P(Y=3)=\binom{10}{3}(0,4562)^3 (1-0,4562)^{10-3}\\
-            =0,1602
-          \end{align*}
-      \end{enumerate}
-    \end{description}
-     % \emph{Exercício}: Um fabricante adquire certo tipo de componente de um fornecedor.
-     % Segundo este fornecedor, a proporção de componentes defeituoso é de 2\%. O fabricante
-     % adquire 10 lotes por mês e de cada lote são selecionados 15 componentes para 
-     % inspeção. Qual a probabilidade de que sejam encontrados 3 lotes com mais de um 
-     % componente defeituoso?
-
-      \subsection{Distribuição Geométrica}
-      \begin{description}
-        \item  Considere uma sequência de ensaios Bernoulli independentes em probabilidade de 
-      sucesso $p$ ($0<p<1$). Seja a v.a.\ $x$ o $n^o$ de fracassos até a ocorrência 
-      do $1^o$ sucesso. Similarmente, a v.a.\ $x$ pode ser vista como o $n^o$ de ensaios que precedem 
-      o primeiro sucesso.
-
-    \item{Definição}: A v.a.\ $x$ tem distribuição geométrica se, e somente se, sua 
-      f.m.p.\ é definida por: 
-      \begin{align}
-        p_{x}(x)=P(X=x)=\begin{cases}
-          p(1-p)^x, \quad x=0,1,2,\dots \quad 0<p<1\\
-          0, \quad \text{caso contrário}
-        \end{cases}
-      \end{align}
-      \begin{center}Notação: $X \sim Geo(p)$\end{center}
-      Temos que:
-      \begin{align}
-        \mu_{x}=E(x)=\frac{1-p}{p} \text{\quad e a }\\
-        \sigma^2 = var(x)=\frac{1-p}{p^2}
-      \end{align}
-      Similarmente, a variável aleatória $Y$ pode ser vista como o $n^o$ de ensaios que
-      precedem o primeiro sucesso assim, $Y$ tem a distribuição geométrica com f.m.p.\ dada por:
-        \begin{align}
-        p_y(y)=P(Y>y)=\begin{cases}
-          (1-p)^{y-1} \text{\quad }p,y=1,2,\dots \\
-          0, \text{\quad Caso contrário}
-        \end{cases}
-      \end{align}
-      Neste caso, a v.a.\ $Y$ pode ser vista como $Y=X+1$ e, consequentemente, o valor esperado de y eh:
-      \begin{align} 
-      mu_y=E(Y)=E(X+1)=E(X)=E(X)+1= \frac{1}{p}
-    \end{align}
-    E a variância de $Y$ e:
-    \begin{align}
-      \sigma_y^2=var(Y)=var(X+1)=var(X)= \frac{1-p}{p}^2
-    \end{align}
-  \item{Exemplo}: Um pesquisador está realizando um experimentos químicos independetes 
-      e sabe que a probabilidade de que cada cada experimento apresnete uma reação 
-      positiva é $0,3$. QUal é a probabilidade de que menos de 3 reações negativas 
-      ocorram antes da primeira positiva?
-
-      $x$:$n^o$ de ocorrência positiva 
-      \begin{align*}
-        x=&\begin{cases}
-          1, \text{\quad se a reação positiva}\\
-          0, \text{\quad caso contrário}
-        \end{cases}
-      \end{align*}
-      $$P(x=1)=p=0,3$$\\
-      $X: n^o$ de reações negativas até a ocorrência de uma positiva\\
-      \begin{center}$Y \sim Geo(0,3)$\end{center}
-      \begin{align*}
-        P(X<3)=P(X=0)+P(X=1)+P(X=2)\\
-        P(X=0)=(1-0,3)^0 \times 0,3 = 0,3\\
-        P(X=1)=(1-0,3)^1 \times 0,3 = 0,21\\
-        P(X=2)=(1-0,3)^2 \times 0,3 = 0,147\\
-        P(X<3)=0,3+0,21+0147=0,657
-      \end{align*}
-      Ou ainda,
-      \begin{align*}
-        Y: n^o \quad \text{de ensaios até a ocorrência de reação positiva}\\
-        R_y = \{ 1,2,3,\ldots \}\\
-        P( Y<4 ) = P (Y \leq 3) = P(Y=1)+ P(Y=2)+P(Y=3)\\
-        P(Y=y)= p(1-p)^{y-1} \quad y=1,2,\dots
-      \end{align*}
-     % Exercício: Pensar no exercício anterior com o $n^o$ de ensaios.
-    \end{description}
-      \subsection{Distribuição Binomial Negativa}
-      \begin{description}
-        \item  Considere ensaios independetes de Bernoulli ($p$) e definimos $X$ como o $n^o$ 
-      de fracassos anteriores ao r-ésimos sucesso.
-
-    \item{Definição}: A v.a.\ $x$ tem distribuição Binomial negativa se, e somente se,
-      sua f.m.p.\ é definida por:
-      \begin{align}
-        p(x)=P(X=x)=&
-        \begin{cases}
-          \binom{x+r-1}{r-1} p^r (1-p)^x, \text{\quad x=0,1,2,\dots} \\
-          0, \text{\quad caso contrário}
-        \end{cases}
-      \end{align}
-    \begin{center}Notação: $X \mathtt{\sim}BN(r,p)$\end{center}
-      Temos que: 
-      \begin{align}
-        \mu_{x}=E(x)=\frac{r(1-p)}{p} \\
-        \sigma^2 = var(x)=\frac{1-p}{p^2}
-      \end{align}
-      Observações: 
-      \begin{enumerate}
-        \item Note que se $r=1$, temos o modelo geométrico.
-        \item $$\binom{x+r-1}{r-1}&= \binom{x+r-1}{x}$$
-      \end{enumerate}
-      A Binomial Negativa pode ser definida como o $n^o$ de ensaios necessários para 
-      a obtenção do r-ésimo sucesso. Formando $y=x+r$ temos a quantidade desejada e 
-      seus valores variam de $r$ em diante. Assim sendo $Y$ o $n^o$ de ensaios até 
-      a obtenção de $r$ sucessos, temos: 
-      \begin{align}
-        p(y)=p(Y=y)=&\begin{cases}
-          \binom{y-1}{m-1}p^m(1-p)^{y-m}, \text{\quad }y=m,m+1,\dots \\
-          0, \text{\quad caso contrário}
-        \end{cases}
-      \end{align}
-    \item{Exemplo}: Em uma serie do campeonato de basquete, o time que ganhar quatro em sete jogos sera
-      o vencedor. Suponha que o time $A$ tenha probabilidade de $55\%$ de ganhar de $B$ e que $A$ e $B$ 
-      se enfrentarao em uma serie de sete jogos. Qual a probabilidade de que $A$ venca a serie em 6 jogos?
-     \begin{align*} 
-       X:\text{O numero de derrotas de $A$ até que $A$ ganhe 4 partidas}\\
-       X \mathtt{\sim}BN (r=4, p=0,55)
-     \end{align*}
-     \begin{align*}
-       P(X=2)=\binom{2+4-1}{4-1} 0,55^{4}\times 0,45^{2}=0,1853
-     \end{align*}
-     Ou, de maniera similar, temos:
-     \begin{align*}
-       Y: n^{o} de partidas até que $A$ venca o campeonato
-     \end{align*}
-     \begin{align*}
-       P(Y=6)= \binom{6-1}{4-1} 0,55^{4} \times 0,45^{6-4} = 0,1853
-     \end{align*}
- \end{description}
- \subsection{Distribuição Hipergeometrica}
-Considere um conjunto de $n$ objetos dos quais $m$ são do tipo $I$
-e $(n-m) $ são do tipo $II$. Para um sorteio de $r$ objetos $(r<n)$, 
-feitos ao acaso e sem repeticao, defina $X$ como o número de objetos do tipo
-$I$ selecionados.
-\begin{description}
-  \item{Definição}: A v.a.\ $X$ tem distribuicao Hipergeometrica se sua f.m.p.\ eh dada
-    por:
-    \begin{align*}
-      P_x(x)= P(X=x)= \frac{\binom{m}{xs} \binom{n-m}{r-x}}{\binom{n}{r}}
-    \end{align*}
-    Em que $x$ (inteiro) eh tal que:
-    \begin{align*}
-      max \{0,r-(n-m)\} \leq x \leq min \{ r,m \}
-    \end{align*}
-  \item{Observação}: Os limites de $x$ garantem que situaçoes absurdas ocorram.
-  \item{Temos que: }
-    \begin{align*}
-      E(X) = r \frac{m}{n} \\
-      Var(x)= \frac{r\times m (n-m)(n-r)}{n^2 (n-1)}
-    \end{align*}
-  \item{Notacao}: $X \mathtt{\sim} Hgeo (m,n,r)$
-  \item{Exemplo}: Considere que em um lote de $20$ peças, existam $4$ defeituosas.
-    Seleciona-se $5$ dessas peças, sem resposicao, qual seria a probabilidade 
-    de duas defeituosas terem sido escolgidas?
-    \begin{align*}
-      X: \text{$N^{o}$  de peças defeituosas em $5$ retiradas }\\
-      P(x=2)=\frac{\binom{4}{2} \binom{16}{3}}{\binom{20}{5}}\\
-      R_{x}: \{ 0,1,2,3,4 \}
-    \end{align*}
-\end{description}
-\subsection{Distribuicao de Poisson}
-Eh largamente empregada quando se deseja contar o número de eventos de certo tipo
-que ocorrem em um certo periodo de tempo ou superficie ou volume.
-\begin{description}
-\item{Definicao} Uma v.a.\ tem Distribuição Poisson com parâmetro $\lambda$, $\lambda >0$,se sua
-  f.m.p.\ eh dada por:
- \begin{align}
-   P_{x} (x)= P(X=x)= \frac{e^{-\lambda}\lambda{x}}{x!}, \quad x=0,1,2,\ldots
- \end{align} 
- \item{Notacao}: $X \mathtt{\sim} Poi(\lambda)$
- \item{Temos que}:
-   \begin{align}
-     E(X)= \lambda \\
-     Var(x)= \lambda
-   \end{align}
-   \item{Exemplo}: Uma central telefonica recebe, em media, 5 chamadas por minuto.
-     Supondo que a distribuição de Poisson seja adequada nessa situação, obtenha a 
-     probabilidade de que a central receba no maximo 2 chamadas durante um intervalo
-     de um minuto.
-     \begin{align*}
-       X: n^{o} \text{de chamadas recebidas em 1 minuto em uma central telefonica}
-       \\
-       E(X)=\lambda= \text{5 chamadas/minuto}\\
-     \end{align*}
-     \begin{align*}
-       P(X \leq 2)= P(X=0)+ P(X=1)+P(X=2)
-     \end{align*}
-     \begin{align*}
-       P(X=0) = \frac{e^{-5}5^0}{0!}= 0,0067\\
-       P(X=1) = \frac{e^{-5}5^1}{1!}= 0,0334\\
-       P(X=2) = \frac{e^{-5}5^2}{2!}= 0,0842
-     \end{align*}
-     Logo,
-     \begin{align*}
-       P(X \leq 2)= 0,0067+0,0334+0,0842=0,1243
-     \end{align*}
-   \end{description}
-     \subsubsection{O processo de Poisson}
-     
-     Suponha que $\mu$ seja a média de ocorrência do evento de interesse
-     em $t$ unidades de medida(por exemplo, tempo). Denotamos por $\lambda$,
-     a taxa média de ocorrência em uma unidade de medida, como $\mu= \lambda t$.
-     Podemos reescrever a f.m.p.\ por:
-     \begin{align*}
-       p_{x} =P(X=x)= \frac{e^{-\lambda t} \left( \lambda t \right)^{x}}{x!}, \quad x=0,1,2,\ldots
-     \end{align*}
-     \begin{description} 
-       \item{Exemplo}: Considere o exemplo anterior e calcule a probabilidade de que a central 
-         telefonica receba no maximo duas chamadas em 4 minutos.
-         \begin{align*}
-           P(X \leq 2 \/ t=4) = P(X=0)+P(X=1)+P(X=2)
-         \end{align*}
-     \begin{align*}
-       P(X=0) = \frac{e^{-5 \times 4}(5\times 4)^0}{0!}= 2,06 \times 10^{-9}\\
-       P(X=1) = \frac{e^{-5 \times 4}(5\times 4)^1}{1!}= 4,12 \times 10^{-8}\\
-       P(X=2) = \frac{e^{-5 \times 4}(5\times 4)^2}{2!}= 4,12 \times 10^{-7} 
-     \end{align*}
-    \begin{align*}
-      P(X \leq 2 \/ t=4)= 2,06 \times 10^{-9}+4,12 \times 10^{-8}+4,12 \times 10^{-7} = 4,56 \times 10^{-7} \approx 0
-    \end{align*} 
-  \item{Resultados Imporatantes}
-    \begin{description}
-  \item {Resultado 1}: Se $X_1, X_2,\ldots, X_n$ sao independetes e $X_i \mathtt{\sim} Poisson(\lambda_i)$, então:
-    \begin{align}
-      Y= X_1+X_2+\ldots+X_n \mathtt{\sim} Poisson\left( \lambda_1+\ldots+\lambda_n \right)
-    \end{align}
-  \item {Resultado 2}: Se $X \mathtt{\sim}Bin(M,P)$. com $m$ grande e $P$ pequeno, pode-se aproximar a distribuição de 
-    $X$ pela distribuição de Poisson, cujo parâmetro sera $\lambda = M \times P$.
-    \begin{description}
-      \item {Exemplo}: Numero de gols marcados em $M=100$ tentativas.
-
-    \begin{align*}
-      P=0,05 \quad \talque \quad  X \mathtt{\sim} Bin(100, 0,05) \\
-      P(X \ge 50)=P(X=50), \ldots + P(X=100)= 1- \{P(X=0)+\ldots+P(X=49) \}\\
-      E(X)=M \times p = \mu\\
-      X \mathtt{\sim}Poi(\lambda= M \times P)
-    \end{align*}
-
-  \item{Exercício}: Em certa instalacao industrial, acidentes ocorrem com baixa frequência. Sabe-se que 
-    a probabilidade de um acidente ocorrer em um certo dia eh $0,005$ e que os acidentes são independentes.
-    
-    \begin{enumerate}[label=(\alph*)]
-      \item Qual a probabilidade de que em um periodo de 400 dias haja no maximo 3 dias com acidente?
-      Utilize a aproximacao pela distribuição de Poisson.
-    \item Calcule a probabilidade exata do item anterior e compare os resultados.
-   \end{enumerate}
-  \end{description}
-\end{description}
-   \end{description}
-   \section{Modelos Continuos}
-   \subsection{Distribuicao Uniforme} 
-   \begin{description}
-     \item {Definição}: Uma v.a.\ contínua $X$ tem distribuição uniforme no intervalo $(a,b), \quad a,b \in \mathbb{R}$,
-       se sua f.d.p.\ eh dada por:
-\begin{align}
-  f_x(x) = \begin{cases}
-\frac{1}{b-a}, \quad a \leq x \leq b  \\
-   0, \quad \text{caso contrário}
-  \end{cases}
-\end{align}
-\item{Notação}: $X \mathtt{\sim} U(a,b)$
-\item A f.d.a.\ eh dada por:
-  \begin{align}
-    F_x{x} = \begin{cases}
-      0, \quad \text{se} x<a \\
-      \frac{x-a}{b-a}, \quad \text{se} a\leq<b\\
-      1, x \ge b
-    \end{cases}
-  \end{align}
-  \begin{align}
-    P(X \leq x) = \int_{- \infty}^{x} f_{x} (t) dt = \int_{a}^{x} \frac{1}{b-a} dt\\
-    \nonumber = \frac{1}{b-a}t |_{a}^{x} = \frac{x^a -a}{b-a}
-  \end{align}
-\item{Exemplo}:
-  \begin{align*}
-    P(a_1 \leq X \leq b_1) = F_{x} (b_1) - F_{x}(a_1) \\
-    P(X > a_1)= 1- P(X \leq a_1) \\
-    = 1-F_{x} (a_1) \\
-    P(X \eq a_1)= F_{x}(a_1)
-  \end{align*}
-   \end{description}
- \item A media de $x$ eh:
-   \begin{align*}
-     E(X) = \frac{a+b}{2}
-   \end{align*}
- \item E a variância de $x$ eh:
-   \begin{align*}
-     Var(x) = \frac{ \left(b-a\right)^2 }{12}
-   \end{align*}
-   \item{Exemplo}: Seja $X$ uma v.a.\ com distribuição uniforme, $U(-1/2 , 1/2). $
-     Calcule:
-\begin{enumerate}[label=(\alph*)]
-  \item $F_{x} (x)$
-  \item P(\frac{-1}{4} \leq x \leq \frac{1}{4})
-  \item $E(x)$ e $Var(x)$
-\end{enumerate}
-Sabe-se que:
-\begin{align*}
-  X \mathtt{\sim}  U(\frac{-1}{2}; \frac{1}{2})
-\end{align*}
-Assim, a f.d.p.\ de $x$ eh:
-\begin{align*}
-  f_{x} (x)= \frac{1}{\frac{1}{2}- \left( \frac{-1}{2}\right)} = 1 \quad \frac{-1}{2}<x<\frac{1}{2}
-\end{align*}
-\begin{enumerate}[label=(\alph*)]
-  \item  $F_{x}(x)=?$
-    \begin{align*}
-      F_{x} (x)= P(X \leq x) = \int_{ -\infty  }^{x} f(t)dt\\
-      = \int_{\frac{-1}{2}}^{x} 1 dt= t|_{\frac{-1}{2}}{x} \\
-      = x+ \frac{1}{2}
-    \end{align*}
-    \begin{align*}
-      F_{x} (x) = P(X \leq x) = \begin{cases}
-        0, \quad \text{se}  x< \frac{-1}{2} \\
-        x+ \frac{1}{2} , \quad \text{se} \frac{-1}{2} \leq x < \frac{1}{2} \\
-        1, \quad x \ge \frac{1}{2}
-      \end{cases}
-    \end{align*}
-    \item 
-      \begin{align*}
-      P(\frac{-1}{4}\leq X \leq \frac{1}{4})  = \int_{\frac{-1}{4}}^{\frac{1}{4}}\\
-      = x|_{\frac{-1}{4}}^{\frac{1}{4}}= \frac{1}{4}+\frac{1}{4}=\frac{1}{2}
-    \end{align*}
-    Ou 
-    \begin{align*}
-      P(\frac{-1}{4} \leq X \leq \frac{1}{4})= F_{x}(\frac{1}{4})-F_{x}(\frac{-1}{4}) \\
-      \frac{3}{4}- \frac{1}{4}= \frac{1}{2}
-    \end{align*}
-    \item 
-      \begin{align*}
-        E(X) = \frac{a+b}{2} \\
-        = \frac{\frac{-1}{2} + \frac{1}{2}}{2}=0\\
-        Var(x)= \frac{ \left( b-a \right)^2 }{12}= \frac{ \left( \frac{1}{2} + \frac{1}{2} \right)^2 }{12}= \frac{1}{12}
-      \end{align*}
-\end{enumerate}
-\subsection{Distribuição Exponencial}
-\begin{description}
-  \item {Definição}: Uma v.a.\ contínua $X$ tem distribuição exponencial com parâmetro $\labmda, \lambda>0$, se sua
-    f.d.p.\ eh dada por:
-    \begin{align*}
-      f_{x} (x)= \begin{cases}
-        \lambda e^{- \lambda x} , \quad x \ge 0 \\
-        0, \quad \text{caso contrário}
-      \end{cases}
-    \end{align*}
-  \item{Notação}: $X \mathtt{\sim} Exp(\lambda)$
-    \item A f.d.a.\ de $x$ eh:
-      \begin{align*}
-        P(X \le x)  = \int_{ -\infty }{x} f_{x}(t)dt \\
-        = \int_{0}^{x} \lambda e^{-\lambda t } dt \\
-        = -e^{-\lambda t} |_{0}^{x} = -e^{-\lambda x} +1\\
-        = 1- e^{-\lambda x}
-      \end{align*}
-      \begin{align*}
-        F_{x} (x) = \begin{cases}
-         0, \quad x<0\\
-         1-e^{-\lambda x} , x\ge 0
-        \end{cases}
-      \end{align*}
-    \item A media e variancia de x sao:
-      \begin{align*}
-        E(x) = \frac{1}{\lambda}
-      \end{align*}
-      \begin{align*}
-        Var(x) = \frac{1}{\lambda^2}
-      \end{align*}
-    \item{Propriedade}:
-      \begin{enumerate}
-        \item Se $X \mathtt{\sim}  Exp(\lambda)$, então:
-        \begin{align*}
-          P(X> a+b  \/ x>b) = P(X > a)
-        \end{align*}
-        Esta propriedade eh conhecida por falta de memoria e eh a unica distribuição 
-        contínua que tem essa propriedade.
-
-        Observação: Outra parametrizacao para a distribuicao exponencial eh:
-        \begin{align*}
-          f_{x} (x)= \frac{1}{2}e^{-\frac{x}{2}}, \quad x\ge 0
-        \end{align*}
-        Ou seja, $\lambda= \frac{1}{\alpha}$
-        A media de x sera:
-        \begin{align*}
-          E(x)  = \alpha
-        \end{align*}
-        E a variância eh dada por:
-        \begin{align*}
-          Var(x) = \alpha^2
-        \end{align*}
-        Exemplo: Seja $X$ o tempo de vida util de um fusivel que tem distribuicao Exponencial
-        com vida media de 100 horas. Qual a probabilidade de um fusivel durar mais de 150
-        horas?
-        \begin{align*}
-          X \mathtt{\sim}  Exp(\frac{1}{100}) \\
-          \mu = E(x)= \frac{1}{\lambda}=100 \right \lambda= \frac{1}{100}\\
-          P(X> 150)= int_{150}^{\infty} \frac{1}{100} e^{- \frac{1}{100} x} dx \\
-          =0,22313
-        \end{align*}
-        Ou 
-        \begin{align*}
-          P(X>150) = 1- P(X \le 150)= 1- \int_{0}^{150} \frac{1}{100} e^{- \frac{1}{100}x}dx \\
-          = 0,22313
-        \end{align*}
-      \end{enumerate}
-\end{description}
-\subsection{Distribuição Normal}
-E a distribuicao mais importante dos modelos probabilisticos. 
-Eh tambem conhecida como distribuicao gaussiana. Sua representação 
-gráfica eh conhecida por curva em forma de sino.
-\begin{description}
-  \item {Definição:}  Uma v.a.\ contínua $X$ tem Distribuição normal com parâmetro $\mu$ (media) e 
-    $\sigma^2$ se sua f.d.p.\ eh dada por:
-    \begin{align}
-      f_{x} (X)= \frac{1}{\sqrt{2\pi \sigma^2}}
-    \end{align}
-\end{description}
- \end{document}

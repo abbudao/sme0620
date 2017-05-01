@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2017.1.29)  27 APR 2017 13:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2017.1.29)  1 MAY 2017 13:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**1-03-2016.tex
-(./1-03-2016.tex
+**document.tex
+(./document.tex
 LaTeX2e <2016/03/31> patch level 3
 Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
 (/usr/share/texmf-dist/tex/latex/base/book.cls
@@ -24,7 +24,9 @@ File: bk11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
-) (/usr/share/texmf-dist/tex/generic/babel/babel.sty
+) (./DocumentStyle.sty
+Package: DocumentStyle 
+(/usr/share/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2016/04/23 3.9r The Babel package
 (/usr/share/texmf-dist/tex/generic/babel-portuges/portuges.ldf
 Language: portuges 2008/03/18 v1.2q Portuguese support from the babel system
@@ -649,7 +651,50 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \float@box=\box40
 \@float@everytoks=\toks37
 \@floatcapt=\box41
-) (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.code.tex
+) (/usr/share/texmf-dist/tex/latex/pgfplots/pgfplots.sty (/usr/share/texmf-dist/tex/latex/pgfplots/pgfplots.revision.tex)
+Package: pgfplots 2016/08/10 v1.14 Data Visualization (1.14)
+(/usr/share/texmf-dist/tex/latex/pgfplots/pgfplots.code.tex (/usr/share/texmf-dist/tex/latex/pgfplots/pgfplotscore.code.tex
+\t@pgfplots@toka=\toks38
+\t@pgfplots@tokb=\toks39
+\t@pgfplots@tokc=\toks40
+\pgfplots@tmpa=\dimen175
+\c@pgfplots@coordindex=\count127
+\c@pgfplots@scanlineindex=\count128
+(/usr/share/texmf-dist/tex/latex/pgfplots/sys/pgfplotssysgeneric.code.tex)) (/usr/share/texmf-dist/tex/latex/pgfplots/libs/pgfplotslibrary.code.tex) (/usr/share/texmf-dist/tex/latex/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_loader.code.tex (/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex)
+Package pgfplots: loading complementary arithmetics for your pgf version...
+(/usr/share/texmf-dist/tex/latex/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_pgflibraryfpu.code.tex) (/usr/share/texmf-dist/tex/latex/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count129
+)) (/usr/share/texmf-dist/tex/latex/pgfplots/util/pgfplotsutil.code.tex (/usr/share/texmf-dist/tex/latex/pgfplots/liststructure/pgfplotsliststructure.code.tex) (/usr/share/texmf-dist/tex/latex/pgfplots/liststructure/pgfplotsliststructureext.code.tex) (/usr/share/texmf-dist/tex/latex/pgfplots/liststructure/pgfplotsarray.code.tex
+\c@pgfplotsarray@tmp=\count130
+) (/usr/share/texmf-dist/tex/latex/pgfplots/liststructure/pgfplotsmatrix.code.tex) (/usr/share/texmf-dist/tex/latex/pgfplots/numtable/pgfplotstableshared.code.tex
+\c@pgfplotstable@counta=\count131
+\t@pgfplotstable@a=\toks41
+) (/usr/share/texmf-dist/tex/latex/pgfplots/liststructure/pgfplotsdeque.code.tex) (/usr/share/texmf-dist/tex/latex/pgfplots/util/pgfplotsbinary.code.tex (/usr/share/texmf-dist/tex/latex/pgfplots/util/pgfplotsbinary.data.code.tex)) (/usr/share/texmf-dist/tex/latex/pgfplots/util/pgfplotsutil.verb.code.tex) (/usr/share/texmf-dist/tex/latex/pgfplots/libs/pgflibrarypgfplots.surfshading.code.tex
+\c@pgfplotslibrarysurf@no=\count132
+(/usr/share/texmf-dist/tex/latex/pgfplots/sys/pgflibrarypgfplots.surfshading.pgfsys-pdftex.def))) (/usr/share/texmf-dist/tex/latex/pgfplots/util/pgfplotscolormap.code.tex (/usr/share/texmf-dist/tex/latex/pgfplots/util/pgfplotscolor.code.tex)) (/usr/share/texmf-dist/tex/latex/pgfplots/pgfplotsstackedplots.code.tex) (/usr/share/texmf-dist/tex/latex/pgfplots/pgfplotsplothandlers.code.tex (/usr/share/texmf-dist/tex/latex/pgfplots/pgfplotsmeshplothandler.code.tex (/usr/share/texmf-dist/tex/latex/pgfplots/pgfplotsmeshplotimage.code.tex))) (/usr/share/texmf-dist/tex/latex/pgfplots/pgfplots.scaling.code.tex) (/usr/share/texmf-dist/tex/latex/pgfplots/pgfplotscoordprocessing.code.tex) (/usr/share/texmf-dist/tex/latex/pgfplots/pgfplots.errorbars.code.tex) (/usr/share/texmf-dist/tex/latex/pgfplots/pgfplots.markers.code.tex) (/usr/share/texmf-dist/tex/latex/pgfplots/pgfplotsticks.code.tex) (/usr/share/texmf-dist/tex/latex/pgfplots/pgfplots.paths.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.code.tex (/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.code.tex
+\pgfdecoratedcompleteddistance=\dimen176
+\pgfdecoratedremainingdistance=\dimen177
+\pgfdecoratedinputsegmentcompleteddistance=\dimen178
+\pgfdecoratedinputsegmentremainingdistance=\dimen179
+\pgf@decorate@distancetomove=\dimen180
+\pgf@decorate@repeatstate=\count133
+\pgfdecorationsegmentamplitude=\dimen181
+\pgfdecorationsegmentlength=\dimen182
+)
+\tikz@lib@dec@box=\box42
+) (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathmorphing.code.tex (/usr/share/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathmorphing.code.tex)) (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathreplacing.code.tex (/usr/share/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathreplacing.code.tex))
+\pgfplots@numplots=\count134
+\pgfplots@xmin@reg=\dimen183
+\pgfplots@xmax@reg=\dimen184
+\pgfplots@ymin@reg=\dimen185
+\pgfplots@ymax@reg=\dimen186
+\pgfplots@zmin@reg=\dimen187
+\pgfplots@zmax@reg=\dimen188
+) (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryplotmarks.code.tex
+File: tikzlibraryplotmarks.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
+(/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmarks.code.tex
+File: pgflibraryplotmarks.code.tex 2015/08/03 v3.0.1a (rcs-revision 1.14)
+))) (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.code.tex
 File: tikzlibraryshapes.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
 (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.geometric.code.tex
 File: tikzlibraryshapes.geometric.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
@@ -671,58 +716,62 @@ File: pgflibraryshapes.arrows.code.tex 2008/06/26 v3.0.1a (rcs-revision 1.1)
 File: tikzlibraryshapes.multipart.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
 (/usr/share/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.multipart.code.tex
 File: pgflibraryshapes.multipart.code.tex 2010/01/07 v3.0.1a (rcs-revision 1.2)
-\pgfnodepartlowerbox=\box42
-\pgfnodeparttwobox=\box43
-\pgfnodepartthreebox=\box44
-\pgfnodepartfourbox=\box45
-\pgfnodeparttwentybox=\box46
-\pgfnodepartnineteenbox=\box47
-\pgfnodeparteighteenbox=\box48
-\pgfnodepartseventeenbox=\box49
-\pgfnodepartsixteenbox=\box50
-\pgfnodepartfifteenbox=\box51
-\pgfnodepartfourteenbox=\box52
-\pgfnodepartthirteenbox=\box53
-\pgfnodeparttwelvebox=\box54
-\pgfnodepartelevenbox=\box55
-\pgfnodeparttenbox=\box56
-\pgfnodepartninebox=\box57
-\pgfnodeparteightbox=\box58
-\pgfnodepartsevenbox=\box59
-\pgfnodepartsixbox=\box60
-\pgfnodepartfivebox=\box61
+\pgfnodepartlowerbox=\box43
+\pgfnodeparttwobox=\box44
+\pgfnodepartthreebox=\box45
+\pgfnodepartfourbox=\box46
+\pgfnodeparttwentybox=\box47
+\pgfnodepartnineteenbox=\box48
+\pgfnodeparteighteenbox=\box49
+\pgfnodepartseventeenbox=\box50
+\pgfnodepartsixteenbox=\box51
+\pgfnodepartfifteenbox=\box52
+\pgfnodepartfourteenbox=\box53
+\pgfnodepartthirteenbox=\box54
+\pgfnodeparttwelvebox=\box55
+\pgfnodepartelevenbox=\box56
+\pgfnodeparttenbox=\box57
+\pgfnodepartninebox=\box58
+\pgfnodeparteightbox=\box59
+\pgfnodepartsevenbox=\box60
+\pgfnodepartsixbox=\box61
+\pgfnodepartfivebox=\box62
 ))) (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarybackgrounds.code.tex
 File: tikzlibrarybackgrounds.code.tex 2013/07/18 v3.0.1a (rcs-revision 1.3)
-\pgf@layerbox@background=\box62
-\pgf@layerboxsaved@background=\box63
-) (./1-03-2016.aux)
-\openout1 = `1-03-2016.aux'.
+\pgf@layerbox@background=\box63
+\pgf@layerboxsaved@background=\box64
+) (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytrees.code.tex
+File: tikzlibrarytrees.code.tex 2008/02/24 v3.0.1a (rcs-revision 1.2)
+) (/usr/share/texmf-dist/tex/latex/pgfplots/libs/tikzlibrarypgfplots.fillbetween.code.tex (/usr/share/texmf-dist/tex/latex/pgfplots/pgfcontrib/tikzlibraryfillbetween.code.tex (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryintersections.code.tex (/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryintersections.code.tex
+\pgf@intersect@solutions=\count135
+)) (/usr/share/texmf-dist/tex/latex/pgfplots/pgfcontrib/tikzlibrarydecorations.softclip.code.tex (/usr/share/texmf-dist/tex/latex/pgfplots/pgfcontrib/pgflibraryfillbetween.code.tex))) (/usr/share/texmf-dist/tex/latex/pgfplots/libs/tikzlibrarypgfplots.decorations.softclip.code.tex))) (./document.aux (./tex/Probabilidade.aux) (./tex/ModelosProb.aux))
+\openout1 = `document.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
 ABD: EveryShipout initializing macros (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count127
-\scratchdimen=\dimen175
-\scratchbox=\box64
-\nofMPsegments=\count128
-\nofMParguments=\count129
-\everyMPshowfont=\toks38
-\MPscratchCnt=\count130
-\MPscratchDim=\dimen176
-\MPnumerator=\count131
-\makeMPintoPDFobject=\count132
-\everyMPtoPDFconversion=\toks39
+\scratchcounter=\count136
+\scratchdimen=\dimen189
+\scratchbox=\box65
+\nofMPsegments=\count137
+\nofMParguments=\count138
+\everyMPshowfont=\toks42
+\MPscratchCnt=\count139
+\MPscratchDim=\dimen190
+\MPnumerator=\count140
+\makeMPintoPDFobject=\count141
+\everyMPtoPDFconversion=\toks43
 ) (/usr/share/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2016/05/21 v0.22 Utility functions of pdfTeX for LuaTeX (HO)
 (/usr/share/texmf-dist/tex/generic/oberdiek/ifluatex.sty
@@ -759,200 +808,107 @@ Package grfext Info: Graphics extension search list:
 (/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
+Package pgfplots notification 'compat/show suggested version=true': you might benefit from \pgfplotsset{compat=1.14} (current compat level: 1.7).
+
+\openout2 = `./tex/Probabilidade.aux'.
+
+(./tex/Probabilidade.tex
 Cap\'{\i }tulo 1.
-LaTeX Font Info:    Try loading font information for U+msa on input line 24.
+LaTeX Font Info:    Try loading font information for U+msa on input line 7.
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 24.
+LaTeX Font Info:    Try loading font information for U+msb on input line 7.
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Overfull \hbox (3.05264pt too wide) in paragraph at lines 24--26
+Overfull \hbox (3.05264pt too wide) in paragraph at lines 7--9
 []\OT1/cmr/m/n/10.95 : s~ao os acon-te-ci-men-tos cu-
  []
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 31.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 14.
 (/usr/share/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 31.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 14.
 
-Overfull \hbox (13.67647pt too wide) in paragraph at lines 46--48
-[]\OT1/cmr/m/n/10.95 : qual-quer sub-con-junto do espa^^Xco amos-tral $
+Overfull \hbox (9.87436pt too wide) in paragraph at lines 29--31
+[]\OT1/cmr/m/n/10.95 qualquer sub-con-junto do espa^^Xco amos-tral $
 $ do ex-pe-ri-mento aleat^^Sorio
  []
 
 [1
 
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./tikz/figura1.tikz) (./tikz/figura2.tikz) [2] (./tikz/figura3.tikz) (./tikz/figura4.tikz) (./tikz/figura5.tikz) [3] (./tikz/figura6.tikz) (./tikz/figura7.tikz) (./tikz/figura8.tikz) [4] (./tikz/figura9.tikz) (./tikz/figura10.tikz) [5] (./tikz/figura1.tikz)
-Overfull \hbox (8.30537pt too wide) in paragraph at lines 242--243
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./tikz/Probabilidade/figura1.tikz) [2] (./tikz/Probabilidade/figura2.tikz) (./tikz/Probabilidade/figura3.tikz) (./tikz/Probabilidade/figura4.tikz) [3] (./tikz/Probabilidade/figura5.tikz) (./tikz/Probabilidade/figura6.tikz) (./tikz/Probabilidade/figura7.tikz) [4] (./tikz/Probabilidade/figura8.tikz) (./tikz/Probabilidade/figura9.tikz) (./tikz/Probabilidade/figura10.tikz)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[5] (./tikz/Probabilidade/figura1.tikz)
+Overfull \hbox (8.30537pt too wide) in paragraph at lines 226--227
 \OT1/cmr/m/n/10.95 Se um ex-pe-ri-mento aleat^^Sorio ti-ver $\OML/cmm/m/it/10.95 n$ \OT1/cmr/m/n/10.95 re-sul-ta-dos poss^^S^^Pveis, $
  = \OMS/cmsy/m/n/10.95 f\OML/cmm/m/it/10.95 ![]; ![]; [] ; ![]\OMS/cmsy/m/n/10.95 g$\OT1/cmr/m/n/10.95 ,
  []
 
 [6] [7]
-Overfull \hbox (14.8718pt too wide) in paragraph at lines 351--351
+Overfull \hbox (14.8718pt too wide) in paragraph at lines 334--334
 [] 
  []
 
-[8] [9] [10] [11] [12] [13] [14] [15] [16]
-Overfull \hbox (6.97757pt too wide) in paragraph at lines 773--775
+[8] [9] [10] (./tikz/Probabilidade/tree1.tikz) (./tikz/Probabilidade/tree2.tikz)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[11] [12] (./tikz/Probabilidade/figura10.tikz) [13] (./tikz/Probabilidade/partition.tikz) [14] [15] [16]
+Underfull \vbox (badness 1062) has occurred while \output is active []
+
+[17] (./tikz/Probabilidade/domain1.tikz) [18] [19]
+Overfull \hbox (6.97757pt too wide) in paragraph at lines 757--759
 []$\OML/cmm/m/it/10.95 Y$ \OT1/cmr/m/n/10.95 in-dica o tempo de vida (em ho-ras) de um equi-pa-mento eletr^onico.
  []
 
 
-Overfull \hbox (1.25287pt too wide) in paragraph at lines 773--775
+Overfull \hbox (1.25287pt too wide) in paragraph at lines 757--759
 \OML/cmm/m/it/10.95 Y$ \OT1/cmr/m/n/10.95 pode as-su-mir va-lo-res em $\U/msb/m/n/10.95 R[]$ \OT1/cmr/m/n/10.95 e as-sim ^^Se cha-mado de v.a. cont^^S^^Pnua. 
  []
 
 
-Overfull \hbox (48.19504pt too wide) in paragraph at lines 779--781
+Overfull \hbox (48.19504pt too wide) in paragraph at lines 763--765
 []\OT1/cmr/m/n/10.95 : Seja x uma v.a. dis-creta que as-sume va-lo-res em $\OML/cmm/m/it/10.95 R[] \OT1/cmr/m/n/10.95 = \OMS/cmsy/m/n/10.95 f\OML/cmm/m/it/10.95 x[]; x[]; [] ; x[]; [] \OMS/cmsy/m/n/10.95 g$\OT1/cmr/m/n/10.95 .
  []
 
-[17]
-Overfull \hbox (10.29048pt too wide) in paragraph at lines 827--827
+(./tikz/Probabilidade/fmp1.tikz) [20]
+Overfull \hbox (10.29048pt too wide) in paragraph at lines 811--811
 [] 
  []
 
-[18] [19] [20] [21] [22] [23] [24] [25] [26]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+[21] [22] (./tikz/Probabilidade/fmp2.tikz) [23] [24] (./tikz/Probabilidade/intersecaxis.tikz) [25]
+Underfull \vbox (badness 1817) has occurred while \output is active []
 
-[27]
-Overfull \hbox (21.41458pt too wide) in paragraph at lines 1260--1260
+[26] [27] [28] [29] [30]
+Overfull \hbox (21.41458pt too wide) in paragraph at lines 1256--1256
 []\OT1/cmr/bx/n/14.4 Esperan^^Xca Ma-tem^^Satica de uma Vari^^Savel Aleat^^Soria 
  []
 
-[28] [29] [30]
-Underfull \hbox (badness 10000) in paragraph at lines 1671--1672
 
+Overfull \hbox (1.69917pt too wide) has occurred while \output is active
+\OT1/cmr/m/sl/10.95 1.6.  ESPERAN[]A MATEM[]ATICA DE UMA VARI[]AVEL ALEAT[]ORIA \OT1/cmr/m/n/10.95 31
  []
 
-[31]
-Underfull \hbox (badness 10000) in paragraph at lines 1672--1674
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1674--1675
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1687--1688
-
- []
-
-[32]
-Overfull \hbox (53.42747pt too wide) in paragraph at lines 1722--1727
-\OML/cmm/m/it/10.95 p \OT1/cmr/m/n/10.95 :  []$ 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1722--1727
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1727--1728
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1728--1729
-
- []
-
-[33]
-Underfull \hbox (badness 10000) in paragraph at lines 1790--1792
-
- []
-
-[34] [35] [36] [37]
-Overfull \hbox (15.08875pt too wide) in paragraph at lines 1952--1952
-[] 
- []
-
-./1-03-2016.tex:1969: Undefined control sequence.
-<argument>  P=0,05 \quad \talque 
-                                 \quad X \mathtt {\sim } Bin(100, 0,05) \\ P...
-l.1969     \end{align*}
-                       
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-./1-03-2016.tex:1969: Undefined control sequence.
-<argument>  P=0,05 \quad \talque 
-                                 \quad X \mathtt {\sim } Bin(100, 0,05) \\ P...
-l.1969     \end{align*}
-                       
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-Overfull \hbox (32.31715pt too wide) in paragraph at lines 1969--1969
-[] 
- []
-
-[38]
-./1-03-2016.tex:2012: Undefined control sequence.
-<argument> ... a_1) \\ = 1-F_{x} (a_1) \\ P(X \eq 
-                                                  a_1)= F_{x}(a_1) 
-l.2012   \end{align*}
-                     
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-./1-03-2016.tex:2012: Undefined control sequence.
-<argument> ... a_1) \\ = 1-F_{x} (a_1) \\ P(X \eq 
-                                                  a_1)= F_{x}(a_1) 
-l.2012   \end{align*}
-                     
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-[39] [40]
-Overfull \hbox (6.41483pt too wide) in paragraph at lines 2071--2073
-[]\OT1/cmr/m/n/10.95 Defini^^Xc~ao: Uma v.a. cont^^S^^Pnua $\OML/cmm/m/it/10.95 X$ \OT1/cmr/m/n/10.95 tem dis-tri-bui^^Xc~ao ex-po-nen-cial com par^ametro
- []
-
-[41] [42] [43] [44]
-Underfull \hbox (badness 10000) in paragraph at lines 2270--2272
-
- []
-
-[45] [46] [47] [48]
-Underfull \vbox (badness 1590) has occurred while \output is active []
-
-[49] [50] (./1-03-2016.aux) ) 
+[31] [32]) [33] (./document.aux (./tex/Probabilidade.aux) (./tex/ModelosProb.aux)) ) 
 Here is how much of TeX's memory you used:
- 15487 strings out of 493013
- 313524 string characters out of 6139317
- 393827 words of memory out of 5000000
- 18674 multiletter control sequences out of 15000+600000
- 12389 words of font info for 48 fonts, out of 8000000 for 9000
+ 26428 strings out of 493013
+ 675838 string characters out of 6139317
+ 931918 words of memory out of 5000000
+ 29413 multiletter control sequences out of 15000+600000
+ 14509 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,19n,67p,408b,966s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on 1-03-2016.pdf (50 pages, 274241 bytes).
+ 103i,19n,126p,774b,2605s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on document.pdf (33 pages, 245807 bytes).
 PDF statistics:
- 230 PDF objects out of 1000 (max. 8388607)
- 161 compressed objects within 2 object streams
+ 178 PDF objects out of 1000 (max. 8388607)
+ 125 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

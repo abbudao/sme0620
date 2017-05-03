@@ -1,0 +1,15 @@
+\pgfmathdeclarefunction{gauss}{2}{\pgfmathparse{1/(#2*sqrt(2*pi))*exp(-((x-#1)^2)/(2*#2^2))}%
+}
+\def\startx{-3}
+\def\endx{-1.5}
+\begin{tikzpicture}
+\begin{axis}[no markers, domain=0:10, samples=100,
+axis lines*=left, xlabel=$x$, ylabel=$f_{x}(x)$,
+height=6cm, width=10cm,xtick={\startx,\endx}, ytick=\empty,
+enlargelimits=false, clip=false, axis on top
+]
+
+\addplot [color=blue, domain=-3:3] {gauss(0,1)} ;
+\addplot [fill=cyan!20, draw=none, domain=\startx:\endx] {gauss(0,1)} \closedcycle;
+\end{axis}
+\end{tikzpicture}

@@ -1,0 +1,17 @@
+\def\startx{-2}
+\def\endx{4}
+\begin{tikzpicture}
+\begin{axis}[
+axis lines*=left,enlargelimits=false, clip=false, axis on top,
+domain=\startx:\endx]S
+\addplot[color=blue,thick,domain=-3:0,ultra thick]{0};
+  \addplot+[no markers,color=blue,domain=0:1,ultra thick]{0.25};
+  \addplot+[no markers,color=blue,domain=1:2,ultra thick]{0.75};
+  \addplot+[no markers,color=blue,domain=2:5,ultra thick]{1};
+  \addplot[mark=*,solid,color=blue,fill=blue] coordinates {(1,0.75)};
+  \addplot[mark=*,solid,color=blue,fill=blue] coordinates {(0,0.25)};
+  \addplot[mark=*,solid,color=blue,fill=blue] coordinates {(2,1)};
+  \addplot[mark=*,solid,color=blue,fill=white] coordinates {(2,0.75)};
+  \addplot[mark=*,solid,color=blue,fill=white] coordinates {(1,0.25)};
+\end{axis}
+\end{tikzpicture}

@@ -19,6 +19,7 @@ xlabel= $X \leq \frac{1}{2}$
 \addplot[fill=cyan,domain=-10:0.5] {0.02}\closedcycle;
 \end{axis}
 \end{tikzpicture}
+\hfill
 \begin{tikzpicture}
 \begin{axis}[compat=newest, %footnotesize
 tick label style={font=\footnotesize},
@@ -38,6 +39,7 @@ xlabel= $\frac{1}{3} \leq X \leq \frac{2}{3}$
 \addplot[fill=cyan,domain=0.33:0.66] {0.02}\closedcycle;
 \end{axis}
 \end{tikzpicture}
+\hfill
 \begin{tikzpicture}
 \begin{axis}[compat=newest, %footnotesize
 tick label style={font=\footnotesize},
@@ -49,10 +51,10 @@ every axis/.style={pin distance=1ex},
 trim axis left,
 axis x line=center,
 axis y line=none,
-xmin=-1,xmax=1,
+xmin=-1.1,xmax=1,
 ymin=0, ymax= 1,
 xtick={0.33,0.5},
-xlabel=  $ X \leq \frac{1}{2} \cap \frac{1}{3} \leq X \leq \frac{2}{3}$
+xlabel=  $ (X \leq \frac{1}{2} )\cap (\frac{1}{3} \leq X \leq \frac{2}{3})$
 ]
 \addplot[fill=cyan,domain=0.33:0.5] {0.02}\closedcycle;
 \end{axis}

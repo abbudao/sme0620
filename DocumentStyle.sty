@@ -10,7 +10,11 @@
 \usepackage{float}
 \usepackage{xcolor}
 \usepackage{pgfplots}
+\usepackage{xfrac}
 \usetikzlibrary{shapes, backgrounds}
 \usetikzlibrary{trees}
+\usetikzlibrary{positioning}
 \usepgfplotslibrary{fillbetween}
 \pgfplotsset{compat=1.7}
+\newcommand*\eval[3]{\left.#1\right\rvert_{#2}^{#3}}
+\newcommand*{\rom}[1]{\expandafter\@slowromancap\romannumeral #1@}

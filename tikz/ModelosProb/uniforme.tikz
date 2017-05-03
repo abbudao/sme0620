@@ -1,0 +1,28 @@
+\pgfmathdeclarefunction{weird}{1}{%
+  \pgfmathparse{5}%
+}
+
+\begin{tikzpicture}
+
+\def\startx{-7}
+\def\endx{7}
+\def\verticalbar{6}
+\begin{axis}[no markers,
+axis lines*=left, xlabel=Variavel aleatoria Continua, ylabel=f.d.p,,
+height=6cm, width=10cm,  xticklabels={a,\empty,\empty,$a_1$,\empty,\empty,\empty,\empty,\empty,$b_1$,\empty,\empty,\empty,\empty,b},
+xtick={-7,-6,-5,-4,-3, -2, -1, 0, 1, 2, 3,4,5,6,7}, ytick=\empty,xtick style={draw=none},
+enlargelimits=false, clip=false, axis on top,
+    domain=\startx:\endx
+]
+\addplot [name path=g5,thin, smooth,] {weird(1)};
+\addplot [
+    fill=orange!52,
+    draw=none,
+    domain=-4:2,
+    stack plots=y
+    ] {max(weird(1),0)} \closedcycle;
+\node[below] at (590,-40) {$P(a_1<x<b_1)$};
+\draw[dashed,color=blue!60] (825,-100) to (825,0);
+\node[above,color=blue!60] at (825,0) {$P(X=k)=0$};
+\end{axis}
+\end{tikzpicture}

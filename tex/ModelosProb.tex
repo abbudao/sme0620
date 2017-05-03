@@ -1,9 +1,10 @@
 \chapter{Principais Modelos Probabilísticos}
  \section{Modelos Discretos}
  \subsection{Distribuição Uniforme Discreta}
- A v.a.\ assume cada um de seus valores com igual probabilidade.
+ \begin{description}
+   \item  A v.a.\ assume cada um de seus valores com igual probabilidade.
 
- Definição: A v.a.\ discreta $X$, assumindo valores $x_1,x_2,\dots,x_k$ tem 
+   \item [Definição:] A v.a.\ discreta $X$, assumindo valores $x_1,x_2,\dots,x_k$ tem 
  distribuição uniforme se, e somente se, sua f.m.p.\ é definida por: 
  \begin{align}
    p(x)=P(X=x)=\begin{cases}
@@ -11,17 +12,16 @@
      0, \text{\quad caso contrário}
    \end{cases}
  \end{align}
- Notação: $X \sim U_{d}(k)$
+\item  [Notação:] $X \sim U_{d}(k)$
  A média e variância de x é:
  \begin{align}
-   \mu_{x}=E(x)=\sum_{x \in R_{x}}x_i P(X=x_i)\\
+   \mu_{x}=E(x)=\sum_{x \in R_{x}}x_i P(X=x_i)\\ \nonumber
    = \sum_{x \in R_{x}}x_i \frac{1}{k}= \frac{1}{k}\sum_{x_i \in R_{x}}\\
-   \text{e}\\
-   var(x)=E(X^2)-\{E(X)\}^2\\
-   = \sum_{x_i \in R_{x}}(x_i -\mu_x )^2 p(X=x_i)\\
-   =\frac{1}{k} \{\sum^k_{i=1} x_i^2 - \frac{(\sum_{i=1}^k)^2}{k}\}
+   Var(x)=E(X^2)-\left(E(X)\right)^2\\ \nonumber
+   = \sum_{x_i \in R_{x}}\left(x_i -\mu_x \right)^2 \times p\left(X=x_i \right)\\  
+   =\frac{1}{k} \left(\sum^k_{i=1} x_i^2 - \frac{(\sum_{i=1}^k)^2}{k}\right) \nonumber
  \end{align}
- Exemplo: Seja $x$ uma v.a.\ que indica o $n^o$ de pontos marcados na face 
+\item [Exemplo:] Seja $x$ uma v.a.\ que indica o $n^o$ de pontos marcados na face 
  superior de um dado quando ele é lançado. Portanto, temos uma distribuição 
  uniforme discreta, cuja f.m.p.\ é dada por: 
  \begin{align}
@@ -35,17 +35,18 @@
    \mu_{x}=E(x)=\frac{1}{6}(1+2+3+4+5+6)\\
    =\frac{1}{6}21= \frac{7}{2}=3,5
  \end{align}
- E a $var(x)$ é:
+ E a $Var(x)$ é:
  \begin{align}
    E(x^2)=\frac{1}{6}(1^2 + 2^2 + \dots + 6^2)\\
    =\frac{91}{6}=15,17\\
    var(x)=\frac{91}{6}- \{\frac{7}{2}\}^2=\frac{105}{36}=2,92
  \end{align}
+ \end{description}
  \subsection{Distribuição Bernoulli}
- Considere uma v.a.\ $x$ que assume apenas dois valores 1, se ocorrer sucesso,
- 0, se ocorrer fracasso. Indicaremos por ``p" a probabilidade de sucesso, Isto
- é, $P(\text{Sucesso})=P(x=1)=p$.
- Definição: A v.a.\ discreta $x$ que assume apenas valores 0 ou 1 tem Distribuição
+ \begin{description}
+   \item Considere uma v.a.\ $x$ que assume apenas dois valores 1, se ocorrer sucesso,$0$, se ocorrer fracasso. Indicaremos por $p$ a probabilidade de sucesso, isto é $P(\text{Sucesso})=P(x=1)=p$.
+
+\item [Definição:] A v.a.\ discreta $x$ que assume apenas valores 0 ou 1 tem Distribuição
  Bernoulli se, somente se, sua f.m.p.\ é definida por:
  \begin{align}
    p(x)=P(X=x)= \begin{cases}
@@ -53,14 +54,14 @@
      0, \text{\quad caso contrário}
    \end{cases}
  \end{align}
- Notação: $X \sim Ber(p)$
+\item[ Notação:] $X \sim Ber(p)$
 
- Exemplos: 
+\item [Exemplos:]
  $$p(x)=(\frac{2}{5})^x(1-\frac{2}{5})^x, \text{\quad}x=0,1$$\\
  $$p(x)=(\frac{7}{8})^{1-x}(1-\frac{7}{8})^{1-x}, \text{\quad }, x=0,1$$
 
  De forma similar, podemos apresentar $p(x)$ por:
- \begin{figure} 
+ \begin{figure} [H]
    \centering
    \begin{tabular}{c c c}
      \toprule
@@ -77,7 +78,7 @@
  \begin{align}
    \sigma^2 = var(x)=p (1-p)
  \end{align}
- Exemplo: Suponha o lançamento de um dado perfeito e o interesse é ocorrer a face
+ \item [Exemplo:] Suponha o lançamento de um dado perfeito e o interesse é ocorrer a face
  3.
  \begin{align*}
    X=\begin{cases}
@@ -101,52 +102,63 @@
    \end{tabular}
    \label{fig:8}
  \end{figure}
- $X \sim Ber(\frac{1}{6})$
+\begin{align*}
+   X \sim Ber(\frac{1}{6})
+\end{align*}
+
  A média de $x$ é: 
  \begin{align*}
    \mu_{x}=(X)=p=\frac{1}{6}
  \end{align*}
- e a variância de $x$ é: 
+
+ E a variância de $x$ é: 
  \begin{align*}
-   \sigma^2= var(x)=p(1-p)=\frac{1}{6}\frac{5}{6}=\frac{5}{36}
+   \sigma^2= var(x)=p(1-p)=\frac{1}{6} \times \frac{5}{6}=\frac{5}{36}
  \end{align*}
+ \end{description}
  \subsection{Distribuição Binominal}
- Considere $M$ ensaios de Bernoulli independentes, todos com a mesma probabilidade
+
+ \begin{description}
+   \item  Considere $M$ ensaios de Bernoulli independentes, todos com a mesma probabilidade
  de sucesso $p$. A v.a.\ que conta o número de sucessos nos $M$ ensaios de Bernoulli
  é denominada v.a.\ binomial com parâmetro $M$ e $p$.
 
- \begin{description}
-   \item{Definição}: A v.a.\ discreta $x$, correspondente ao $n^o$ de sucesso em $M$ ensaios
+   \item[Definição:] A v.a.\ discreta $x$, correspondente ao $n^o$ de sucesso em $M$ ensaios
      independentes de Bernoulli, tem distribuição binomial se, e somente se, sua 
      f.m.p.\ é definida por: 
      \begin{align}
        p(x)=P(X=x)=\begin{cases}
-         \binom{M}{x}p^x (1-p)^{M-x}, \text{\quad}x=0,1,\dots,M \text{\quad e }0<p<1\\
-         0, \text{\quad caso contrário}
+         \binom{M}{x}p^x (1-p)^{M-x}, \text{\quad}x=0,1,\dots,M  \quad  ,0<p<1\\
+         0, \text{\quad Caso contrário}
        \end{cases}
      \end{align}
 
-   \item{Notação}:$ x \sim Bin(M,p)\\$
-     Obs: $\binom{M}{x}=\frac{M!}{x!(M-x)!}$
+   \item{Notação}:$ X \sim Bin(M,p)\\$
+   \item     [Obs:] $\binom{M}{x}=\frac{M!}{x!(M-x)!}$
 
      Temos que: 
      \begin{align}
-       \mu_{x}=E(X)=Mp\text{a média de} x \text{e}\\
-       \sigma^2 =var(x)=Mp(1-p), \text{a variância de x}
+       \mu_{x}=E(X)=Mp \\
+       \sigma^2 =var(x)=Mp(1-p)
      \end{align}
-   \item{Exemplo}: Considere uma linha de produção, onde 3 peças são selecionadas aleatoriamente
-     e são classificadas como defeituosas (D) ou não-defeituosas(N). $X_{1},X_{2},X_{3}$
-     são variáveis aleatórias que assumem $1$ se a peça for não-defeituosa e $0$ caso 
+   \item[Exemplo]: Considere uma linha de produção, onde 3 peças são selecionadas aleatoriamente
+     e são classificadas como defeituosas (D) ou não-defeituosas(N).\\
+     $X_{1},X_{2},X_{3}$ são variáveis aleatórias que assumem $1$ se a peça for não-defeituosa e $0$ caso 
      contrário. A probabilidade da peça ser não-defeituosa é $p$ e , consequentemente, 
      a probabilidade da peça ser defeituosa é $1-p$. Estamos interessados na distribuição
-     de:
-     $$Y=X_{1}+X_{2}+X_{3}$$
+     de:$Y=X_{1}+X_{2}+X_{3}$
      \begin{align*}
-       x_1 = \begin{cases}
-         1, \quad \text{se a peca e nao deituosa}\\
-         0, \quad \text{se a peca e deituosa}
+       X_1 = \begin{cases}
+         1, \quad \text{Peça não deituosa}\\
+         0, \quad \text{Peça deituosa}
        \end{cases}
      \end{align*}
+     \begin{figure}[H]
+       \centering
+       \input{tikz/ModelosProb/arvore1.tikz}
+       \label{fig:}
+     \end{figure}
+     \begin{figure}[H]
      \begin{tabular}{c c c c c c }
        \toprule
        & $X_1$  & $X_2$ & $X_3$   & $Y= X_1 +X_2+ X_3$ & $ P(Y=y)$\\ \midrule
@@ -167,12 +179,13 @@
        NDD& 1 & 0 & 0 & 1 & $p(1-p)^2$ \\ \bottomrule
 
      \end{tabular}
+   \end{figure}
 
      Abaixo estão os possíveis resultados do experimento:
 
      %Arvore zica aqui, pegar de algum colega
 
-     \begin{figure} 
+     \begin{figure}[H]
        \centering
        \begin{tabular}{c c c c c}
          \toprule
@@ -185,10 +198,12 @@
       \begin{align*}
         p(y)=P(Y=y)=\begin{cases}
           \binom{3}{y}p^y (1-p)^{3-y}, \text{\quad}y=0,1,2,3\\
-          0, \text{\quad caso contrário}
+          0, \text{\quad Caso contrário}
         \end{cases}
       \end{align*}
-    \item{Exemplo}: Uma rede varejista compra certo tipo de equipamento eletrônico. O 
+    \item[Exemplo]:
+      
+      Uma rede varejista compra certo tipo de equipamento eletrônico. O 
       fabricante indica que a taxa de quipamentos em perfeito estado é $97\%$.
       \begin{enumerate}[label=(\alph*)]
         \item Seleciona-se ao acaso 20 itens. Qual a probabilidade de haver pelo menos 
@@ -199,20 +214,27 @@
       $p$ taxa de equipamentos em perfeito estado\\
       $$p=0,97$$\\
       $y$: $n^o$ de equipamentos em perfeito estado.\\
-      $$y \sim binom(20;0,97)$$\\
+      $$y \sim Binom(20;0,97)$$\\
 
-    \item{Resolucão:}
+    \item[Resolução]:
+
       \begin{enumerate}[label=(\alph*)]
-        \item    $M=20$ itens\\
-          p:Probabilidade de pelo menos um item defeituoso.\\
-          $p=0,03$
+
+        \item    
+          \begin{align*}
+            M=\quad \text{20 itens}\\
+            p: \quad \text{Probabilidade de pelo menos um item defeituoso.}\\
+          p=0,03
+        \end{align*}
           \begin{align*}
            X_i= \begin{cases}
              1, \quad \text{se o equipamente e defeituoso}\\
-             0, \quad \text{c.c }
+             0, \quad \text{c.c.\ }
             \end{cases} 
           \end{align*}
-          $$x \sim binom(20:0,03) \text{quad} x=1,2,3,4,5,\dots,20$$\\
+          \begin{align*}
+X           \sim Binom(20:0,03) \quad x=1,2,3,4,5,\dots,20
+         \end{align*}
           \begin{align*}
            Y=X_1 + X_2 + \ldots +X_20 
           \end{align*}
@@ -221,7 +243,7 @@
             =1-P(Y=0)
           \end{align*}
           \begin{align*}
-            P(Y=0)= \binom{20}{0} (0,03)^0 (1-0,03)^{20-0}\\
+            P(Y=0)= \binom{20}{0} (0,03)^0 (1-0,03)^{20-0}
             =0,5438
           \end{align*}
           \begin{align*}
@@ -231,7 +253,7 @@
           Ou, resolvendo pela v.a.\ $Y$, temos:
 \begin{align*}
            X_i= \begin{cases}
-             1, \quad \text{Se o equipamento for perfeito} \\
+             1, \quad \text{se o equipamento for perfeito} \\
              0, \quad \text{se o equipamente for defeituoso}
             \end{cases} 
           \end{align*}
@@ -247,16 +269,19 @@
             P(y\le 19)=1-0,5339\\
             =0,4562
           \end{align*}
-        \item 10 carregamentos: 20 itens são selecionados \\
-          $Y$: $n^o$ de carregamento com pelo menos um item defeituoso \\
-          $M=10$\\
-          $Y=0,1,2,\ldots,10$\\
-          $p:\quad \text{porporcao de ter pelo menos um item defeituoso em um carregamento}$\\
-          $$p=0,4562$$\\
-          $$Y \sim B(10:0,4562)$$\\
+        \item
           \begin{align*}
-            P(Y=3)=\binom{10}{3}(0,4562)^3 (1-0,4562)^{10-3}\\
-            =0,1602
+            10\text{ Carregamentos}\\
+           20  \text{ itens são selecionados} \\
+           Y: \text{$n^o$ de carregamento com pelo menos um item defeituoso} \\
+          M=10\\
+          Y=0,1,2,\ldots,10\\
+          p:\quad \text{Proporção de ter pelo menos um item defeituoso em um carregamento}\\
+          p=0,4562\\
+          Y \sim B(10:0,4562)
+        \end{align*}
+        \begin{align*}
+            P(Y=3)=\binom{10}{3}(0,4562)^3 (1-0,4562)^{10-3}  =0,1602
           \end{align*}
       \end{enumerate}
     \end{description}
@@ -273,7 +298,7 @@
       do $1^o$ sucesso. Similarmente, a v.a.\ $x$ pode ser vista como o $n^o$ de ensaios que precedem 
       o primeiro sucesso.
 
-    \item{Definição}: A v.a.\ $x$ tem distribuição geométrica se, e somente se, sua 
+    \item[Definição]: A v.a.\ $x$ tem distribuição geométrica se, e somente se, sua 
       f.m.p.\ é definida por: 
       \begin{align}
         p_{x}(x)=P(X=x)=\begin{cases}
@@ -295,7 +320,7 @@
           0, \text{\quad Caso contrário}
         \end{cases}
       \end{align}
-      Neste caso, a v.a.\ $Y$ pode ser vista como $Y=X+1$ e, consequentemente, o valor esperado de y eh:
+      Neste caso, a v.a.\ $Y$ pode ser vista como $Y=X+1$ e, consequentemente, o valor esperado de y é:
       \begin{align} 
       mu_y=E(Y)=E(X+1)=E(X)=E(X)+1= \frac{1}{p}
     \end{align}
@@ -303,7 +328,7 @@
     \begin{align}
       \sigma_y^2=var(Y)=var(X+1)=var(X)= \frac{1-p}{p}^2
     \end{align}
-  \item{Exemplo}: Um pesquisador está realizando um experimentos químicos independetes 
+  \item[Exemplo]: Um pesquisador está realizando um experimentos químicos independetes 
       e sabe que a probabilidade de que cada cada experimento apresnete uma reação 
       positiva é $0,3$. QUal é a probabilidade de que menos de 3 reações negativas 
       ocorram antes da primeira positiva?
@@ -339,7 +364,7 @@
         \item  Considere ensaios independetes de Bernoulli ($p$) e definimos $X$ como o $n^o$ 
       de fracassos anteriores ao r-ésimos sucesso.
 
-    \item{Definição}: A v.a.\ $x$ tem distribuição Binomial negativa se, e somente se,
+    \item[Definição]: A v.a.\ $x$ tem distribuição Binomial negativa se, e somente se,
       sua f.m.p.\ é definida por:
       \begin{align}
         p(x)=P(X=x)=&
@@ -354,12 +379,12 @@
         \mu_{x}=E(x)=\frac{r(1-p)}{p} \\
         \sigma^2 = var(x)=\frac{1-p}{p^2}
       \end{align}
-      Observações: 
+    \item[Observações]: 
       \begin{enumerate}
         \item Note que se $r=1$, temos o modelo geométrico.
         \item $$\binom{x+r-1}{r-1} = \binom{x+r-1}{x}$$
       \end{enumerate}
-      A Binomial Negativa pode ser definida como o $n^o$ de ensaios necessários para 
+    \item A Binomial Negativa pode ser definida como o $n^o$ de ensaios necessários para 
       a obtenção do r-ésimo sucesso. Formando $y=x+r$ temos a quantidade desejada e 
       seus valores variam de $r$ em diante. Assim sendo $Y$ o $n^o$ de ensaios até 
       a obtenção de $r$ sucessos, temos: 
@@ -369,11 +394,11 @@
           0, \text{\quad caso contrário}
         \end{cases}
       \end{align}
-    \item{Exemplo}: Em uma serie do campeonato de basquete, o time que ganhar quatro em sete jogos sera
+    \item[Exemplo]: Em uma serie do campeonato de basquete, o time que ganhar quatro em sete jogos sera
       o vencedor. Suponha que o time $A$ tenha probabilidade de $55\%$ de ganhar de $B$ e que $A$ e $B$ 
       se enfrentarao em uma serie de sete jogos. Qual a probabilidade de que $A$ venca a serie em 6 jogos?
      \begin{align*} 
-       X:\text{O numero de derrotas de $A$ até que $A$ ganhe 4 partidas}\\
+       X:\text{O número de derrotas de $A$ até que $A$ ganhe 4 partidas}\\
        X \mathtt{\sim}BN (r=4, p=0,55)
      \end{align*}
      \begin{align*}
@@ -381,49 +406,61 @@
      \end{align*}
      Ou, de maniera similar, temos:
      \begin{align*}
-       Y: \text{ numero de partidas até que $A$ venca o campeonato}
+       Y: \text{ número de partidas até que $A$ venca o campeonato}
      \end{align*}
      \begin{align*}
        P(Y=6)= \binom{6-1}{4-1} 0,55^{4} \times 0,45^{6-4} = 0,1853
      \end{align*}
  \end{description}
  \subsection{Distribuição Hipergeometrica}
+\begin{description}
+  \item
 Considere um conjunto de $n$ objetos dos quais $m$ são do tipo $I$
 e $(n-m) $ são do tipo $II$. Para um sorteio de $r$ objetos $(r<n)$, 
 feitos ao acaso e sem repeticao, defina $X$ como o número de objetos do tipo
 $I$ selecionados.
-\begin{description}
-  \item{Definição}: A v.a.\ $X$ tem distribuicao Hipergeometrica se sua f.m.p.\ eh dada
+  \item[Definição:] A v.a.\ $X$ tem distribuição Hipergeometrica se sua f.m.p.\ é dada
     por:
     \begin{align*}
       P_x(x)= P(X=x)= \frac{\binom{m}{xs} \binom{n-m}{r-x}}{\binom{n}{r}}
     \end{align*}
-    Em que $x$ (inteiro) eh tal que:
+    Em que $x$ (inteiro) é tal que:
     \begin{align*}
       max \{0,r-(n-m)\} \leq x \leq min \{ r,m \}
     \end{align*}
-  \item{Observação}: Os limites de $x$ garantem que situaçoes absurdas ocorram.
-  \item{Temos que: }
+  \item[Observação]: Os limites de $x$ garantem que situaçoes absurdas ocorram.
+  \item Temos que: 
     \begin{align*}
       E(X) = r \frac{m}{n} \\
       Var(x)= \frac{r\times m (n-m)(n-r)}{n^2 (n-1)}
     \end{align*}
-  \item{Notacao}: $X \mathtt{\sim} Hgeo (m,n,r)$
-  \item{Exemplo}: Considere que em um lote de $20$ peças, existam $4$ defeituosas.
+    \begin{figure}[H]
+      \centering
+      \input{tikz/ModelosProb/hipergeo1.tikz}
+      \caption{}
+      \label{fig:x}
+    \end{figure}
+  \item[Notacao]: $X \mathtt{\sim} Hgeo (m,n,r)$
+  \item[Exemplo]: Considere que em um lote de $20$ peças, existam $4$ defeituosas.
     Seleciona-se $5$ dessas peças, sem resposicao, qual seria a probabilidade 
-    de duas defeituosas terem sido escolgidas?
+    de duas defeituosas terem sido escolhidas?
+\begin{figure}[H]
+  \centering
+  \input{tikz/ModelosProb/hipergeo2.tikz}
+  \label{fig:x2}
+\end{figure}
     \begin{align*}
       X: \text{$N^{o}$  de peças defeituosas em $5$ retiradas }\\
       P(x=2)=\frac{\binom{4}{2} \binom{16}{3}}{\binom{20}{5}}\\
       R_{x}: \{ 0,1,2,3,4 \}
     \end{align*}
 \end{description}
-\subsection{Distribuicao de Poisson}
-Eh largamente empregada quando se deseja contar o número de eventos de certo tipo
-que ocorrem em um certo periodo de tempo ou superficie ou volume.
+\subsection{Distribuição de Poisson}
 \begin{description}
-\item{Definicao} Uma v.a.\ tem Distribuição Poisson com parâmetro $\lambda$, $\lambda >0$,se sua
-  f.m.p.\ eh dada por:
+  \item É largamente empregada quando se deseja contar o número de eventos de certo tipo
+que ocorrem em um certo período de tempo ou superficie ou volume.
+\item[Definicao] Uma v.a.\ tem Distribuição Poisson com parâmetro $\lambda$, $\lambda >0$,se sua
+  f.m.p.\ é dada por:
  \begin{align}
    P_{x} (x)= P(X=x)= \frac{e^{-\lambda}\lambda{x}}{x!}, \quad x=0,1,2,\ldots
  \end{align} 
@@ -433,7 +470,7 @@ que ocorrem em um certo periodo de tempo ou superficie ou volume.
      E(X)= \lambda \\
      Var(x)= \lambda
    \end{align}
-   \item{Exemplo}: Uma central telefonica recebe, em media, 5 chamadas por minuto.
+   \item[Exemplo]: Uma central telefonica recebe, em média, 5 chamadas por minuto.
      Supondo que a distribuição de Poisson seja adequada nessa situação, obtenha a 
      probabilidade de que a central receba no maximo 2 chamadas durante um intervalo
      de um minuto.
@@ -456,16 +493,15 @@ que ocorrem em um certo periodo de tempo ou superficie ou volume.
      \end{align*}
    \end{description}
      \subsubsection{O processo de Poisson}
-     
-     Suponha que $\mu$ seja a média de ocorrência do evento de interesse
+     \begin{description}  
+       \item     Suponha que $\mu$ seja a média de ocorrência do evento de interesse
      em $t$ unidades de medida(por exemplo, tempo). Denotamos por $\lambda$,
      a taxa média de ocorrência em uma unidade de medida, como $\mu= \lambda t$.
      Podemos reescrever a f.m.p.\ por:
      \begin{align*}
        p_{x} =P(X=x)= \frac{e^{-\lambda t} \left( \lambda t \right)^{x}}{x!}, \quad x=0,1,2,\ldots
      \end{align*}
-     \begin{description} 
-       \item{Exemplo}: Considere o exemplo anterior e calcule a probabilidade de que a central 
+       \item[Exemplo]: Considere o exemplo anterior e calcule a probabilidade de que a central 
          telefonica receba no maximo duas chamadas em 4 minutos.
          \begin{align*}
            P(X \leq 2 \/ t=4) = P(X=0)+P(X=1)+P(X=2)
@@ -478,48 +514,52 @@ que ocorrem em um certo periodo de tempo ou superficie ou volume.
     \begin{align*}
       P(X \leq 2 \/ t=4)= 2,06 \times 10^{-9}+4,12 \times 10^{-8}+4,12 \times 10^{-7} = 4,56 \times 10^{-7} \approx 0
     \end{align*} 
-  \item{Resultados Imporatantes}
+  \item[Resultados Importantes]
     \begin{description}
-  \item {Resultado 1}: Se $X_1, X_2,\ldots, X_n$ sao independetes e $X_i \mathtt{\sim} Poisson(\lambda_i)$, então:
+  \item [Resultado 1]: Se $X_1, X_2,\ldots, X_n$ são independetes e $X_i \mathtt{\sim} Poisson(\lambda_i)$, então:
     \begin{align}
       Y= X_1+X_2+\ldots+X_n \mathtt{\sim} Poisson\left( \lambda_1+\ldots+\lambda_n \right)
     \end{align}
-  \item {Resultado 2}: Se $X \mathtt{\sim}Bin(M,P)$. com $m$ grande e $P$ pequeno, pode-se aproximar a distribuição de 
+  \item [Resultado 2]: Se $X \mathtt{\sim}Bin(M,P)$. com $m$ grande e $P$ pequeno, pode-se aproximar a distribuição de 
     $X$ pela distribuição de Poisson, cujo parâmetro sera $\lambda = M \times P$.
-    \begin{description}
-      \item {Exemplo}: Numero de gols marcados em $M=100$ tentativas.
+\end{description}
+
+      \item [Exemplo]: número de gols marcados em $M=100$ tentativas.
 
     \begin{align*}
-      P=0,05 \quad \talque \quad  X \mathtt{\sim} Bin(100, 0,05) \\
+      P=0,05 \quad \therefore \quad  X \mathtt{\sim} Bin(100, 0,05) \\
       P(X \ge 50)=P(X=50), \ldots + P(X=100)= 1- \{P(X=0)+\ldots+P(X=49) \}\\
       E(X)=M \times p = \mu\\
       X \mathtt{\sim}Poi(\lambda= M \times P)
     \end{align*}
 
-  \item{Exercício}: Em certa instalacao industrial, acidentes ocorrem com baixa frequência. Sabe-se que 
-    a probabilidade de um acidente ocorrer em um certo dia eh $0,005$ e que os acidentes são independentes.
+  \item[Exercício]: Em certa instalacao industrial, acidentes ocorrem com baixa frequência. Sabe-se que 
+    a probabilidade de um acidente ocorrer em um certo dia é $0,005$ e que os acidentes são independentes.
     
     \begin{enumerate}[label=(\alph*)]
-      \item Qual a probabilidade de que em um periodo de 400 dias haja no maximo 3 dias com acidente?
+      \item Qual a probabilidade de que em um período de 400 dias haja no maximo 3 dias com acidente?
       Utilize a aproximacao pela distribuição de Poisson.
     \item Calcule a probabilidade exata do item anterior e compare os resultados.
    \end{enumerate}
-  \end{description}
-\end{description}
    \end{description}
-   \section{Modelos Continuos}
-   \subsection{Distribuicao Uniforme} 
+   \section{Modelos Contínuos}
+   \subsection{Distribuição Uniforme} 
    \begin{description}
-     \item {Definição}: Uma v.a.\ contínua $X$ tem distribuição uniforme no intervalo $(a,b), \quad a,b \in \mathbb{R}$,
-       se sua f.d.p.\ eh dada por:
+     \item [Definição]: Uma v.a.\ contínua $X$ tem distribuição uniforme no intervalo $(a,b), \quad a,b \in \mathbb{R}$,
+       se sua f.d.p.\ é dada por:
 \begin{align}
   f_x(x) = \begin{cases}
 \frac{1}{b-a}, \quad a \leq x \leq b  \\
    0, \quad \text{caso contrário}
   \end{cases}
 \end{align}
-\item{Notação}: $X \mathtt{\sim} U(a,b)$
-\item A f.d.a.\ eh dada por:
+\item[Notação]: $X \mathtt{\sim} U(a,b)$
+  \begin{figure}[H]
+    \centering
+    \input{tikz/ModelosProb/uniforme.tikz}
+    \caption{ilustração da f.d.p de $X$}
+  \end{figure}
+\item A f.d.a.\ é dada por:
   \begin{align}
     F_x{x} = \begin{cases}
       0, \quad \text{se} x<a \\
@@ -528,25 +568,25 @@ que ocorrem em um certo periodo de tempo ou superficie ou volume.
     \end{cases}
   \end{align}
   \begin{align}
-    P(X \leq x) = \int_{- \infty}^{x} f_{x} (t) dt = \int_{a}^{x} \frac{1}{b-a} dt\\
+    P(X \leq x) = \int \limits_{(- \infty}^{x} f_{x} (t) dt = \int_{a)}^{(x} \frac{1}{b-a)} dt\\
     \nonumber = \frac{1}{b-a}t |_{a}^{x} = \frac{x^a -a}{b-a}
   \end{align}
-\item{Exemplo}:
+\item[Exemplo]:
   \begin{align*}
     P(a_1 \leq X \leq b_1) = F_{x} (b_1) - F_{x}(a_1) \\
     P(X > a_1)= 1- P(X \leq a_1) \\
     = 1-F_{x} (a_1) \\
-    P(X \eq a_1)= F_{x}(a_1)
+    P(X > a_1)= F_{x}(a_1)
   \end{align*}
- \item A media de $x$ eh:
+ \item A média de $x$ é:
    \begin{align*}
      E(X) = \frac{a+b}{2}
    \end{align*}
- \item E a variância de $x$ eh:
+ \item E a variância de $x$ é:
    \begin{align*}
      Var(x) = \frac{ \left(b-a\right)^2 }{12}
    \end{align*}
-   \item{Exemplo}: Seja $X$ uma v.a.\ com distribuição uniforme, $U(-1/2 , 1/2). $
+   \item[Exemplo]: Seja $X$ uma v.a.\ com distribuição uniforme, $U(-1/2 , 1/2). $
      Calcule:
 \begin{enumerate}[label=(\alph*)]
   \item $F_{x} (x)$
@@ -557,15 +597,15 @@ Sabe-se que:
 \begin{align*}
   X \mathtt{\sim}  U(\frac{-1}{2}; \frac{1}{2})
 \end{align*}
-Assim, a f.d.p.\ de $x$ eh:
+Assim, a f.d.p.\ de $x$ é:
 \begin{align*}
   f_{x} (x)= \frac{1}{\frac{1}{2}- \left( \frac{-1}{2}\right)} = 1 \quad \frac{-1}{2}<x<\frac{1}{2}
 \end{align*}
 \begin{enumerate}[label=(\alph*)]
   \item  $F_{x}(x)=?$
     \begin{align*}
-      F_{x} (x)= P(X \leq x) = \int_{ -\infty  }^{x} f(t)dt\\
-      = \int_{\frac{-1}{2}}^{x} 1 dt= t|_{\frac{-1}{2}}{x} \\
+      F_{x} (x)= P(X \leq x) = \int \limits_{( -\infty  )}^{(x)} f(t)dt\\
+      = \int \limits_{(\frac{-1}{2})}^{(x} 1 dt= t|_{\frac{-1}{2}}{x)} \\
       = x+ \frac{1}{2}
     \end{align*}
     \begin{align*}
@@ -577,7 +617,7 @@ Assim, a f.d.p.\ de $x$ eh:
     \end{align*}
     \item 
       \begin{align*}
-      P(\frac{-1}{4}\leq X \leq \frac{1}{4})  = \int_{\frac{-1}{4}}^{\frac{1}{4}}\\
+      P(\frac{-1}{4}\leq X \leq \frac{1}{4})  = \int \limits_{(\frac{-1}{4})}^{(\frac{1}{4})}\\
       = x|_{\frac{-1}{4}}^{\frac{1}{4}}= \frac{1}{4}+\frac{1}{4}=\frac{1}{2}
     \end{align*}
     Ou 
@@ -596,19 +636,23 @@ Assim, a f.d.p.\ de $x$ eh:
    \end{description}
 \subsection{Distribuição Exponencial}
 \begin{description}
-  \item {Definição}: Uma v.a.\ contínua $X$ tem distribuição exponencial com parâmetro $\lambda, \lambda>0$, se sua
-    f.d.p.\ eh dada por:
+  \item [Definição]: Uma v.a.\ contínua $X$ tem distribuição exponencial com parâmetro $\lambda, \lambda>0$, se sua
+    f.d.p.\ é dada por:
     \begin{align*}
       f_{x} (x)= \begin{cases}
         \lambda e^{- \lambda x} , \quad x \ge 0 \\
         0, \quad \text{caso contrário}
       \end{cases}
     \end{align*}
-  \item{Notação}: $X \mathtt{\sim} Exp(\lambda)$
-    \item A f.d.a.\ de $x$ eh:
+  \item[Notação]: $X \mathtt{\sim} Exp(\lambda)$
+    \begin{figure}[H]
+      \centering
+      \input{tikz/ModelosProb/fdp1.tikz}
+    \end{figure}
+    \item A f.d.a.\ de $x$ é:
       \begin{align*}
         P(X \le x)  = \int_{ -\infty }{x} f_{x}(t)dt \\
-        = \int_{0}^{x} \lambda e^{-\lambda t } dt \\
+        = \int \limits_{(0)}^{(x} \lambda e^{-\lambda t )} dt \\
         = -e^{-\lambda t} |_{0}^{x} = -e^{-\lambda x} +1\\
         = 1- e^{-\lambda x}
       \end{align*}
@@ -618,78 +662,82 @@ Assim, a f.d.p.\ de $x$ eh:
          1-e^{-\lambda x} , x\ge 0
         \end{cases}
       \end{align*}
-    \item A media e variancia de x sao:
+    \item A média e variância de x são:
       \begin{align*}
         E(x) = \frac{1}{\lambda}
       \end{align*}
       \begin{align*}
         Var(x) = \frac{1}{\lambda^2}
       \end{align*}
-    \item{Propriedade}:
-      \begin{enumerate}
-        \item Se $X \mathtt{\sim}  Exp(\lambda)$, então:
+    \item[Propriedade]:
+       Se $X \mathtt{\sim}  Exp(\lambda)$, então:
         \begin{align*}
           P(X> a+b  \/ x>b) = P(X > a)
         \end{align*}
-        Esta propriedade eh conhecida por falta de memoria e eh a unica distribuição 
+        Esta propriedade é conhecida por falta de memoria e é a única distribuição 
         contínua que tem essa propriedade.
 
-        Observação: Outra parametrizacao para a distribuicao exponencial eh:
+        \begin{description}
+      \item        [Observação]:
+
+        Outra parametrização para a distribuição exponencial é:
+
         \begin{align*}
           f_{x} (x)= \frac{1}{2}e^{-\frac{x}{2}}, \quad x\ge 0
         \end{align*}
         Ou seja, $\lambda= \frac{1}{\alpha}$
-        A media de x sera:
+        A média de x sera:
         \begin{align*}
           E(x)  = \alpha
         \end{align*}
-        E a variância eh dada por:
+        E a variância é dada por:
         \begin{align*}
           Var(x) = \alpha^2
         \end{align*}
-        Exemplo: Seja $X$ o tempo de vida util de um fusivel que tem distribuicao Exponencial
-        com vida media de 100 horas. Qual a probabilidade de um fusivel durar mais de 150
+      \item [Exemplo:] Seja $X$ o tempo de vida util de um fusivel que tem distribuição Exponencial
+        com vida média de 100 horas. Qual a probabilidade de um fusivel durar mais de 150
         horas?
         \begin{align*}
           X \sim  Exp(\frac{1}{100}) \\
           \mu = E(x)= \frac{1}{\lambda}=100 \left( \lambda= \frac{1}{100} \right)\\
-          P(X> 150)= int_{150}^{\infty} \frac{1}{100} e^{- \frac{1}{100} x} dx \\
-          =0,22313
+          P(X> 150)= \int \limits_{150}^{\infty} \frac{1}{100} e^{- \frac{1}{100} x} dx =0,22313
         \end{align*}
         Ou 
         \begin{align*}
-          P(X>150) = 1- P(X \le 150)= 1- \int_{0}^{150} \frac{1}{100} e^{- \frac{1}{100}x}dx \\
-          = 0,22313
+          P(X>150) = 1- P(X \le 150)=\\ 1- \int \limits_{0}^{150} \frac{1}{100} e^{- \frac{1}{100}x}dx          = 0,22313
         \end{align*}
-      \end{enumerate}
+      \end{description}
 \end{description}
 \subsection{Distribuição Normal}
-E a distribuicao mais importante dos modelos probabilisticos. 
-Eh tambem conhecida como distribuicao gaussiana. Sua representação 
-gráfica eh conhecida por curva em forma de sino.
+E a distribuição mais importante dos modelos probabilisticos. 
+é tambem conhecida como distribuição gaussiana. Sua representação 
+gráfica é conhecida por curva em forma de sino.
 \begin{description}
-  \item {Definição:}  Uma v.a.\ contínua $X$ tem Distribuição normal com parâmetro $\mu$ (media) e 
-    $\sigma^2$ se sua f.d.p.\ eh dada por:
+  \item [Definição:]  Uma v.a.\ contínua $X$ tem Distribuição normal com parâmetro $\mu$ (média) e 
+    $\sigma^2$ se sua f.d.p.\ é dada por:
     \begin{align}
       f_{x} (X)= \frac{1}{\sqrt{2\pi \sigma^2}} e^{\frac{-1}{2\sigma^2} \left( x-\mu \right)^2} \quad -\infty<x<\infty \\
       \text{Com } \quad -\infty < \mu < \infty, \quad \sigma^2>0
     \end{align}
-  \item {Notação:} $X \sim N(\mu ; \sigma^2)$
+  \item [Notação:] $X \sim N(\mu ; \sigma^2)$
 
-Uma ilustração gráfica da sua f.d.p.\ eh:
-%Grafico aqui
-A media e variância de $x$ sao:
+Uma ilustração gráfica da sua f.d.p.\ é:
+\begin{figure}[H]
+  \centering
+  \input{tikz/ModelosProb/dnorm1.tikz}
+\end{figure}
+A média e variância de $x$ são:
 \begin{align*}
 E(x) =\mu \\
 Var(x)=\sigma^2
 \end{align*}
-\item {Propriedades:}
-A distribuição eh simetrica em relacao `a media. Isto eh,
+\item [Propriedades:]
+A distribuição é simetrica em relação à média. Isto é:
 \begin{align}
   f(\mu - x) = f(\mu+x), \quad \forall x \in \mathbb{R}
 \end{align}
-\item Como a area total sob a curva eh igual a 1, `a esquerda e `a direita de $\mu$, 
-  a area eh igual a $0,5$.
+\item Como a área total sob a curva é igual a 1, à esquerda e à direita de $\mu$, 
+  a área é igual a $0,5$.
 \item 
   \begin{align*}
     P(\mu -\sigma \leq X \leq \mu+\sigma)= 0,6896\\
@@ -699,27 +747,30 @@ A distribuição eh simetrica em relacao `a media. Isto eh,
 Ilustrando:
 %Grafico aqui
 %http://johncanning.net/wp/?p=1202
-
-A f.d.a.\ de uma v.a.\ $X \sim N(\mu,\sigma^2)$ eh:
+\begin{figure}[H]
+  \centering
+  \input{tikz/ModelosProb/dnorm2.tikz}
+\end{figure}
+A f.d.a.\ de uma v.a.\ $X \sim N(\mu,\sigma^2)$ é:
 \begin{align*}
   F_{x} (X)= P(X \leq x)= \int^{x}_{-\infty} \frac{1}{\sqrt{2\pi \sigma^2}}e^{\frac{-1}{2\sigma^2} \left( t- \mu \right)^2} dt 
 \end{align*}
-Cuja integral nao tem solucao analitica. Assim, calculamos suas probabilidades com auxilio de tabelas.
+Cuja integral nao tem solução analítica. Assim, calculamos suas probabilidades com auxilio de tabelas.
 
-\item {Definição}: Se $X \sim N(\mu; \sigma^2)$, entao a v.a.\ $Z$ eh definida por:
+\item [Definição]: Se $X \sim N(\mu; \sigma^2)$, entao a v.a.\ $Z$ é definida por:
   \begin{align}
    Z= \frac{X-\mu}{\sigma} 
   \end{align}
-  Tera a distribuição normal com media 0 e variância 1. Ou seja, $Z \sim N(0,1)$.
+  Terá a distribuição normal com média 0 e variância 1. Ou seja, $Z \sim N(0,1)$.
   
-  Essa distribuição eh conhecida como distribuição normal-padrão ou reduzida. 
+  Essa distribuição é conhecida como distribuição normal-padrão ou reduzida. 
 \end{description}
-  \subsubsection{Calculo de probabilidades}
+  \subsubsection{Cálculo de probabilidades}
   \begin{description}
-    \item {Exemplo} Uso da tabela normal padrão:
+    \item [Exemplo] Uso da tabela normal padrão:
 
       Seja $Z\sim N(0,1)$ calcule:
-      \begin{enumerate}
+      \begin{enumerate}[label=(\alph*)]
         \item $P(0 \leq Z \leq 1,65)$
         \item $P(Z \leq 0,5)$
         \item $P(Z < -1,57)$
@@ -730,9 +781,12 @@ Cuja integral nao tem solucao analitica. Assim, calculamos suas probabilidades c
       \end{enumerate}
       
       Resolva:
-      \begin{enumerate}
+\begin{enumerate}[label=(\alph*)]
         \item $P(0 \leq Z \leq 1,65)$
-          % grafico aqui
+          \begin{figure}[H]
+            \centering
+            \input{tikz/ModelosProb/dnorm3.tikz}
+          \end{figure}
           %Olhando a primeira tabela:
         \begin{align*}          P(0 \leq Z \leq 1,65)= 0,45053 \end{align*}
           %Olhando a segunda tabela:
@@ -743,6 +797,12 @@ Cuja integral nao tem solucao analitica. Assim, calculamos suas probabilidades c
           = 0,9505 - 0,5 = 0,4505
         \end{align*}
       \item $P(Z < 0,5)$
+
+\begin{figure}[H]
+            \centering
+            \input{tikz/ModelosProb/dnorm4.tikz}
+          \end{figure}
+
 %grafico aqui
         \begin{align*}
           P(Z < 0,5)= 0,5 + P(0 \leq Z \leq 0,5) \\
@@ -755,6 +815,16 @@ Cuja integral nao tem solucao analitica. Assim, calculamos suas probabilidades c
       \end{align*}
 
     \item $ P(Z< -1,57)$
+\begin{figure}[H]
+            \centering
+            \input{tikz/ModelosProb/dnorm5.tikz}
+          \end{figure}
+
+Ou equivalentemente:
+\begin{figure}[H]
+  \centering
+  \input{tikz/ModelosProb/dnorm51.tikz}
+\end{figure}
       %grafico aqui
       \begin{align*}
         P(Z< -1,57) = P(Z> 1,57)\\
@@ -767,6 +837,11 @@ Cuja integral nao tem solucao analitica. Assim, calculamos suas probabilidades c
         P(Z < -1,57) = 0,0582
       \end{align*}
     \item $P(-0,65 \leq Z \leq 0,65)$
+\begin{figure}[H]
+            \centering
+            \input{tikz/ModelosProb/dnorm6.tikz}
+          \end{figure}
+
       %Grafico aqui
       \begin{align*}
         P(-0,65 \leq Z \leq 0) = P(-0,65 \leq Z \leq 0) \\
@@ -778,45 +853,67 @@ Cuja integral nao tem solucao analitica. Assim, calculamos suas probabilidades c
         P( -0,65 \leq Z \leq -0,65 ) = P(Z < 0,65) - P(Z < -0,65)
       \end{align*}
     \item 
+\begin{figure}[H]
+            \centering
+            \input{tikz/ModelosProb/dnorm7.tikz}
+          \end{figure}
+
       %grafico aqui
       \begin{align*}
         P(0,8 < z < 1,4)  = P(0 \leq Z \leq 1,4) - P(0 \leq Z \leq 0,8) \\
         = 0,41924 - 0,28814
       \end{align*}
     \item $P(0 \leq Z \leq z) = 0,4753$
+\begin{figure}[H]
+            \centering
+            \input{tikz/ModelosProb/dnorm8.tikz}
+          \end{figure}
+
       %grafico aqui
       \begin{align*}
        z= 1,965 
       \end{align*}
-    \item $P(Z < z) = 0,05$
+    \item $P(Z < z) = 0,05$ \begin{figure}[H] \centering
+            \input{tikz/ModelosProb/dnorm9.tikz}
+          \end{figure}
+
       %Grafico aqui
       \begin{align*}
        z= -1,645 
       \end{align*}
       \end{enumerate}
 
-    \item {Exemplo:} Seja $X \sim N(90,100)$ \\
+    \item [Exemplo:] Seja $X \sim N(90,100)$ \\
       \begin{description}
-        \item  {Determine:}
+        \item  [Determine]:
       \begin{enumerate}[label=(\alph*)]
         \item $P(80 < x < 100)$
         \item $P(x \geq  90)$
         \item $P(60 \leq x \leq 75 )$
       \end{enumerate}
 
-    \item {Resolucão:}
+    \item [Resolução]:
       \begin{enumerate}[label=(\alph*)]
         \item $P(80 < x < 100)$
-          %grafico aqui
+          \begin{figure}[H]
+            \centering
+            \input{tikz/ModelosProb/dnorm10.tikz}
+            \label{fig:}
+          \end{figure}
           \begin{align*}
             Z= \frac{X-\mu  }{\sigma} \\
             z_1 = \frac{80-90}{10}=-1\\
             z_2 = \frac{100-90}{10}=1
           \end{align*}
-         \begin{align*}
+                  \begin{align*}
            P(80<X < 100) = P(-1 < Z <1)
          \end{align*} 
-            %Grafico aqui
+ \begin{figure}[H]
+            \centering
+            \input{tikz/ModelosProb/dnorm11.tikz}
+            \label{fig:}
+          \end{figure}
+
          \begin{align*}
            P(-1 < Z < 1)  = 2 \times P(0<Z < 1) \\
            = 2 \times 0,34134 \\
@@ -824,14 +921,29 @@ Cuja integral nao tem solucao analitica. Assim, calculamos suas probabilidades c
          \end{align*}
 
         \item $P(x \geq  90)$
-          %grafico aqui
+ \begin{figure}[H]
+            \centering
+            \input{tikz/ModelosProb/dnorm12.tikz}
+            \label{fig:}
+          \end{figure}
           \begin{align*}
             P(x \geq 90) =P(Z \geq \frac{90-90}{10}) \\
             = P(Z \geq 0)=0,5
           \end{align*}
 
         \item $P(60 \leq x \leq 75 )$
-          %grafico aqui
+ \begin{figure}[H]
+\centering
+\input{tikz/ModelosProb/dnorm13.tikz}
+\label{fig:}
+\end{figure}
+ \begin{figure}[H]
+            \centering
+            \input{tikz/ModelosProb/dnorm14.tikz}
+            \label{fig:}
+          \end{figure}
+
+
           \begin{align*}
             P(60 \leq X \leq 75 ) \\
             =P(\frac{60-90}{10} \leq Z \leq \frac{75-90}{10}) \\
@@ -846,16 +958,16 @@ Cuja integral nao tem solucao analitica. Assim, calculamos suas probabilidades c
           \end{align*}
 
       \end{enumerate}
-    \item {Exemplo:} Seja $X \sim \mathtt{N}(50; 10^2)$
+    \item [Exemplo:] Seja $X \sim \mathtt{N}(50; 10^2)$
       \begin{description}
-        \item {Determine:}
+        \item [Determine:]
           \begin{enumerate}[label=(\alph*)]
    \item $P(|X-50| <10)$
   \item $P( \mu-a \leq X \leq \mu +a )=0,9$
   \item $P(K< X <70)=0,8185$
   \item $P(K < x <75)= 0,3031$
           \end{enumerate}
-        \item {Resolucao:}
+        \item [Resolução:]
 \begin{enumerate}[label=(\alph*)]
    \item $P(|X-50| <10)$
      \begin{align*}
@@ -869,6 +981,17 @@ Cuja integral nao tem solucao analitica. Assim, calculamos suas probabilidades c
    = P(\frac{40-50}{10}< Z < \frac{60-50}{10}) \\
    = P(-1 < Z < 1)
  \end{align*} 
+ \begin{figure}[H]
+            \centering
+            \input{tikz/ModelosProb/dnorm15.tikz}
+            \label{fig:}
+          \end{figure}
+ \begin{figure}[H]
+            \centering
+            \input{tikz/ModelosProb/dnorm16.tikz}
+            \label{fig:}
+          \end{figure}
+
  %grafico aqui
 \begin{align*}
   P(-1 < Z <1)  = 2 \times P(0 < Z <1) \\
@@ -876,12 +999,19 @@ Cuja integral nao tem solucao analitica. Assim, calculamos suas probabilidades c
   \simeq 0,68
 \end{align*}
 
-  \item $P( \mu-a \leq X \leq \mu +a )=0,9$
+  \item $P\left( \mu-a \leq X \leq \mu +a \right)=0,9$
 \begin{align*}
-  P(50- a \leq X \leq 50 +a)  = 0,9 \\
-  P(\frac{(50-a)-50}{10}) \leq Z \leq \frac{(50+a)-50}{10} \\
-  P(\frac{-a}{10} \leq Z \leq \frac{a}{10})=0,9 
+  P\left(50- a \leq X \leq 50 +a\right)  = 0,9 \\
+  P\left(\frac{(50-a)-50}{10}\right) \leq Z \leq \frac{(50+a)-50}{10} \\
+  P\left(\frac{-a}{10} \leq Z \leq \frac{a}{10}\right)=0,9 
 \end{align*}
+
+ \begin{figure}[H]
+            \centering
+            \input{tikz/ModelosProb/dnorm17.tikz}
+            \label{fig:}
+          \end{figure}
+
 %grafico aqui
 \begin{align*}
   P( \frac{-a}{10} \leq Z \leq \frac{a}{10} ) = 2 \times P(0 \leq Z \leq \frac{9}{10})= 0,9 \\
@@ -890,6 +1020,13 @@ Cuja integral nao tem solucao analitica. Assim, calculamos suas probabilidades c
   a = 16,5
 \end{align*}
   \item $P(K< X <70)=0,8185$
+ \begin{figure}[H]
+            \centering
+            \input{tikz/ModelosProb/dnorm18.tikz}
+            \label{fig:}
+          \end{figure}
+
+
     %grafico aqui
     \begin{align*}
       P( \frac{K-50}{10} < Z < \frac{70-50}{10} ) = 0,8185 \\
@@ -909,8 +1046,10 @@ Cuja integral nao tem solucao analitica. Assim, calculamos suas probabilidades c
     \end{align*}
   \item $P(K < x <75)= 0,3031$
     %grafico aqui
-    Temos o caso do Grafico 1 caso $P(50 < X < 75) > 0,3031$. Do contrário, se 
-    $P(50 < X < 75) < 0,3031$, temos o caso do Grafico 2.
+
+    Temos o caso da tabela 1 caso $P(50 < X < 75) > 0,3031$.
+    
+    Do contrário, se $P(50 < X < 75) < 0,3031$, temos o caso do tabela 2.
     \begin{align*}
       P(50 < X < 75)  \\
       =P(\frac{50-50}{10} < Z < \frac{75-50}{10}) \\
@@ -941,7 +1080,7 @@ Cuja integral nao tem solucao analitica. Assim, calculamos suas probabilidades c
   \end{align*}
   Considere $Y= \sum_{i=1}^{n} X_i = X_1+\ldots+X_n$, temos que:
   \begin{align*}
-    E(Y)  = E( \sum_{i}^{n} X_i ) = \sum_{i=1}^{n} E(X_i) \\
+    E(Y)  = E( \sum \limits_{(i)}^{n} X_i ) = \sum_{i=1}^{n} E(X_i) \\
     = \sum_{i=1}^{n} \mu = n \times \mu
   \end{align*}
   Ou
@@ -964,7 +1103,7 @@ Cuja integral nao tem solucao analitica. Assim, calculamos suas probabilidades c
   \end{align*}
   Analogamente, temos a média amostral:
   \begin{align*}
-    \bar{X} = \frac{\sum_{i}^{n}}{X_i}
+    \bar{X} = \frac{\sum \limits_{(i)}^{n}}{X_i}
   \end{align*}
   Com isso, temos:
   \begin{align*}
@@ -980,15 +1119,15 @@ Cuja integral nao tem solucao analitica. Assim, calculamos suas probabilidades c
   \end{align*}
   Logo $\bar{X} \sim \mathtt{N} ( \mu ; \frac{\sigma^2}{n} ) $
 
-  A variável reduzida eh:
+  A variável reduzida é:
   \begin{align*}
     Z = \frac{\bar{X}- E(\bar{X})}{\sqrt{Var(\bar{X})}} = \frac{\bar{x} - \mu}{\sqrt{\frac{\sigma^2}{n}}} \\
     = \frac{\bar{x}- \mu}{\frac{\sigma}{\sqrt{n}}} \\
     Z= \frac{\sqrt{n} (\bar{X} -\mu)}{\sigma} \sim \mathtt{N} (0,1)
   \end{align*}
-\item {Exemplo:} O peso de sacos de parafusos empacotados por uma maquina tem media de $50g$ e desvio-padrão de $2g$.
+\item [Exemplo:] O peso de sacos de parafusos empacotados por uma maquina tem média de $50g$ e desvio-padrão de $2g$.
   Assumindo que  o peso tem distribuição normal, qual a probabilidade de que 10 sacos pesem juntos de $490g$? 
-  Qual a probabilidade de que a media desses 10 sacos sejam no maximo $52g$?
+  Qual a probabilidade de que a média desses 10 sacos sejam no maximo $52g$?
 
 \begin{enumerate}[label=(\alph*)]
   \item

@@ -1,0 +1,18 @@
+\pgfmathdeclarefunction{gauss}{2}{\pgfmathparse{1/(#2*sqrt(2*pi))*exp(-((x-#1)^2)/(2*#2^2))}%
+}
+\begin{tikzpicture}
+\begin{axis}[no markers, domain=0:10, samples=100,
+  axis lines*=left, xlabel=$x$, ylabel=$f_{x}(x)$,,
+height=6cm, width=10cm,xticklabels={\empty,\empty,$a$,$\mu$,$b$,\empty,\empty},
+xtick={-3, -2, -1, 0, 1, 2, 3}, ytick=\empty,
+enlargelimits=false, clip=false, axis on top
+]
+
+\addplot [color=blue, domain=-3:3] {gauss(0,1)} ;
+\addplot [fill=cyan!20, draw=none, domain=-1:1] {gauss(0,1)} \closedcycle;
+\addplot[color=red] coordinates {(-3,0.2) (0,0.2)};
+\addplot[color=red] coordinates {(0,0.4) (3,0.4)};
+\node[coordinate, pin={0.5}] at (axis cs: -1.6, 0.2){};
+\node[coordinate, pin={0.5}] at (axis cs: 1.5, 0.4){};
+\end{axis}
+\end{tikzpicture}

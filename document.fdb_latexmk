@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1493787110 "document.tex" "document.pdf" "document" 1493787118
+["pdflatex"] 1493811201 "document.tex" "document.pdf" "document" 1493811209
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1492575640 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1492575644 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/tcrm1095.tfm" 1492575647 1536 02c06700a42be0f5a28664c7273f82e7 ""
@@ -240,12 +240,12 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1493670022 334148 1b9d30ff8c861d6082e3e9bfccd8d7eb ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1493669859 7587050 ac6c4cd547e8545eafa262adbe2f1d86 ""
   "DocumentStyle.sty" 1493771668 564 428f1ed9e932b78b63e12c1306b69a67 ""
-  "document.aux" 1493787118 262 465103e67645db71b5f1b72cf1628afc ""
+  "document.aux" 1493811209 262 465103e67645db71b5f1b72cf1628afc ""
   "document.tex" 1493784613 188 293a7c9a31fb46df218fbd9f6aa37823 ""
   "enumitem.sty" 1493658769 42666 6fa770e3485520a6a5f2ea7d259c8f8d ""
-  "tex/ModelosProb.aux" 1493787118 2982 468bd207bc95b431d7db861af4d1a294 ""
+  "tex/ModelosProb.aux" 1493811209 2982 468bd207bc95b431d7db861af4d1a294 ""
   "tex/ModelosProb.tex" 1493787109 40094 ed609a420f4f8c537282dc0274e7ad98 ""
-  "tex/Probabilidade.aux" 1493787111 5813 f0c47e3da22c7bb400d21737c865ff82 ""
+  "tex/Probabilidade.aux" 1493811203 5813 f0c47e3da22c7bb400d21737c865ff82 ""
   "tex/Probabilidade.tex" 1493784443 57416 581306d5247e087a675d0150b2ecf872 ""
   "tikz/ModelosProb/arvore1.tikz" 1493683929 1024 de3c710fbbdba56602345c6edb0307c8 ""
   "tikz/ModelosProb/dnorm1.tikz" 1493696425 761 02dbaf01b9dd5da8f5c4027ec9d19f5d ""
@@ -257,7 +257,7 @@
   "tikz/ModelosProb/dnorm15.tikz" 1493786326 516 e09fff3cad79f3520a3b96858e9b601e ""
   "tikz/ModelosProb/dnorm16.tikz" 1493786535 537 dc4499c909d3aeb4dcefc0ac88e24c36 ""
   "tikz/ModelosProb/dnorm17.tikz" 1493786886 540 80d14443113c88241d3755a354ce712b ""
-  "tikz/ModelosProb/dnorm18.tikz" 1493787002 538 aaf8c7f26dff42d3dd8bb1e1b819a9be ""
+  "tikz/ModelosProb/dnorm18.tikz" 1493811185 538 cb8de5cce506c0206ec349a414fb7779 ""
   "tikz/ModelosProb/dnorm2.tikz" 1493785200 1504 5502f65cd443712cb1cefe01d7db1ca4 ""
   "tikz/ModelosProb/dnorm3.tikz" 1493696982 520 aa91a0375492103cb54d0871f84c5879 ""
   "tikz/ModelosProb/dnorm4.tikz" 1493698187 510 9f1488ab8b1c21888ba3f335ac6f3284 ""
@@ -290,8 +290,8 @@
   "tikz/Probabilidade/tree1.tikz" 1493658769 1767 52cd76400cef3acc3c58c2803cfae502 ""
   "tikz/Probabilidade/tree2.tikz" 1493658769 1937 cfc124ed361366fc2c5e0ca1d888375c ""
   (generated)
+  "document.pdf"
   "document.log"
   "document.aux"
-  "tex/Probabilidade.aux"
-  "document.pdf"
   "tex/ModelosProb.aux"
+  "tex/Probabilidade.aux"

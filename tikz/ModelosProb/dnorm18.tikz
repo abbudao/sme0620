@@ -1,7 +1,7 @@
 \pgfmathdeclarefunction{gauss}{2}{\pgfmathparse{1/(#2*sqrt(2*pi))*exp(-((x-#1)^2)/(2*#2^2))}%
 }
 \def\startx{-1}
-\def\endx{3}
+\def\endx{2}
 \begin{tikzpicture}
 \begin{axis}[no markers, domain=0:10, samples=100,
 axis lines*=left, xlabel=$x$, ylabel=$f_{x}(x)$,

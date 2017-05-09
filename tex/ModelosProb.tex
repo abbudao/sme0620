@@ -16,7 +16,7 @@
  A média e variância de x é:
  \begin{align}
    \mu_{x}=E(x)=\sum_{x \in R_{x}}x_i P(X=x_i)\\ \nonumber
-   = \sum_{x \in R_{x}}x_i \frac{1}{k}= \frac{1}{k}\sum_{x_i \in R_{x}}\\
+   = \sum_{x \in R_{x}}x_i \frac{1}{k}= \frac{1}{k}\sum_{x_i \in R_{x}} x_i\\
    Var(x)=E(X^2)-\left(E(X)\right)^2\\ \nonumber
    = \sum_{x_i \in R_{x}}\left(x_i -\mu_x \right)^2 \times p\left(X=x_i \right)\\  
    =\frac{1}{k} \left(\sum^k_{i=1} x_i^2 - \frac{(\sum_{i=1}^k)^2}{k}\right) \nonumber
@@ -50,15 +50,15 @@
  Bernoulli se, somente se, sua f.m.p.\ é definida por:
  \begin{align}
    p(x)=P(X=x)= \begin{cases}
-     p^{x}(1-p){1-x}, \text{\quad} x=0,1, \text{\quad} 0<p<1\\
+     p^{x}(1-p)^{1-x}, \text{\quad} x=0,1, \text{\quad} 0<p<1\\
      0, \text{\quad caso contrário}
    \end{cases}
  \end{align}
 \item[ Notação:] $X \sim Ber(p)$
 
 \item [Exemplos:]
- $$p(x)=(\frac{2}{5})^x(1-\frac{2}{5})^x, \text{\quad}x=0,1$$\\
- $$p(x)=(\frac{7}{8})^{1-x}(1-\frac{7}{8})^{1-x}, \text{\quad }, x=0,1$$
+  $$p(x)=\left(\frac{2}{5}\right)^x\left(1-\frac{2}{5}\right)^{1-x} \text{\quad},x=0,1$$\\
+ $$p(x)=\left(\frac{7}{8}\right)^{x}\left(1-\frac{7}{8}\right)^{1-x} \text{\quad }, x=0,1$$
 
  De forma similar, podemos apresentar $p(x)$ por:
  \begin{figure} [H]
@@ -462,7 +462,7 @@ que ocorrem em um certo período de tempo ou superficie ou volume.
 \item[Definicao] Uma v.a.\ tem Distribuição Poisson com parâmetro $\lambda$, $\lambda >0$,se sua
   f.m.p.\ é dada por:
  \begin{align}
-   P_{x} (x)= P(X=x)= \frac{e^{-\lambda}\lambda{x}}{x!}, \quad x=0,1,2,\ldots
+   P_{x} (x)= P(X=x)= \frac{e^{-\lambda}\lambda^{x}}{x!}, \quad x=0,1,2,\ldots
  \end{align} 
  \item{Notacao}: $X \mathtt{\sim} Poi(\lambda)$
  \item{Temos que}:
@@ -651,9 +651,9 @@ Assim, a f.d.p.\ de $x$ é:
     \end{figure}
     \item A f.d.a.\ de $x$ é:
       \begin{align*}
-        P(X \le x)  = \int_{ -\infty }{x} f_{x}(t)dt \\
-        = \int \limits_{(0)}^{(x} \lambda e^{-\lambda t )} dt \\
-        = -e^{-\lambda t} |_{0}^{x} = -e^{-\lambda x} +1\\
+        P(X \le x)  = \int \limits_{ -\infty }^{x} f_{x}(t)dt \\
+        = \int \limits_{0}^{x} \lambda e^{-\lambda t } dt \\
+        = \eval{-e^{-\lambda t}}{0}{x} = -e^{-\lambda x} +1\\
         = 1- e^{-\lambda x}
       \end{align*}
       \begin{align*}

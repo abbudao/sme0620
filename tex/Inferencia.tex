@@ -1,0 +1,523 @@
+\chapter{Inferencia Estatistica}
+\section{Introducao}
+\begin{description}
+  \item [Objetivo:]  Produzir informacoes sobre dada caracteristica da populacao na qual estamos 
+    interessados, a partir de informacoes colhidas de uma parte dessa populacao (amostra).
+  \item[Caracteristica:] Variavel Aleatoria 
+    \begin{align}
+      X: \Omega \to \mathtt{R} \nonumber \\ 
+      X: p_{x,\theta} ou f_{x}(x,\theta)
+    \end{align}
+  \item [Situacao Pratica:] $\theta$ eh desconhecido
+  \item [Interesse:] Estimar $\theta$ (Metodos de Estimacao Pontual)
+
+    Para isso, considere uma amostra aleatoria de $X$:
+    \begin{align*}
+      X=(X_1,X_2,\ldots,X_n) 
+    \end{align*}
+    Cada $X_i$ eh independente e tem a mesma distribuicao de $X$. ASsociada a uma a.a.\ $X$, temos o vetor
+    de observacoes:
+    \begin{align*}
+      x=(x_1,x_2,\ldots,x_n) 
+    \end{align*}
+    Com base na a.a.\ podemos obter uma estatistica ou estimador que eh funcao da a.a.\ :
+    \begin{align*}
+      T=T(X_1,X_2,\ldots,X_n) 
+    \end{align*}
+    As estatisticas mais comuns:
+    \begin{description}
+      \item[Media amostral] :
+        \begin{align*}
+          \bar{X} = \frac{\sum \limits_{i=1}^{n} X_i}{n}
+        \end{align*}
+      \item [Variancia Amostral]:
+        \begin{align*}
+          s^2 = \frac{\sum \limits_{i=1}^{n} \left( X_i - \bar{X}\right)^2}{n-1} 
+        \end{align*}
+      \item [Menor Valor da amostra]:
+        \begin{align*}
+          X_{(1)} = min(X_1,X_2,\ldots,X_n)
+        \end{align*}
+      \item [Maior valor da amostra:]
+        \begin{align*}
+          X_{(n)} = max(X_1,X_2,\ldots,X_n)
+        \end{align*}
+    \end{description}
+  \item[O problema da inferencia estatistica:] faer afirmacoes sobre $\theta (s)$, parametros da populacao, atraves da amostra.
+
+    Iremos estudar distribuicoes amostrais de algumas estatisticas.
+\end{description}
+\section{Distribuicoes Amostrais}
+\subsection{Distribuicao Amostral da Media}
+\begin{description}
+  \item [Estatistica:] 
+    \begin{align*}
+      T(X_1,\ldots,X_n) =\underbrace{\bar{X}{\text{Media amostral}}
+    \end{align*}
+    Considere uma v.a.\ $X$, cujos parametros media e variancia populacional sao, respectivamente, $\mu=E(x)$ 
+    e $\sigma^2= Var(x).$ Vamos retirar todas as possiveis amostras de tamanho $n$ dessa populacao e, para cada uma,
+    calcular $\bar{X}$:
+    %Figura aqui
+    Em seguida, consideremos a distribuicao amostral de $\bar{X}$ e estudaremos suas propriedades. 
+  \item[Teorema:] Se $X$ eh uma v.a.\ com media $\mu$ e variancia $\sigma^2$ seja $\mathbf{X}= \left(X_1,\ldots, X_n \right)$ 
+    uma a.a.\ $X$. Entao:
+  \item  \begin{description}
+     \begin{align}
+      E(\bar{X}) =\mu \\
+      Var(\bar{X})= \frac{\sigma^2}{n}
+    \end{align}
+\item[Obs]: 
+  \begin{align*}
+    Var(\bar{X}) = Var \left(\sum \limits_{i=1}^{n} \frac{X_i}{n}\right)\\
+    = \frac{1}{n^2} \sum \limits_{i=1}^{n} Var(x_i)= \frac{1}{n^2} \sum \limits_{i=1}^{n} \sigma^2 \\
+    = \frac{1}{n}  \sigma^2 = \frac{\sigma^2}{n}
+  \end{align*}
+  \end{description}
+  O que acontece com a distribuicao de $\bar{X}$ quando aumentamos o tamanho da amostra ($n$)?
+  \begin{align*}
+    E(\bar{X}) = \mu \\
+    Var(\bar{X}) \to 0 , \quad \text{Quando $n \to \infty$}
+  \end{align*}
+  Este resultado eh conhecido como Teorema Central do Limite (T.C.L).
+\item[Teorema:] Para a.a.\, retirada de uma populacao com media $\mu$ e variancia $\sigma^2$, finita, 
+  a distribuicao amostral de $\bar{X}$ aproxima-se, para $n$ grande, de uma distribuicao normal com 
+  media $\mu$ e variancia $\frac{\sigma^2}{n}$. Ou seja:
+  \begin{description}
+    
+    \item \begin{align}
+    \bar{X}  \tilde N(\mu, \frac{\sigma^2}{n}), \quad \text{quando } $n\to \infty$
+  \end{align}
+\item[Obs:] Observe que se a populacao for normal, entao \bar{X} tera distribuicao 
+  exata normal.
+  \end{description}
+  Padronizando, obtemos:
+  \begin{align}
+    Z= \frac{\bar{x} - E(\bar{X})}{\sqrt{Var(\bar{X})}} = \frac{\bar{X}- \mu}{\frac{\sigma}{\sqrt{n}}}\\
+    =\frac{\sqrt{n} \left(\bar{X} - \mu\right)}{\sigma} \tilde N(0,1)
+  \end{align}
+\item [Exemplo]:
+Uma v.a.\ $X$ tem distribuicao nromal com media 10 e desvio-padrao 3.
+\begin{enumerate}[label=(\alph*)]
+  \item Se $\bar{X}$ for a media da amostra de 25 elementos retirados dessa populacao,
+    calcule $P \left(a < \bar{X} <1 \right)$.
+  \item Que tamanho deveria ter a amostra para que $P(a < \bar{X} < 11 =0,95)$?
+\end{enumerate}
+\begin{enumerate}[label=(\alph*)]
+  \item  $P(a < \bar{X < 11}) = )$?
+
+$n=25$
+    \begin{align*}
+      \mathbf{X} = \left(X_1, X_2, \ldots, $X_{25}\right) \\
+      \bar{X} \tilde N(\mu; \frac{\sigma^2}{n})\\
+      \bar{X} \tilde N(10; \frac{3^2}{25})
+    \end{align*}
+    \begin{align*}
+      P(a< \bar{X}<11) = P \left(\frac{9-10}{\frac{3}{\sqrt{25}}} < Z < \frac{11-10}{\frac{3}{\sqrt{25}}}\right) \\
+      P(- \frac{5}{3} < Z < \frac{5}{3}) = P \left(-1,67 < Z < 1,67\right) \\
+=2 P( 0< Z <1,67 ) \\
+=2 \times 0,45254 = 0,9105
+    \end{align*}
+  \item 
+    \begin{align*}
+      \bar{X} \tilde N(\mu; \frac{\sigma^2}{n})\\
+      \bar{X} \tilde N(10; \frac{3^2}{n})
+    \end{align*}
+\begin{align*}
+  P \left(9 < \bar{X} <11\right) = 0,95 \\
+  P \left( \frac{9-19}{\frac{3}{\sqrt{n}}} < Z < \frac{11-10}{\frac{3}{\sqrt{n}}}\right)= 0,95 \\
+P \left(\frac{- \sqrt{n}}{3} < Z < \frac{\sqrt{n}}{3} \right)= 0,95\\
+P \left(0< Z < \frac{\sqrt{n}}{3}\right)= \frac{0,95}{2}=0,475
+\end{align*}
+\begin{align*}
+ z= 1,96 \\
+ \frac{\sqrt{n}}{3}=1,96 \\
+ n= \left(5,88\right)^2 \\
+ n= 34,574 \\
+ n=35
+\end{align*}
+\end{enumerate}
+\end{description}
+\subsection{Distribuicao Amostral para a Proporcao}
+\begin{description}
+  \item Seja $X$ uma v.a.\ definida da seguinte maneira:
+\begin{align}
+  X= \begin{cases}  
+    1, \quad \text{se ocorre sucesso(interesse)} \\
+    0, \quad \text{se ocorre frcasso}
+  \end{cases}
+\end{align}
+$X$ distribuicao de Bernoulli. Logo:
+\begin{align*}
+  E(X) = \mu= p \\
+  Var(X)= \sigma^2= p \left(1-p\right)
+\end{align*}
+Considere uma a.a.\ $\mathbf{X}= \left(X_1,\ldots, X_{n}\right)$ da v.a.\ $X$ e o interesse eh a proporcao de indivudos/elementos
+que possui a caracteristica de interesse (sucesso), $\tilde{p}$ . Isto eh:
+\begin{align}
+  \tilde{p} = \frac{\sum \limits_{i=1}^{n}}{n}= \bar{X}
+\end{align}
+Observe que cada $X_i$,$i=1, \ldots, n$, tem distribuicao Bernoulli e sao independentes. Pelo TCL, $\tilde{p}$ tera distribuicao 
+aproximadamente normal com media $\mu=p$ e variancia:
+\begin{align*}
+  \frac{\sigma^2}{n} = \frac{p(1-p)}{n}\\
+  \tilde{p} \tilde N (p, \frac{p(1-p)}{n})
+\end{align*}
+Padronizando, temos:
+\begin{align*}
+  Z= \frac{\tilde{p} - E(\tilde{p})}{\sqrt{var(\tilde{p})}} = \frac{p-\tilde{p}}{\sqrt{\frac{p(1-p)}{n}}} \quad \tilde  N(0,1)
+\end{align*}
+\item[Exemplo]:
+  \begin{description}
+    \item  Um procedimento de controle de qualdiade foi planejado para garantir um maximo de $10\%$ de itens defeituosos na producao.
+  Supondo que a producao esteja sob controle ($p=0,1$) e que os itens sejam vendidos em caixas com 100 unidades, qual a probabilidade de que uma caixa:
+\item  \begin{enumerate}[label=(\alph*)]
+     \item Tenha mais do que $10\%$ de defeituosos.
+    \item Nao tenha itens defeituosos
+\end{enumerate}
+\item $X$: numero de pecas defeituosas a cada venda\\
+  $X \tilde Ber(p) \quad p=0,1$ \\
+  $n=100 \quad \left(X_1,X_2,\ldots,X_{100}\right)$\\
+  $E(X)=\mu = p= 0,1$\\
+  $Var(X)= \sigma^2 = p \left(1-p\right)= 0,1 \times 0,9= 0,09$
+ \begin{enumerate}[label=(\alph*)]
+   \item 10\% de 100 = 10
+     \begin{align*}
+       P \left(\sum \limits_{i=1}^{100} X_{i} >10\right) =P \left(\tilde{p}> 0,1\right) \\
+       \tilde{p} \tilde N(0,1; \frac{0,09}{100})\\
+       P \left( \tilde{p} > 0,1\right) = P \left(Z> \frac{0,1-0,1}{\frac{\sqrt{0,09}}{100}}\right)\\
+       =P(Z>0)= 0,5
+     \end{align*}
+     %figura aqui
+   \item $P \left(\sum \limits_{i=1} X_{i}=0\right)= P(\tilde{p}=0) \approx 0$
+ \end{enumerate} 
+\end{description} 
+\end{description}
+%Duas aulas perdidas
+\section{Fix me}
+\subsection{Eficiencia}
+\begin{description}
+  \item [Definicao]  Considere dois estimadores $T_1 (x)= \tilde{\theta_1}$
+    e $T_2 (x)= \tilde{\theta_2}$, nao-viciados para um parametro $\theta$. Dizemos
+    que $\tilde{\theta_1}= T_1 (x)$ eh mais eficiente que $\tilde{\theta_2}= T_2 (x)$ se
+    $Var(T_1 (x))< Var(T_2(x))$.
+\end{description}
+\subsection{Consistencia}
+\begin{description}
+  \item Seja $\left{ T_{n}(x) \right}_{n>1}$ uma sequencia de estimadores de $\theta$:
+    \begin{align*}
+      T_1(x) ; T_2(x); T_3 (x), \ldots
+    \end{align*}
+  \item [Definicao] a sequencia $\left{ T_n \right}_{n \geq 1}$ eh definida ser uma sequencia 
+    consistente de estimadores de $\theta$ se, e somente se, para todo $\epsilon>0$ satisfaz:
+    \begin{align*}
+      \lim\limits_{n \to \infty} P( | T_{n} - \theta | \geq \epsilon )=0
+    \end{align*}
+  \item [Obs:]  $\lim\limits_{n \to \infty} ( | T_{n} - \theta < \epsilon )= 1$
+    Em geral, para verficiar se um estimador eh consistente, utilizamos a desigualdade 
+    de Chebyshev que diz:
+    \begin{align*}
+      P( |T_{n} - \theta| \geq \epsilon )  \leq \frac{Var(T_n (x))}{\epsilon^2}
+    \end{align*}
+  \item [Proposicao]:
+    Uma sequencia $\left{ T_{n} (x) \right}_{n \geq 1}$ de estimadores de $\theta$ eh consistente 
+    se:
+    \begin{align*}
+      \lim \limits_{n \to \infity}  E(T_{n} (x)) = \theta
+    \end{align*}
+    E 
+    \begin{align*}
+      \lim \limits_{n \to \infty}  Var( T_{n} (x) ) =0
+    \end{align*}
+  \item [Exemplo] Seja $X= (X_1, X_2, \ldots, X_n ) $ uma a.a.\ da v.a.\ $X$ com distribuicao
+    $N \left(\mu, \sigma^2 \right)$. Considere os estimadoresde $\mu$ e $\sigma^2$, respectivamente,
+    $    \tilde{\mu}= \bar{X}$ e $\tilde{\sigma^2}= \frac{\sum_{i=1}^{n} \left(X_i - \bar{X}\right)^2}{n}$.
+    Calcule os vicios para estes estimadores.
+
+    Para $\mu$:
+    \begin{align*}
+      \beta_{\mu}  \left(\tilde{\mu}\right)= \beta_{\mu} \left( \bar{X} \right)= E(\bar{X})-\mu
+    \end{align*}
+    Obtende o $E(\bar{X})$:
+    \begin{align*}
+      E(\bar{X}) = E \left(\frac{\sum \limits_{i=1}^{n} X_i}{n}\right)= \frac{1}{n} \sum \limits_{i=1}^{n} E(X_i)= \mu
+    \end{align*}
+    Logo,
+    \begin{align*}
+      \beta_{\mu} \left(\bar{X}\right)= \mu - \mu =0
+    \end{align*}
+    Portanto, $\bar{X}$ eh um estimador nao-viciado (nao-viesado).
+    
+    Para $\sigma^2$
+    \begin{align*}
+      \beta_{\sigma^2} = E \left(\tilde{\sigma^2}\right) - \sigma^2
+    \end{align*}
+    Obtendo o $E(\tilde{\sigma^2}):$
+    \begin{align*}
+      E \left( \tilde{\sigma^2}\right) = E \left(\frac{\sum \limits_{i=1}^{n} \left(X_i - \bar{X}\right)^2 }{n}\right)\\
+      = \frac{1}{n} E \left(\sum_{i=1}^{n} \left(X_i^2 - 2X_i \bar{X_1} + \bar{X}^2\right)\right) \\
+      = \frac{1}{n}E \left(\sum_{i=1}^{n} X_i^2 - \sum_{i=1}^{n} 2X_i \bar{X_1} + \sum_{i=1}^{n}\bar{X}^2\right)\right) \\
+      = \frac{1}{n} E \left( \sum_{i=1}^{n} X_i^2 - 2n\bar{X}^2 + n\bar{X}^2\right) \\
+      = \frac{1}{n} \left{ \sum \limits_{i=1}^{n} E \left(X_i^2\right) - nE \left(\bar{X^2}\right) \right}
+    \end{align*}
+    Sabemos que: 
+    \begin{align*}
+      Var(X_i^2)= E \left(X_i^2\right) - \left{ E(X_i) \right}^2
+      E(X_i^2)  = Var \left(X_i\right)+ \left{ E \left(X_i\right) \right}^2 = \sigma^2 + \mu^2
+    \end{align*}
+    E alem disso:
+    \begin{align*}
+      Var(\bar{X}) = E \left( \bar{X^2} \left\{ E \left(\bar{X}\right)^2  \right\}\right) \\
+      E \left(\bar{X^2}\right) = Var(\bar{X})+ \left\{ E \left(\bar{X}\right)^2 \right\}
+    \end{align*}
+    \begin{align*}
+      Var(\bar{X})= Var \left( \frac{1}{n} \sum\limits_{i=1}^{n} X_i\right) \\
+      = \frac{1}{n^2} \sum \limits_{i=1}^{n} Var(X_i) = \frac{1}{n}\sigma^2 \\
+      = \frac{\sigma^2}{n}
+    \end{align*}
+    \begin{align*}
+      E \left( \bar{X^2}\right) = Var \left(\bar{X}\right)+ \left\{ E \left(\bar{X}\right)^2 \right\} \\
+      =\frac{\sigma^2}{n} + \mu^2
+    \end{align*}
+    Com isso, temos que:
+    \begin{align*}
+     E \left(\sigma^2\right) = \frac{1}{n} \left\{ \sigma^2 + \mu^2 \right\} \\
+     = \sigma^2 + \mu^2 - \left(\frac{\sigma^2}{n} + \mu^2 \right)\\
+     = \sigma^2 - \frac{\sigma^2}{n}\\
+     = \frac{\sigma^2 \left(n-1\right)}{n}
+    \end{align*}
+    Logo,
+    \begin{align*}
+      \beta_{\sigma^2}  \left(\bar{\sigma^2}\right)= \frac{-\sigma^2}{n}
+    \end{align*}
+    Portanto, $\bar{\sigma^2}$ eh um estimador viciado. Por outro lado, temos:
+    \begin{align*}
+      \lim \limits_{n \to \infty} \beta_{\sigma^2} \left(\sigma^2\right) = \lim \limits_{n \to \infty} \left( \frac{-\sigma^2}{n}\right)=0
+    \end{align*}
+    E $\tilde{\sigma^2}$ sera  assistonticamente nao-viciado.
+  \item [Observacao] O calculo do vicio de um estimador pdoe ser usado para sugerir novos estimadores.
+    Por exemplo, considere $\tilde{\sigma^2}$ o estiamdor para $\sigma^2$, cujo vicio eh $\frac{-\sigma^2}{n}$. 
+    Um novo estiamdor nao-viciado pode ser obtido por:
+    \begin{align*}
+      E \left(\tilde{\sigma^2}\right) = \frac{\sigma^2 \left(n-1\right)}{n} \\
+      \frac{n}{n-1} E \left(\tilde{\sigma^2}\right)= \sigma^2 \\
+      E \left(\frac{n\tilde{\sigma^2}}{n-1}\right)= \sigma^2 
+    \end{align*}
+    Logo, $S^2= \frac{n \tilde{\sigma^2}}{n-1}$ eh um estimador nao-viciado para $\sigma^2$, pois $E  \left(E(S^2)= \sigma^2\right).$
+    Assim, o estimador nao-viciado para $\sigma^2$ eh:
+    \begin{align*}
+      S^2= \frac{n \tilde{\sigma^2}}{n-1} = \frac{\sum \limits_{i=1}^{n} \left(X_i - \bar{X}\right)^2}{n-1} \\
+      = \frac{\sum \limits_{i=1}^{n} \left(X_i - \bar{X}\right)^2}{n-1}
+    \end{align*}
+  \item [Exemplo:] Considere uma amostra de tamanho $n$ da v.a.\ $X$ com distribuicao $N \left(\mu; \sigma^2 \right)$.
+    Considere dois estimadores para $\mu$:
+    \begin{align*}
+      \tilde{\mu_1} = X_1 \\
+      \tilde{\mu_2}= \bar{X}
+    \end{align*}
+    \begin{enumerate}[label=(\alph*)]
+      \item Qual dos estimadores eh melhor do ponto de vista de eficiencia?
+      \item E do ponto de ista de consistencia?
+    \end{enumerate}
+  \item [Resposta]
+    \begin{enumerate}[label=(\alph*)]
+      \item 
+        \begin{align*}
+          E \left(\tilde{\mu_1}\right) = E \left(X_1\right)= \mu\\
+          E \left(\mu_2\right) = E \left(\bar{X}\right)= E \left( \frac{ \sum \limits_{i=1}^{n} X_i }{n}\right) \\
+          = \frac{1}{n} \sum \limits_{i=1}^{n} E \left(X_i\right) = \frac{1}{n}  \sum \limits_{i=1}^{n}= \mu
+        \end{align*}
+        \begin{align*}
+          Var \left(\tilde{\mu_1}\right) = Var \left(X_1\right)= \sigma^2 \\
+          Var \left(\tilde{\mu_2}\right)= Var \left(\tilde{X}\right)= \frac{\sigma^2}{n}
+        \end{align*}
+        Como $Var(\tilde{\mu_2} < Var(\tilde{\mu_1}))$, temos que $\tilde{\mu_2}$ eh melhor.
+      \item Avaliando a consistencia pela proposicao.
+
+        Para $\tilde{\mu_1}$ 
+        \begin{align*}
+          \lim \limits_{n \to \infty}  E \left(\tilde{\mu_1}\right)= \lim \limits_{n \to \infty} \mu = \mu
+        \end{align*}
+        \begin{align*}
+          \lim \limits_{n \to \infty}  Var \left(\tilde{\mu_1}\right)= \lim \limits_{n \to \infty} \sigma^2 = \sigma^2
+        \end{align*}
+        Logo, $tilde{\mu_1}$ nao eh consistente.
+
+        Para $\tilde{\mu_2}$ 
+        \begin{align*}
+          \lim \limits_{n \to \infty}  E \left(\tilde{\mu_2}\right)= \lim \limits_{n \to \infty} \mu = \mu
+        \end{align*}
+        \begin{align*}
+          \lim \limits_{n \to \infty}  Var \left(\tilde{\mu_2}\right)= \lim \limits_{n \to \infty} \sigma^2 = 0
+        \end{align*}
+        Logo, $tilde{\mu_2}$ eh consistente. Do ponto de vista de consistencia $\tilde{\mu_2}$ eh melhor.
+    \end{enumerate}
+  \item [Exemplo]: 
+
+    Considere os estimadores $\tilde{\sigma^2}$ e $\tilde{s^2}$ para $\sigma^2$. Compare os seus EQM`s e verifique se estes
+    estimadores sao consistentes. Utilize o seguinte resultado:
+    \begin{align*}
+      Y= \frac{\sum \limits_{i=1}^{n} \left(X_i - \bar{X}\right)^2}{\sgma^2}  \tilde X^2_{(N+1)} \\
+      E(Y)= n-1  \quad \text{e} \quad Var(y)= 2 \left(n-1\right)
+    \end{align*}
+    \begin{align*}
+      \tilde{\sigma^2}      = \frac{\sum \limits_{i=1}^{n} \left(X_i - \bar{X}\right)}{n} \\
+      s^2 = \frac{\sum \limits_{i=1}^{n} \left(X_i - \bar{X}\right)^2}{n-1} \\
+      EQM_{\sigma^2}= \left( T(X)\right) =Var \left( T(X)\right) + \left\{  \beta_{\sigma^2} (T(x)) \right\}^2\\
+      EQM_{\sigma^2} \left(\tilde{\sigma^2}\right)= Var \left(\tilde{\sigma^2}\right) + \left\{ \beta_{\sigma^2} ( \tilde{\sigma^2} ) \right\}^2
+    \end{align*}
+    Obtendo a $Var{\tilde{sigma}^2}$:
+    \begin{align*}
+    Var ( \tilde{\sigma^2} ) = Var \left( \frac{ \sum \limits_{i=1}  \left(X_i - \bar{X}\right)^2\right)}{n}\\
+    \frac{\sigma^4}{n^2} Var \left( \frac{\sum \limits_{i=1}^{n}}{\sigma^2}\right)\\
+    = \frac{\sigma^4}{n^2} 2 \left(n-1\right)
+    \end{align*}
+    \begin{align*}
+      EQM_{\sigma^2} ( \tilde{\sigma^2} )= \frac{\sigma^4}{n^2} 2(n-1) + \left[  -\frac{\sigma^2}{n} \right]^2 \\
+      = \frac{\sigma^n}{n^2} 2(n-1) + \frac{\sigma^4}{n^2} \\
+      = \frac{\sigma^2}{n^2} \left\{ 2n -2 +1 \right\} \\
+      = \frac{\sigma^4}{n^2} \left\{ 2n-1 \right\}
+    \end{align*}
+    Logo, o EQM eh:
+    \begin{align*}
+      EQM_{\sigma^2} \left(\tilde{\sigma^2}\right) = \frac{\sigma^4}{n^2} 2 \left(n-1\right)+ \frac{\sigma^4}{n^2} \\
+      = \frac{\sigma^4 \left(2n -2 +1\right)}{n^2}= \frac{\sigma^4}{n^2} \left(2n-1\right)
+    \end{align*}
+    Avaliando se $\tilde{\sigma^2}$ eh consistente, utilizaremos a desigualdade de Chebyshev.
+    \begin{align*}
+      \lim \limits_{n \to \infty}P \left(| \tilde{\sigma^2}- \sigma^2| \geq \epsilon \right)\leq \lim \limits_{n \to \infty} \frac{Var \left(\tilde{\sigma^2}\right)}{\epsilon^2} \\
+      \lim \limits_{n \to \infty} \frac{Var(\sigma^2)}{\epsilon^2} \\
+      \lim \limits_{n \to \infty} \frac{\sigma^4\times 2 \times (n-1)}{n^2 \times \epsilon^2} \\
+      =\frac{2\sigma^4}{\epsion^2} \lim \limits_{n \to \infty} \frac{n-1}{n^2}=0
+    \end{align*}
+    Logo, $\tilde{\sigma^2}$ eh um estimador consistente.
+    Para $S^2 = \frac{\sum \limits_{i=1}^{n} \left(X_i - \bar{X}\right)^2}{n-1}$ ja sabemos que $S^2$ eh um estiamdor nao-viciado,
+    ou seja, $\beta_{\sigma^2} \left(s^2\right)=0$.
+    \begin{align*}
+      EQM_{\sigma^2} \left(S^2\right)= Var(S^2)+ \left{ \beta_{\sigma^2} \left(S^2\right) \right}^2 \\
+      =Var(S^2)
+    \end{align*}
+    Calculando $Var(S^2)$:
+    \begin{align*}
+      Var(S^2) = Var \frac{\left(\sum \limits_{i=1}^{n} \left(X_i - \bar{X}\right)^2\right)}{n-1}\\
+      = Var \frac{\left(y \sigma^2\right)}{n-1}= \frac{\sigma^4}{(n-1)^2} Var(y)
+    \end{align*}
+    \begin{align*}
+      Var(S^2) = \frac{\sigma^4}{ \left(n-1\right)^2 } 2 \left(n-1\right) \\
+      = \frac{2\sigma^4}{n-1}
+    \end{align*}
+    Logo, o EQM de $S^2$ eh:
+   \begin{align*}
+   EQM{\sigma^2} \left(S^2\right)= \frac{2 \sigma^4}{n-1} \quad \sigma^2=1 \quad n=2
+   \end{align*} 
+   Avaliando se $S^2$ eh consistente, utilizaremos a proposicao que diz:
+
+   O estimador sera consistente se $\lim \limits{n \to \infty} E(S^2)= \sigma^2 $ e $\lim \limits{ n \to \infty } Var(S^2)=0$. Como 
+   $E(S^2)= \sigma^2$ e $Var(S^2)= \frac{2 \sigma^4}{n-1}$ temos:
+   \begin{align*}
+     \lim \limits_{n \to \infty} E(S^2)= \lim \limits_{n \to \infty} \sigma^2 = \sigma^2 \\
+     \lim \limits_{n \to \infty} Var(S^2)= \lim \limits_{n \to \infty} 2\frac{\sigma^4}{n-1} = 2\sigma^4 \lim \limits_{n \to \infty} \frac{1}{n-1}= 0
+   \end{align*}
+   Logo, $S^2$ eh um estimador consistente.
+
+   Resumo do estimadores par $\sigma^2$:
+   \begin{tabular}{l l l l}
+Estimadores    & Vicio  & EQM &  Consistencia\\
+$S^2= \frac{\sum \limits_{i=1}^{n} \left(X_i - \bar{X}\right)^2}{n-1}$& 0 & $\frac{2 \sigma^4}{n-1}$& Sim \\
+$\sigma^2= \frac{\sum \limits_{i=1}^{n} \left(X_i - \bar{X}\right)^2}{n-1}$& $\frac{-\sigma^2}{n}$ & $\frac{\sigma^4 \left(2n-1\right)}{n^2}$& Sim
+   \end{tabular}
+\end{description}
+\section{Estimacao por intervalos}
+\begin{description}
+  \item [Objetivo]  Construir intervalos que indiquem alem da estimativa pontual, uma medida de precisao dessa estimativa. Estes intervalos sao chamados intervalos de confianca.
+    \subsection{Estimacao intervalar para a media populaciona $(\mu)$}
+    \begin{description}
+      \item        Considere $X = \left(X_1, X_2 ,\ldots, X_n\right)$ uma a.a.\ da v.a.\ $X$ com $E(X)= \mu$ e $Var(X)= \sigma^2$. Ja sabemos que
+        $\bar{X}$ eh um estimador pontual para $\mu$ e que a distribuicao amostral de $\bar{X}$ eh:
+        \begin{align}
+          \bar{X}  \tilde N \left(\mu, \frac{\sigma^2}{n}\right) \quad \text{Exata ou aproximada}
+        \end{align}
+        Com isso, temos:
+        \begin{align}
+          Z= \frac{\bar{X}- E(\bar{X})}{\sqrt{Var(\bar{X})}} = \frac{\bar{X}- \mu}{\frac{\sigma}{\sqrt{n}}} \tilde N(0,1)
+        \end{align}
+        Para obtermos a estimacao intervalar para $\mu$, iremos considerar duas situacoes:
+        \begin{enumerate}[label=(\alph*)]
+          \item $\sigma^2$ conhecido
+
+            Seja $\alpha$ um valor pequeno $(0 < \alpha <1)$, tal que:
+\begin{align*}
+  \alpha : \text{Nivel de significancia}  \\
+1- \alpha : \text{Nivel de Confianca}
+\end{align*}
+Assim, 
+\begin{align*}
+  P( -z_{\alpha/2} < Z < z_{\alpha/2} ) = 1-\alpha
+\end{align*}
+%Fig dist normal 
+\begin{align*}
+  P \left( -z_{\alpha/2} < \frac{\bar{X}- \mu}{\frac{\sigma}{\sqrt{n}}}< z_{\alpha/2}\right) = 1-\alpha \\
+  P \left(\bar{X} -z_{\alpha/2} {\frac{\sigma}{\sqrt{n}}}< \mu<\bar{X}+ z_{\alpha/2}\right){\frac{\sigma}{\sqrt{n}}} = 1-\alpha 
+\end{align*}
+Logo, o intervalo com $\gamma = (1-\alpha)$ 100\% de confianca para $\mu$ eh :
+\begin{align*}
+  IC_{\gamma}= \left[\bar{X}- z_{\alpha/2} , \bar{X}+ z_{\alpha/2}  \right] \\
+  IC_{\gamma} = \left[ \bar{X}- \epsilon , \bar{X}+\epsilon \right]
+\end{align*} 
+Em que $\epsilon= z_{\sigma2} \frac{\alpha}{\sqrt{n}}$. Obs: $n= \left(\frac{z_{\alpha/2\sigma}}{\epsilon}\right)$
+        \end{enumerate}
+      \item [Observacoes]:
+        \begin{enumerate}
+          \item $\mu$ eh um parametro e nao uma v.a.\
+          \item Quando $IC$ estiver em funcao da a.a.\ dizemos que o intervalo de confianca aleatoria.
+        \end{enumerate}
+      \item [Interpretacao]:
+
+        Se pudessemos construir uma grande quantidade de intervalos todos com o mesmo tamanho de amostras $n$, esperamos que 
+        um $(1-\alpha)\times 100\%$ deles contenham o verdadeiro valor do parametro.
+        %fig aqui
+      \item [Exemplo] suponha que os comprimentos de jacares adultos de uma certa raca seja uma distribuicao normal com media $\mu$, desconhecida e variancia igual a $0,01m^2$. Uma amostra de 10 animais foi sorteada e forneceu media $1,69m$. Obtenha um intervalo com $95\%$ de confianca para $\mu$.
+
+        \begin{align*}
+         X \tilde N \left(\mu ; 0,01\right)  \\
+         X= \left(X_1 , X_2 , \ldots , X_10\right) \\
+         n=10 \quad \bar{x}=1,69 \quad \alpha= 5\% 
+        \end{align*}
+        Sabemos que:
+        \begin{align*}
+          IC_{95\%} : \left[ \bar{X} \mp z_{\alpha/2}  \frac{\sigma}{\sqrt{n}}\right] 
+        \end{align*}
+        %Fig dist normal aqui
+        \begin{align*}
+          \bar{X}  \mp z_{\alpha/2} \frac{\sigma}{\sqrt{n}} \\
+          = 1,69 \mp \frac{\sqrt{0,01}}{10}\\
+          =1,69 + 0,06
+        \end{align*}
+        \begin{align*}
+          IC_{95\%} : \left[ 1,63 ; 1,75\right]
+        \end{align*}
+      \item[Exercicio] Suponha que o tempo de vida de um equipamento tem distribuicao normal com media $\mu$, desconhecida,
+        e desvio-padrao de 5 horas. Admita que $64$ equipamentos foram testados, fornecendo um tempo de vida medio de 500 horas. 
+        Deseja-se obter um intervalo para $\mu$ com:
+        \begin{enumerate}[label=(\alph*)]
+          \item $95\%$ de confianca
+          \item $90\%$ de confianca
+        \end{enumerate}
+        %fig aqui
+      \item [Exemplo] Considerando o exemplo dos comprimentos dos jacares, de que tamanho precisaria tomar uma amostra para estimar a media dos comprimentos da populacao  com um erro maximo de $0,01$ com $95\%$ de confianca?
+        \begin{align*}
+          X \tilde N \left(\mu ; 0,01\right)\\
+          \alpha= 5\% \quad n=? \quad \epsilon=0,01  
+        \end{align*}
+        \begin{align*}
+          \bar{X} \mp z_{\alpha/2} \frac{\sigma}{\sqrt{n}} \\
+          \epsilon = z_{\alpha/2} \frac{\sigma}{\sqrt{n}} \\
+          \left(\sqrt{n}\right)^2= \left( \frac{z_{\alpha/2 \sigma}}{\epsilon}\right)^2\\
+          n= \left(\frac{z_{alpha/2}\sigma}{\epsilon}\right)^2
+        \end{align*}
+        %fig aqui
+        \begin{align*}
+         n= \left(\frac{1,96}{0,01}\right)^2 \times 0,01= 384,16\\
+         n \approx 385
+        \end{align*}
+      \end{description}
+\end{description}

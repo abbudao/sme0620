@@ -1,7 +1,7 @@
 \begin{tikzpicture}
   \begin{axis}[clip=false,
 axis y line*=left,
-yticklabels={$P_{2}$,$P_{n}$,$\empty$,$P_{1}$,$\empty$,$P_{k}$},ytick={1,...,6},
+yticklabels={$p_{2}$,$p_{n}$,$\empty$,$p_{1}$,$\empty$,$p_{k}$},ytick={1,...,6},
 axis x line*=bottom,
 xticklabels={$x_1$,$x_2$,$\ldots$,$x_k$,$\ldots$,$x_n$},xtick={1,...,6},xtick style={draw=none},ytick style={draw=none}
     ]

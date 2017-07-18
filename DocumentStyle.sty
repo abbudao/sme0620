@@ -8,13 +8,43 @@
 \usepackage{amssymb}
 \usepackage{tikz}
 \usepackage{float}
-\usepackage{xcolor}
 \usepackage{pgfplots}
+\usepackage{xcolor}
 \usepackage{xfrac}
+\usepackage{tcolorbox}
+\usepackage{varwidth}
+\tcbuselibrary{skins}
 \usetikzlibrary{shapes, backgrounds}
 \usetikzlibrary{trees}
 \usetikzlibrary{positioning}
+%Pgf Config
 \usepgfplotslibrary{fillbetween}
 \pgfplotsset{compat=1.7}
+%Text Commands
 \newcommand*\eval[3]{\left.#1\right\rvert_{#2}^{#3}}
 \newcommand*{\rom}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\newcommand{\Var}{\operatorname{Var}}
+\newcommand{\E}{\operatorname{E}}
+%Color Pallete
+\definecolor{primary}{cmyk}{0.77,0.23,0,0.37}
+\definecolor{dark}{cmyk}{1,0.32,0,0.41}
+\definecolor{darkest}{cmyk}{0.68,0.32,0,0.76}
+\definecolor{bright}{cmyk}{0.87,0.32,0,0.12}
+\definecolor{brightest}{cmyk}{0.04,0,0,0.05}
+%Custom Color Box
+\newtcolorbox{obsbox}[2][]{enhanced,before skip=2mm,after skip=2mm,colframe=black!50,boxrule=0.2mm,attach boxed title to top left={xshift=1cm,yshift*=1mm-\tcboxedtitleheight},varwidth boxed title*=-3cm,boxed title style={frame code={\path[fill=tcbcol@back!30!black]([yshift=-1mm,xshift=-1mm]frame.north west)arc[start angle=0,end angle=180,radius=1mm]([yshift=-1mm,xshift=1mm]frame.north east)arc[start angle=180,end angle=0,radius=1mm];\path[left color=tcbcol@back!60!black,right color=tcbcol@back!60!black,middle color=tcbcol@back!80!black]([xshift=-2mm]frame.north west) -- ([xshift=2mm]frame.north east)[rounded corners=1mm]-- ([xshift=1mm,yshift=-1mm]frame.north east)-- (frame.south east) -- (frame.south west)-- ([xshift=-1mm,yshift=-1mm]frame.north west)[sharp corners]-- cycle;},interior engine=empty,},fonttitle=\bfseries,title={#2},#1}
+\newtcolorbox{exbox}{enhanced,colframe=primary,colbacktitle=bright,title=Exercício,fonttitle=\bfseries}
+%Custom Enviroments
+
+\newenvironment{obs}
+{\begin{obsbox}[colbacktitle=bright,colback=brightest!60,]{Observação}}
+{  \end{obsbox}}
+
+
+\newenvironment{exercise}
+{\begin{exbox}}
+{\end{exbox}}
+%\newenvironment{example}
+%{
+
+%}

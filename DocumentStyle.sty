@@ -1,5 +1,7 @@
 \ProvidesPackage{DocumentStyle}
 \usepackage[portuguese]{babel}
+\isopage[10]
+\renewcommand*\rmdefault{put}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
 \usepackage{amsfonts}
@@ -9,9 +11,10 @@
 \usepackage{tikz}
 \usepackage{float}
 \usepackage{pgfplots}
+\usepackage{diagbox}
 \usepackage{xcolor}
 \usepackage{xfrac}
-\usepackage{tcolorbox}
+\usepackage[most]{tcolorbox}
 \usepackage{varwidth}
 \tcbuselibrary{skins}
 \usetikzlibrary{shapes, backgrounds}
@@ -24,27 +27,40 @@
 \newcommand*\eval[3]{\left.#1\right\rvert_{#2}^{#3}}
 \newcommand*{\rom}[1]{\expandafter\@slowromancap\romannumeral #1@}
 \newcommand{\Var}{\operatorname{Var}}
+\newcommand{\Ber}{\operatorname{Ber}}
 \newcommand{\E}{\operatorname{E}}
+\newcommand{\Bi}{\operatorname{Binom}}
+\newcommand{\BN}{\operatorname{BN}}
+\newcommand{\N}{\operatorname{N}}
+\newcommand{\Exp}{\operatorname{Exp}}
+\newcommand{\U}{\operatorname{U}}
+\newcommand{\Poi}{\operatorname{Poi}}
+\newcommand{\Cov}{\operatorname{Cov}}
 %Color Pallete
-\definecolor{primary}{cmyk}{0.77,0.23,0,0.37}
-\definecolor{dark}{cmyk}{1,0.32,0,0.41}
-\definecolor{darkest}{cmyk}{0.68,0.32,0,0.76}
-\definecolor{bright}{cmyk}{0.87,0.32,0,0.12}
 \definecolor{brightest}{cmyk}{0.04,0,0,0.05}
+\definecolor{darkest}{RGB}{20,42,61}
+ \definecolor{dark}{RGB}{0,100,148}
+\definecolor{primary}{RGB}{37,124,161}
+\definecolor{bright}{RGB}{27,152,224}
+\definecolor{brightest}{RGB}{232,241,242}
+%Default Environment Values
+\renewcommand{\descriptionlabel}[1]{\bfseries \textcolor{dark}{#1}}
 %Custom Color Box
-\newtcolorbox{obsbox}[2][]{enhanced,before skip=2mm,after skip=2mm,colframe=black!50,boxrule=0.2mm,attach boxed title to top left={xshift=1cm,yshift*=1mm-\tcboxedtitleheight},varwidth boxed title*=-3cm,boxed title style={frame code={\path[fill=tcbcol@back!30!black]([yshift=-1mm,xshift=-1mm]frame.north west)arc[start angle=0,end angle=180,radius=1mm]([yshift=-1mm,xshift=1mm]frame.north east)arc[start angle=180,end angle=0,radius=1mm];\path[left color=tcbcol@back!60!black,right color=tcbcol@back!60!black,middle color=tcbcol@back!80!black]([xshift=-2mm]frame.north west) -- ([xshift=2mm]frame.north east)[rounded corners=1mm]-- ([xshift=1mm,yshift=-1mm]frame.north east)-- (frame.south east) -- (frame.south west)-- ([xshift=-1mm,yshift=-1mm]frame.north west)[sharp corners]-- cycle;},interior engine=empty,},fonttitle=\bfseries,title={#2},#1}
-\newtcolorbox{exbox}{enhanced,colframe=primary,colbacktitle=bright,title=Exercício,fonttitle=\bfseries}
+\newtcolorbox{obsbox}{enhanced,colframe=bright!15, colback=bright!15,title=Observação,attach boxed title to top left={yshift=-2mm},colbacktitle=bright!15,coltitle=primary, fonttitle=\bfseries}
+\newtcolorbox[auto counter]{exerbox}{enhanced,breakable,colframe=primary,colbacktitle=bright,colback=bright!10,title=Exercício~\thetcbcounter,fonttitle=\bfseries}
+\newtcolorbox[auto counter]{exembox}{enhanced,breakable,colframe=dark,colbacktitle=primary,colback=bright!15,title=Exemplo~\thetcbcounter,fonttitle=\bfseries}
+%\newtcolorbox{simpexembox}{backcol=primary!40}
 %Custom Enviroments
 
 \newenvironment{obs}
-{\begin{obsbox}[colbacktitle=bright,colback=brightest!60,]{Observação}}
+{\begin{obsbox}}
 {  \end{obsbox}}
 
 
 \newenvironment{exercise}
-{\begin{exbox}}
-{\end{exbox}}
-%\newenvironment{example}
-%{
+{\begin{exerbox}}
+{\end{exerbox}}
 
-%}
+\newenvironment{example}
+{\begin{exembox}}
+{\end{exembox}}

@@ -3,126 +3,116 @@
  \subsection{Distribuição Uniforme Discreta}
  \begin{description}
    \item  A v.a.\ assume cada um de seus valores com igual probabilidade.
-
-   \item [Definição:] A v.a.\ discreta $X$, assumindo valores $x_1,x_2,\dots,x_k$ tem 
+   \item[Definição] A v.a.\ discreta $X$, assumindo valores $x_1,x_2,\dots,x_k$ tem 
  distribuição uniforme se, e somente se, sua f.m.p.\ é definida por: 
  \begin{align}
    p(x)=P(X=x)=\begin{cases}
-     \frac{1}{k}, \text{\quad} x=x_1,x_2,\dots,x_k\\
+     \frac{1}{k}, \text{\quad} X=x_1,x_2,\dots,x_k\\
      0, \text{\quad caso contrário}
    \end{cases}
  \end{align}
 \item  [Notação:] $X \sim U_{d}(k)$
- A média e variância de x é:
+ A média e variância de $X$ é:
  \begin{align}
-   \mu_{x}=E(x)=\sum_{x \in R_{x}}x_i P(X=x_i)\\ \nonumber
+   \mu_{x}=\E(x)=\sum_{x \in R_{x}}x_i P(X=x_i)\\ \nonumber
    = \sum_{x \in R_{x}}x_i \frac{1}{k}= \frac{1}{k}\sum_{x_i \in R_{x}} x_i\\
-   Var(x)=E(X^2)-\left(E(X)\right)^2\\ \nonumber
+   \Var(x)=\E(X^2)-\left(\E(X)\right)^2\\ \nonumber
    = \sum_{x_i \in R_{x}}\left(x_i -\mu_x \right)^2 \times p\left(X=x_i \right)\\  
    =\frac{1}{k} \left(\sum^k_{i=1} x_i^2 - \frac{(\sum_{i=1}^k)^2}{k}\right) \nonumber
  \end{align}
-\item [Exemplo:] Seja $x$ uma v.a.\ que indica o $n^o$ de pontos marcados na face 
- superior de um dado quando ele é lançado. Portanto, temos uma distribuição 
- uniforme discreta, cuja f.m.p.\ é dada por: 
- \begin{align}
-   p(x)=P(X=x)-\begin{cases}
-     \frac{1}{6},\text{\quad} x=1,2,3,4,5,6\\
-     0, \text{\quad caso contrário}
-   \end{cases}
- \end{align}
- E o $E(x)$ é: 
- \begin{align}
-   \mu_{x}=E(x)=\frac{1}{6}(1+2+3+4+5+6)\\
-   =\frac{1}{6}21= \frac{7}{2}=3,5
- \end{align}
- E a $Var(x)$ é:
- \begin{align}
-   E(x^2)=\frac{1}{6}(1^2 + 2^2 + \dots + 6^2)\\
-   =\frac{91}{6}=15,17\\
-   var(x)=\frac{91}{6}- \{\frac{7}{2}\}^2=\frac{105}{36}=2,92
- \end{align}
- \end{description}
+ \begin{example} Seja $x$ uma v.a.\ que indica o $n^o$ de pontos marcados na face 
+   superior de um dado quando ele é lançado. Portanto, temos uma distribuição 
+   uniforme discreta, cuja f.m.p.\ é dada por: 
+   \begin{align}
+     p(x)=P(X=x)-\begin{cases}
+       \frac{1}{6},\text{\quad} x=1,2,3,4,5,6\\
+       0, \text{\quad caso contrário}
+     \end{cases}
+   \end{align}
+   E o $\E(x)$ é: 
+   \begin{align}
+     \mu_{x}=\E(x)=\frac{1}{6} \times (1+2+3+4+5+6)\\
+     =\frac{1}{6}\times 21= \frac{7}{2}=3,5
+   \end{align}
+   E a $\Var(x)$ é:
+   \begin{align}
+     \E(x^2)=\frac{1}{6}(1^2 + 2^2 + \dots + 6^2)\\
+     =\frac{91}{6}=15,17\\
+     \Var(x)=\frac{91}{6}- \left( \frac{7}{2} \right)^2=\frac{105}{36}=2,92
+   \end{align}
+\end{example}
+\end{description}
  \subsection{Distribuição Bernoulli}
  \begin{description}
-   \item Considere uma v.a.\ $x$ que assume apenas dois valores 1, se ocorrer sucesso,$0$, se ocorrer fracasso. Indicaremos por $p$ a probabilidade de sucesso, isto é $P(\text{Sucesso})=P(x=1)=p$.
-
-\item [Definição:] A v.a.\ discreta $x$ que assume apenas valores 0 ou 1 tem Distribuição
+   \item Considere uma v.a.\ $X$ que assume apenas dois valores 1, se ocorrer sucesso,$0$, se ocorrer fracasso. Indicaremos por $p$ a probabilidade de sucesso, isto é $P(\text{Sucesso})=P(x=1)=p$.
+\item [Definição:] A v.a.\ discreta $X$ que assume apenas valores 0 ou 1 tem Distribuição
  Bernoulli se, somente se, sua f.m.p.\ é definida por:
  \begin{align}
    p(x)=P(X=x)= \begin{cases}
-     p^{x}(1-p)^{1-x}, \text{\quad} x=0,1, \text{\quad} 0<p<1\\
+     p^{x}(1-p)^{1-x}, \text{\quad} x=0,1 \text{\quad} 0<p<1\\
      0, \text{\quad caso contrário}
    \end{cases}
  \end{align}
-\item[ Notação:] $X \sim Ber(p)$
-
+\item[ Notação:] $X \sim \Ber(p)$
 \item [Exemplos:]
-  $$p(x)=\left(\frac{2}{5}\right)^x\left(1-\frac{2}{5}\right)^{1-x} \text{\quad},x=0,1$$\\
- $$p(x)=\left(\frac{7}{8}\right)^{x}\left(1-\frac{7}{8}\right)^{1-x} \text{\quad }, x=0,1$$
-
+  $$p(x)=\left(\frac{2}{5}\right)^x\left(1-\frac{2}{5}\right)^{1-x} \text{\quad}x=0,1$$\\
+ $$p(x)=\left(\frac{7}{8}\right)^{x}\left(1-\frac{7}{8}\right)^{1-x} \text{\quad }x=0,1$$
  De forma similar, podemos apresentar $p(x)$ por:
- \begin{figure} [H]
-   \centering
+ \begin{center}
    \begin{tabular}{c c c}
      \toprule
      x&0&1\\ \midrule
-     $P(X=x)$&$1-p$&$p$\\ \bottomrule
+     $P(X=x)$&$1-p$&$p$\\\bottomrule
    \end{tabular}
-   \label{fig:7}
- \end{figure}
+ \end{center}
  A média de $x$ é: 
  \begin{align}
-   \mu_{x}=E(x)=p
+   \mu_{x}=\E(x)=p
  \end{align}
  e a variância de $x$ é: 
  \begin{align}
-   \sigma^2 = var(x)=p (1-p)
+   \sigma^2 = \Var(x)=p (1-p)
  \end{align}
- \item [Exemplo:] Suponha o lançamento de um dado perfeito e o interesse é ocorrer a face
- 3.
- \begin{align*}
-   X=\begin{cases}
-     1, \text{\quad se ocorrer a face }3\\
-     0, \text{\quad caso contrário}\{1,2,4,5,6\}]
-   \end{cases}
- \end{align*}
- Cuja f.m.p.\ é dada por:
- \begin{align}
-   p(x)=P(X=x)=\begin{cases}
-     \frac{1}{6}(1-\frac{1}{6})^{1-x}, \text{\quad}x=0,1\\
-     0, \text{\quad caso contrário}
-   \end{cases}
- \end{align}
- \begin{figure} 
-   \centering
-   \begin{tabular}{c c c}
-     \toprule
-     x&0&1\\ \midrule
-     $P(X=x)$&$\frac{5}{6}$&$\frac{1}{6}$\\ \bottomrule
-   \end{tabular}
-   \label{fig:8}
- \end{figure}
-\begin{align*}
-   X \sim Ber(\frac{1}{6})
-\end{align*}
-
- A média de $x$ é: 
- \begin{align*}
-   \mu_{x}=(X)=p=\frac{1}{6}
- \end{align*}
-
- E a variância de $x$ é: 
- \begin{align*}
-   \sigma^2= var(x)=p(1-p)=\frac{1}{6} \times \frac{5}{6}=\frac{5}{36}
- \end{align*}
- \end{description}
- \subsection{Distribuição Binominal}
-
+ \begin{example}Suponha o lançamento de um dado perfeito e o interesse é ocorrer a face
+   3.
+   \begin{align*}
+     X=\begin{cases}
+       1, \text{\quad se ocorrer a face 3}\\
+       0, \text{\quad caso contrário } \left\{ 1,2,4,5,6 \right\}
+     \end{cases}
+   \end{align*}
+   Cuja f.m.p.\ é dada por:
+   \begin{align}
+     p(x)=P(X=x)=\begin{cases}
+       \frac{1}{6} \times \left(1-\frac{1}{6}\right)^{1-x}, \text{\quad}x=0,1\\
+       0, \text{\quad caso contrário}
+     \end{cases}
+   \end{align}
+   \begin{center}
+     \begin{tabular}{c c c}
+       \toprule
+       x&0&1\\ \midrule
+       $P(X=x)$&$\frac{5}{6}$&$\frac{1}{6}$\\ \bottomrule
+     \end{tabular}
+   \end{center}
+   \begin{align*}
+     X \sim \Ber\left(\frac{1}{6}\right)
+   \end{align*}
+   A média de $X$ é: 
+   \begin{align*}
+     \mu_{x}=(X)=p=\frac{1}{6}
+   \end{align*}
+   E a variância de $X$ é: 
+   \begin{align*}
+     \sigma^2= \Var(x)=p(1-p)=\frac{1}{6} \times \frac{5}{6}=\frac{5}{36}
+   \end{align*}
+\end{example}
+\end{description}
+\subsection{Distribuição Binominal}
  \begin{description}
    \item  Considere $M$ ensaios de Bernoulli independentes, todos com a mesma probabilidade
  de sucesso $p$. A v.a.\ que conta o número de sucessos nos $M$ ensaios de Bernoulli
  é denominada v.a.\ binomial com parâmetro $M$ e $p$.
-
    \item[Definição:] A v.a.\ discreta $X$, correspondente ao $n^o$ de sucesso em $M$ ensaios
      independentes de Bernoulli, tem distribuição binomial se, e somente se, sua 
      f.m.p.\ é definida por: 
@@ -132,16 +122,16 @@
          0, \text{\quad Caso contrário}
        \end{cases}
      \end{align}
-
-   \item{Notação}:$ X \sim Bin(M,p)\\$
-   \item     [Obs:] $\binom{M}{x}=\frac{M!}{x!(M-x)!}$
-
+   \item{Notação}:$ X \sim Bin(M,p)$
+   \begin{obs}
+     $\binom{M}{x}=\frac{M!}{x!(M-x)!}$
+   \end{obs}
      Temos que: 
      \begin{align}
        \mu_{x}=E(X)=Mp \\
-       \sigma^2 =var(x)=Mp(1-p)
+       \sigma^2 =\Var(x)=Mp(1-p)
      \end{align}
-   \item[Exemplo]: Considere uma linha de produção, onde 3 peças são selecionadas aleatoriamente
+     \begin{example}Considere uma linha de produção, onde 3 peças são selecionadas aleatoriamente
      e são classificadas como defeituosas (D) ou não-defeituosas(N).\\
      $X_{1},X_{2},X_{3}$ são variáveis aleatórias que assumem $1$ se a peça for não-defeituosa e $0$ caso 
      contrário. A probabilidade da peça ser não-defeituosa é $p$ e , consequentemente, 
@@ -158,32 +148,20 @@
        \input{tikz/ModelosProb/arvore1.tikz}
        \label{fig:}
      \end{figure}
-     \begin{figure}[H]
      \begin{tabular}{c c c c c c }
        \toprule
        & $X_1$  & $X_2$ & $X_3$   & $Y= X_1 +X_2+ X_3$ & $ P(Y=y)$\\ \midrule
        DNN &0 & 1 & 1 & 2 & $p^2(1-p)$\\\midrule
-
        DND& 0 & 1 & 0 & 1 & $p(1-p)^2$\\\midrule
-
        DDN& 0 & 0 & 1 & 1 & $p(1-p)^2$\\\midrule
-
        DDD&  0 & 0 & 0 & 0 & $(1-p)^3$\\\midrule
-
        NNN&   1 & 1 & 1 & 3 & $p^3$\\\midrule
-
        NND& 1 & 1 & 0 & 2 & $p^2(1-p)$\\\midrule
-
        NDN& 1 & 0 & 1 & 2 & $p^2(1-p)$\\\midrule
-
        NDD& 1 & 0 & 0 & 1 & $p(1-p)^2$ \\ \bottomrule
-
      \end{tabular}
-   \end{figure}
 
      Abaixo estão os possíveis resultados do experimento:
-
-     %Arvore zica aqui, pegar de algum colega
 
      \begin{figure}[H]
        \centering
@@ -201,103 +179,103 @@
           0, \text{\quad Caso contrário}
         \end{cases}
       \end{align*}
-    \item[Exemplo]:
-      
-      Uma rede varejista compra certo tipo de equipamento eletrônico. O 
-      fabricante indica que a taxa de quipamentos em perfeito estado é $97\%$.
-      \begin{enumerate}[label=(\alph*)]
-        \item Seleciona-se ao acaso 20 itens. Qual a probabilidade de haver pelo menos 
-          um item defeituoso nesses 20?
-        \item Seleciona-se aleatoriamente 20 itens em cada 10 carregamentos, qual a 
-          probabilidade de haver 3 carregamentos com pelo menos um item defeituoso?
-      \end{enumerate}
-      $p$ taxa de equipamentos em perfeito estado\\
-      $$p=0,97$$\\
-      $y$: $n^o$ de equipamentos em perfeito estado.\\
-      $$y \sim Binom(20;0,97)$$\\
-
-    \item[Resolução]:
-
-      \begin{enumerate}[label=(\alph*)]
-
-        \item    
-          \begin{align*}
-            M=\quad \text{20 itens}\\
-            p: \quad \text{Probabilidade de pelo menos um item defeituoso.}\\
-          p=0,03
-        \end{align*}
-          \begin{align*}
-           X_i= \begin{cases}
-             1, \quad \text{se o equipamente e defeituoso}\\
-             0, \quad \text{c.c.\ }
-            \end{cases} 
-          \end{align*}
-          \begin{align*}
-X           \sim Binom(20:0,03) \quad x=1,2,3,4,5,\dots,20
-         \end{align*}
-          \begin{align*}
-           Y=X_1 + X_2 + \ldots +X_20 
-          \end{align*}
-          \begin{align*}
-            P(Y\ge 1)= 1-P(Y<1)\\
-            =1-P(Y=0)
-          \end{align*}
-          \begin{align*}
-            P(Y=0)= \binom{20}{0} (0,03)^0 (1-0,03)^{20-0}
-            =0,5438
-          \end{align*}
-          \begin{align*}
-            P(Y\ge 1)= 1-0,5438\\
-            =0,4562
-          \end{align*}
-          Ou, resolvendo pela v.a.\ $Y$, temos:
-\begin{align*}
-           X_i= \begin{cases}
-             1, \quad \text{se o equipamento for perfeito} \\
-             0, \quad \text{se o equipamente for defeituoso}
-            \end{cases} 
-          \end{align*}
-          \begin{align*}
-            P(Y\le 19)=1-P(Y>19)\\
-            =1-P(Y=20)
-          \end{align*}
-          \begin{align*}
-            P(y=20)=\binom{20}{20}0,97^{20}(1-0,97)^{20-20}\\
-            =0,5438
-          \end{align*}
-          \begin{align*}
-            P(y\le 19)=1-0,5339\\
-            =0,4562
-          \end{align*}
-        \item
-          \begin{align*}
-            10\text{ Carregamentos}\\
-           20  \text{ itens são selecionados} \\
-           Y: \text{$n^o$ de carregamento com pelo menos um item defeituoso} \\
-          M=10\\
-          Y=0,1,2,\ldots,10\\
-          p:\quad \text{Proporção de ter pelo menos um item defeituoso em um carregamento}\\
-          p=0,4562\\
-          Y \sim B(10:0,4562)
-        \end{align*}
-        \begin{align*}
-            P(Y=3)=\binom{10}{3}(0,4562)^3 (1-0,4562)^{10-3}  =0,1602
-          \end{align*}
-      \end{enumerate}
-    \end{description}
-     % \emph{Exercício}: Um fabricante adquire certo tipo de componente de um fornecedor.
-     % Segundo este fornecedor, a proporção de componentes defeituoso é de 2\%. O fabricante
-     % adquire 10 lotes por mês e de cada lote são selecionados 15 componentes para 
-     % inspeção. Qual a probabilidade de que sejam encontrados 3 lotes com mais de um 
-     % componente defeituoso?
-
+    \end{example}
+      \begin{example}
+        Uma rede varejista compra certo tipo de equipamento eletrônico. O 
+        fabricante indica que a taxa de quipamentos em perfeito estado é $97\%$.
+        \begin{enumerate}[label=(\alph*)]
+          \item Seleciona-se ao acaso 20 itens. Qual a probabilidade de haver pelo menos 
+            um item defeituoso nesses 20?
+          \item Seleciona-se aleatoriamente 20 itens em cada 10 carregamentos, qual a 
+            probabilidade de haver 3 carregamentos com pelo menos um item defeituoso?
+        \end{enumerate}
+        \begin{gather*}
+          p:\text{taxa de equipamentos em perfeito estado}\\
+          p=0{,}97\\
+        y:\text{$n^o$ de equipamentos em perfeito estado.}\\
+       y \sim \Bi(20;0,97)
+     \end{gather*}
+        \textbf{Resolução}
+        \begin{enumerate}[label=(\alph*)]
+          \item
+            \begin{gather*}
+              M=\text{ 20 itens}\\
+              p:\text{ Probabilidade de pelo menos um item defeituoso.}\\
+              p=0{,}03
+            \end{gather*}
+            \begin{align*}
+              X_i= \begin{cases}
+                1, \quad \text{se o equipamente e defeituoso}\\
+                0, \quad \text{c.c.\ }
+              \end{cases} 
+            \end{align*}
+            \begin{align*}
+              X           \sim Binom(20:0,03) \quad x=1,2,3,4,5,\dots,20
+            \end{align*}
+            \begin{align*}
+              Y=X_1 + X_2 + \ldots +X_20 
+            \end{align*}
+            \begin{align*}
+              P(Y\ge 1)= 1-P(Y<1)\\
+              =1-P(Y=0)
+            \end{align*}
+            \begin{align*}
+              P(Y=0)= \binom{20}{0} (0,03)^0 (1-0,03)^{20-0}
+              =0,5438
+            \end{align*}
+            \begin{align*}
+              P(Y\ge 1)= 1-0,5438\\
+              =0,4562
+            \end{align*}
+            Ou, resolvendo pela v.a.\ $Y$, temos:
+            \begin{align*}
+              X_i= \begin{cases}
+                1, \quad \text{se o equipamento for perfeito} \\
+                0, \quad \text{se o equipamente for defeituoso}
+              \end{cases} 
+            \end{align*}
+            \begin{align*}
+              P(Y\le 19)=1-P(Y>19)\\
+              =1-P(Y=20)
+            \end{align*}
+            \begin{align*}
+              P(y=20)=\binom{20}{20}0,97^{20}(1-0,97)^{20-20}\\
+              =0,5438
+            \end{align*}
+            \begin{align*}
+              P(y\le 19)=1-0,5339\\
+              =0,4562
+            \end{align*}
+          \item
+            \begin{gather*}
+              10\text{ carregamentos}\\
+              20  \text{ itens são selecionados} \\
+              Y: \text{$n^o$ de carregamentos com pelo menos um item defeituoso} \\
+              M=10\\
+              Y=0,1,2,\ldots,10\\
+              p:\text{proporção de ter ao menos um defeituoso no carregamento}\\
+              p=0,4562\\
+              Y \sim B(10:0,4562)
+            \end{gather*}
+            \begin{align*}
+              P(Y=3)=\binom{10}{3}(0,4562)^3 (1-0,4562)^{10-3}=0,1602
+            \end{align*}
+        \end{enumerate}
+    \end{example}
+    \begin{exercise}
+      Um fabricante adquire certo tipo de componente de um fornecedor.
+      Segundo este fornecedor, a proporção de componentes defeituoso é de 2\%. O fabricante
+      adquire 10 lotes por mês e de cada lote são selecionados 15 componentes para 
+      inspeção. Qual a probabilidade de que sejam encontrados 3 lotes com mais de um 
+      componente defeituoso?
+    \end{exercise}
+  \end{description}
       \subsection{Distribuição Geométrica}
       \begin{description}
         \item  Considere uma sequência de ensaios Bernoulli independentes em probabilidade de 
-      sucesso $p$ ($0<p<1$). Seja a v.a.\ $x$ o $n^o$ de fracassos até a ocorrência 
-      do $1^o$ sucesso. Similarmente, a v.a.\ $x$ pode ser vista como o $n^o$ de ensaios que precedem 
+      sucesso $p$ ($0<p<1$). Seja a v.a.\ $X$ o $n^o$ de fracassos até a ocorrência 
+      do $1^o$ sucesso. Similarmente, a v.a.\ $X$ pode ser vista como o $n^o$ de ensaios que precedem 
       o primeiro sucesso.
-
     \item[Definição]: A v.a.\ $x$ tem distribuição geométrica se, e somente se, sua 
       f.m.p.\ é definida por: 
       \begin{align}
@@ -309,7 +287,7 @@ X           \sim Binom(20:0,03) \quad x=1,2,3,4,5,\dots,20
       \begin{center}Notação: $X \sim Geo(p)$\end{center}
       Temos que:
       \begin{align}
-        \mu_{x}=E(x)=\frac{1-p}{p} \text{\quad e a }\\
+        \mu_{x}=\E(x)=\frac{1-p}{p} \text{\quad e a }\\
         \sigma^2 = var(x)=\frac{1-p}{p^2}
       \end{align}
       Similarmente, a variável aleatória $Y$ pode ser vista como o $n^o$ de ensaios que
@@ -322,17 +300,16 @@ X           \sim Binom(20:0,03) \quad x=1,2,3,4,5,\dots,20
       \end{align}
       Neste caso, a v.a.\ $Y$ pode ser vista como $Y=X+1$ e, consequentemente, o valor esperado de y é:
       \begin{align} 
-      mu_y=E(Y)=E(X+1)=E(X)=E(X)+1= \frac{1}{p}
+      mu_y=\E(Y)=\E(X+1)=\E(X)=\E(X)+1= \frac{1}{p}
     \end{align}
     E a variância de $Y$ e:
     \begin{align}
       \sigma_y^2=var(Y)=var(X+1)=var(X)= \frac{1-p}{p}^2
     \end{align}
-  \item[Exemplo]: Um pesquisador está realizando um experimentos químicos independetes 
+    \begin{example}Um pesquisador está realizando um experimentos químicos independetes 
       e sabe que a probabilidade de que cada cada experimento apresnete uma reação 
       positiva é $0,3$. QUal é a probabilidade de que menos de 3 reações negativas 
       ocorram antes da primeira positiva?
-
       $x$:$n^o$ de ocorrência positiva 
       \begin{align*}
         x=&\begin{cases}
@@ -342,7 +319,7 @@ X           \sim Binom(20:0,03) \quad x=1,2,3,4,5,\dots,20
       \end{align*}
       $$P(x=1)=p=0,3$$\\
       $X: n^o$ de reações negativas até a ocorrência de uma positiva\\
-      \begin{center}$Y \sim Geo(0,3)$\end{center}
+    \begin{center}$Y \sim Geo(0,3)$\end{center}
       \begin{align*}
         P(X<3)=P(X=0)+P(X=1)+P(X=2)\\
         P(X=0)=(1-0,3)^0 \times 0,3 = 0,3\\
@@ -357,13 +334,14 @@ X           \sim Binom(20:0,03) \quad x=1,2,3,4,5,\dots,20
         P( Y<4 ) = P (Y \leq 3) = P(Y=1)+ P(Y=2)+P(Y=3)\\
         P(Y=y)= p(1-p)^{y-1} \quad y=1,2,\dots
       \end{align*}
-     % Exercício: Pensar no exercício anterior com o $n^o$ de ensaios.
-    \end{description}
+    \end{example}
+    \begin{exercise} Pensar no exercício anterior com o $n^o$ de ensaios.
+  \end{exercise}
+  \end{description}
       \subsection{Distribuição Binomial Negativa}
       \begin{description}
         \item  Considere ensaios independetes de Bernoulli ($p$) e definimos $X$ como o $n^o$ 
       de fracassos anteriores ao r-ésimos sucesso.
-
     \item[Definição]: A v.a.\ $x$ tem distribuição Binomial negativa se, e somente se,
       sua f.m.p.\ é definida por:
       \begin{align}
@@ -373,18 +351,19 @@ X           \sim Binom(20:0,03) \quad x=1,2,3,4,5,\dots,20
           0, \text{\quad caso contrário}
         \end{cases}
       \end{align}
-    \begin{center}Notação: $X \mathtt{\sim}BN(r,p)$\end{center}
+    \begin{center}Notação: $X \sim \BN(r,p)$\end{center}
       Temos que: 
       \begin{align}
         \mu_{x}=E(x)=\frac{r(1-p)}{p} \\
         \sigma^2 = var(x)=\frac{1-p}{p^2}
       \end{align}
-    \item[Observações]: 
-      \begin{enumerate}
+      \begin{obs}
+        \begin{enumerate}
         \item Note que se $r=1$, temos o modelo geométrico.
         \item $$\binom{x+r-1}{r-1} = \binom{x+r-1}{x}$$
       \end{enumerate}
-    \item A Binomial Negativa pode ser definida como o $n^o$ de ensaios necessários para 
+    \end{obs}
+  \item A Binomial Negativa pode ser definida como o $n^o$ de ensaios necessários para 
       a obtenção do r-ésimo sucesso. Formando $y=x+r$ temos a quantidade desejada e 
       seus valores variam de $r$ em diante. Assim sendo $Y$ o $n^o$ de ensaios até 
       a obtenção de $r$ sucessos, temos: 
@@ -394,24 +373,25 @@ X           \sim Binom(20:0,03) \quad x=1,2,3,4,5,\dots,20
           0, \text{\quad caso contrário}
         \end{cases}
       \end{align}
-    \item[Exemplo]: Em uma serie do campeonato de basquete, o time que ganhar quatro em sete jogos sera
-      o vencedor. Suponha que o time $A$ tenha probabilidade de $55\%$ de ganhar de $B$ e que $A$ e $B$ 
-      se enfrentarao em uma serie de sete jogos. Qual a probabilidade de que $A$ venca a serie em 6 jogos?
-     \begin{align*} 
-       X:\text{O número de derrotas de $A$ até que $A$ ganhe 4 partidas}\\
-       X \mathtt{\sim}BN (r=4, p=0,55)
-     \end{align*}
-     \begin{align*}
-       P(X=2)=\binom{2+4-1}{4-1} 0,55^{4}\times 0,45^{2}=0,1853
-     \end{align*}
-     Ou, de maniera similar, temos:
-     \begin{align*}
-       Y: \text{ número de partidas até que $A$ venca o campeonato}
-     \end{align*}
-     \begin{align*}
-       P(Y=6)= \binom{6-1}{4-1} 0,55^{4} \times 0,45^{6-4} = 0,1853
-     \end{align*}
- \end{description}
+      \begin{example}
+        Em uma serie do campeonato de basquete, o time que ganhar quatro em sete jogos sera
+        o vencedor. Suponha que o time $A$ tenha probabilidade de $55\%$ de ganhar de $B$ e que $A$ e $B$ 
+        se enfrentarao em uma serie de sete jogos. Qual a probabilidade de que $A$ venca a serie em 6 jogos?
+        \begin{align*} 
+          X:\text{O número de derrotas de $A$ até que $A$ ganhe 4 partidas}\\
+          X \mathtt{\sim}BN (r=4, p=0,55)
+        \end{align*}
+        \begin{align*}
+          P(X=2)=\binom{2+4-1}{4-1} 0,55^{4}\times 0,45^{2}=0,1853
+        \end{align*}
+        Ou, de maniera similar, temos:
+        \begin{align*}
+          Y: \text{ número de partidas até que $A$ venca o campeonato}
+        \end{align*}
+        \begin{align*}
+          P(Y=6)= \binom{6-1}{4-1} 0,55^{4} \times 0,45^{6-4} = 0,1853
+        \end{align*}
+    \end{example} \end{description}
  \subsection{Distribuição Hipergeometrica}
 \begin{description}
   \item
@@ -475,8 +455,7 @@ que ocorrem em um certo período de tempo ou superficie ou volume.
      probabilidade de que a central receba no maximo 2 chamadas durante um intervalo
      de um minuto.
      \begin{align*}
-       X: n^{o} \text{de chamadas recebidas em 1 minuto em uma central telefonica}
-       \\
+       X: n^{o} \text{de chamadas recebidas em 1 minuto em uma central telefônica}\\
        E(X)=\lambda= \text{5 chamadas/minuto}\\
      \end{align*}
      \begin{align*}
@@ -523,19 +502,15 @@ que ocorrem em um certo período de tempo ou superficie ou volume.
   \item [Resultado 2]: Se $X \mathtt{\sim}Bin(M,P)$. com $m$ grande e $P$ pequeno, pode-se aproximar a distribuição de 
     $X$ pela distribuição de Poisson, cujo parâmetro sera $\lambda = M \times P$.
 \end{description}
-
       \item [Exemplo]: número de gols marcados em $M=100$ tentativas.
-
     \begin{align*}
       P=0,05 \quad \therefore \quad  X \mathtt{\sim} Bin(100, 0,05) \\
       P(X \ge 50)=P(X=50), \ldots + P(X=100)= 1- \{P(X=0)+\ldots+P(X=49) \}\\
       E(X)=M \times p = \mu\\
-      X \mathtt{\sim}Poi(\lambda= M \times P)
+      X \sim \Poi(\lambda= M \times P)
     \end{align*}
-
   \item[Exercício]: Em certa instalacao industrial, acidentes ocorrem com baixa frequência. Sabe-se que 
     a probabilidade de um acidente ocorrer em um certo dia é $0,005$ e que os acidentes são independentes.
-    
     \begin{enumerate}[label=(\alph*)]
       \item Qual a probabilidade de que em um período de 400 dias haja no maximo 3 dias com acidente?
       Utilize a aproximacao pela distribuição de Poisson.
@@ -553,7 +528,7 @@ que ocorrem em um certo período de tempo ou superficie ou volume.
    0, \quad \text{caso contrário}
   \end{cases}
 \end{align}
-\item[Notação]: $X \mathtt{\sim} U(a,b)$
+\item[Notação] $X \sim \U(a,b)$
   \begin{figure}[H]
     \centering
     \input{tikz/ModelosProb/uniforme.tikz}
@@ -571,72 +546,72 @@ que ocorrem em um certo período de tempo ou superficie ou volume.
     P(X \leq x) = \int \limits_{(- \infty}^{x} f_{x} (t) dt = \int_{a)}^{(x} \frac{1}{b-a)} dt\\
     \nonumber = \frac{1}{b-a}t |_{a}^{x} = \frac{x^a -a}{b-a}
   \end{align}
-\item[Exemplo]:
-  \begin{align*}
+  \begin{example}  \begin{align*}
     P(a_1 \leq X \leq b_1) = F_{x} (b_1) - F_{x}(a_1) \\
     P(X > a_1)= 1- P(X \leq a_1) \\
     = 1-F_{x} (a_1) \\
     P(X > a_1)= F_{x}(a_1)
   \end{align*}
- \item A média de $x$ é:
-   \begin{align*}
-     E(X) = \frac{a+b}{2}
-   \end{align*}
- \item E a variância de $x$ é:
-   \begin{align*}
-     Var(x) = \frac{ \left(b-a\right)^2 }{12}
-   \end{align*}
-   \item[Exemplo]: Seja $X$ uma v.a.\ com distribuição uniforme, $U(-1/2 , 1/2). $
-     Calcule:
-\begin{enumerate}[label=(\alph*)]
-  \item $F_{x} (x)$
-  \item $P(\frac{-1}{4} \leq x \leq \frac{1}{4})$
-  \item $E(x)$ e $Var(x)$
-\end{enumerate}
-Sabe-se que:
-\begin{align*}
-  X \mathtt{\sim}  U(\frac{-1}{2}; \frac{1}{2})
-\end{align*}
-Assim, a f.d.p.\ de $x$ é:
-\begin{align*}
-  f_{x} (x)= \frac{1}{\frac{1}{2}- \left( \frac{-1}{2}\right)} = 1 \quad \frac{-1}{2}<x<\frac{1}{2}
-\end{align*}
-\begin{enumerate}[label=(\alph*)]
-  \item  $F_{x}(x)=?$
-    \begin{align*}
-      F_{x} (x)= P(X \leq x) = \int \limits_{( -\infty  )}^{(x)} f(t)dt\\
-      = \int \limits_{(\frac{-1}{2})}^{(x} 1 dt= t|_{\frac{-1}{2}}{x)} \\
-      = x+ \frac{1}{2}
-    \end{align*}
-    \begin{align*}
-      F_{x} (x) = P(X \leq x) = \begin{cases}
-        0, \quad \text{se}  x< \frac{-1}{2} \\
-        x+ \frac{1}{2} , \quad \text{se} \frac{-1}{2} \leq x < \frac{1}{2} \\
-        1, \quad x \ge \frac{1}{2}
-      \end{cases}
-    \end{align*}
+\item A média de $x$ é:
+  \begin{align*}
+    E(X) = \frac{a+b}{2}
+  \end{align*}
+\item E a variância de $x$ é:
+  \begin{align*}
+    Var(x) = \frac{ \left(b-a\right)^2 }{12}
+  \end{align*}
+\end{example}
+\begin{example}Seja $X$ uma v.a.\ com distribuição uniforme, $U(-1/2 , 1/2).$
+  \textbf{Calcule:}
+  \begin{enumerate}[label=(\alph*)]
+    \item $F_{x} (x)$
+    \item $P(\frac{-1}{4} \leq x \leq \frac{1}{4})$
+    \item $E(x)$ e $Var(x)$
+  \end{enumerate}
+  Sabe-se que:
+  \begin{align*}
+    X \sim  U(\frac{-1}{2}; \frac{1}{2})
+  \end{align*}
+  Assim, a f.d.p.\ de $x$ é:
+  \begin{align*}
+    f_{x} (x)= \frac{1}{\frac{1}{2}- \left( \frac{-1}{2}\right)} = 1 \quad \frac{-1}{2}<x<\frac{1}{2}
+  \end{align*}
+  \begin{enumerate}[label=(\alph*)]
+    \item  $F_{x}(x)=?$
+      \begin{align*}
+        F_{x} (x)= P(X \leq x) = \int \limits_{( -\infty  )}^{(x)} f(t)dt\\
+        = \int \limits_{(\frac{-1}{2})}^{(x} 1 dt= t|_{\frac{-1}{2}}{x)} \\
+        = x+ \frac{1}{2}
+      \end{align*}
+      \begin{align*}
+        F_{x} (x) = P(X \leq x) = \begin{cases}
+          0, \quad \text{se}  x< \frac{-1}{2} \\
+          x+ \frac{1}{2} , \quad \text{se} \frac{-1}{2} \leq x < \frac{1}{2} \\
+          1, \quad x \ge \frac{1}{2}
+        \end{cases}
+      \end{align*}
     \item 
       \begin{align*}
-      P(\frac{-1}{4}\leq X \leq \frac{1}{4})  = \int \limits_{(\frac{-1}{4})}^{(\frac{1}{4})}\\
-      = x|_{\frac{-1}{4}}^{\frac{1}{4}}= \frac{1}{4}+\frac{1}{4}=\frac{1}{2}
-    \end{align*}
-    Ou 
-    \begin{align*}
-      P(\frac{-1}{4} \leq X \leq \frac{1}{4})= F_{x}(\frac{1}{4})-F_{x}(\frac{-1}{4}) \\
-      \frac{3}{4}- \frac{1}{4}= \frac{1}{2}
-    \end{align*}
+        P(\frac{-1}{4}\leq X \leq \frac{1}{4})  = \int \limits_{(\frac{-1}{4})}^{(\frac{1}{4})}\\
+        = x|_{\frac{-1}{4}}^{\frac{1}{4}}= \frac{1}{4}+\frac{1}{4}=\frac{1}{2}
+      \end{align*}
+      Ou 
+      \begin{align*}
+        P(\frac{-1}{4} \leq X \leq \frac{1}{4})= F_{x}(\frac{1}{4})-F_{x}(\frac{-1}{4}) \\
+        \frac{3}{4}- \frac{1}{4}= \frac{1}{2}
+      \end{align*}
     \item 
       \begin{align*}
         E(X) = \frac{a+b}{2} \\
         = \frac{\frac{-1}{2} + \frac{1}{2}}{2}=0\\
         Var(x)= \frac{ \left( b-a \right)^2 }{12}= \frac{ \left( \frac{1}{2} + \frac{1}{2} \right)^2 }{12}= \frac{1}{12}
       \end{align*}
-\end{enumerate}
-
-   \end{description}
+  \end{enumerate}
+\end{example}
+\end{description}
 \subsection{Distribuição Exponencial}
 \begin{description}
-  \item [Definição]: Uma v.a.\ contínua $X$ tem distribuição exponencial com parâmetro $\lambda, \lambda>0$, se sua
+  \item [Definição] Uma v.a.\ contínua $X$ tem distribuição exponencial com parâmetro $\lambda, \lambda>0$, se sua
     f.d.p.\ é dada por:
     \begin{align*}
       f_{x} (x)= \begin{cases}
@@ -644,7 +619,7 @@ Assim, a f.d.p.\ de $x$ é:
         0, \quad \text{caso contrário}
       \end{cases}
     \end{align*}
-  \item[Notação]: $X \mathtt{\sim} Exp(\lambda)$
+  \item[Notação] $X \sim \Exp(\lambda)$
     \begin{figure}[H]
       \centering
       \input{tikz/ModelosProb/fdp1.tikz}
@@ -662,76 +637,69 @@ Assim, a f.d.p.\ de $x$ é:
          1-e^{-\lambda x} , x\ge 0
         \end{cases}
       \end{align*}
-    \item A média e variância de x são:
+    \item A média e variância de $X$ são:
       \begin{align*}
         E(x) = \frac{1}{\lambda}
       \end{align*}
       \begin{align*}
         Var(x) = \frac{1}{\lambda^2}
       \end{align*}
-    \item[Propriedade]:
-       Se $X \mathtt{\sim}  Exp(\lambda)$, então:
+    \item[Propriedade]
+       Se $X \sim  \Exp(\lambda)$, então:
         \begin{align*}
           P(X> a+b  \/ x>b) = P(X > a)
         \end{align*}
         Esta propriedade é conhecida por falta de memoria e é a única distribuição 
         contínua que tem essa propriedade.
-
-        \begin{description}
-      \item        [Observação]:
-
-        Outra parametrização para a distribuição exponencial é:
-
-        \begin{align*}
-          f_{x} (x)= \frac{1}{2}e^{-\frac{x}{2}}, \quad x\ge 0
-        \end{align*}
-        Ou seja, $\lambda= \frac{1}{\alpha}$
-        A média de x sera:
-        \begin{align*}
-          E(x)  = \alpha
-        \end{align*}
-        E a variância é dada por:
-        \begin{align*}
-          Var(x) = \alpha^2
-        \end{align*}
-      \item [Exemplo:] Seja $X$ o tempo de vida util de um fusivel que tem distribuição Exponencial
-        com vida média de 100 horas. Qual a probabilidade de um fusivel durar mais de 150
-        horas?
-        \begin{align*}
-          X \sim  Exp(\frac{1}{100}) \\
-          \mu = E(x)= \frac{1}{\lambda}=100 \left( \lambda= \frac{1}{100} \right)\\
-          P(X> 150)= \int \limits_{150}^{\infty} \frac{1}{100} e^{- \frac{1}{100} x} dx =0,22313
-        \end{align*}
-        Ou 
-        \begin{align*}
-          P(X>150) = 1- P(X \le 150)=\\ 1- \int \limits_{0}^{150} \frac{1}{100} e^{- \frac{1}{100}x}dx          = 0,22313
-        \end{align*}
-      \end{description}
-\end{description}
+        \begin{obs}        Outra parametrização para a distribuição exponencial é:
+          \begin{align*}
+            f_{x} (x)= \frac{1}{2}e^{-\frac{x}{2}}, \quad x\ge 0
+          \end{align*}
+          Ou seja, $\lambda= \frac{1}{\alpha}$
+          A média de x sera:
+          \begin{align*}
+            E(x)  = \alpha
+          \end{align*}
+          E a variância é dada por:
+          \begin{align*}
+            Var(x) = \alpha^2
+          \end{align*}
+        \end{obs}
+        \begin{example}Seja $X$ o tempo de vida util de um fusivel que tem distribuição Exponencial
+          com vida média de 100 horas. Qual a probabilidade de um fusivel durar mais de 150
+          horas?
+          \begin{align*}
+            X \sim  Exp(\frac{1}{100}) \\
+            \mu = E(x)= \frac{1}{\lambda}=100 \left( \lambda= \frac{1}{100} \right)\\
+            P(X> 150)= \int \limits_{150}^{\infty} \frac{1}{100} e^{- \frac{1}{100} x} dx =0,22313
+          \end{align*}
+          Ou 
+          \begin{align*}
+            P(X>150) = 1- P(X \le 150)=\\ 1- \int \limits_{0}^{150} \frac{1}{100} e^{- \frac{1}{100}x}dx          = 0,22313
+          \end{align*}
+      \end{example}
+  \end{description}
 \subsection{Distribuição Normal}
-E a distribuição mais importante dos modelos probabilisticos. 
-é tambem conhecida como distribuição gaussiana. Sua representação 
-gráfica é conhecida por curva em forma de sino.
+É a distribuição mais importante dos modelos probabilisticos. É tambem conhecida como distribuição gaussiana. Sua representação gráfica é conhecida por curva em forma de sino.
 \begin{description}
-  \item [Definição:]  Uma v.a.\ contínua $X$ tem Distribuição normal com parâmetro $\mu$ (média) e 
+  \item [Definição]  Uma v.a.\ contínua $X$ tem Distribuição normal com parâmetro $\mu$ (média) e 
     $\sigma^2$ se sua f.d.p.\ é dada por:
     \begin{align}
       f_{x} (X)= \frac{1}{\sqrt{2\pi \sigma^2}} e^{\frac{-1}{2\sigma^2} \left( x-\mu \right)^2} \quad -\infty<x<\infty \\
       \text{Com } \quad -\infty < \mu < \infty, \quad \sigma^2>0
     \end{align}
-  \item [Notação:] $X \sim N(\mu ; \sigma^2)$
-
+  \item [Notação] $X \sim N(\mu ; \sigma^2)$
 Uma ilustração gráfica da sua f.d.p.\ é:
 \begin{figure}[H]
   \centering
   \input{tikz/ModelosProb/dnorm1.tikz}
 \end{figure}
-A média e variância de $x$ são:
+A média e variância de $X$ são:
 \begin{align*}
 E(x) =\mu \\
 Var(x)=\sigma^2
 \end{align*}
-\item [Propriedades:]
+\item [Propriedades]
 A distribuição é simetrica em relação à média. Isto é:
 \begin{align}
   f(\mu - x) = f(\mu+x), \quad \forall x \in \mathbb{R}
@@ -755,20 +723,16 @@ A f.d.a.\ de uma v.a.\ $X \sim N(\mu,\sigma^2)$ é:
 \begin{align*}
   F_{x} (X)= P(X \leq x)= \int^{x}_{-\infty} \frac{1}{\sqrt{2\pi \sigma^2}}e^{\frac{-1}{2\sigma^2} \left( t- \mu \right)^2} dt 
 \end{align*}
-Cuja integral nao tem solução analítica. Assim, calculamos suas probabilidades com auxilio de tabelas.
-
-\item [Definição]: Se $X \sim N(\mu; \sigma^2)$, entao a v.a.\ $Z$ é definida por:
+Cuja integral não tem solução analítica. Assim, calculamos suas probabilidades com auxilio de tabelas.
+\item [Definição] Se $X \sim N(\mu; \sigma^2)$, entao a v.a.\ $Z$ é definida por:
   \begin{align}
    Z= \frac{X-\mu}{\sigma} 
   \end{align}
   Terá a distribuição normal com média 0 e variância 1. Ou seja, $Z \sim N(0,1)$.
-  
   Essa distribuição é conhecida como distribuição normal-padrão ou reduzida. 
 \end{description}
   \subsubsection{Cálculo de probabilidades}
-  \begin{description}
-    \item [Exemplo] Uso da tabela normal padrão:
-
+    \begin{example}
       Seja $Z\sim N(0,1)$ calcule:
       \begin{enumerate}[label=(\alph*)]
         \item $P(0 \leq Z \leq 1,65)$
@@ -779,9 +743,9 @@ Cuja integral nao tem solução analítica. Assim, calculamos suas probabilidade
         \item $P(0 \leq Z \leq z)=0,4753$
         \item $P(Z < z)=0,05$
       \end{enumerate}
-      
-      Resolva:
-\begin{enumerate}[label=(\alph*)]
+
+      \textbf{Solução}
+      \begin{enumerate}[label=(\alph*)]
         \item $P(0 \leq Z \leq 1,65)$
           \begin{figure}[H]
             \centering
@@ -792,107 +756,107 @@ Cuja integral nao tem solução analítica. Assim, calculamos suas probabilidade
           %Olhando a segunda tabela:
           Ou:
           \begin{align*}
-          P(0 \leq Z \leq 1,65)= P(Z < 1,65)-P(Z \leq 0) \\
-          = P(z < 1,65)- 0,5 \\
-          = 0,9505 - 0,5 = 0,4505
-        \end{align*}
-      \item $P(Z < 0,5)$
+            P(0 \leq Z \leq 1,65)= P(Z < 1,65)-P(Z \leq 0) \\
+            = P(z < 1,65)- 0,5 \\
+            = 0,9505 - 0,5 = 0,4505
+          \end{align*}
+        \item $P(Z < 0,5)$
 
-\begin{figure}[H]
+          \begin{figure}[H]
             \centering
             \input{tikz/ModelosProb/dnorm4.tikz}
           \end{figure}
 
-%grafico aqui
-        \begin{align*}
-          P(Z < 0,5)= 0,5 + P(0 \leq Z \leq 0,5) \\
-          = 0,5 + 0,19146 \\
-          = 0,69146
-      \end{align*}
-      Ou 
-      \begin{align*}
-        P(Z <0,5) = 0,6915
-      \end{align*}
+          %grafico aqui
+          \begin{align*}
+            P(Z < 0,5)= 0,5 + P(0 \leq Z \leq 0,5) \\
+            = 0,5 + 0,19146 \\
+            = 0,69146
+          \end{align*}
+          Ou 
+          \begin{align*}
+            P(Z <0,5) = 0,6915
+          \end{align*}
 
-    \item $ P(Z< -1,57)$
-\begin{figure}[H]
+        \item $ P(Z< -1,57)$
+          \begin{figure}[H]
             \centering
             \input{tikz/ModelosProb/dnorm5.tikz}
           \end{figure}
 
-Ou equivalentemente:
-\begin{figure}[H]
-  \centering
-  \input{tikz/ModelosProb/dnorm51.tikz}
-\end{figure}
-      %grafico aqui
-      \begin{align*}
-        P(Z< -1,57) = P(Z> 1,57)\\
-        =0,5 - P(0 \leq Z \leq 1,57) \\
-        = 0,5 - 0,44179 \\
-        = 0,0582
-      \end{align*}
-      Ou 
-      \begin{align*}
-        P(Z < -1,57) = 0,0582
-      \end{align*}
-    \item $P(-0,65 \leq Z \leq 0,65)$
-\begin{figure}[H]
+          Ou equivalentemente:
+          \begin{figure}[H]
+            \centering
+            \input{tikz/ModelosProb/dnorm51.tikz}
+          \end{figure}
+          %grafico aqui
+          \begin{align*}
+            P(Z< -1,57) = P(Z> 1,57)\\
+            =0,5 - P(0 \leq Z \leq 1,57) \\
+            = 0,5 - 0,44179 \\
+            = 0,0582
+          \end{align*}
+          Ou 
+          \begin{align*}
+            P(Z < -1,57) = 0,0582
+          \end{align*}
+        \item $P(-0,65 \leq Z \leq 0,65)$
+          \begin{figure}[H]
             \centering
             \input{tikz/ModelosProb/dnorm6.tikz}
           \end{figure}
 
-      %Grafico aqui
-      \begin{align*}
-        P(-0,65 \leq Z \leq 0) = P(-0,65 \leq Z \leq 0) \\
-        =2 P(0 \leq Z \leq 0,65) \\
-        =2 \times 0,24215 \\
-        =0,4843
-      \end{align*}
-      \begin{align*}
-        P( -0,65 \leq Z \leq -0,65 ) = P(Z < 0,65) - P(Z < -0,65)
-      \end{align*}
-    \item 
-\begin{figure}[H]
+          %Grafico aqui
+          \begin{align*}
+            P(-0,65 \leq Z \leq 0) = P(-0,65 \leq Z \leq 0) \\
+            =2 P(0 \leq Z \leq 0,65) \\
+            =2 \times 0,24215 \\
+            =0,4843
+          \end{align*}
+          \begin{align*}
+            P( -0,65 \leq Z \leq -0,65 ) = P(Z < 0,65) - P(Z < -0,65)
+          \end{align*}
+        \item 
+          \begin{figure}[H]
             \centering
             \input{tikz/ModelosProb/dnorm7.tikz}
           \end{figure}
 
-      %grafico aqui
-      \begin{align*}
-        P(0,8 < z < 1,4)  = P(0 \leq Z \leq 1,4) - P(0 \leq Z \leq 0,8) \\
-        = 0,41924 - 0,28814
-      \end{align*}
-    \item $P(0 \leq Z \leq z) = 0,4753$
-\begin{figure}[H]
+          %grafico aqui
+          \begin{align*}
+            P(0,8 < z < 1,4)  = P(0 \leq Z \leq 1,4) - P(0 \leq Z \leq 0,8) \\
+            = 0,41924 - 0,28814
+          \end{align*}
+        \item $P(0 \leq Z \leq z) = 0,4753$
+          \begin{figure}[H]
             \centering
             \input{tikz/ModelosProb/dnorm8.tikz}
           \end{figure}
 
-      %grafico aqui
-      \begin{align*}
-       z= 1,965 
-      \end{align*}
-    \item $P(Z < z) = 0,05$ \begin{figure}[H] \centering
+          %grafico aqui
+          \begin{align*}
+            z= 1,965 
+          \end{align*}
+        \item $P(Z < z) = 0,05$ \begin{figure}[H] \centering
             \input{tikz/ModelosProb/dnorm9.tikz}
           \end{figure}
 
-      %Grafico aqui
-      \begin{align*}
-       z= -1,645 
-      \end{align*}
-      \end{enumerate}
+          %Grafico aqui
+          \begin{align*}
+            z= -1,645 
+          \end{align*}
+        \end{enumerate}
+\end{example}
+\begin{example}
+  Seja $X \sim N(90,100)$ 
 
-    \item [Exemplo:] Seja $X \sim N(90,100)$ \\
-      \begin{description}
-        \item  [Determine]:
+  \textbf{Determine:}
       \begin{enumerate}[label=(\alph*)]
         \item $P(80 < x < 100)$
         \item $P(x \geq  90)$
         \item $P(60 \leq x \leq 75 )$
       \end{enumerate}
-
-    \item [Resolução]:
+      \textbf{Resolução}
       \begin{enumerate}[label=(\alph*)]
         \item $P(80 < x < 100)$
           \begin{figure}[H]
@@ -905,23 +869,23 @@ Ou equivalentemente:
             z_1 = \frac{80-90}{10}=-1\\
             z_2 = \frac{100-90}{10}=1
           \end{align*}
-                  \begin{align*}
-           P(80<X < 100) = P(-1 < Z <1)
-         \end{align*} 
- \begin{figure}[H]
+          \begin{align*}
+            P(80<X < 100) = P(-1 < Z <1)
+          \end{align*} 
+          \begin{figure}[H]
             \centering
             \input{tikz/ModelosProb/dnorm11.tikz}
             \label{fig:}
           \end{figure}
 
-         \begin{align*}
-           P(-1 < Z < 1)  = 2 \times P(0<Z < 1) \\
-           = 2 \times 0,34134 \\
-           =0,6826
-         \end{align*}
+          \begin{align*}
+            P(-1 < Z < 1)  = 2 \times P(0<Z < 1) \\
+            = 2 \times 0,34134 \\
+            =0,6826
+          \end{align*}
 
         \item $P(x \geq  90)$
- \begin{figure}[H]
+          \begin{figure}[H]
             \centering
             \input{tikz/ModelosProb/dnorm12.tikz}
             \label{fig:}
@@ -932,12 +896,12 @@ Ou equivalentemente:
           \end{align*}
 
         \item $P(60 \leq x \leq 75 )$
- \begin{figure}[H]
-\centering
-\input{tikz/ModelosProb/dnorm13.tikz}
-\label{fig:}
-\end{figure}
- \begin{figure}[H]
+          \begin{figure}[H]
+            \centering
+            \input{tikz/ModelosProb/dnorm13.tikz}
+            \label{fig:}
+          \end{figure}
+          \begin{figure}[H]
             \centering
             \input{tikz/ModelosProb/dnorm14.tikz}
             \label{fig:}
@@ -958,148 +922,147 @@ Ou equivalentemente:
           \end{align*}
 
       \end{enumerate}
-    \item [Exemplo:] Seja $X \sim \mathtt{N}(50; 10^2)$
-      \begin{description}
-        \item [Determine:]
+    \end{example}  
+    \begin{example}Seja $X \sim \N(50; 10^2)$
+      \textbf{Determine:}
           \begin{enumerate}[label=(\alph*)]
-   \item $P(|X-50| <10)$
-  \item $P( \mu-a \leq X \leq \mu +a )=0,9$
-  \item $P(K< X <70)=0,8185$
-  \item $P(K < x <75)= 0,3031$
+            \item $P(|X-50| <10)$
+            \item $P( \mu-a \leq X \leq \mu +a )=0,9$
+            \item $P(K< X <70)=0,8185$
+            \item $P(K < x <75)= 0,3031$
           \end{enumerate}
-        \item [Resolução:]
-\begin{enumerate}[label=(\alph*)]
-   \item $P(|X-50| <10)$
-     \begin{align*}
-       \begin{cases}
-        X-50<10 \Rightarrow X<60 \\
-        -(X-50) <10 \Rightarrow X>40
-       \end{cases}
-     \end{align*}
-     \begin{align*}
-       P(|X-50| <10)  = P(40<X<60) \\
-   = P(\frac{40-50}{10}< Z < \frac{60-50}{10}) \\
-   = P(-1 < Z < 1)
- \end{align*} 
- \begin{figure}[H]
-            \centering
-            \input{tikz/ModelosProb/dnorm15.tikz}
-            \label{fig:}
-          \end{figure}
- \begin{figure}[H]
-            \centering
-            \input{tikz/ModelosProb/dnorm16.tikz}
-            \label{fig:}
-          \end{figure}
+          \textbf{Solução}
+          \begin{enumerate}[label=(\alph*)]
+            \item $P(|X-50| <10)$
+              \begin{align*}
+                \begin{cases}
+                  X-50<10 \Rightarrow X<60 \\
+                  -(X-50) <10 \Rightarrow X>40
+                \end{cases}
+              \end{align*}
+              \begin{align*}
+                P(|X-50| <10)  = P(40<X<60) \\
+                = P(\frac{40-50}{10}< Z < \frac{60-50}{10}) \\
+                = P(-1 < Z < 1)
+              \end{align*} 
+              \begin{figure}[H]
+                \centering
+                \input{tikz/ModelosProb/dnorm15.tikz}
+                \label{fig:}
+              \end{figure}
+              \begin{figure}[H]
+                \centering
+                \input{tikz/ModelosProb/dnorm16.tikz}
+                \label{fig:}
+              \end{figure}
 
- %grafico aqui
-\begin{align*}
-  P(-1 < Z <1)  = 2 \times P(0 < Z <1) \\
-  = 2 \times 0,34124 \\
-  \simeq 0,68
-\end{align*}
+              %grafico aqui
+              \begin{align*}
+                P(-1 < Z <1)  = 2 \times P(0 < Z <1) \\
+                = 2 \times 0,34124 \\
+                \simeq 0,68
+              \end{align*}
 
-  \item $P\left( \mu-a \leq X \leq \mu +a \right)=0,9$
-\begin{align*}
-  P\left(50- a \leq X \leq 50 +a\right)  = 0,9 \\
-  P\left(\frac{(50-a)-50}{10}\right) \leq Z \leq \frac{(50+a)-50}{10} \\
-  P\left(\frac{-a}{10} \leq Z \leq \frac{a}{10}\right)=0,9 
-\end{align*}
+            \item $P\left( \mu-a \leq X \leq \mu +a \right)=0,9$
+              \begin{align*}
+                P\left(50- a \leq X \leq 50 +a\right)  = 0,9 \\
+                P\left(\frac{(50-a)-50}{10}\right) \leq Z \leq \frac{(50+a)-50}{10} \\
+                P\left(\frac{-a}{10} \leq Z \leq \frac{a}{10}\right)=0,9 
+              \end{align*}
 
- \begin{figure}[H]
-            \centering
-            \input{tikz/ModelosProb/dnorm17.tikz}
-            \label{fig:}
-          \end{figure}
+              \begin{figure}[H]
+                \centering
+                \input{tikz/ModelosProb/dnorm17.tikz}
+                \label{fig:}
+              \end{figure}
 
-%grafico aqui
-\begin{align*}
-  P( \frac{-a}{10} \leq Z \leq \frac{a}{10} ) = 2 \times P(0 \leq Z \leq \frac{9}{10})= 0,9 \\
-  P(0 \leq Z \leq \frac{a}{10})=0,45 \\
-  \frac{a}{10}= 1,645 \\
-  a = 16,5
-\end{align*}
-  \item $P(K< X <70)=0,8185$
- \begin{figure}[H]
-            \centering
-            \input{tikz/ModelosProb/dnorm18.tikz}
-            \label{fig:}
-          \end{figure}
+              %grafico aqui
+              \begin{align*}
+                P( \frac{-a}{10} \leq Z \leq \frac{a}{10} ) = 2 \times P(0 \leq Z \leq \frac{9}{10})= 0,9 \\
+                P(0 \leq Z \leq \frac{a}{10})=0,45 \\
+                \frac{a}{10}= 1,645 \\
+                a = 16,5
+              \end{align*}
+            \item $P(K< X <70)=0,8185$
+              \begin{figure}[H]
+                \centering
+                \input{tikz/ModelosProb/dnorm18.tikz}
+                \label{fig:}
+              \end{figure}
 
 
-    %grafico aqui
-    \begin{align*}
-      P( \frac{K-50}{10} < Z < \frac{70-50}{10} ) = 0,8185 \\
-      P(\frac{K-50}{10} < Z < 2) =0,8185
-    \end{align*}
-    %grafico aqui
-    \begin{align*}
-      P( \frac{K-50}{10}<Z<2 )  = 0,8185 \\
-      P( \frac{K-50}{10} < Z <0) + P(0 < Z <2) =0,8185 \\
-      P(\frac{K-50}{10}<Z < 0) = 0,8185 - 0,47725 \\
-      P( \frac{K-50}{10} < Z < 0 ) =0,3413
-    \end{align*}
-    %grafico aqui
-    \begin{align*}
-      \frac{-(K-50)}{10} = 10 \\
-      K= 40
-    \end{align*}
-  \item $P(K < x <75)= 0,3031$
-    %grafico aqui
+              %grafico aqui
+              \begin{align*}
+                P( \frac{K-50}{10} < Z < \frac{70-50}{10} ) = 0,8185 \\
+                P(\frac{K-50}{10} < Z < 2) =0,8185
+              \end{align*}
+              %grafico aqui
+              \begin{align*}
+                P( \frac{K-50}{10}<Z<2 )  = 0,8185 \\
+                P( \frac{K-50}{10} < Z <0) + P(0 < Z <2) =0,8185 \\
+                P(\frac{K-50}{10}<Z < 0) = 0,8185 - 0,47725 \\
+                P( \frac{K-50}{10} < Z < 0 ) =0,3413
+              \end{align*}
+              %grafico aqui
+              \begin{align*}
+                \frac{-(K-50)}{10} = 10 \\
+                K= 40
+              \end{align*}
+            \item $P(K < x <75)= 0,3031$
+              %grafico aqui
 
-    Temos o caso da tabela 1 caso $P(50 < X < 75) > 0,3031$.
-    
-    Do contrário, se $P(50 < X < 75) < 0,3031$, temos o caso do tabela 2.
-    \begin{align*}
-      P(50 < X < 75)  \\
-      =P(\frac{50-50}{10} < Z < \frac{75-50}{10}) \\
-      =P(0 < Z < 2,5) = 0,49379
-    \end{align*}
-    %Grafico aqui
-    \begin{align*}
-      P(K < X < 75)  = 0,3031\\
-      =P(\frac{K-50}{10}< Z <2,5)= 0,3031
-    \end{align*}
-    %Grafico aqui
-    \begin{align*}
-      P(0 < Z < 2,5)  - P(0 < Z  < \frac{k-50}{k})=0,3031 \\
-      0,49379 - 0,3031 = P(0 < Z < \frac{k-50}{10}) \\
-      P(0<Z < \frac{\underbrace{k-50}_{0,495}}{10})= 0,19069  \\
-      \frac{K-50}{10}= 0,495 \Rightarrow  K=4,95 +50 \\
-      K=54,95
-    \end{align*}
-\end{enumerate}
+              Temos o caso da tabela 1 caso $P(50 < X < 75) > 0,3031$.
 
-    \end{description}
-  \end{description}
+              Do contrário, se $P(50 < X < 75) < 0,3031$, temos o caso do tabela 2.
+              \begin{align*}
+                P(50 < X < 75)  \\
+                =P(\frac{50-50}{10} < Z < \frac{75-50}{10}) \\
+                =P(0 < Z < 2,5) = 0,49379
+              \end{align*}
+              %Grafico aqui
+              \begin{align*}
+                P(K < X < 75)  = 0,3031\\
+                =P(\frac{K-50}{10}< Z <2,5)= 0,3031
+              \end{align*}
+              %Grafico aqui
+              \begin{align*}
+                P(0 < Z < 2,5)  - P(0 < Z  < \frac{k-50}{k})=0,3031 \\
+                0,49379 - 0,3031 = P(0 < Z < \frac{k-50}{10}) \\
+                P(0<Z < \frac{\underbrace{k-50}_{0,495}}{10})= 0,19069  \\
+                \frac{K-50}{10}= 0,495 \Rightarrow  K=4,95 +50 \\
+                K=54,95
+              \end{align*}
+          \end{enumerate}
+
+      \end{example}    
   \subsubsection{Distribuição da Combinacao linear de v.a.\`s normais independentes}
   \begin{description}
     \item Sejam $X_1, X_2 , \ldots, X_n $ e  $n$ v.a.\`s tais que:
   \begin{align*}
-    X_i \sim \mathtt{N}(\mu ; \sigma^2)  \quad \text{para} \quad i=1,2,\ldots,n
+    X_i \sim \N(\mu ; \sigma^2)  \quad \text{para} \quad i=1,2,\ldots,n
   \end{align*}
   Considere $Y= \sum_{i=1}^{n} X_i = X_1+\ldots+X_n$, temos que:
   \begin{align*}
-    E(Y)  = E( \sum \limits_{(i)}^{n} X_i ) = \sum_{i=1}^{n} E(X_i) \\
+    \E(Y)  = \E( \sum \limits_{(i)}^{n} X_i ) = \sum_{i=1}^{n} \E(X_i) \\
     = \sum_{i=1}^{n} \mu = n \times \mu
   \end{align*}
   Ou
   \begin{align*}
-    E(Y )  =E( \sum_{i=1}^n X_i )= E(X_1 + \ldots +X_n) \\
-    = E(X_1) +E(X_2) + \ldots +E(X_n)\\
+    \E(Y )  =\E\left( \sum_{i=1}^n X_i \right)= \E\left(X_1 + \ldots +X_n\right) \\
+    = \E(X_1) +\E(X_2) + \ldots +\E(X_n)\\
     =\underbrace{\mu + \mu + \dots + \mu}_{n} = n \times \mu
   \end{align*}
   Assim:
   \begin{align*}
-    Var(Y) = Var(\sum_{i=1}^{n} X_i)= \sum^{n}_{i=1} Var(X_i) \\
+    \Var(Y) = \Var(\sum_{i=1}^{n} X_i)= \sum^{n}_{i=1} Var(X_i) \\
     = \sum_{i=1}^{n} \sigma^2 = n  \times \sigma^2
   \end{align*}
-  Logo, $Y \sim \mathtt{N}(n\mu ; n \sigma^2)$.
+  Logo, $Y \sim \N(n\mu ; n \sigma^2)$.
 
-  Pelas propriedades da distribuição normal, temos que se $Y\sim \mathtt{N}(n\mu; n\sigma^2)$, 
+  Pelas propriedades da distribuição normal, temos que se $Y\sim \N(n\mu; n\sigma^2)$, 
   a variável reduzida sera:
   \begin{align*}
-    Z= \frac{Y- E(Y)}{\sqrt{Var(Y)}} = \frac{Y- n\mu}{\sqrt{n\sigma^2}} \sim \mathtt{N}(0,1)
+    Z= \frac{Y- \E(Y)}{\sqrt{\Var(Y)}} = \frac{Y- n\mu}{\sqrt{n\sigma^2}} \sim \N(0,1)
   \end{align*}
   Analogamente, temos a média amostral:
   \begin{align*}
@@ -1117,208 +1080,222 @@ Ou equivalentemente:
     = \frac{1}{n^2} \sum_{i=1}^{n} \sigma^2 = \frac{1}{n^2} \times n \times \sigma^2 \\
     = \frac{\sigma^2}{n}
   \end{align*}
-  Logo $\bar{X} \sim \mathtt{N} ( \mu ; \frac{\sigma^2}{n} ) $
+  Logo $\bar{X} \sim \N ( \mu ; \frac{\sigma^2}{n} ) $
 
   A variável reduzida é:
   \begin{align*}
     Z = \frac{\bar{X}- E(\bar{X})}{\sqrt{Var(\bar{X})}} = \frac{\bar{x} - \mu}{\sqrt{\frac{\sigma^2}{n}}} \\
     = \frac{\bar{x}- \mu}{\frac{\sigma}{\sqrt{n}}} \\
-    Z= \frac{\sqrt{n} (\bar{X} -\mu)}{\sigma} \sim \mathtt{N} (0,1)
+    Z= \frac{\sqrt{n} (\bar{X} -\mu)}{\sigma} \sim \N (0,1)
   \end{align*}
-\item [Exemplo:] O peso de sacos de parafusos empacotados por uma maquina tem média de $50g$ e desvio-padrão de $2g$.
-  Assumindo que  o peso tem distribuição normal, qual a probabilidade de que 10 sacos pesem juntos de $490g$? 
-  Qual a probabilidade de que a média desses 10 sacos sejam no maximo $52g$?
+  \begin{example}O peso de sacos de parafusos empacotados por uma maquina tem média de $50g$ e desvio-padrão de $2g$.
+    Assumindo que  o peso tem distribuição normal, qual a probabilidade de que 10 sacos pesem juntos de $490g$? 
+    Qual a probabilidade de que a média desses 10 sacos sejam no maximo $52g$?
 
-\begin{enumerate}[label=(\alph*)]
-  \item
-  \begin{align*}
-    X \sim \mathtt{N} (50, 2^2) \\
-    X_1, X_2, \ldots , X_{10 } \\
-    Y= \sum_{i=1}^{n} X_i < 490 \\
-    Y \sim \mathtt{N}(500 ; 10 \times 2^2) \\
-    P(Y <490 ) = P(Z < \frac{490-500}{\sqrt{40}}) \\
-    P(Z< -1,58) = 0,0571
-  \end{align*}
-  %grafico aqui
+    \begin{enumerate}[label=(\alph*)]
+      \item
+        \begin{align*}
+          X \sim \N(50, 2^2) \\
+          X_1, X_2, \ldots , X_{10 } \\
+          Y= \sum_{i=1}^{n} X_i < 490 \\
+          Y \sim \N(500 ; 10 \times 2^2) \\
+          P(Y <490 ) = P(Z < \frac{490-500}{\sqrt{40}}) \\
+          P(Z< -1,58) = 0,0571
+        \end{align*}
+        %grafico aqui
 
-\item $\bar{X \leq 52g}$
-  \begin{align*}
-    \bar{X}  = \frac{\sum X_{i}}{n} \sim \mathtt{N}(\mu ; \frac{\sigma^2}{n}) \\
-    \bar{X} \sim N(50; \frac{2^2}{10})
-  \end{align*}
-  \begin{align*}
-    P(X \leq 52)  = P(Z \leq \frac{52-50}{\sqrt{\frac{2}{5}}}) \\
-    = P(Z \leq 3,16)
-  \end{align*}
-  %Grafico 
-  \begin{align*}
-    P(Z \leq 3,16 ) = 0,9992
-  \end{align*}
-\end{enumerate}
+      \item $\bar{X \leq 52g}$
+        \begin{align*}
+          \bar{X}  = \frac{\sum X_{i}}{n} \sim \N(\mu ; \frac{\sigma^2}{n}) \\
+          \bar{X} \sim N(50; \frac{2^2}{10})
+        \end{align*}
+        \begin{align*}
+          P(X \leq 52)  = P(Z \leq \frac{52-50}{\sqrt{\frac{2}{5}}}) \\
+          = P(Z \leq 3,16)
+        \end{align*}
+        %Grafico 
+        \begin{align*}
+          P(Z \leq 3,16 ) = 0,9992
+        \end{align*}
+    \end{enumerate}
+\end{example}
 \end{description}
-\end{description}
-\section{Variaveis Aleatorias Bidimensionais}
+\section{Variáveis Aleatórias Bidimensionais}
 \begin{description}
-  \item Seja $X$ e $Y$ duas variáveis aleatórias quando ha interesse na variacao conjunta de $X$ e $Y$, estudamos o par $(X,Y)$ como uma variável aleatória bidimensional. `1`
-  \item  [Definição:] A variável aleatória bidimensional discreta $(X,Y)$ tem funcao massa de probabilidade conjunta definida por:
+  \item Seja $X$ e $Y$ duas variáveis aleatórias. Quando há interesse na variação conjunta de $X$ e $Y$, estudamos o par $(X,Y)$ como uma variável aleatória bidimensional. 
+  \item  [Definição] A variável aleatória bidimensional discreta $(X,Y)$ tem função massa de probabilidade conjunta definida por:
     \begin{align}
       P_{x,y}= P(X=x, Y=y)
     \end{align}
-    A funcao de distribuição acumulada $F_{x,y} = P(X \leq x, Y \leq y)$ para $(x,y)$ valores que $(X,Y)$ pode assumir.
-  \item [Propriedades]:
+    A função de distribuição acumulada $F_{X,Y} = P(X \leq x, Y \leq y)$ para $(x,y)$ valores que $(X,Y)$ pode assumir.
+  \item [Propriedades] \hfill
     \begin{enumerate}[label=(\alph*)]
-      \item $p_{x,y}(x,y) \geq 0, \quad \forall (x,y)$.
-      \item $\sum \limits_{R_X} \sum \limits_{R_Y} p_{x,y} (x,y) = 1$.
+      \item $p_{X,Y}(x,y) \geq 0, \quad \forall (x,y)$.
+      \item $\displaystyle \sum \limits_{R_X} \sum \limits_{R_Y} p_{X,Y} (x,y) = 1$.
     \end{enumerate}
-  \item [Exemplo]:
-Em um processo de inspecao de qualdiade, cada peca passa por dois testes e eh classificada de acordo com duas variáveis $X$ e $Y$, tais que:
-\begin{align*}
- X= \begin{cases}
-   1,\quad \text{Se a peca passa no primeiro teste}  \\
-   0, \quad \text{Se a peca falha no primeiro teste}
- \end{cases} 
-\end{align*}
-\begin{align*}
- Y= \begin{cases}
-  1,\quad \text{Se a peca passa no segundo teste}  \\
-0, \quad \text{Se a peca falha no segundo teste}
- \end{cases} 
-\end{align*}
-Segundo a f.m.p.\ conjunta dada por:
-%Tabela ma formatada, reformular
-\begin{table}[H]
-  \centering
-  \label{tab:x}
-  \begin{tabular}{c c c c}
-    $    p_{x,y} $ & $Y$& $p_x{x}$ \\
-    $ X$ & 0 &1  \\
-    0 & 0,1&0,2&0,3 \\
-    1 & 0,2& 0,5& 0,7\\
-    $p_y(y)$  & 0,3&0,7&1
-  \end{tabular}
-\end{table}
-$P(X=0, Y=0)=0,1$, indica a proabilidade de uma peca selecionada ao acaso falhar no primeiro teste e no segundo teste.
-\end{description}
-\subsection{Distribuiçoes Marginais}
+    \begin{example}Em um processo de inspeção de qualidade, cada peça passa por dois testes e é classificada de acordo com duas variáveis $X$ e $Y$, tais que:
+      \begin{align*}
+        X= \begin{cases}
+          1,\quad \text{se a peça passa no primeiro teste}  \\
+          0, \quad \text{se a peça falha no primeiro teste}
+        \end{cases} 
+      \end{align*}
+      \begin{align*}
+        Y= \begin{cases}
+          1,\quad \text{se a peça passa no segundo teste}  \\
+          0, \quad \text{se a peça falha no segundo teste}
+        \end{cases} 
+      \end{align*}
+      Segundo a f.m.p.\ conjunta dada por: 
+      \begin{table}[H]
+      \centering
+        \begin{tabular}{c c c}
+          $p_{X,Y}(x,y)$ & \multicolumn{2}{c}{$Y$} \\ \midrule
+          $X$ & 0 &1  \\\midrule
+          0 & 0{,}1&0{,}2 \\
+          1 & 0{,}2& 0{,}5 
+        \end{tabular} 
+      \end{table}
+        Ou seja, cada peça falha nos testes $1$ e $2$ com probabilidade de $10\%$ por exemplo, e passa nos dois teste com probabilidade de $50\%$.
+      %Tabela ma formatada, reformular
+      $P\left(X=0, Y=0\right)=0,1$ indica a proabilidade de uma peça selecionada ao acaso falhar no primeiro teste e no segundo teste.
+  \end{example}
+  \end{description}
+  \subsection{Distribuiçoes Marginais}
 \begin{description}
-\item [Definição:] 
-  Seja $(X,Y)$ variávei aleatória bidimensional com f.m.p.\ conjunta $p_{x,y}(x,y)$. A probabilidade marginal de $X$ eh $\sum \limits_{R_{Y}} p_{x,y} (x,y)$. A probabilidade marginal de $Y$ eh $p_{y}(y) = \sum \limits_{R_{x}} p_{x,y}(x,y)$.
-\item[Exemplo:] Considere o exemplo anterior, e obtenha as distribuiçoes marginais.
-
-  Marginal de X:
-  \begin{align*}
-    R_{x} = \{ 0,1 \}
-  \end{align*}
-  \begin{align*}
-    p_{x} (0) = P(X=0, Y=y)\\
-    = P(X=0, Y=0) +P(X=0,Y=1)=0,1+0,2=0,3
-  \end{align*}
-  \begin{align*}
-    p_{x} (0) = P(X=1, Y=y)\\
-    = P(X=1, Y=0) +P(X=1,Y=1)=0,2+0,5=0,7
-  \end{align*}
-  Com isso, temos que a f.m.p.\ marginal de $X$ eh:
-  \begin{table}[H]
-    \centering
-    \begin{tabular}{c c c}
-      $x$ & $0$ &$1$ \\ \midrule
-      $p_{x}$ & 0,3 & 0,7 \\
-    \end{tabular}
-  \end{table}
-  A f.m.p.\ marginal de $Y$ eh dada por:
-\begin{table}[H]
-    \centering
-    \begin{tabular}{c c c}
-      $y$ & $0$ &$1$ \\ \midrule
-      $p_{x}$ & 0,3 & 0,7 
-    \end{tabular}
-  \end{table}
-\item [Definicao:] A v.a.\ bidimensional continua $(X,Y)$ tem f.d.p.\ conjunta dada por $f_{x,y}(x,y)$ e função acumulada $F_{x,y}(x,y)$, satisfazendo:
+\item [Definição] 
+  Seja $(X,Y)$ variável aleatória bidimensional com f.m.p.\ conjunta $p_{X,Y}(x,y)$. A probabilidade marginal de $X$ é $\sum \limits_{R_{Y}} p_{X,Y} (x,y)$. A probabilidade marginal de $Y$ é $p_{y}(y) = \sum \limits_{R_{x}} p_{X,Y}(x,y)$.
+  \begin{example}Considere o exemplo anterior, e obtenha as distribuições marginais.
+    Marginal de X:
+    \begin{align*}
+      R_{x} = \{ 0,1 \}
+    \end{align*}
+    \begin{align*}
+      p_{x} (0) = P(X=0, Y=y)\\
+      = P(X=0,Y=0) +P(X=0,Y=1)=0{,}1+0{,}2=0{,}3
+    \end{align*}
+    \begin{align*}
+      p_{x} (0) = P(X=1,Y=y)\\
+      = P(X=1, Y=0) +P(X=1,Y=1)=0{,}2+0{,}5=0{,}7
+    \end{align*}
+    Com isso, temos que a f.m.p.\ marginal de $X$ é:
+    \begin{table}[H]
+      \centering
+      \begin{tabular}{c c c}
+        $x$ & $0$ &$1$ \\ \midrule
+        $p_{x}$ & 0{,}3 & 0{,}7 \\
+      \end{tabular}
+    \end{table}
+    A f.m.p.\ marginal de $Y$ é dada por:
+    \begin{table}[H]
+      \centering
+      \begin{tabular}{c c c}
+        $y$ & $0$ &$1$ \\ \midrule
+      $p_{x}$ & 0{,}3 & 0{,}7 
+      \end{tabular}
+    \end{table}
+    As distribuições marginais de $X$ e $Y$ são dadas por:
+    \begin{table}[H]
+      \centering
+        \begin{tabular}{c c c c}
+          \diagbox{X}{Y}  & 0 &1& $p_X(x)$  \\\midrule
+          0 & 0{,}1&0{,}2&0{,}3 \\ \midrule
+          1 & 0{,}2& 0{,}5& 0{,}7\\ \midrule
+          $p_Y(y)$  & 0{,}3&0{,}7&1 
+        \end{tabular} 
+      \end{table}
+  \end{example}
+\item [Definição] A v.a.\ bidimensional continua $(X,Y)$ tem f.d.p.\ conjunta dada por $f_{X,Y}(x,y)$ e função acumulada $F_{X,Y}(x,y)$, satisfazendo:
   \begin{enumerate}[leftmargin=*, label=\roman*., widest=IV, align=left]
     \item 
      \begin{align}
-      f_{x,y} \geq 0, \quad \forall (x,y)
+      f_{X,Y} \geq 0, \quad \forall (x,y)
      \end{align} 
     \item  
      \begin{align*}
-      \int \limits_{R_{y}} \int \limits_{R_{x}} f_{x,y} (x,y) dx dy = int \limits_{R_{x}} \int \limits_{R_{y}} f_{x,y} (x,y) dy dx= 1
+      \int \limits_{R_{y}} \int \limits_{R_{x}} f_{X,Y} (x,y) dx dy = \int \limits_{R_{x}} \int \limits_{R_{y}} f_{X,Y} (x,y) dy dx= 1
      \end{align*} 
     \item 
       \begin{align*}
-        F_{X,Y}(x,y) = P(X \leq x, Y\leq y)\\
-        = F_{X,Y}(x,y) = P(X < x, Y\leq y)\\
-        = F_{X,Y}(x,y) = P(X \leq x, Y< y)\\
-        = F_{X,Y}(x,y) = P(X<x, Y<y)
+        F_{X,Y}(x,y) = P(X \leq x, Y\leq y)= P(X < x, Y\leq y)= \\
+        = P(X \leq x, Y< y)= P(X<x, Y<y)
       \end{align*}
   \end{enumerate}
-\item[Propriedades]:
+\item[Propriedades] \hfill
   \begin{enumerate}[label=(\alph*)]
     \item 
       \begin{align*}
-        f_{x,y} (x,y)= \frac{\partial^2}{\partial x \partial y}F_{x,y} (x,y)
+        f_{x,y} (X,Y)= \frac{\partial^2}{\partial x \partial y}F_{X,Y} (x,y)= \frac{\partial^2}{\partial y \partial x}F_{X,Y} (x,y)
       \end{align*}
     \item 
       \begin{align*}
-        F_{x,y} (x,y)= \int \limits_{- \infty}^{x} \int \limits_{- \infty}^{y} f_{x,y}(x,y) dy dx
+        F_{x,y} (x,y)= \int_{- \infty}^{x} \int_{- \infty}^{y} f_{x,y}(x,y) dy dx
       \end{align*}
       \item 
         \begin{align*} 
-          P(a \leq X \leq b ; c \leq y \leq d) = \int \limits_{a}^{b} \int \limits_{c}^{d} f_{x,y} (x,y) dy dx
+          P(a \leq X \leq b ; c \leq y \leq d) = \int_{a}^{b} \int_{c}^{d} f_{x,y} (x,y) dy dx
         \end{align*}
   \end{enumerate}
-\item [Exemplo:] Duas caracteristicas do desempenho do motor de um foguete sao o empuxo $(X)$ e a taxa de mistura $(Y)$. Suponha que $(X,Y)$ seja uma v.a.\ continua bidimensional com f.d.p.\ conjunta dada por:
-  \begin{align*}
-    f_{x,y} (x,y)= \begin{cases}
-      2(x+y-2xy), \quad 0\leq x \leq 1, \quad 0 \leq y \leq 1\\
-      0, \quad \text{c.c.}
-    \end{cases}
-  \end{align*}
-  Calcular a probabilidade:
-  \begin{align*}
-    P(0 \leq X \leq 0,5; 0,5 \leq Y \leq 1)  \\
-    = \int \limits_{0}^{0.5} \int \limits_{0.5}^{1} 2(x+y -2xy)dy dx \\
-    =2 \int \limits_{0}^{0.5} \left( \eval{xy}{0.5}{1} + \eval{\frac{y^2}{2}}{0.5}{1} - \eval{xy^2}{0.5}{1} \right) dx \\
-    = 2 \int \limits_{0}^{0.5} \left( (\frac{1}{2} x + \frac{3}{8} - \frac{3x}{4}) \right)dx \\
-    = 2 \left( \eval{\frac{x^2}{4}{0}{0.5} + \eval{\frac{3}{8}}{0}{0.5} -\eval{\frac{3x^2}{8}}{0}{0.5} \right) \\
-      = \frac{5}{16}  =0.3125
-  \end{align*}
-\end{description}
+  \begin{example}  Duas características do desempenho do motor de um foguete sao o empuxo $(X)$ e a taxa de mistura $(Y)$. Suponha que $(X,Y)$ seja uma v.a.\ continua bidimensional com f.d.p.\ conjunta dada por:
+    \begin{align*}
+      f_{x,y} (x,y)= \begin{cases}
+        2(x+y-2xy), \quad 0\leq x \leq 1, \quad 0 \leq y \leq 1\\
+        0, \quad \text{c.c.}
+      \end{cases}
+    \end{align*}
+    \textbf{Calcule a probabilidade:}
+    \begin{align*}
+      P(0 \leq X \leq 0,5; 0,5 \leq Y \leq 1)  
+    \end{align*}
+    
+    \textbf{Solução}
+    \begin{align*}
+      P(0 \leq X \leq 0,5; 0,5 \leq Y \leq 1)  \\
+      = \int_{0}^{0.5} \int_{0.5}^{1} 2(x+y -2xy)dy dx \\
+      =2 \int_{0}^{0.5} \left( \eval{xy}{0.5}{1} + \eval{\frac{y^2}{2}}{0.5}{1} - \eval{xy^2}{0.5}{1} \right) dx \\
+      = 2 \int_{0}^{0.5} \left( \frac{x}{2} + \frac{3}{8} - \frac{3x}{4} \right)dx \\
+      = 2 \left( \eval{\frac{x^2}{4}}{0}{0.5} + \eval{\frac{3}{8}}{0}{0.5} -\eval{\frac{3x^2}{8}}{0}{0.5} \right) \\
+      = \frac{5}{16}  =0{,}3125
+      \end{align*}
+  \end{example}
+  \end{description}
 \subsection{Densidades Marginais}
 \begin{description}
   \item [Definição:] Seja $(X,Y)$ v.a.\ continua bidimensional com f.d.p.\ conjunta $f_{x,y}(x,y)$. A f.d.p.\ marginal de $X$ eh dada por $f_{x}(x)= \int \limits_{R_{y}}f_{x,y}(x,y)dy$ e a f.d.p.\ marginal dada por:
     \begin{align*}
       f_{y} (y)= \int_{R_{x}}f_{x,y} (x,y) dx
     \end{align*}
-  \item [Exemplo:] No exemplo anterior, determine as distribuiçoes marginais de $X$ e $Y$. 
-
-    \begin{align*}
-      f_{x,y} (x,y) = 2(x+y -2xy), \quad x \in \[ 0,1 \] \quad y \in \[ 0,1 \]
-    \end{align*}
-    A marginal de $X$:
-\begin{align*}
-  f_{x} (x)= \int \limits_{0}^{1} 2 \left(x+y -2xy \right) dy \\ 
-  = 2 \left( \eval{xy}{0}{1} + \eval{xy}{0}{1} - \eval{xy^2}{0}{1} \right)
-\end{align*}
-\begin{align*}
-  f_{x}(x)= 2 \left( x + \frac{1}{2} - x \right)= 1
-\end{align*}
-Logo, a f.d.p de $X$ eh:
-\begin{align*}
-  f_{x} (x) = \begin{cases}
-   1, \quad 0 \leq x \leq 1  \\
-   0, \quad \text{c.c.}
-  \end{cases}
-\end{align*}
-A marginal de $Y$:
-\begin{align*}
-  f_{y} (y) = \int \limits_{0}^{1} 2 \left(x+y -2xy\right)dx \\
-  =2 \left( \eval{x^2}{0}{1}- \eval{yx^2}{0}{1}\right)\\
-  = 2 \left(\frac{1}{2}+ y - y\right)=1
-\end{align*}
-\end{description}
+    \begin{example}
+      No exemplo anterior, determine as distribuiçoes marginais de $X$ e $Y$. 
+      \begin{align*}
+        f_{x,y} (x,y) = 2(x+y -2xy), \quad x \in \left[ 0,1 \right] \quad y \in \left[ 0,1 \right]
+      \end{align*}
+      A marginal de $X$:
+      \begin{align*}
+        f_{x} (x)= \int \limits_{0}^{1} 2 \left(x+y -2xy \right) dy \\ 
+        = 2 \left( \eval{xy}{0}{1} + \eval{xy}{0}{1} - \eval{xy^2}{0}{1} \right)
+      \end{align*}
+      \begin{align*}
+        f_{x}(x)= 2 \left( x + \frac{1}{2} - x \right)= 1
+      \end{align*}
+      Logo, a f.d.p de $X$ eh:
+      \begin{align*}
+        f_{x} (x) = \begin{cases}
+          1, \quad 0 \leq x \leq 1  \\
+          0, \quad \text{c.c.}
+        \end{cases}
+      \end{align*}
+      A marginal de $Y$:
+      \begin{align*}
+        f_{y} (y) = \int \limits_{0}^{1} 2 \left(x+y -2xy\right)dx \\
+        =2 \left( \eval{x^2}{0}{1}- \eval{yx^2}{0}{1}\right)\\
+        = 2 \left(\frac{1}{2}+ y - y\right)=1
+      \end{align*}
+  \end{example}
+  \end{description}
 \subsection{Independência Probabilística}
 \begin{description}
-  \item  Duas v.a.'s $X$ e $Y$ sao independentes se a sua f.m.p.\ conjunta (ou f.d.p.\ conjunta) de $(X,Y)$ for fatoravel no produto das f.m.p.\ (ou f.d.p.\ marginais )de $X$ e $Y$, isto eh:
+  \item  Duas v.a.'s $X$ e $Y$ são independentes se a sua f.m.p.\ conjunta (ou f.d.p.\ conjunta) de $(X,Y)$ for fatorável no produto das f.m.p.\ (ou f.d.p.\ marginais )de $X$ e $Y$, isto eh:
   \begin{align}
     p_{x,y}  = p_{x}(x) \times p_{y}(y)
   \end{align}
@@ -1326,106 +1303,99 @@ A marginal de $Y$:
   \begin{align}
     f_{x,y} (x,y)= f_{x}(x) \times f_{y}(y) \quad \forall (x,y)
   \end{align}
- 
-\item [Exemplo:]  Suponha que uma maquina seja ajustada par auma determinada tarefa de manha e para outra tarefa a tarde. SUponha que o numero de vezes que a maquina da problema de manha e a tarde sejam representadas por variaveis  $X$ e $Y$ com f.m.p.\ conjunta dada por:
-  \begin{table}[H]
-    \centering
-    \begin{tabular}{c c c c c}
-      \toprule
-      x /\ y & 0 & 1 & 2 &$p_{x}(x)$ \\ \midrule
-      0 & 0,1 & 0,2 & 0,2& 0,5\\ \midrule
-      1 & 0,04 & 0,08& 0,08&0,2 \\ \midrule
-      2 & 0,06 & 0,12 & 0,12 & 0,3 \\ \midrule 
-      $p_{Y} (y)$ & 0,2 & 0,4 &0,4 & 1 \bottomrule
-      \bottomrule
-    \end{tabular}
-  \end{table}
-  Observem que:
-  \begin{align*}
-    P(X=0, Y=0) = P(x=0) + P(y=0)= 0,5 \times 0,2 = 0,1
-  \end{align*}
-  \begin{align*}
-    P(X=0, Y=1) = P(x=0) + P(y=1)= 0,5 \times 0,4 = 0,2
-  \end{align*}
-E assim por diante,  para todo $x$ e $y$.
+  \begin{example} 
+    Suponha que uma máquina seja ajustada par uma determinada tarefa de manhã e para outra tarefa a tarde. Suponha que o número de vezes que a máquina dá problema de manhã e a tarde sejam representadas por variáveis  $X$ e $Y$ com f.m.p.\ conjunta dadas por:
 
-Como esses produtos de probabilidades sao satisfeitos, temos que $X$ e $Y$ sao independentes.
+      \begin{tabular}{c c c c c}
+        \toprule\\
+        x \ y & 0 & 1 & 2 &$p_{x}(x)$ \\ \midrule
+        0 & 0{,}1 & 0{,}2 & 0{,}2& 0{,}5\\ \midrule
+        1 & 0{,}04 & 0{,}08& 0{,}08&0{,}2 \\ \midrule
+        2 & 0{,}06 & 0{,}12 & 0{,}12 & 0{,}3 \\ \midrule 
+        $p_{Y}(y)$& 0{,}2 & 0{,}4 &0{,}4 & 1\\ \bottomrule
+      \end{tabular}
+    Observem que:
+    \begin{align*}
+      P(X=0, Y=0) = P(x=0) + P(y=0)= 0,5 \times 0,2 = 0,1
+    \end{align*}
+    \begin{align*}
+      P(X=0, Y=1) = P(x=0) + P(y=1)= 0,5 \times 0,4 = 0,2
+    \end{align*}
+    E assim por diante,  para todo $x$ e $y$.
+
+    Como esses produtos de probabilidades são satisfeitos, temos que $X$ e $Y$ são independentes.
+\end{example}
 \end{description}
-\subsection{Esperanca, Covariancia, Correlacao}
+\subsection{Esperança, Covariância, Correlação}
 \begin{description}
-  \item [Definição:] Sejam $x$ e $y$ v.a.'s com $E(X)=\mu_{x}$, $E(Y)=\mu_{y}$, $Var(X)=\sigma_x^2$ e $Var(Y)=\sigma_y^2$. Seja $p_{x,y}(x,y)$ a f.m.p.\ conjunta ou $f_{x,y}(x,y)$ a f.d.p.\ conjunta de $x$ e $y$. Seja $h(x,y)$ uma função de $(X,Y)$. Definimos o valor esperado de $h(x,y)$ no caso discreto por:
+  \item [Definição:] Sejam $x$ e $y$ v.a.'s com $\E(X)=\mu_{x}$, $\E(Y)=\mu_{y}$, $\Var(X)=\sigma_x^2$ e $\Var(Y)=\sigma_y^2$. Seja $p_{x,y}(x,y)$ a f.m.p.\ conjunta ou $f_{x,y}(x,y)$ a f.d.p.\ conjunta de $X$ e $Y$. Seja $h(x,y)$ uma função de $(X,Y)$. Definimos o valor esperado de $h(x,y)$ no caso discreto por:
     \begin{align}
-      E \left(h \left(x,y\right)\right) = \sum limits_{R_{x}} \sum \limits_{R_{y}} h(x,y) \times p_{x,y}(x,y)
+      \E \left(h \left(x,y\right)\right) = \sum \limits_{R_{X}} \sum \limits_{R_{Y}} h(x,y) \times p_{x,y}(x,y)
     \end{align}
     E no caso contínuo:
     \begin{align}
-      E(h(x,y)) = \int \limits_{R_{x}} \int \limits_{R_{y}} h(x,y) f_{x,y}(x,y) dydx \\
+      \E(h(x,y)) = \int \limits_{R_{x}} \int \limits_{R_{y}} h(x,y) f_{x,y}(x,y) dydx \\
       = \int \limits_{R_{y}} \int \limits_{R_{x}} h(x,y) f_{x,y}(x,y) dxdy
     \end{align}
     Alem disso, definimos para ambos os casos, a covariancia entre $x$ e $y$:
     \begin{align}
       \sigma_{x,y}  = Cov(X,Y) = E \left( \left(X-E(X)\right) \left(Y-E(Y)\right)\right) \\
-      = E(XY) - E(X)E(Y)\\
-      =E(XY)- \mu_{x}\times \mu_{y}
+      = \E(XY) - E(X)E(Y)\\
+      =\E(XY)- \mu_{x}\times \mu_{y}
     \end{align}
     A correlacao entre $x$ e $y$ eh dada por:
     \begin{align}
-      \rho_{x,y} = \frac{Cov(X,Y)}{\sqrt{Var(x) \times \sqrt{Var(y)}}}= \frac{\sigma_{x,y}}{\sigma_{x} \times \sigma_{y}}
+    \rho_{x,y} = \frac{Cov(X,Y)}{\sqrt{Var(x)} \times \sqrt{Var(y)}}= \frac{\sigma_{x,y}}{\sigma_{x} \times \sigma_{y}}
     \end{align}
-  \item [Exemplo:] Vamos calcular a Correlacao entre $X$ e $Y$ no exemplo anterior (exemplo da maquina).\\
-    A f.m.p.\ conjunta eh:
-  \begin{table}[H]
-    \centering
-    \begin{tabular}{c c c c c}
-      \toprule
-      x /\ y & 0 & 1 & 2 &$p_{x}(x)$ \\ \midrule
-      0 & 0,1 & 0,2 & 0,2& 0,5\\ \midrule
-      1 & 0,04 & 0,08& 0,08&0,2 \\ \midrule
-      2 & 0,06 & 0,12 & 0,12 & 0,3 \\ \midrule 
-      $p_{Y} (y)$ & 0,2 & 0,4 &0,4 & 1 \bottomrule
-      \bottomrule
-    \end{tabular}
-  \end{table}
-\begin{align*}
-  \rho_{x,y} = \frac{Cov(x,y)}{\sigma_{x},\sigma_{y}}\\
-  Cov(X,Y)=E(XY)-E(X) \times E(Y)
-\end{align*}
-\begin{align*}
-  \mu_{x} =E(X)=\sum \limits_{R_{x}}x \times p_{x} \\
-  = 0 \times 0.5 + 1 \times 0.2 + 2 \times 0.3 \\
-  = 0.8
-\end{align*}
-\begin{align*}
-  \mu_{y} =E(Y)=\sum \limits_{R_{y}}y \times p_{y} \\
-  = 0 \times 0.2 + 1 \times 0.4 + 2 \times 0.4 \\
-  =1.2 
-\end{align*}
-\begin{align*}
-  E(XY) = \sum \limits_{R_{X}} \sum \limits_{R_{y}} x\times y \times p_{x,y}(x,y) \\
-  = 0 \times 0 \times 0.1 + \ldots + 2 \times 2 \times 0.12\\
-  = 0.96
-\end{align*}
-\begin{align*}
-  Cov(x,y) = 0.96 - 0.8 \times 1.2 \\
-  =0
-\end{align*}
-\begin{align*}
-  \sigma_{x}^2 - \left(E(X)\right)^2
-\end{align*}
-Como temos:
-\begin{align*}
-  E(X^2) = \sum \limits_{R_{x}} x^2 \times  p_{x}
-\end{align*}
-Logo a $\rho_{x,y}$ eh:
-\begin{align*}
-  \rho_{x,y}  = \frac{0}{\sgima_{x} \times \sigma_{y}}=0 
-\end{align*}
-\item [Resultado]:
-  \begin{description}
-    \item[Independencia e correlacao]:  Se $X$ e $Y$ sao duas v.a.'s independentes, então a correlacao entre $X$ e $Y$ eh o $0$ ($\rho_{x,y}=0$).
-    \item [Obs:]  A volta nao vale. Se $X$ e $Y$ sao independetes $E(XY)=E(X) \times E(Y)$.
-    \end{description}
-  \item [Resultados]:
+    \begin{example}
+      Vamos calcular a Correlacao entre $X$ e $Y$ no exemplo anterior (exemplo da maquina). A f.m.p.\ conjunta é:
+      \begin{table}[H]
+        \centering
+        \begin{tabular}{c c c c c}
+          \toprule\\
+          \diagbox{X}{Y} & 0 & 1 & 2 &$p_{x}(x)$ \\ \midrule
+          0 & 0,1 & 0,2 & 0,2& 0,5\\ \midrule
+          1 & 0,04 & 0,08& 0,08&0,2 \\ \midrule
+          2 & 0,06 & 0,12 & 0,12 & 0,3 \\ \midrule 
+          $p_{Y} (y)$ & 0,2 & 0,4 &0,4 & 1 \\ \bottomrule
+        \end{tabular}
+      \end{table}
+      \begin{align*}
+        \rho_{x,y} = \frac{Cov(x,y)}{\sigma_{x} \times \sigma_{y}}\\
+        \Cov(X,Y)=\E(XY)-E(X) \times E(Y)
+      \end{align*}
+      \begin{align*}
+        \mu_{x} =E(X)=\sum \limits_{R_{x}}x \times p_{x} \\
+        = 0 \times 0.5 + 1 \times 0.2 + 2 \times 0.3 = 0.8
+      \end{align*}
+      \begin{align*}
+        \mu_{y} =E(Y)=\sum \limits_{R_{y}}y \times p_{y} \\
+        = 0 \times 0.2 + 1 \times 0.4 + 2 \times 0.4 = 1.2 
+      \end{align*}
+      \begin{align*}
+        \E(XY) = \sum \limits_{R_{X}} \sum \limits_{R_{y}} x\times y \times p_{x,y}(x,y) \\
+        = 0 \times 0 \times 0.1 + \ldots + 2 \times 2 \times 0.12 = 0.96
+      \end{align*}
+      \begin{align*}
+        \Cov(x,y) = 0.96 - 0.8 \times 1.2     =0
+      \end{align*}
+      % \begin{align*}
+      %   \sigma_{x}^2 - \left(\E(X)\right)^2
+      % \end{align*}
+      % Como temos:
+      % \begin{align*}
+      %   \E(X^2) = \sum \limits_{R_{x}} x^2 \times  p_{x}
+      % \end{align*}
+      Logo a $\rho_{x,y}$ é:
+      \begin{align*}
+        \rho_{x,y}  = \frac{0}{\sigma_{x} \times \sigma_{y}}=0 
+      \end{align*}
+    \end{example}
+
+    \item[Independência e correlação]  Se $X$ e $Y$ sao duas v.a.'s independentes, então a correlacao entre $X$ e $Y$ eh o $0$ ($\rho_{x,y}=0$).
+      \begin{obs}A volta nao vale. Se $X$ e $Y$ sao independetes $\E(XY)=E(X) \times E(Y)$.
+    \end{obs}
+  \item [Resultados]\hfill
     
     Para $X$ e $Y$ v.a.\ 's e $a,b \in \mathbb{R}$, constantes:
     \begin{enumerate}
@@ -1450,21 +1420,21 @@ Logo a $\rho_{x,y}$ eh:
          Var(aX \pm bY) = a^2 Var(X) + b^2Var(Y)
        \end{align*}
     \end{enumerate}
-  \item [Exemplo:] Seja $(X,Y)$ uma v.a. bidimensional cuja f.d.p.\ conjunta eh dada por:
-    \begin{description}
-      
-    \begin{align*}
-      f_{x,y} (x,y) = \begin{cases}
-       9xy, \quad 0<x<y<1  \\
-       0, \quad \text{c.c.}
-      \end{cases}
-    \end{align*}
-\item [Determine:]
+    \begin{example}Seja $(X,Y)$ uma v.a. bidimensional cuja f.d.p.\ conjunta eh dada por:
+
+        \begin{align*}
+          f_{x,y} (x,y) = \begin{cases}
+            9xy, \quad 0<x<y<1  \\
+            0, \quad \text{c.c.}
+          \end{cases}
+        \end{align*}
+    \textbf{Determine:}
     \begin{enumerate}[label=(\alph*)]
       \item As marginais de $X$ e $Y$
       \item $P(0 \leq X \leq \frac{1}{2}, 0 \leq Y \leq \frac{1}{2})$
     \end{enumerate}
-\item [Resolução:]
+ \textbf{Solução}
+
    \begin{enumerate}[label=(\alph*)]
      \item $f_{x} (x)= ?$ e $f_{y}(y)=?$
        %Grafico aqui\
@@ -1498,6 +1468,6 @@ Logo a $\rho_{x,y}$ eh:
           = \frac{1}{16}=0.0625
         \end{align*}
    \end{enumerate} 
-    \end{description}
+     \end{example}
 
 \end{description}
